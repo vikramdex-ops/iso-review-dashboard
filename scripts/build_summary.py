@@ -30,7 +30,8 @@ def summarise(lot, table):
         sev = r[iM].strip().capitalize()
         if not names or sev not in SEV:
             continue
-        who, status, resp = names[-1], r[iN].strip().lower(), r[iQ].strip().lower()
+        who = " ".join(w.capitalize() for w in names[-1].split())  # normalise casing so "DHARMA"/"Dharma" merge
+        status, resp = r[iN].strip().lower(), r[iQ].strip().lower()
         b = stats.setdefault(who, {s: [0, 0, 0, 0] for s in SEV})[sev]  # assigned, closed, open, hold
         b[0] += 1
         if status == "closed" or any(w in resp for w in DONE): b[1] += 1
@@ -55,4 +56,5 @@ if not any(v == "ok" for v in status.values()):
 out = root / "site" / "data" / "summary.json"
 out.write_text(json.dumps({"updated": datetime.datetime.now(datetime.timezone.utc).isoformat(),
                            "preliminary": False, "status": status, "rows": rows}, indent=1))
+(root / "site" / "config.json").write_text(json.dumps(cfg, indent=1))  # keep client-side refresh in sync
 print("wrote", out, status)
