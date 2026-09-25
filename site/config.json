@@ -1,9 +1,27 @@
 {
-  "sheet_id": "1pu7jJDQ8a2e7PIjiv1Bqw7NVzeOKzJLlA_fMmmyBzTY",
-  "lots": {
-    "Lot 1": { "sheet_name": "Lot1_AsBuilt_Iso_Review_Register", "gid": "31577278" },
-    "Lot 2": { "sheet_name": "Lot2_AsBuilt_Iso_Review_Register", "gid": "1594060800" }
+ "sheet_id": "1pu7jJDQ8a2e7PIjiv1Bqw7NVzeOKzJLlA_fMmmyBzTY",
+ "lots": {
+  "Lot 1": {
+   "sheet_name": "Lot1_AsBuilt_Iso_Review_Register",
+   "gid": "31577278"
   },
-  "done_words": ["updated", "complete", "completed", "ignore", "ignored", "done", "closed", "incorporated"],
-  "hold_words": ["rdb", "hold"]
+  "Lot 2": {
+   "sheet_name": "Lot2_AsBuilt_Iso_Review_Register",
+   "gid": "1594060800"
+  }
+ },
+ "done_words": [
+  "updated",
+  "complete",
+  "completed",
+  "ignore",
+  "ignored",
+  "done",
+  "closed",
+  "incorporated"
+ ],
+ "hold_words": [
+  "rdb",
+  "hold"
+ ]
 }

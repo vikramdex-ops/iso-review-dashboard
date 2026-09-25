@@ -1,2 +1,76 @@
-{"updated":"2026-09-24T00:00:00+00:00","preliminary":true,"status":{"Lot 1":"preliminary","Lot 2":"pending"},
- "rows":[["Hemnath","Lot 1",19,1,17,32,0,32,29,0,29,1,0,0,80,1,79]]}
+{
+ "updated": "2026-09-25T08:34:41.754146+00:00",
+ "preliminary": false,
+ "status": {
+  "Lot 1": {
+   "raw_rows": 2029,
+   "named_rows": 477,
+   "counted": 459,
+   "excluded_no_severity": 18,
+   "excluded_blank_name": 1552,
+   "content_hash": "5dc11e40924f"
+  },
+  "Lot 2": {
+   "error": "fetched content is byte-identical to 'Lot 1' \u2014 gid/sheet_name for 'Lot 2' is almost certainly wrong and is pulling the same tab"
+  }
+ },
+ "rows": [
+  [
+   "Dharma",
+   "Lot 1",
+   21,
+   14,
+   1,
+   43,
+   38,
+   5,
+   56,
+   48,
+   8,
+   6,
+   0,
+   0,
+   120,
+   100,
+   20
+  ],
+  [
+   "Karthikeyan",
+   "Lot 1",
+   68,
+   35,
+   4,
+   79,
+   54,
+   12,
+   69,
+   53,
+   10,
+   29,
+   13,
+   6,
+   216,
+   142,
+   74
+  ],
+  [
+   "Kowshik",
+   "Lot 1",
+   38,
+   18,
+   1,
+   50,
+   47,
+   1,
+   35,
+   29,
+   3,
+   19,
+   2,
+   3,
+   123,
+   94,
+   29
+  ]
+ ]
+}
