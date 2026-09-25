@@ -7,6 +7,24 @@ cfg = json.loads((root / "config.json").read_text())
 DONE, HOLD = cfg["done_words"], cfg["hold_words"]
 SEV = ["High", "Medium", "Low"]
 
+def discover_sheets():
+    """List every tab's real title + gid via the legacy public worksheets feed.
+    Works for any sheet shared 'Anyone with the link: Viewer' without auth."""
+    url = f"https://spreadsheets.google.com/feeds/worksheets/{cfg['sheet_id']}/public/basic?alt=json"
+    try:
+        text = fetch_url(url)
+        data = json.loads(text)
+        out = []
+        for e in data.get("feed", {}).get("entry", []):
+            title = e.get("title", {}).get("$t", "")
+            src = e.get("id", {}).get("$t", "") or next(
+                (l["href"] for l in e.get("link", []) if l.get("rel", "").endswith("basic")), "")
+            gid = src.rstrip("/").split("/")[-1]
+            out.append({"title": title, "gid": gid})
+        return out
+    except Exception as e:
+        return {"discover_error": str(e)}
+
 def fetch_url(url):
     with urllib.request.urlopen(url, timeout=60) as r:
         text = r.read().decode("utf-8")
@@ -43,6 +61,14 @@ def summarise(lot, table):
     h = table[0]
     iM, iN = col(h, "severity", 12), col(h, "status", 13)
     iP, iQ = col(h, "assigned to", 15), col(h, "modeller response", 16)
+    sample = {"header_cols": len(h), "header": h[:20],
+              "iM": iM, "iN": iN, "iP": iP, "iQ": iQ,
+              "rows_at": {}}
+    for i in [1, 100, 300, 500, 800, 1200, 1700, 2000]:
+        if i < len(table):
+            r = table[i]
+            rr = r + [""] * (max(iM, iN, iP, iQ) + 1 - len(r))
+            sample["rows_at"][i + 1] = {"colA": r[0][:20], "severity": rr[iM], "assignedTo": rr[iP]}
     stats = {}
     raw_rows = len(table) - 1
     named_rows = 0       # column P non-blank, regardless of severity
@@ -72,13 +98,32 @@ def summarise(lot, table):
                      H[3], M[3], L[3], tot, cl, tot - cl])
     counted = sum(r[14] for r in rows)
     diag = {"raw_rows": raw_rows, "named_rows": named_rows, "counted": counted,
-            "excluded_no_severity": no_severity, "excluded_blank_name": raw_rows - named_rows}
+            "excluded_no_severity": no_severity, "excluded_blank_name": raw_rows - named_rows,
+            "debug": sample}
     return rows, diag
+
+import re
+sheet_list = discover_sheets()
+sheet_index_debug = sheet_list
+
+def norm(s):
+    return re.sub(r"[^a-z0-9]", "", s.lower())
+
+def resolve(lot, lot_cfg):
+    """Prefer a tab auto-discovered by fuzzy name match (robust to gid drift);
+    fall back to the configured sheet_name/gid if discovery found nothing usable."""
+    if isinstance(sheet_list, list):
+        key = norm(lot)  # e.g. "lot1"
+        for entry in sheet_list:
+            if norm(entry["title"]).startswith(key) or key in norm(entry["title"]):
+                return {"gid": entry["gid"], "sheet_name": entry["title"]}, f"auto-discovered tab '{entry['title']}'"
+    return lot_cfg, "used config fallback (auto-discovery found no match)"
 
 rows, status, hashes = [], {}, {}
 for lot, lot_cfg in cfg["lots"].items():
     try:
-        table, raw_text = fetch(lot_cfg)
+        resolved_cfg, how = resolve(lot, lot_cfg)
+        table, raw_text = fetch(resolved_cfg)
         h = hashlib.sha256(raw_text.encode()).hexdigest()[:12]
         dup = next((other for other, oh in hashes.items() if oh == h), None)
         if dup:
@@ -88,6 +133,8 @@ for lot, lot_cfg in cfg["lots"].items():
         lot_rows, diag = summarise(lot, table)
         rows += lot_rows
         diag["content_hash"] = h
+        diag["resolved_via"] = how
+        diag["resolved_tab"] = resolved_cfg
         status[lot] = diag
         print(f"[{lot}] raw_rows={diag['raw_rows']} named_rows={diag['named_rows']} "
               f"counted={diag['counted']} excluded_no_severity={diag['excluded_no_severity']} "
@@ -104,7 +151,8 @@ if len(ok_lots) < len(cfg["lots"]):
 
 out = root / "site" / "data" / "summary.json"
 out.write_text(json.dumps({"updated": datetime.datetime.now(datetime.timezone.utc).isoformat(),
-                           "preliminary": False, "status": status, "rows": rows}, indent=1))
+                           "preliminary": False, "status": status, "rows": rows,
+                           "sheet_index_debug": sheet_index_debug}, indent=1))
 (root / "site" / "config.json").write_text(json.dumps(cfg, indent=1))  # keep client-side refresh in sync
 print("wrote", out)
 print("TOTAL_ASSIGNED_ACROSS_LOTS", sum(r[14] for r in rows))
