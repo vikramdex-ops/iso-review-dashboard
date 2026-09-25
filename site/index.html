@@ -79,6 +79,8 @@ h3{font:400 clamp(2rem,4vw,3rem)/1.05 "Instrument Serif",serif;letter-spacing:-.
 .track span{transition:flex-grow 1.4s var(--ease);min-width:0}
 .lrow small{color:var(--dim);font-variant-numeric:tabular-nums;font-size:.85rem}
 .legend{display:flex;gap:1.4rem;margin-top:1.6rem;color:var(--dim);font-size:.85rem;flex-wrap:wrap}
+.diag{margin-top:.6rem;font-size:.78rem;color:var(--dim);display:flex;gap:1.2rem;flex-wrap:wrap}
+.diag b{color:var(--ink);font-weight:600}.diag .warn{color:var(--hi)}
 .legend s{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:.4rem;text-decoration:none}
 dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem 3rem;max-width:70ch;max-width:none}
 dt{font-weight:600;margin-bottom:.3rem}dd{color:var(--dim);max-width:46ch}
@@ -95,6 +97,7 @@ footer{padding:4rem 0 3rem;color:var(--dim);font-size:.85rem}
     <div class="brand">DDSP <span>/ As-Built ISO Review Register</span></div>
     <div class="sync" role="status"><i class="dot" id="dot"></i><span id="sync">Loading…</span></div>
   </header>
+  <div class="diag" id="diag"></div>
 
   <div class="hero">
     <h1><span class="l">Every comment,</span><span class="l"><em>accounted</em> for.</span></h1>
@@ -168,6 +171,16 @@ function chips(){
   $("#chips").innerHTML=lots.map(l=>`<button class="chip" aria-pressed="${l===lot}" data-l="${l}">${l}</button>`).join("");
 }
 $("#chips").onclick=e=>{const b=e.target.closest("button");if(!b)return;lot=b.dataset.l;chips();render()};
+function diag(){
+  const st=D.status||{};
+  const parts=Object.entries(st).map(([lot,s])=>{
+    if(s&&s.error) return `<span class="warn">${lot}: ${s.error}</span>`;
+    if(s&&typeof s==="object") return `${lot}: <b>${s.raw_rows}</b> rows read · <b>${s.counted}</b> counted`+
+      (s.excluded_no_severity?` · ${s.excluded_no_severity} skipped (no severity)`:"");
+    return `${lot}: ${s}`;
+  });
+  $("#diag").innerHTML=parts.join("");
+}
 function clock(){
   const u=new Date(D.updated),m=Math.max(0,Math.round((Date.now()-u)/6e4)),nx=new Date(u.getTime()+108e5);
   const ago=m<1?"just now":m<60?m+" min ago":Math.floor(m/60)+"h "+m%60+"m ago";
@@ -176,7 +189,7 @@ function clock(){
     :`Synced ${ago} · next auto-refresh ~${nx.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}`;
   $("#dot").classList.toggle("pre",!!D.preliminary);
 }
-function paint(){stats();chips();render();clock()}
+function paint(){stats();chips();render();clock();diag()}
 fetch("data/summary.json?"+Date.now()).then(r=>r.json()).then(d=>{D=d;paint();setInterval(clock,6e4)})
  .catch(()=>{$("#tbl tbody").innerHTML='<tr><td colspan="17" class="empty">Could not load data/summary.json. Serve this page over http(s).</td></tr>'});
 

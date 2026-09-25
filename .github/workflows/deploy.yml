@@ -14,7 +14,8 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: python scripts/build_summary.py
-        continue-on-error: true      # on failure the committed snapshot is served instead
+        # No continue-on-error: if the sync fails, the job stops here and the
+        # previously deployed site is left untouched instead of silently redeploying stale/placeholder data.
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with: { path: site }
