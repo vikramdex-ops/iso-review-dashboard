@@ -7,24 +7,6 @@ cfg = json.loads((root / "config.json").read_text())
 DONE, HOLD = cfg["done_words"], cfg["hold_words"]
 SEV = ["High", "Medium", "Low"]
 
-def discover_sheets():
-    """List every tab's real title + gid via the legacy public worksheets feed.
-    Works for any sheet shared 'Anyone with the link: Viewer' without auth."""
-    url = f"https://spreadsheets.google.com/feeds/worksheets/{cfg['sheet_id']}/public/basic?alt=json"
-    try:
-        text = fetch_url(url)
-        data = json.loads(text)
-        out = []
-        for e in data.get("feed", {}).get("entry", []):
-            title = e.get("title", {}).get("$t", "")
-            src = e.get("id", {}).get("$t", "") or next(
-                (l["href"] for l in e.get("link", []) if l.get("rel", "").endswith("basic")), "")
-            gid = src.rstrip("/").split("/")[-1]
-            out.append({"title": title, "gid": gid})
-        return out
-    except Exception as e:
-        return {"discover_error": str(e)}
-
 def fetch_url(url):
     with urllib.request.urlopen(url, timeout=60) as r:
         text = r.read().decode("utf-8")
@@ -32,26 +14,11 @@ def fetch_url(url):
         raise RuntimeError("got an HTML error page, not CSV (bad gid/sheet name or not shared)")
     return text
 
-def fetch(lot_cfg):
-    """lot_cfg is either a bare gid (legacy) or {"gid":.., "sheet_name":..}.
-    Tries sheet-name addressing first (robust to gid drift), falls back to gid."""
-    if isinstance(lot_cfg, str):
-        lot_cfg = {"gid": lot_cfg}
-    errs = []
-    if lot_cfg.get("sheet_name"):
-        try:
-            name = urllib.parse.quote(lot_cfg["sheet_name"])
-            text = fetch_url(f"https://docs.google.com/spreadsheets/d/{cfg['sheet_id']}/gviz/tq?tqx=out:csv&sheet={name}")
-            return list(csv.reader(io.StringIO(text))), text
-        except Exception as e:
-            errs.append(f"by name: {e}")
-    if lot_cfg.get("gid"):
-        try:
-            text = fetch_url(f"https://docs.google.com/spreadsheets/d/{cfg['sheet_id']}/export?format=csv&gid={lot_cfg['gid']}")
-            return list(csv.reader(io.StringIO(text))), text
-        except Exception as e:
-            errs.append(f"by gid: {e}")
-    raise RuntimeError("; ".join(errs) or "no gid or sheet_name configured")
+def fetch(gid):
+    """Export by numeric gid only. (gviz / sheet-name lookups silently fall back to the
+    FIRST tab when they can't match, which produced duplicated lots.)"""
+    text = fetch_url(f"https://docs.google.com/spreadsheets/d/{cfg['sheet_id']}/export?format=csv&gid={gid}")
+    return list(csv.reader(io.StringIO(text))), text
 
 def col(header, name, fallback):
     low = [h.strip().lower() for h in header]
@@ -60,7 +27,7 @@ def col(header, name, fallback):
 def summarise(lot, table):
     h = table[0]
     iM, iN = col(h, "severity", 12), col(h, "status", 13)
-    iP, iQ = col(h, "assigned to", 15), col(h, "modeller response", 16)
+    iP, iQ = col(h, "assigned to", 15), col(h, "modeller responce", col(h, "modeller response", 16))
     sample = {"header_cols": len(h), "header": h[:20],
               "iM": iM, "iN": iN, "iP": iP, "iQ": iQ,
               "rows_at": {}}
@@ -102,28 +69,10 @@ def summarise(lot, table):
             "debug": sample}
     return rows, diag
 
-import re
-sheet_list = discover_sheets()
-sheet_index_debug = sheet_list
-
-def norm(s):
-    return re.sub(r"[^a-z0-9]", "", s.lower())
-
-def resolve(lot, lot_cfg):
-    """Prefer a tab auto-discovered by fuzzy name match (robust to gid drift);
-    fall back to the configured sheet_name/gid if discovery found nothing usable."""
-    if isinstance(sheet_list, list):
-        key = norm(lot)  # e.g. "lot1"
-        for entry in sheet_list:
-            if norm(entry["title"]).startswith(key) or key in norm(entry["title"]):
-                return {"gid": entry["gid"], "sheet_name": entry["title"]}, f"auto-discovered tab '{entry['title']}'"
-    return lot_cfg, "used config fallback (auto-discovery found no match)"
-
 rows, status, hashes = [], {}, {}
 for lot, lot_cfg in cfg["lots"].items():
     try:
-        resolved_cfg, how = resolve(lot, lot_cfg)
-        table, raw_text = fetch(resolved_cfg)
+        table, raw_text = fetch(lot_cfg)
         h = hashlib.sha256(raw_text.encode()).hexdigest()[:12]
         dup = next((other for other, oh in hashes.items() if oh == h), None)
         if dup:
@@ -133,8 +82,7 @@ for lot, lot_cfg in cfg["lots"].items():
         lot_rows, diag = summarise(lot, table)
         rows += lot_rows
         diag["content_hash"] = h
-        diag["resolved_via"] = how
-        diag["resolved_tab"] = resolved_cfg
+        diag["gid"] = lot_cfg
         status[lot] = diag
         print(f"[{lot}] raw_rows={diag['raw_rows']} named_rows={diag['named_rows']} "
               f"counted={diag['counted']} excluded_no_severity={diag['excluded_no_severity']} "
@@ -151,8 +99,7 @@ if len(ok_lots) < len(cfg["lots"]):
 
 out = root / "site" / "data" / "summary.json"
 out.write_text(json.dumps({"updated": datetime.datetime.now(datetime.timezone.utc).isoformat(),
-                           "preliminary": False, "status": status, "rows": rows,
-                           "sheet_index_debug": sheet_index_debug}, indent=1))
+                           "preliminary": False, "status": status, "rows": rows}, indent=1))
 (root / "site" / "config.json").write_text(json.dumps(cfg, indent=1))  # keep client-side refresh in sync
 print("wrote", out)
 print("TOTAL_ASSIGNED_ACROSS_LOTS", sum(r[14] for r in rows))

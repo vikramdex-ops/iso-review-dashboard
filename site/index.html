@@ -185,7 +185,6 @@ function clock(){
   const u=new Date(D.updated),m=Math.max(0,Math.round((Date.now()-u)/6e4)),nx=new Date(u.getTime()+108e5);
   const ago=m<1?"just now":m<60?m+" min ago":Math.floor(m/60)+"h "+m%60+"m ago";
   $("#sync").textContent=D.preliminary?"Preliminary snapshot · awaiting first live sync"
-    :D.live?`Live · fetched ${ago} directly from the sheet`
     :`Synced ${ago} · next auto-refresh ~${nx.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}`;
   $("#dot").classList.toggle("pre",!!D.preliminary);
 }
@@ -193,94 +192,13 @@ function paint(){stats();chips();render();clock();diag()}
 fetch("data/summary.json?"+Date.now()).then(r=>r.json()).then(d=>{D=d;paint();setInterval(clock,6e4)})
  .catch(()=>{$("#tbl tbody").innerHTML='<tr><td colspan="17" class="empty">Could not load data/summary.json. Serve this page over http(s).</td></tr>'});
 
-/* ---- Manual live refresh: pulls Google Sheets directly in the browser, no rebuild needed ---- */
-const DONE=["updated","complete","completed","ignore","ignored","done","closed","incorporated"],HOLD=["rdb","hold"];
-function parseCSV(text){
-  const rows=[];let row=[],field="",q=false;
-  for(let i=0;i<text.length;i++){const c=text[i];
-    if(q){ if(c=='"'){ if(text[i+1]=='"'){field+='"';i++} else q=false } else field+=c }
-    else if(c=='"') q=true;
-    else if(c==','){row.push(field);field=""}
-    else if(c=='\n'){row.push(field);rows.push(row);row=[];field=""}
-    else if(c!=='\r') field+=c;
-  }
-  if(field||row.length){row.push(field);rows.push(row)}
-  return rows.filter(r=>r.length>1||r[0]!=="");
-}
-const norm=s=>(s||"").toLowerCase().replace(/[^a-z0-9]/g,"");
-async function discover(id){
-  try{
-    const r=await fetch(`https://spreadsheets.google.com/feeds/worksheets/${id}/public/basic?alt=json`,{cache:"no-store"});
-    if(!r.ok)return null;
-    const j=await r.json();
-    return (j.feed.entry||[]).map(e=>({title:e.title.$t,gid:String(e.id.$t).split("/").pop()}));
-  }catch(e){return null}
-}
-async function getText(u){
-  const r=await fetch(u,{cache:"no-store"});
-  if(!r.ok)throw new Error("HTTP "+r.status);
-  const t=await r.text();
-  if(/^\s*<!doctype html/i.test(t)||/^\s*<html/i.test(t))throw new Error("got an HTML page instead of CSV");
-  return t;
-}
-async function fetchLot(id,lotName,lotCfg,tabs){
-  if(typeof lotCfg==="string")lotCfg={gid:lotCfg};
-  let name=lotCfg.sheet_name,gid=lotCfg.gid;
-  if(tabs){const m=tabs.find(t=>norm(t.title).includes(norm(lotName)));if(m){name=m.title;gid=m.gid}}
-  const urls=[];
-  if(name)urls.push(`https://docs.google.com/spreadsheets/d/${id}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(name)}`);
-  if(gid)urls.push(`https://docs.google.com/spreadsheets/d/${id}/export?format=csv&gid=${gid}`);
-  let last;
-  for(const u of urls){try{return await getText(u)}catch(e){last=e}}
-  throw new Error((last&&last.message)||"could not reach the sheet from the browser");
-}
-function summarise(lot,table){
-  const h=table[0].map(s=>(s||"").trim().toLowerCase());
-  const idx=(name,fb)=>{const i=h.indexOf(name);return i<0?fb:i};
-  const iM=idx("severity",12),iN=idx("status",13),iP=idx("assigned to",15),iQ=idx("modeller response",16);
-  const SEV=["High","Medium","Low"],stats={};
-  for(const raw of table.slice(1)){
-    const r=raw.slice();while(r.length<=Math.max(iM,iN,iP,iQ))r.push("");
-    const names=(r[iP]||"").split("/").map(s=>s.trim()).filter(Boolean);
-    const sev=(r[iM]||"").trim(); const Sev=sev.charAt(0).toUpperCase()+sev.slice(1).toLowerCase();
-    if(!names.length||!SEV.includes(Sev))continue;
-    const who=names[names.length-1].trim().split(/\s+/).map(w=>w.charAt(0).toUpperCase()+w.slice(1).toLowerCase()).join(" ");
-    const status=(r[iN]||"").trim().toLowerCase(),resp=(r[iQ]||"").trim().toLowerCase();
-    stats[who]=stats[who]||{High:[0,0,0,0],Medium:[0,0,0,0],Low:[0,0,0,0]};
-    const b=stats[who][Sev];b[0]++;
-    if(status==="closed"||DONE.some(w=>resp.includes(w)))b[1]++;
-    else if(HOLD.some(w=>resp.includes(w)))b[3]++;
-    else b[2]++;
-  }
-  return Object.keys(stats).sort().map(who=>{
-    const s=stats[who],H=s.High,M=s.Medium,L=s.Low,tot=H[0]+M[0]+L[0],cl=H[1]+M[1]+L[1];
-    return [who,lot,H[0],H[1],H[2],M[0],M[1],M[2],L[0],L[1],L[2],H[3],M[3],L[3],tot,cl,tot-cl];
-  });
-}
+/* Refresh now: re-reads the latest published sync. The browser cannot read Google's CSV reliably
+   (CORS + silent tab fallback caused duplicated lots), so numbers only ever come from the verified server sync. */
 $("#refresh").onclick=async()=>{
-  const btn=$("#refresh");btn.disabled=true;btn.classList.add("spin");btn.lastChild.textContent=" Fetching…";
-  try{
-    const cfg=await fetch("config.json?"+Date.now()).then(r=>r.json());
-    const tabs=await discover(cfg.sheet_id);
-    let rows=[],status={},seen={};
-    for(const [lotName,lotCfg] of Object.entries(cfg.lots)){
-      try{
-        const text=await fetchLot(cfg.sheet_id,lotName,lotCfg,tabs);
-        const dup=Object.keys(seen).find(k=>seen[k]===text);
-        if(dup)throw new Error(`data is identical to ${dup} - this lot is pointing at the wrong tab, so it was left out instead of double counting`);
-        seen[lotName]=text;
-        const table=parseCSV(text);
-        const lotRows=summarise(lotName,table);
-        rows=rows.concat(lotRows);
-        status[lotName]={raw_rows:table.length-1,counted:lotRows.reduce((a,r)=>a+r[14],0)};
-      }catch(e){status[lotName]={error:e.message}}
-    }
-    if(!rows.length)throw new Error(Object.values(status).map(s=>s.error).filter(Boolean)[0]||"no data");
-    D={updated:new Date().toISOString(),preliminary:false,live:true,status,rows};
-    paint();
-  }catch(e){
-    alert("Live refresh failed: "+e.message+"\n\nThe scheduled 3-hourly sync keeps the site updated automatically.");
-  }finally{btn.disabled=false;btn.classList.remove("spin");btn.lastChild.textContent=" Refresh now"}
+  const btn=$("#refresh");btn.disabled=true;btn.classList.add("spin");btn.lastChild.textContent=" Checking…";
+  try{D=await fetch("data/summary.json?"+Date.now(),{cache:"no-store"}).then(r=>r.json());paint()}
+  catch(e){alert("Could not load the latest data: "+e.message)}
+  finally{btn.disabled=false;btn.classList.remove("spin");btn.lastChild.textContent=" Refresh now"}
 };
 
 /* projector beam + dust */
