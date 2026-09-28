@@ -179,6 +179,12 @@ function diag(){
       (s.excluded_no_severity?` · ${s.excluded_no_severity} skipped (no severity)`:"");
     return `${lot}: ${s}`;
   });
+  const ok=Object.values(st).filter(s=>s&&!s.error&&s.named_rows!=null);
+  if(ok.length){
+    const named=ok.reduce((a,s)=>a+s.named_rows,0),cnt=ok.reduce((a,s)=>a+s.counted,0),skip=named-cnt;
+    parts.unshift(`<span>Sheet check: <b>${named.toLocaleString()}</b> rows have an assignee = <b>${cnt.toLocaleString()}</b> in the table`+
+      (skip?` + <b>${skip}</b> with no severity (not categorised)`:" · all reconciled")+`</span>`);
+  }
   $("#diag").innerHTML=parts.join("");
 }
 function clock(){
