@@ -207,13 +207,32 @@ function parseCSV(text){
   if(field||row.length){row.push(field);rows.push(row)}
   return rows.filter(r=>r.length>1||r[0]!=="");
 }
-async function fetchCSV(id,gid){
-  const urls=[`https://docs.google.com/spreadsheets/d/${id}/gviz/tq?tqx=out:csv&gid=${gid}`,
-              `https://docs.google.com/spreadsheets/d/${id}/export?format=csv&gid=${gid}`];
-  for(const u of urls){
-    try{const r=await fetch(u,{cache:"no-store"});if(r.ok){const t=await r.text();if(!/^\s*<!doctype html/i.test(t))return parseCSV(t)}}catch(e){}
-  }
-  throw new Error("The sheet could not be reached directly from the browser (likely blocked by CORS or sharing settings).");
+const norm=s=>(s||"").toLowerCase().replace(/[^a-z0-9]/g,"");
+async function discover(id){
+  try{
+    const r=await fetch(`https://spreadsheets.google.com/feeds/worksheets/${id}/public/basic?alt=json`,{cache:"no-store"});
+    if(!r.ok)return null;
+    const j=await r.json();
+    return (j.feed.entry||[]).map(e=>({title:e.title.$t,gid:String(e.id.$t).split("/").pop()}));
+  }catch(e){return null}
+}
+async function getText(u){
+  const r=await fetch(u,{cache:"no-store"});
+  if(!r.ok)throw new Error("HTTP "+r.status);
+  const t=await r.text();
+  if(/^\s*<!doctype html/i.test(t)||/^\s*<html/i.test(t))throw new Error("got an HTML page instead of CSV");
+  return t;
+}
+async function fetchLot(id,lotName,lotCfg,tabs){
+  if(typeof lotCfg==="string")lotCfg={gid:lotCfg};
+  let name=lotCfg.sheet_name,gid=lotCfg.gid;
+  if(tabs){const m=tabs.find(t=>norm(t.title).includes(norm(lotName)));if(m){name=m.title;gid=m.gid}}
+  const urls=[];
+  if(name)urls.push(`https://docs.google.com/spreadsheets/d/${id}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(name)}`);
+  if(gid)urls.push(`https://docs.google.com/spreadsheets/d/${id}/export?format=csv&gid=${gid}`);
+  let last;
+  for(const u of urls){try{return await getText(u)}catch(e){last=e}}
+  throw new Error((last&&last.message)||"could not reach the sheet from the browser");
 }
 function summarise(lot,table){
   const h=table[0].map(s=>(s||"").trim().toLowerCase());
@@ -242,16 +261,25 @@ $("#refresh").onclick=async()=>{
   const btn=$("#refresh");btn.disabled=true;btn.classList.add("spin");btn.lastChild.textContent=" Fetching…";
   try{
     const cfg=await fetch("config.json?"+Date.now()).then(r=>r.json());
-    let rows=[],status={};
-    for(const [lotName,gid] of Object.entries(cfg.lots)){
-      try{rows=rows.concat(summarise(lotName,await fetchCSV(cfg.sheet_id,gid)));status[lotName]="ok (live)"}
-      catch(e){status[lotName]="error: "+e.message}
+    const tabs=await discover(cfg.sheet_id);
+    let rows=[],status={},seen={};
+    for(const [lotName,lotCfg] of Object.entries(cfg.lots)){
+      try{
+        const text=await fetchLot(cfg.sheet_id,lotName,lotCfg,tabs);
+        const dup=Object.keys(seen).find(k=>seen[k]===text);
+        if(dup)throw new Error(`data is identical to ${dup} - this lot is pointing at the wrong tab, so it was left out instead of double counting`);
+        seen[lotName]=text;
+        const table=parseCSV(text);
+        const lotRows=summarise(lotName,table);
+        rows=rows.concat(lotRows);
+        status[lotName]={raw_rows:table.length-1,counted:lotRows.reduce((a,r)=>a+r[14],0)};
+      }catch(e){status[lotName]={error:e.message}}
     }
-    if(!rows.length) throw new Error(Object.values(status)[0]||"no data");
+    if(!rows.length)throw new Error(Object.values(status).map(s=>s.error).filter(Boolean)[0]||"no data");
     D={updated:new Date().toISOString(),preliminary:false,live:true,status,rows};
     paint();
   }catch(e){
-    alert("Live refresh failed: "+e.message+"\n\nThe scheduled 3-hourly sync will still keep the site updated automatically.");
+    alert("Live refresh failed: "+e.message+"\n\nThe scheduled 3-hourly sync keeps the site updated automatically.");
   }finally{btn.disabled=false;btn.classList.remove("spin");btn.lastChild.textContent=" Refresh now"}
 };
 
