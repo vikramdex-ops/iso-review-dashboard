@@ -1,15 +1,15 @@
 {
- "updated": "2026-09-28T06:40:05.171801+00:00",
+ "updated": "2026-09-28T06:41:34.348508+00:00",
  "preliminary": false,
  "status": {
   "Lot 1": {
-   "raw_rows": 2029,
-   "named_rows": 477,
-   "counted": 459,
-   "excluded_no_severity": 18,
-   "excluded_blank_name": 1552,
+   "raw_rows": 2075,
+   "named_rows": 1741,
+   "counted": 1722,
+   "excluded_no_severity": 19,
+   "excluded_blank_name": 334,
    "debug": {
-    "header_cols": 27,
+    "header_cols": 23,
     "header": [
      "Comment No.",
      "Document No.",
@@ -26,7 +26,7 @@
      "Severity",
      "Status",
      "Action by",
-     "assigned to",
+     " Assigned to",
      "Modeller Responce",
      "Incorporated? (Yes / No / Partial / N-A)",
      "Incorporated in Rev / date",
@@ -48,108 +48,205 @@
       "assignedTo": "karthikeyan"
      },
      "301": {
-      "colA": "1668-01-04",
-      "severity": "Low",
-      "assignedTo": ""
+      "colA": "1667-01-03",
+      "severity": "Medium",
+      "assignedTo": "DHARMA"
      },
      "501": {
-      "colA": "1719-01-02",
+      "colA": "1718-01-03",
       "severity": "High",
-      "assignedTo": "karthikeyan"
+      "assignedTo": "DHARMA"
      },
      "801": {
-      "colA": "1822-01-01",
-      "severity": "High",
+      "colA": "1818-01-05",
+      "severity": "OK",
       "assignedTo": ""
      },
      "1201": {
-      "colA": "1927-01-05",
+      "colA": "1919-01-04",
       "severity": "OK",
       "assignedTo": ""
      },
      "1701": {
-      "colA": "",
-      "severity": "Low",
-      "assignedTo": ""
+      "colA": "1601-31-01",
+      "severity": "Medium",
+      "assignedTo": "Kowshik"
      },
      "2001": {
-      "colA": "",
-      "severity": "High",
+      "colA": "39-1695-01-03",
+      "severity": "Medium",
       "assignedTo": ""
      }
     }
    },
-   "content_hash": "5dc11e40924f",
-   "resolved_via": "used config fallback (auto-discovery found no match)",
-   "resolved_tab": {
-    "sheet_name": "Lot1_AsBuilt_Iso_Review_Register",
-    "gid": "31577278"
-   }
+   "content_hash": "ccf83b06efac",
+   "gid": "31577278"
   },
   "Lot 2": {
-   "error": "fetched content is byte-identical to 'Lot 1' \u2014 gid/sheet_name for 'Lot 2' is almost certainly wrong and is pulling the same tab"
+   "raw_rows": 241,
+   "named_rows": 214,
+   "counted": 214,
+   "excluded_no_severity": 0,
+   "excluded_blank_name": 27,
+   "debug": {
+    "header_cols": 27,
+    "header": [
+     "Comment No.",
+     "Document No.",
+     "Line number",
+     "Sheet",
+     "Marked PDF",
+     "Extracted iso file",
+     "RLM file",
+     "Location on drawing",
+     "Category",
+     "RLM shows",
+     "Extracted iso shows",
+     "Comment / Action required",
+     "Severity",
+     "Status",
+     "Action by",
+     "Assigned To",
+     "Modeller response",
+     "Incorporated? (Yes / No / Partial / N-A)",
+     "Incorporated in Rev / date",
+     "Checked by (DDSP)"
+    ],
+    "iM": 12,
+    "iN": 13,
+    "iP": 15,
+    "iQ": 16,
+    "rows_at": {
+     "2": {
+      "colA": "Comment No.",
+      "severity": "High",
+      "assignedTo": "Hemnath"
+     },
+     "101": {
+      "colA": "1768-01-08",
+      "severity": "Low",
+      "assignedTo": "Hemnath"
+     }
+    }
+   },
+   "content_hash": "bc1e3ea4946f",
+   "gid": "1594060800"
   }
  },
  "rows": [
   [
+   "Akash",
+   "Lot 1",
+   16,
+   11,
+   0,
+   13,
+   13,
+   0,
+   9,
+   9,
+   0,
+   5,
+   0,
+   0,
+   38,
+   33,
+   5
+  ],
+  [
    "Dharma",
    "Lot 1",
-   21,
-   14,
-   1,
-   43,
-   38,
-   5,
-   56,
-   48,
-   8,
-   6,
+   160,
+   104,
+   39,
+   165,
+   39,
+   126,
+   192,
+   51,
+   141,
+   17,
    0,
    0,
-   120,
-   100,
-   20
+   517,
+   194,
+   323
   ],
   [
    "Karthikeyan",
    "Lot 1",
-   68,
-   35,
-   4,
-   79,
-   54,
-   12,
-   69,
-   53,
-   10,
-   29,
-   13,
-   6,
-   216,
-   142,
-   74
+   204,
+   170,
+   1,
+   208,
+   67,
+   141,
+   224,
+   59,
+   165,
+   33,
+   0,
+   0,
+   636,
+   296,
+   340
   ],
   [
    "Kowshik",
    "Lot 1",
-   38,
-   18,
-   1,
-   50,
-   47,
-   1,
-   35,
-   29,
-   3,
-   19,
-   2,
-   3,
+   141,
+   85,
+   22,
+   154,
+   48,
+   104,
+   158,
+   33,
    123,
-   94,
-   29
+   34,
+   2,
+   2,
+   453,
+   166,
+   287
+  ],
+  [
+   "Murukeshwari",
+   "Lot 1",
+   29,
+   22,
+   6,
+   27,
+   25,
+   1,
+   22,
+   22,
+   0,
+   1,
+   1,
+   0,
+   78,
+   69,
+   9
+  ],
+  [
+   "Hemnath",
+   "Lot 2",
+   70,
+   2,
+   65,
+   81,
+   9,
+   68,
+   63,
+   9,
+   51,
+   3,
+   4,
+   3,
+   214,
+   20,
+   194
   ]
- ],
- "sheet_index_debug": {
-  "discover_error": "HTTP Error 404: Not Found"
- }
+ ]
 }
