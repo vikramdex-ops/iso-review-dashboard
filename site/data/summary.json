@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-01T03:39:51.164507+00:00",
+ "updated": "2026-10-01T12:15:39.824889+00:00",
  "preliminary": false,
  "status": {
   "Lot 1": {
@@ -9,7 +9,7 @@
    "excluded_no_severity": 20,
    "excluded_blank_name": 332,
    "debug": {
-    "header_cols": 23,
+    "header_cols": 24,
     "header": [
      "Comment No.",
      "Document No.",
@@ -28,9 +28,9 @@
      "Action by",
      " Assigned to",
      "Modeller Responce",
+     "MANUAL EDIT FOR RDB",
      "Incorporated? (Yes / No / Partial / N-A)",
-     "Incorporated in Rev / date",
-     "Checked by (DDSP)"
+     "Incorporated in Rev / date"
     ],
     "iM": 12,
     "iN": 13,
@@ -79,7 +79,7 @@
      }
     }
    },
-   "content_hash": "27863163085b",
+   "content_hash": "3ff87970590b",
    "gid": "31577278"
   },
   "Lot 2": {
@@ -129,7 +129,7 @@
      }
     }
    },
-   "content_hash": "74715befe745",
+   "content_hash": "17414a46d220",
    "gid": "1594060800"
   }
  },
@@ -157,58 +157,58 @@
    "Dharma",
    "Lot 1",
    163,
-   146,
+   145,
    0,
    165,
-   76,
-   89,
+   93,
+   71,
    192,
-   84,
-   108,
-   17,
-   0,
+   95,
+   97,
+   18,
+   1,
    0,
    520,
-   306,
-   214
+   333,
+   187
   ],
   [
    "Karthikeyan",
    "Lot 1",
    202,
-   167,
-   1,
-   208,
-   106,
-   102,
-   224,
-   107,
-   117,
-   34,
+   168,
    0,
+   208,
+   157,
+   50,
+   224,
+   168,
+   56,
+   34,
+   1,
    0,
    634,
-   380,
-   254
+   493,
+   141
   ],
   [
    "Kowshik",
    "Lot 1",
    135,
-   94,
+   95,
    0,
    126,
-   90,
-   33,
+   95,
+   28,
    124,
-   88,
-   32,
-   41,
+   92,
+   28,
+   40,
    3,
    4,
    385,
-   272,
-   113
+   282,
+   103
   ],
   [
    "Murukeshwari",
@@ -234,14 +234,14 @@
    "Lot 2",
    70,
    13,
-   54,
+   53,
    81,
    29,
    52,
    63,
    27,
    35,
-   3,
+   4,
    0,
    1,
    214,
