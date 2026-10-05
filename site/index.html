@@ -68,6 +68,7 @@ th i{display:block;height:3px;border-radius:2px;margin-bottom:.5rem;background:v
 tbody tr{animation:fade .9s var(--ease) both;animation-delay:calc(.9s + var(--i)*70ms)}
 tbody tr:hover td{background:oklch(0.25 0.02 70)}
 td.z{color:oklch(0.5 0.015 70)}td.t{font-weight:700;color:var(--amber)}
+td.today{font-weight:700;color:var(--ok)}
 tfoot td{font-weight:700;border-bottom:0;background:oklch(0.22 0.02 70)}
 .empty{padding:3rem 1.2rem;color:var(--dim);text-align:center}
 section{padding:clamp(3rem,9vh,6rem) 0 0}
@@ -141,10 +142,10 @@ footer{padding:4rem 0 3rem;color:var(--dim);font-size:.85rem}
 </div>
 
 <script>
-const H=["Assigned To","Lot Category","Assigned - High","Closed - High","Open - High","Assigned - Medium","Closed - Medium","Open - Medium","Assigned - Low","Closed - Low","Open - Low","Hold - High","Hold - Medium","Hold - Low","Overall Total Assigned","Overall Closed in Assigned","Overall Open in Assigned"];
+const H=["Assigned To","Lot Category","Assigned - High","Closed - High","Open - High","Assigned - Medium","Closed - Medium","Open - Medium","Assigned - Low","Closed - Low","Open - Low","Hold - High","Hold - Medium","Hold - Low","Overall Total Assigned","Overall Closed in Assigned","Overall Open in Assigned","Completed Today"];
 const SEV=[["High",2,3,4,11,"--hi"],["Medium",5,6,7,12,"--md"],["Low",8,9,10,13,"--lo"]];
 const $=s=>document.querySelector(s); let D,lot="All";
-const col=i=>i<2?"":/High/.test(H[i])?"--hi":/Medium/.test(H[i])?"--md":/Low/.test(H[i])?"--lo":"--amber";
+const col=i=>i<2?"":/High/.test(H[i])?"--hi":/Medium/.test(H[i])?"--md":/Low/.test(H[i])?"--lo":/Today/.test(H[i])?"--ok":"--amber";
 $("#tbl thead").innerHTML="<tr>"+H.map((h,i)=>`<th scope="col"><i style="--c:var(${col(i)||"--line"})"></i>${h}</th>`).join("")+"</tr>";
 
 function stats(){
@@ -157,9 +158,9 @@ function stats(){
 function render(){
   const rows=D.rows.filter(r=>lot==="All"||r[1]===lot);
   const body=$("#tbl tbody"),foot=$("#tbl tfoot");
-  if(!rows.length){body.innerHTML=`<tr><td colspan="17" class="empty">No synced data for ${lot} yet. It appears here after the next refresh.</td></tr>`;foot.innerHTML="";}
+  if(!rows.length){body.innerHTML=`<tr><td colspan="18" class="empty">No synced data for ${lot} yet. It appears here after the next refresh.</td></tr>`;foot.innerHTML="";}
   else{
-    body.innerHTML=rows.map((r,n)=>`<tr style="--i:${n}">`+r.map((v,i)=>i<2?`<td>${v}</td>`:`<td class="${i>13?"t":v===0?"z":""}">${v}</td>`).join("")+"</tr>").join("");
+    body.innerHTML=rows.map((r,n)=>`<tr style="--i:${n}">`+r.map((v,i)=>i<2?`<td>${v}</td>`:i===17?`<td class="${v>0?"today":"z"}">${v>0?"+"+v:v}</td>`:`<td class="${i>13?"t":v===0?"z":""}">${v}</td>`).join("")+"</tr>").join("");
     foot.innerHTML=rows.length>1?"<tr><td>Total</td><td></td>"+H.slice(2).map((_,k)=>`<td>${rows.reduce((a,r)=>a+r[k+2],0)}</td>`).join("")+"</tr>":"";
   }
   const sum=k=>rows.reduce((a,r)=>a+r[k],0);
@@ -190,13 +191,14 @@ function diag(){
 function clock(){
   const u=new Date(D.updated),m=Math.max(0,Math.round((Date.now()-u)/6e4)),nx=new Date(u.getTime()+108e5);
   const ago=m<1?"just now":m<60?m+" min ago":Math.floor(m/60)+"h "+m%60+"m ago";
+  const day=D.today?new Date(D.today+"T00:00:00+05:30").toLocaleDateString(undefined,{day:"numeric",month:"short"}):"";
   $("#sync").textContent=D.preliminary?"Preliminary snapshot · awaiting first live sync"
-    :`Synced ${ago} · next auto-refresh ~${nx.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}`;
+    :`Synced ${ago} · next auto-refresh ~${nx.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}`+(day?` · "Completed Today" = closed on ${day} IST`:"");
   $("#dot").classList.toggle("pre",!!D.preliminary);
 }
 function paint(){stats();chips();render();clock();diag()}
 fetch("data/summary.json?"+Date.now()).then(r=>r.json()).then(d=>{D=d;paint();setInterval(clock,6e4)})
- .catch(()=>{$("#tbl tbody").innerHTML='<tr><td colspan="17" class="empty">Could not load data/summary.json. Serve this page over http(s).</td></tr>'});
+ .catch(()=>{$("#tbl tbody").innerHTML='<tr><td colspan="18" class="empty">Could not load data/summary.json. Serve this page over http(s).</td></tr>'});
 
 /* Refresh now: re-reads the latest published sync. The browser cannot read Google's CSV reliably
    (CORS + silent tab fallback caused duplicated lots), so numbers only ever come from the verified server sync. */

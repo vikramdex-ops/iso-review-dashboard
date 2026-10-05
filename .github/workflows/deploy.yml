@@ -20,7 +20,7 @@ jobs:
         run: |
           git config user.name "iso-sync-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add site/data/summary.json site/config.json
+          git add site/data/summary.json site/data/closed_log.json site/config.json
           git diff --cached --quiet || git commit -m "Auto-sync $(date -u +%Y-%m-%dT%H:%M:%SZ)"
           git push
       - uses: actions/configure-pages@v5
