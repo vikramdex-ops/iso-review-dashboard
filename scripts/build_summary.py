@@ -111,6 +111,8 @@ if len(ok_lots) < len(cfg["lots"]):
     print(f"WARNING: only {ok_lots} succeeded; some lots are missing from this build.", file=sys.stderr)
     print("Skipping the closed-today log this run so a partial fetch can't wrongly mark rows "
           "from the missing lot(s) as reopened.", file=sys.stderr)
+    for row in rows:
+        row.append(0)  # col 18: completed yesterday (unknown this run, keep row shape consistent)
 else:
     # --- "Completed Today" tracking ---
     # The sheet has no close-date column, so we keep our own log: the first day each row is
@@ -131,17 +133,35 @@ else:
     CLOSED_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
     CLOSED_LOG_PATH.write_text(json.dumps(new_log, indent=1))
 
-    completed_today = {}  # (lot, who) -> count
+    YESTERDAY_IST = (datetime.date.fromisoformat(TODAY_IST) - datetime.timedelta(days=1)).isoformat()
+    completed_today, completed_yesterday = {}, {}
     for r in all_row_states:
-        if new_log.get(r["key"]) == TODAY_IST:
+        d = new_log.get(r["key"])
+        if d == TODAY_IST:
             completed_today[(r["lot"], r["who"])] = completed_today.get((r["lot"], r["who"]), 0) + 1
+        elif d == YESTERDAY_IST:
+            completed_yesterday[(r["lot"], r["who"])] = completed_yesterday.get((r["lot"], r["who"]), 0) + 1
     for row in rows:
         row[17] = completed_today.get((row[1], row[0]), 0)
+        row.append(completed_yesterday.get((row[1], row[0]), 0))  # col 18: completed yesterday, for context after the midnight reset
     print(f"Completed today ({TODAY_IST}):", {f"{k[1]} ({k[0]})": v for k, v in completed_today.items()} or "none")
+    print(f"Completed yesterday ({YESTERDAY_IST}):", {f"{k[1]} ({k[0]})": v for k, v in completed_yesterday.items()} or "none")
+
+# --- Combined view: same rows, aggregated per assignee across every lot (Lot 1-4, ignoring
+# lot segregation) so the reviewer can also see one line per person for the whole register. ---
+COMBINED_LABEL = "All Lots (combined)"
+combined_map = {}
+for r in rows:
+    who, vals = r[0], r[2:]
+    if who not in combined_map:
+        combined_map[who] = [0] * len(vals)
+    combined_map[who] = [a + b for a, b in zip(combined_map[who], vals)]
+combined_rows = [[who, COMBINED_LABEL] + vals for who, vals in sorted(combined_map.items())]
 
 out = root / "site" / "data" / "summary.json"
 out.write_text(json.dumps({"updated": datetime.datetime.now(datetime.timezone.utc).isoformat(),
-                           "preliminary": False, "today": TODAY_IST, "status": status, "rows": rows}, indent=1))
+                           "preliminary": False, "today": TODAY_IST, "status": status, "rows": rows,
+                           "combined": combined_rows}, indent=1))
 (root / "site" / "config.json").write_text(json.dumps(cfg, indent=1))  # keep client-side refresh in sync
 print("wrote", out)
 print("TOTAL_ASSIGNED_ACROSS_LOTS", sum(r[14] for r in rows))

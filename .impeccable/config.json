@@ -1,0 +1,23 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "instrument serif",
+        "createdAt": "2026-10-05T12:08:48.507Z",
+        "reason": "Cinematic editorial display font chosen deliberately for this dashboard per the user's explicit 'cinematic landing page' design brief earlier in this session; not a templated default."
+      },
+      {
+        "rule": "buried-raster",
+        "value": "*",
+        "files": [
+          "site/index.html"
+        ],
+        "createdAt": "2026-10-05T12:08:48.515Z",
+        "reason": "The 'raster' is a 160x160 inline data-URI SVG feTurbulence noise texture for film-grain atmosphere at 7% opacity, not a buried photo/content image; it is deliberately subtle, not hidden."
+      }
+    ]
+  }
+}

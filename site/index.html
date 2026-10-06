@@ -29,8 +29,9 @@ body{color:var(--ink);font:400 1rem/1.55 "Hanken Grotesk",system-ui,sans-serif;-
 header{display:flex;justify-content:space-between;align-items:center;padding:1.4rem 0;gap:1rem;flex-wrap:wrap}
 .brand{font-weight:600;letter-spacing:.02em;font-size:.95rem}.brand span{color:var(--dim);font-weight:400}
 .sync{display:flex;align-items:center;gap:.6rem;font-size:.85rem;color:var(--dim);font-variant-numeric:tabular-nums}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 var(--ok);animation:pulse 2.4s var(--ease) infinite}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 var(--ok)}
 .dot.pre{background:var(--amber)}
+.dot.just-synced{animation:pulse 1.8s var(--ease) 2}
 @keyframes pulse{0%{box-shadow:0 0 0 0 oklch(0.78 0.13 150/.6)}70%,100%{box-shadow:0 0 0 10px transparent}}
 .hero{padding:clamp(2rem,7vh,5rem) 0 clamp(1.5rem,4vh,3rem)}
 h1{font:400 clamp(2.8rem,9vw,6rem)/.95 "Instrument Serif",Georgia,serif;letter-spacing:-.03em;text-wrap:balance;max-width:14ch}
@@ -142,10 +143,11 @@ footer{padding:4rem 0 3rem;color:var(--dim);font-size:.85rem}
 </div>
 
 <script>
-const H=["Assigned To","Lot Category","Assigned - High","Closed - High","Open - High","Assigned - Medium","Closed - Medium","Open - Medium","Assigned - Low","Closed - Low","Open - Low","Hold - High","Hold - Medium","Hold - Low","Overall Total Assigned","Overall Closed in Assigned","Overall Open in Assigned","Completed Today"];
+const H=["Assigned To","Lot Category","Assigned - High","Closed - High","Open - High","Assigned - Medium","Closed - Medium","Open - Medium","Assigned - Low","Closed - Low","Open - Low","Hold - High","Hold - Medium","Hold - Low","Overall Total Assigned","Overall Closed in Assigned","Overall Open in Assigned","Completed Today","Completed Yesterday"];
 const SEV=[["High",2,3,4,11,"--hi"],["Medium",5,6,7,12,"--md"],["Low",8,9,10,13,"--lo"]];
 const $=s=>document.querySelector(s); let D,lot="All";
-const col=i=>i<2?"":/High/.test(H[i])?"--hi":/Medium/.test(H[i])?"--md":/Low/.test(H[i])?"--lo":/Today/.test(H[i])?"--ok":"--amber";
+const COMBINED="All Lots (combined)";
+const col=i=>i<2?"":/High/.test(H[i])?"--hi":/Medium/.test(H[i])?"--md":/Low/.test(H[i])?"--lo":/Today|Yesterday/.test(H[i])?"--ok":"--amber";
 $("#tbl thead").innerHTML="<tr>"+H.map((h,i)=>`<th scope="col"><i style="--c:var(${col(i)||"--line"})"></i>${h}</th>`).join("")+"</tr>";
 
 function stats(){
@@ -156,11 +158,11 @@ function stats(){
     .map(([c,l,v])=>`<div class="stat ${c}"><b>${f(v)}</b><span>${l}</span></div>`).join("");
 }
 function render(){
-  const rows=D.rows.filter(r=>lot==="All"||r[1]===lot);
+  const rows=lot===COMBINED?(D.combined||[]):D.rows.filter(r=>lot==="All"||r[1]===lot);
   const body=$("#tbl tbody"),foot=$("#tbl tfoot");
-  if(!rows.length){body.innerHTML=`<tr><td colspan="18" class="empty">No synced data for ${lot} yet. It appears here after the next refresh.</td></tr>`;foot.innerHTML="";}
+  if(!rows.length){body.innerHTML=`<tr><td colspan="19" class="empty">No synced data for ${lot} yet. It appears here after the next refresh.</td></tr>`;foot.innerHTML="";}
   else{
-    body.innerHTML=rows.map((r,n)=>`<tr style="--i:${n}">`+r.map((v,i)=>i<2?`<td>${v}</td>`:i===17?`<td class="${v>0?"today":"z"}">${v>0?"+"+v:v}</td>`:`<td class="${i>13?"t":v===0?"z":""}">${v}</td>`).join("")+"</tr>").join("");
+    body.innerHTML=rows.map((r,n)=>`<tr style="--i:${n}">`+r.map((v,i)=>i<2?`<td>${v}</td>`:(i===17||i===18)?`<td class="${v>0?"today":"z"}">${v>0?"+"+v:v}</td>`:`<td class="${i>13?"t":v===0?"z":""}">${v}</td>`).join("")+"</tr>").join("");
     foot.innerHTML=rows.length>1?"<tr><td>Total</td><td></td>"+H.slice(2).map((_,k)=>`<td>${rows.reduce((a,r)=>a+r[k+2],0)}</td>`).join("")+"</tr>":"";
   }
   const sum=k=>rows.reduce((a,r)=>a+r[k],0);
@@ -168,8 +170,8 @@ function render(){
     return `<div class="lrow"><b style="color:var(${cl})">${n}</b><div class="track" role="img" aria-label="${n}: ${C} closed, ${O} open, ${Hd} on hold"><span style="flex-grow:${C};background:var(--ok)"></span><span style="flex-grow:${O};background:var(--hi)"></span><span style="flex-grow:${Hd};background:var(--hold)"></span></div><small>${C} closed · ${O} open · ${Hd} hold · ${A} assigned</small></div>`}).join("");
 }
 function chips(){
-  const lots=["All",...new Set([...Object.keys(D.status||{}),...D.rows.map(r=>r[1])])];
-  $("#chips").innerHTML=lots.map(l=>`<button class="chip" aria-pressed="${l===lot}" data-l="${l}">${l}</button>`).join("");
+  const lots=["All",...new Set([...Object.keys(D.status||{}),...D.rows.map(r=>r[1])]),COMBINED];
+  $("#chips").innerHTML=lots.map(l=>`<button class="chip" aria-pressed="${l===lot}" data-l="${l}">${l===COMBINED?"Combined (by person)":l}</button>`).join("");
 }
 $("#chips").onclick=e=>{const b=e.target.closest("button");if(!b)return;lot=b.dataset.l;chips();render()};
 function diag(){
@@ -196,9 +198,13 @@ function clock(){
     :`Synced ${ago} · next auto-refresh ~${nx.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}`+(day?` · "Completed Today" = closed on ${day} IST`:"");
   $("#dot").classList.toggle("pre",!!D.preliminary);
 }
-function paint(){stats();chips();render();clock();diag()}
+function paint(){
+  stats();chips();render();clock();diag();
+  // brief pulse to mark "data just arrived", not a continuous fake-live indicator
+  const d=$("#dot");d.classList.remove("just-synced");void d.offsetWidth;d.classList.add("just-synced");
+}
 fetch("data/summary.json?"+Date.now()).then(r=>r.json()).then(d=>{D=d;paint();setInterval(clock,6e4)})
- .catch(()=>{$("#tbl tbody").innerHTML='<tr><td colspan="18" class="empty">Could not load data/summary.json. Serve this page over http(s).</td></tr>'});
+ .catch(()=>{$("#tbl tbody").innerHTML='<tr><td colspan="19" class="empty">Could not load data/summary.json. Serve this page over http(s).</td></tr>'});
 
 /* Refresh now: re-reads the latest published sync. The browser cannot read Google's CSV reliably
    (CORS + silent tab fallback caused duplicated lots), so numbers only ever come from the verified server sync. */
