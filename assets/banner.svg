@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0b0e"/>
+      <stop offset="55%" stop-color="#111319"/>
+      <stop offset="100%" stop-color="#0a0b0e"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d7a34f" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#d7a34f" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#d7a34f" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="0%" r="75%">
+      <stop offset="0%" stop-color="#d7a34f" stop-opacity=".16"/>
+      <stop offset="100%" stop-color="#d7a34f" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#ffffff" stroke-opacity="0.045"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="340" fill="url(#bg)"/>
+  <rect width="1200" height="340" fill="url(#grid)"/>
+  <rect width="1200" height="340" fill="url(#glow)"/>
+  <rect x="0" y="118" width="1200" height="1.5" fill="url(#beam)"/>
+
+  <!-- severity ledger strip, right side -->
+  <g transform="translate(792,70)" font-family="Hanken Grotesk, Helvetica, Arial, sans-serif">
+    <text x="0" y="0" fill="#8b8d96" font-size="12" letter-spacing="2">SEVERITY LEDGER</text>
+
+    <text x="0" y="36" fill="#e8463f" font-size="12" font-weight="600">HIGH</text>
+    <rect x="0" y="44" width="360" height="8" rx="4" fill="#20232b"/>
+    <rect x="0" y="44" width="246" height="8" rx="4" fill="#e8463f"/>
+
+    <text x="0" y="78" fill="#e0a73c" font-size="12" font-weight="600">MEDIUM</text>
+    <rect x="0" y="86" width="360" height="8" rx="4" fill="#20232b"/>
+    <rect x="0" y="86" width="300" height="8" rx="4" fill="#e0a73c"/>
+
+    <text x="0" y="120" fill="#6fb3e0" font-size="12" font-weight="600">LOW</text>
+    <rect x="0" y="128" width="360" height="8" rx="4" fill="#20232b"/>
+    <rect x="0" y="128" width="330" height="8" rx="4" fill="#6fb3e0"/>
+
+    <g transform="translate(0,170)">
+      <circle cx="4" cy="-4" r="4" fill="#6fcf7c"/>
+      <text x="16" y="0" fill="#c9cad1" font-size="12">Closed</text>
+      <circle cx="96" cy="-4" r="4" fill="#e8463f"/>
+      <text x="108" y="0" fill="#c9cad1" font-size="12">Open</text>
+      <circle cx="178" cy="-4" r="4" fill="#9b7fd4"/>
+      <text x="190" y="0" fill="#c9cad1" font-size="12">Hold</text>
+    </g>
+  </g>
+
+  <!-- live dot -->
+  <g transform="translate(64,54)">
+    <circle cx="0" cy="0" r="5" fill="#6fcf7c"/>
+    <circle cx="0" cy="0" r="5" fill="none" stroke="#6fcf7c" stroke-opacity=".5">
+      <animate attributeName="r" values="5;14;5" dur="2.6s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;0;.5" dur="2.6s" repeatCount="indefinite"/>
+    </circle>
+    <text x="16" y="4" fill="#8b8d96" font-family="Hanken Grotesk, Helvetica, Arial, sans-serif" font-size="12" letter-spacing="2">LIVE · SYNCS EVERY 3H</text>
+  </g>
+
+  <text x="64" y="160" fill="#f3f1ea" font-family="Georgia, 'Times New Roman', serif" font-size="68" font-weight="400" letter-spacing="-1">As&#8211;Built ISO Review</text>
+  <text x="66" y="206" fill="#9a9ba3" font-family="Hanken Grotesk, Helvetica, Arial, sans-serif" font-size="19">Four lots, one register &#8212; synced straight from the review sheet, no manual rebuilds.</text>
+
+  <g transform="translate(66,248)" font-family="Hanken Grotesk, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6b74">
+    <text x="0" y="0">GOOGLE SHEETS</text>
+    <text x="178" y="0" fill="#45464e">&#8594;</text>
+    <text x="206" y="0">GITHUB ACTIONS</text>
+    <text x="400" y="0" fill="#45464e">&#8594;</text>
+    <text x="428" y="0">GITHUB PAGES</text>
+  </g>
+</svg>
