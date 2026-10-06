@@ -1,18 +1,39 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="As-Built ISO Review — Live Status" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0b0e,60:15171c,100:0a0b0e&height=230&section=header&text=As-Built%20ISO%20Review&fontSize=46&fontColor=f2f0ea&fontAlignY=38&desc=Live%20Status%20Register&descAlignY=56&descSize=18&descColor=d7a34f&animation=fadeIn" width="100%" alt="As-Built ISO Review — Live Status Register" />
 
-### Live, self-updating status of the As-Built ISO comment register — across **4 lots**, by reviewer, by severity.
+<img src="https://readme-typing-svg.demolab.com?font=Georgia&size=20&duration=3200&pause=1100&color=D7A34F&center=true&vCenter=true&width=760&lines=Synced+every+3+hours+-+zero+manual+pushes%2C+ever;4+lots%2C+one+register%2C+one+source+of+truth;Assignee+parsing+%2B+severity+%2B+closed-hold+logic%2C+all+automatic;Built+for+reviewers%2C+not+spreadsheets" alt="tagline" />
+
+<br>
 
 [![Deploy](https://github.com/vikramdex-ops/iso-review-dashboard/actions/workflows/deploy.yml/badge.svg)](https://github.com/vikramdex-ops/iso-review-dashboard/actions/workflows/deploy.yml)
-[![Live Dashboard](https://img.shields.io/badge/live%20dashboard-view%20now-d7a34f?style=flat&logo=githubpages&logoColor=white)](https://vikramdex-ops.github.io/iso-review-dashboard/)
-![Sync interval](https://img.shields.io/badge/auto--sync-every%203h-6fcf7c)
-![Source](https://img.shields.io/badge/source-Google%20Sheets-34a853?logo=googlesheets&logoColor=white)
-![No backend](https://img.shields.io/badge/backend-none%20needed-8b8d96)
+[![Live Dashboard](https://img.shields.io/badge/live%20dashboard-view%20now-d7a34f?style=for-the-badge&logo=githubpages&logoColor=white)](https://vikramdex-ops.github.io/iso-review-dashboard/)
+![Sync interval](https://img.shields.io/badge/auto--sync-every%203h-6fcf7c?style=flat-square)
+![Lots tracked](https://img.shields.io/badge/lots%20tracked-4-6fb3e0?style=flat-square)
+![Source](https://img.shields.io/badge/source-Google%20Sheets-34a853?style=flat-square&logo=googlesheets&logoColor=white)
+![No backend](https://img.shields.io/badge/backend-none%20needed-8b8d96?style=flat-square)
+![Last commit](https://img.shields.io/github/last-commit/vikramdex-ops/iso-review-dashboard?style=flat-square&color=d7a34f&label=last%20sync)
 
-**[→ Open the live dashboard](https://vikramdex-ops.github.io/iso-review-dashboard/)**
+<br>
+
+### 🔗 [**Open the live dashboard →**](https://vikramdex-ops.github.io/iso-review-dashboard/)
+
+<sub>`vikramdex-ops.github.io/iso-review-dashboard` — bookmark it, no login needed</sub>
 
 </div>
+
+<br>
+
+<p align="center">
+  <a href="#what-this-is">What this is</a> ·
+  <a href="#how-it-stays-current">How it stays current</a> ·
+  <a href="#the-rules-behind-the-numbers">The rules behind the numbers</a> ·
+  <a href="#on-the-dashboard">On the dashboard</a> ·
+  <a href="#project-layout">Project layout</a> ·
+  <a href="#adding-another-lot">Adding a lot</a>
+</p>
+
+<img src="assets/banner.svg" alt="dashboard ledger preview" width="100%" />
 
 <br>
 
@@ -21,6 +42,35 @@
 A single static page that always shows the current state of the ISO review register — who owns what, how much is closed, open, or on hold, split by severity and by lot, with a combined cross-lot view per reviewer. No one touches the Google Sheet export manually, no one re-runs a script, no one pushes code to refresh it. A scheduled job does that every 3 hours, and a **Refresh now** button on the page does it on demand.
 
 The sheet stays the single source of truth. This repo only mirrors it, honestly, into something a lead can glance at.
+
+<table align="center">
+<tr>
+<td align="center" width="25%">
+
+**📋 4 Lots**
+<br><sub>Lot 1 – Lot 4, same rules</sub>
+
+</td>
+<td align="center" width="25%">
+
+**⏱ Every 3 hours**
+<br><sub>cron-driven, no manual trigger</sub>
+
+</td>
+<td align="center" width="25%">
+
+**🧮 Zero guesswork**
+<br><sub>rules applied mechanically</sub>
+
+</td>
+<td align="center" width="25%">
+
+**🪵 Fully auditable**
+<br><sub>every sync is a git commit</sub>
+
+</td>
+</tr>
+</table>
 
 <br>
 
@@ -115,8 +165,20 @@ Nothing else changes. The combined view, the chips, and the totals strip all pic
 
 <br>
 
+## Built with
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub%20Actions-cron%20%2B%20dispatch-2088FF?style=flat-square&logo=githubactions&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub%20Pages-static%20hosting-222?style=flat-square&logo=github&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vanilla-HTML%2FCSS%2FJS-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/Google%20Sheets-CSV%20export-34A853?style=flat-square&logo=googlesheets&logoColor=white" />
+</p>
+
 <div align="center">
-
-Built with Python, GitHub Actions, and GitHub Pages — no server, no database, no vendor lock-in.
-
+<sub>No server. No database. No vendor lock-in. The sheet stays the source of truth — this is just the window into it.</sub>
 </div>
+
+<br>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0b0e,60:15171c,100:0a0b0e&height=110&section=footer" width="100%" />
