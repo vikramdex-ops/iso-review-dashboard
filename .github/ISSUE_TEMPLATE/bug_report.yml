@@ -1,0 +1,25 @@
+name: 🐛 Bug report
+description: Something on the dashboard or in the sync is wrong
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What did you see, and what did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: numbers
+    attributes:
+      label: Numbers, if relevant
+      description: If this is a counting/logic bug, the row(s) or person/lot affected and what the sheet actually says for them.
+    validations:
+      required: false
+  - type: input
+    id: url
+    attributes:
+      label: Dashboard link or screenshot
+      description: Link to the live dashboard state, or attach a screenshot.
+    validations:
+      required: false

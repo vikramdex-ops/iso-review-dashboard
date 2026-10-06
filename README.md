@@ -13,6 +13,9 @@
 ![Source](https://img.shields.io/badge/source-Google%20Sheets-34a853?style=flat-square&logo=googlesheets&logoColor=white)
 ![No backend](https://img.shields.io/badge/backend-none%20needed-8b8d96?style=flat-square)
 ![Last commit](https://img.shields.io/github/last-commit/vikramdex-ops/iso-review-dashboard?style=flat-square&color=d7a34f&label=last%20sync)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/vikramdex-ops/iso-review-dashboard?style=flat-square&color=d7a34f)](https://github.com/vikramdex-ops/iso-review-dashboard/stargazers)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-6fcf7c?style=flat-square)](CONTRIBUTING.md)
 
 <br>
 
@@ -30,7 +33,8 @@
   <a href="#the-rules-behind-the-numbers">The rules behind the numbers</a> ·
   <a href="#on-the-dashboard">On the dashboard</a> ·
   <a href="#project-layout">Project layout</a> ·
-  <a href="#adding-another-lot">Adding a lot</a>
+  <a href="#adding-another-lot">Adding a lot</a> ·
+  <a href="#faq">FAQ</a>
 </p>
 
 <img src="assets/banner.svg" alt="dashboard ledger preview" width="100%" />
@@ -71,6 +75,21 @@ The sheet stays the single source of truth. This repo only mirrors it, honestly,
 </td>
 </tr>
 </table>
+
+<br>
+
+## Who this is for
+
+The rules in this repo are specific to one ISO review register, but the shape of the problem isn't: **"I have a Google Sheet someone updates, and I need a live status page for people who shouldn't need sheet access."** Status trackers, intake logs, review registers, punch lists — anything where the sheet is the real database and a dashboard is just the window into it.
+
+If that's your situation, the parts worth taking are:
+
+- a sync script that reads tabs by numeric `gid` (not name — Google silently swaps tabs on a name mismatch, see [`build_summary.py`](scripts/build_summary.py))
+- a content-hash guard against accidentally reading the same tab twice
+- an all-or-nothing sync so a bad fetch never overwrites a good dashboard
+- a GitHub Actions workflow that does the fetch → commit → deploy loop on a schedule, for free, with no server
+
+Swap the column mapping and keyword rules for your own sheet's shape (see [Adding another lot](#adding-another-lot) and [`CONTRIBUTING.md`](CONTRIBUTING.md)) and the rest holds.
 
 <br>
 
@@ -165,6 +184,30 @@ Nothing else changes. The combined view, the chips, and the totals strip all pic
 
 <br>
 
+## FAQ
+
+<details>
+<summary><b>Does this need a backend, database, or paid hosting?</b></summary>
+<br>No. The sync runs in GitHub Actions (free for public repos), the output is one JSON file, and the page is static HTML served by GitHub Pages (also free). The only moving part is the Google Sheet itself.
+</details>
+
+<details>
+<summary><b>Does Claude / this repo have write access to my Google Sheet?</b></summary>
+<br>No — it only reads the published CSV export of each tab (the sheet must be shared "Anyone with the link → Viewer"). Nothing is ever written back to the sheet.
+</details>
+
+<details>
+<summary><b>What if the sheet structure doesn't match mine?</b></summary>
+<br>Edit the column mapping and keyword lists in <code>config.json</code> / <code>scripts/build_summary.py</code> — see <a href="#who-this-is-for">Who this is for</a> and <a href="CONTRIBUTING.md">CONTRIBUTING.md</a>. Nothing else in the pipeline needs to change.
+</details>
+
+<details>
+<summary><b>Can I self-host this for my own team?</b></summary>
+<br>Yes — it's MIT licensed. Fork it, point <code>config.json</code> at your own sheet, and GitHub Actions + Pages do the rest on your own repo.
+</details>
+
+<br>
+
 ## Built with
 
 <p align="center">
@@ -181,4 +224,21 @@ Nothing else changes. The combined view, the chips, and the totals strip all pic
 
 <br>
 
+## Star history
+
+<a href="https://star-history.com/#vikramdex-ops/iso-review-dashboard&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=vikramdex-ops/iso-review-dashboard&type=Date&theme=dark" />
+    <img src="https://api.star-history.com/svg?repos=vikramdex-ops/iso-review-dashboard&type=Date" alt="Star History Chart" width="100%" />
+  </picture>
+</a>
+
+<div align="center">
+
+If the sheet-to-dashboard pattern here saves you from building your own, a ⭐ helps the next person find it.
+
+<br><br>
+
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0b0e,60:15171c,100:0a0b0e&height=110&section=footer" width="100%" />
+
+</div>
