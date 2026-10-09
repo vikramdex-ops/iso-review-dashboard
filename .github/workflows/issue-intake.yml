@@ -1,0 +1,69 @@
+name: Apply issued-documents report
+
+# Triggered by the dashboard's "Mark as issued" button, which opens a prefilled GitHub issue
+# (title "Issue documents — <lot> — <date>", body: "Lot: <lot>" + a fenced list of document
+# numbers). Submitting that issue is the write — it runs under the submitter's own GitHub
+# login, so nothing in the public site ever carries a credential with write access.
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  apply:
+    if: startsWith(github.event.issue.title, 'Issue documents —')
+    runs-on: ubuntu-latest
+    concurrency: { group: pages, cancel-in-progress: false }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+
+      - name: Parse the issue and record issued documents
+        id: apply
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: python scripts/apply_issued.py
+
+      - name: Re-sync so the dashboard reflects the new issued status immediately
+        run: python scripts/build_summary.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "iso-sync-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add site/data/issued_log.json site/data/summary.json site/data/closed_log.json site/config.json
+          git diff --cached --quiet || git commit -m "Record issued documents from issue #${{ github.event.issue.number }}"
+          git push
+
+      - name: Comment and close the issue
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const summary = `${{ steps.apply.outputs.summary }}` || "Could not parse this issue — see the workflow run for details.";
+            await github.rest.issues.createComment({
+              owner: context.repo.owner, repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `${summary}\n\nThe dashboard will show these as **Issued** on its next load.`,
+            });
+            await github.rest.issues.update({
+              owner: context.repo.owner, repo: context.repo.repo,
+              issue_number: context.issue.number, state: "closed",
+            });
+
+      - name: Comment on failure (issue is left open to retry)
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner, repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: "Couldn't process this as an issued-documents report — the title or body didn't match what the dashboard generates. Leaving this open; re-open the dashboard's issuance screen and use its 'Mark as issued' button rather than editing this issue by hand.",
+            });

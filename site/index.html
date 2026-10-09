@@ -89,6 +89,64 @@ dt{font-weight:600;margin-bottom:.3rem}dd{color:var(--dim);max-width:46ch}
 code{color:var(--amber)}
 footer{padding:4rem 0 3rem;color:var(--dim);font-size:.85rem}
 @media(max-width:640px){.lrow{grid-template-columns:1fr}.lrow small{order:3}}
+
+/* tabs */
+.tabs{display:flex;gap:.4rem;margin-top:1.6rem;border-bottom:1px solid var(--line)}
+.tab{background:none;border:0;color:var(--dim);font:600 .95rem "Hanken Grotesk",sans-serif;padding:.7rem 1.1rem;cursor:pointer;position:relative;transition:.25s var(--ease)}
+.tab:hover{color:var(--ink)}
+.tab[aria-selected=true]{color:var(--amber)}
+.tab[aria-selected=true]::after{content:"";position:absolute;left:1.1rem;right:1.1rem;bottom:-1px;height:2px;background:var(--amber);border-radius:2px}
+.tabdot{display:none;width:7px;height:7px;border-radius:50%;background:var(--ok);margin-left:.4rem;vertical-align:middle}
+.tabdot.on{display:inline-block}
+.hidden{display:none!important}
+
+/* issuance screen */
+.issuance-hero{padding:clamp(2rem,6vh,3.5rem) 0 1.4rem}
+.issuance-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.1rem;margin-bottom:2rem}
+.lotcard{background:linear-gradient(180deg,var(--panel),oklch(0.18 0.013 60));border:1px solid var(--line);border-radius:14px;padding:1.3rem 1.4rem;box-shadow:0 20px 50px -24px #000;animation:fade .9s var(--ease) both}
+.lotcard h4{font:400 1.35rem "Instrument Serif",serif;display:flex;align-items:center;justify-content:space-between;gap:.6rem}
+.lotcard h4 small{font:500 .72rem "Hanken Grotesk",sans-serif;color:var(--dim);letter-spacing:.03em;text-transform:uppercase}
+.lotcard .stalewarn{margin-top:.5rem;font-size:.78rem;color:var(--hi);background:oklch(0.26 0.04 40/.4);border:1px solid oklch(0.4 0.1 40/.5);border-radius:8px;padding:.5rem .7rem}
+.lotrows{margin-top:1rem;display:grid;gap:.1rem}
+.lotrow{display:flex;align-items:center;justify-content:space-between;gap:.8rem;padding:.6rem 0;border-top:1px solid var(--line)}
+.lotrow:first-child{border-top:0}
+.lotrow .lbl{display:flex;flex-direction:column;gap:.1rem}
+.lotrow .lbl b{font-weight:600;font-size:.92rem}
+.lotrow .lbl small{color:var(--dim);font-size:.75rem}
+.countbtn{background:none;border:1px solid var(--line);border-radius:10px;min-width:3.2rem;padding:.4rem .7rem;font:700 1.25rem "Instrument Serif",serif;font-variant-numeric:tabular-nums;color:var(--ink);cursor:pointer;transition:.2s var(--ease)}
+.countbtn:hover:not(:disabled){border-color:var(--amber);color:var(--amber);transform:translateY(-1px)}
+.countbtn:disabled{opacity:.35;cursor:default}
+.countbtn.ready{color:var(--ok);border-color:oklch(0.5 0.1 150/.5)}
+.countbtn.issued{color:var(--dim)}
+.countbtn.address{color:var(--md);border-color:oklch(0.55 0.1 78/.5)}
+.stampwrap{position:relative;display:inline-flex}
+.stamp{position:absolute;inset:-6px -10px auto auto;top:-10px;right:-14px;font:700 .58rem "Hanken Grotesk",sans-serif;letter-spacing:.06em;color:var(--ok);border:1.5px solid var(--ok);border-radius:5px;padding:.08rem .3rem;transform:rotate(-8deg);opacity:0;animation:stampin .5s .15s var(--ease) both}
+@keyframes stampin{from{opacity:0;transform:rotate(-8deg) scale(1.6)}to{opacity:1;transform:rotate(-8deg) scale(1)}}
+
+/* modal */
+.modal-backdrop{position:fixed;inset:0;z-index:50;background:oklch(0.1 0.01 60/.72);backdrop-filter:blur(3px);display:flex;align-items:center;justify-content:center;padding:1.2rem;animation:fade .25s var(--ease) both}
+.modal-backdrop[hidden]{display:none}
+.modal{background:var(--panel);border:1px solid var(--line);border-radius:16px;max-width:760px;width:100%;max-height:85vh;display:flex;flex-direction:column;box-shadow:0 40px 100px -30px #000;animation:modalin .3s var(--ease) both}
+@keyframes modalin{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
+.modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;padding:1.2rem 1.3rem .2rem}
+.modal-head h4{font:400 1.5rem "Instrument Serif",serif}
+.modal-close{background:none;border:0;color:var(--dim);font-size:1.6rem;line-height:1;cursor:pointer;padding:.1rem .4rem}
+.modal-close:hover{color:var(--ink)}
+.modal-sub{padding:0 1.3rem;color:var(--dim);font-size:.85rem;max-width:60ch}
+.modal-cols{display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:1rem 1.3rem;overflow:hidden;min-height:0;flex:1}
+.modal-col{display:flex;flex-direction:column;min-height:0;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.modal-col-head{display:flex;justify-content:space-between;align-items:center;padding:.5rem .7rem;background:oklch(0.22 0.014 60);font-size:.75rem;letter-spacing:.03em;text-transform:uppercase;color:var(--dim)}
+.copybtn{background:none;border:1px solid var(--line);color:var(--ink);font:600 .72rem "Hanken Grotesk",sans-serif;padding:.25rem .6rem;border-radius:99px;cursor:pointer;transition:.2s var(--ease);text-transform:none;letter-spacing:0}
+.copybtn:hover{border-color:var(--amber);color:var(--amber)}
+.copybtn.copied{border-color:var(--ok);color:var(--ok)}
+.modal-col pre{margin:0;padding:.7rem;overflow:auto;font:.8rem/1.5 ui-monospace,"SF Mono",Consolas,monospace;color:var(--ink);white-space:pre;flex:1}
+.modal-foot{padding:1rem 1.3rem 1.3rem;display:flex;gap:.8rem;flex-wrap:wrap;align-items:center}
+.issuebtn{background:var(--amber);color:var(--bg);border:0;border-radius:10px;padding:.65rem 1.1rem;font:700 .85rem "Hanken Grotesk",sans-serif;cursor:pointer;transition:.2s var(--ease);text-decoration:none;display:inline-flex;align-items:center;gap:.4rem}
+.issuebtn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.modal-foot .note{color:var(--dim);font-size:.78rem;max-width:40ch}
+.addrlist{padding:0 1.3rem;max-height:9rem;overflow:auto;font-size:.82rem;color:var(--dim);display:grid;gap:.15rem;margin-bottom:.4rem}
+.addrlist b{color:var(--ink)}
+@media(max-width:640px){.modal-cols{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -101,6 +159,12 @@ footer{padding:4rem 0 3rem;color:var(--dim);font-size:.85rem}
   </header>
   <div class="diag" id="diag"></div>
 
+  <nav class="tabs" role="tablist" aria-label="Dashboard view">
+    <button class="tab" role="tab" aria-selected="true" id="tab-summary" type="button">Summary</button>
+    <button class="tab" role="tab" aria-selected="false" id="tab-issuance" type="button">Issuance<i class="tabdot" id="issuance-badge"></i></button>
+  </nav>
+
+  <div id="view-summary">
   <div class="hero">
     <h1><span class="l">Every comment,</span><span class="l"><em>accounted</em> for.</span></h1>
     <p class="sub">Live status of ISO review comments by assignee and severity, read from the register and refreshed every three hours.</p>
@@ -139,7 +203,38 @@ footer{padding:4rem 0 3rem;color:var(--dim);font-size:.85rem}
       <div><dt>On hold</dt><dd>Modeller response is RDB or HOLD. Hold items are counted in Overall Open.</dd></div>
     </dl>
   </section>
+  </div>
+
+  <div id="view-issuance" class="hidden">
+    <section class="issuance-hero">
+      <h3>Ready for issue</h3>
+      <p class="sub">A document is <b>ready to issue</b> once every comment against it — column B, any assignee — is closed. One open or on-hold point keeps it back. By document, not by person, lot by lot.</p>
+    </section>
+    <div class="issuance-grid" id="issuance-grid" aria-label="Document issuance status by lot"></div>
+  </div>
+
   <footer>Rebuilt by GitHub Actions every 3 hours from the Google Sheet register.</footer>
+</div>
+
+<div class="modal-backdrop" id="modalBackdrop" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-head">
+      <h4 id="modalTitle"></h4>
+      <button class="modal-close" id="modalClose" type="button" aria-label="Close">&times;</button>
+    </div>
+    <p class="modal-sub" id="modalSub"></p>
+    <div class="modal-cols">
+      <div class="modal-col">
+        <div class="modal-col-head"><span>Document numbers</span><button class="copybtn" id="copyDocs" type="button">Copy</button></div>
+        <pre id="docList"></pre>
+      </div>
+      <div class="modal-col">
+        <div class="modal-col-head"><span id="lineListLabel">Line numbers</span><button class="copybtn" id="copyLines" type="button">Copy</button></div>
+        <pre id="lineList"></pre>
+      </div>
+    </div>
+    <div class="modal-foot" id="modalFoot"></div>
+  </div>
 </div>
 
 <script>
@@ -199,12 +294,93 @@ function clock(){
   $("#dot").classList.toggle("pre",!!D.preliminary);
 }
 function paint(){
-  stats();chips();render();clock();diag();
+  stats();chips();render();clock();diag();renderIssuance();
   // brief pulse to mark "data just arrived", not a continuous fake-live indicator
   const d=$("#dot");d.classList.remove("just-synced");void d.offsetWidth;d.classList.add("just-synced");
 }
 fetch("data/summary.json?"+Date.now()).then(r=>r.json()).then(d=>{D=d;paint();setInterval(clock,6e4)})
  .catch(()=>{$("#tbl tbody").innerHTML='<tr><td colspan="19" class="empty">Could not load data/summary.json. Serve this page over http(s).</td></tr>'});
+
+/* ---------- Tabs ---------- */
+const tabSummary=$("#tab-summary"),tabIssuance=$("#tab-issuance");
+function showTab(which){
+  const sum=which==="summary";
+  tabSummary.setAttribute("aria-selected",sum);tabIssuance.setAttribute("aria-selected",!sum);
+  $("#view-summary").classList.toggle("hidden",!sum);
+  $("#view-issuance").classList.toggle("hidden",sum);
+}
+tabSummary.onclick=()=>showTab("summary");
+tabIssuance.onclick=()=>showTab("issuance");
+
+/* ---------- Issuance screen ---------- */
+const REPO="vikramdex-ops/iso-review-dashboard";
+function renderIssuance(){
+  const docs=D.documents||{};
+  const lots=Object.keys(docs).length?Object.keys(docs):Object.keys(D.status||{});
+  let anyPending=false;
+  $("#issuance-grid").innerHTML=lots.map(lot=>{
+    const d=docs[lot]||{total_documents:0,ready_pending:{count:0},ready_issued:{count:0},address:{count:0},needs_work:{count:0}};
+    if(d.ready_pending.count>0)anyPending=true;
+    const stale=D.status&&D.status[lot]&&D.status[lot].stale_data_from_previous_sync;
+    return `<div class="lotcard">
+      <h4>${lot}<small>${d.total_documents} document${d.total_documents===1?"":"s"}</small></h4>
+      ${stale?`<div class="stalewarn">Showing last good data for this lot — the most recent sync looked filtered or incomplete and was skipped to protect the count.</div>`:""}
+      <div class="lotrows">
+        <div class="lotrow"><div class="lbl"><b>Ready to issue</b><small>fully closed, not yet marked issued</small></div>
+          <button class="countbtn ready" ${d.ready_pending.count?"":"disabled"} data-lot="${lot}" data-bucket="ready_pending">${d.ready_pending.count}</button></div>
+        <div class="lotrow"><div class="lbl"><b>Issued</b><small>already marked and recorded</small></div>
+          <button class="countbtn issued" ${d.ready_issued.count?"":"disabled"} data-lot="${lot}" data-bucket="ready_issued">${d.ready_issued.count}</button></div>
+        <div class="lotrow"><div class="lbl"><b>Address these</b><small>&le;3 open or hold points left</small></div>
+          <button class="countbtn address" ${d.address.count?"":"disabled"} data-lot="${lot}" data-bucket="address">${d.address.count}</button></div>
+        <div class="lotrow"><div class="lbl"><b>Needs more work</b><small>&gt;3 open or hold points</small></div>
+          <span class="countbtn" style="cursor:default;color:var(--dim);border-style:dashed">${d.needs_work.count}</span></div>
+      </div>
+    </div>`;
+  }).join("");
+  $("#issuance-badge").classList.toggle("on",anyPending);
+  $("#issuance-grid").querySelectorAll(".countbtn[data-lot]").forEach(b=>b.onclick=()=>openDocModal(b.dataset.lot,b.dataset.bucket));
+}
+
+const BUCKET_META={
+  ready_pending:{title:"Ready to issue",sub:"Every comment on these documents is closed. Copy the list, issue them, then mark this batch as issued so it drops off next time.",lineLabel:"Line numbers"},
+  ready_issued:{title:"Issued",sub:"Already marked as issued from an earlier batch — kept here for reference.",lineLabel:"Line numbers"},
+  address:{title:"Address these documents",sub:"3 or fewer open/hold points stand between these and being ready to issue.",lineLabel:"Open line numbers"},
+};
+let modalCtx=null;
+function openDocModal(lot,bucket){
+  const d=(D.documents||{})[lot]||{};
+  const b=d[bucket]||{count:0,docs:[],lines:[]};
+  const meta=BUCKET_META[bucket];
+  modalCtx={lot,bucket,docs:b.docs||[]};
+  $("#modalTitle").textContent=`${lot} — ${meta.title} (${b.count})`;
+  $("#modalSub").textContent=meta.sub;
+  $("#lineListLabel").textContent=meta.lineLabel;
+  $("#docList").textContent=(b.docs||[]).join("\n")||"—";
+  $("#lineList").textContent=(b.lines||[]).join("\n")||"—";
+  const foot=$("#modalFoot");
+  if(bucket==="ready_pending"&&b.docs&&b.docs.length){
+    const title=`Issue documents — ${lot} — ${new Date().toISOString().slice(0,10)}`;
+    const body=`Lot: ${lot}\n\nDocuments:\n\`\`\`\n${b.docs.join("\n")}\n\`\`\`\n\n(opened from the dashboard's issuance screen — submitting this issue is what records them as issued)`;
+    const url=`https://github.com/${REPO}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
+    foot.innerHTML=`<a class="issuebtn" href="${url}" target="_blank" rel="noopener">Mark these as issued →</a><span class="note">Opens a GitHub issue prefilled with this list. Submitting it is what records the batch — nothing is marked issued until you do.</span>`;
+  } else if(bucket==="address"&&d.address&&d.address.detail&&d.address.detail.length){
+    foot.innerHTML=`<div class="addrlist">${d.address.detail.map(x=>`<div><b>${x.doc}</b> — ${x.open} open point${x.open===1?"":"s"}</div>`).join("")}</div>`;
+  } else {
+    foot.innerHTML="";
+  }
+  $("#modalBackdrop").hidden=false;
+}
+$("#modalClose").onclick=()=>{$("#modalBackdrop").hidden=true};
+$("#modalBackdrop").onclick=e=>{if(e.target.id==="modalBackdrop")$("#modalBackdrop").hidden=true};
+addEventListener("keydown",e=>{if(e.key==="Escape")$("#modalBackdrop").hidden=true});
+function copy(text,btn){
+  navigator.clipboard.writeText(text).then(()=>{
+    const old=btn.textContent;btn.textContent="Copied!";btn.classList.add("copied");
+    setTimeout(()=>{btn.textContent=old;btn.classList.remove("copied")},1400);
+  }).catch(()=>alert("Could not copy — select the text manually."));
+}
+$("#copyDocs").onclick=()=>copy($("#docList").textContent,$("#copyDocs"));
+$("#copyLines").onclick=()=>copy($("#lineList").textContent,$("#copyLines"));
 
 /* Refresh now: re-reads the latest published sync. The browser cannot read Google's CSV reliably
    (CORS + silent tab fallback caused duplicated lots), so numbers only ever come from the verified server sync. */

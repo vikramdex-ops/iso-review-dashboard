@@ -1,6 +1,6 @@
 """Fetch each lot tab as CSV (sheet must be shared 'Anyone with the link: Viewer'),
 apply the summary rules, and write site/data/summary.json. No credentials needed."""
-import csv, io, json, sys, urllib.request, urllib.parse, hashlib, datetime, pathlib
+import csv, io, json, re, sys, urllib.request, urllib.parse, hashlib, datetime, pathlib
 try:
     from zoneinfo import ZoneInfo
     IST = ZoneInfo("Asia/Kolkata")
@@ -13,6 +13,9 @@ DONE, HOLD = cfg["done_words"], cfg["hold_words"]
 SEV = ["High", "Medium", "Low"]
 TODAY_IST = datetime.datetime.now(IST).date().isoformat()
 CLOSED_LOG_PATH = root / "site" / "data" / "closed_log.json"
+ISSUED_LOG_PATH = root / "site" / "data" / "issued_log.json"
+SUMMARY_PATH = root / "site" / "data" / "summary.json"
+ADDRESS_THRESHOLD = 3  # a document with this many or fewer open/hold points is "almost ready"
 
 def fetch_url(url):
     with urllib.request.urlopen(url, timeout=60) as r:
@@ -31,11 +34,16 @@ def col(header, name, fallback):
     low = [h.strip().lower() for h in header]
     return low.index(name) if name in low else fallback
 
+def natkey(s):
+    """Natural sort so 'DOC-2' sorts before 'DOC-10'."""
+    return [int(t) if t.isdigit() else t.lower() for t in re.split(r"(\d+)", s)]
+
 def summarise(lot, table):
     h = table[0]
     iM, iN = col(h, "severity", 12), col(h, "status", 13)
     iP, iQ = col(h, "assigned to", 15), col(h, "modeller responce", col(h, "modeller response", 16))
     iCmt, iDoc = col(h, "comment no.", 0), col(h, "document no.", 1)
+    iLine = col(h, "line number", 2)
     sample = {"header_cols": len(h), "header": h[:20],
               "iM": iM, "iN": iN, "iP": iP, "iQ": iQ,
               "rows_at": {}}
@@ -49,8 +57,24 @@ def summarise(lot, table):
     named_rows = 0       # column P non-blank, regardless of severity
     no_severity = 0       # named but severity not High/Medium/Low -> excluded, flagged for review
     row_states = []        # per-row identity + current closed state, for day-over-day diffing
+    # Document-level tracking is independent of assignee/severity: a document is only "ready to
+    # issue" once EVERY comment against it is closed, regardless of who owns which comment.
+    docs = {}
     for i, r in enumerate(table[1:], start=2):
-        r = r + [""] * (max(iM, iN, iP, iQ, iCmt, iDoc) + 1 - len(r))
+        r = r + [""] * (max(iM, iN, iP, iQ, iCmt, iDoc, iLine) + 1 - len(r))
+        status_l, resp_l = r[iN].strip().lower(), r[iQ].strip().lower()
+        is_closed = status_l == "closed" or any(w in resp_l for w in DONE)
+
+        docno = r[iDoc].strip()
+        if docno:
+            line = r[iLine].strip()
+            d = docs.setdefault(docno, {"total": 0, "open": 0, "lines_all": [], "lines_open": []})
+            d["total"] += 1
+            d["lines_all"].append(line)
+            if not is_closed:
+                d["open"] += 1
+                d["lines_open"].append(line)
+
         names = [n.strip() for n in r[iP].split("/") if n.strip()]
         if not names:
             continue
@@ -60,12 +84,10 @@ def summarise(lot, table):
             no_severity += 1
             continue
         who = " ".join(w.capitalize() for w in names[-1].split())  # normalise casing so "DHARMA"/"Dharma" merge
-        status, resp = r[iN].strip().lower(), r[iQ].strip().lower()
         b = stats.setdefault(who, {s: [0, 0, 0, 0] for s in SEV})[sev]  # assigned, closed, open, hold
         b[0] += 1
-        is_closed = status == "closed" or any(w in resp for w in DONE)
         if is_closed: b[1] += 1
-        elif any(w in resp for w in HOLD): b[3] += 1
+        elif any(w in resp_l for w in HOLD): b[3] += 1
         else: b[2] += 1
         key = f"{lot}|{r[iCmt].strip() or i}|{r[iDoc].strip()}"  # row number as fallback if Comment No. is blank
         row_states.append({"key": key, "who": who, "lot": lot, "closed": is_closed})
@@ -79,9 +101,52 @@ def summarise(lot, table):
     diag = {"raw_rows": raw_rows, "named_rows": named_rows, "counted": counted,
             "excluded_no_severity": no_severity, "excluded_blank_name": raw_rows - named_rows,
             "debug": sample}
-    return rows, diag, row_states
+    return rows, diag, row_states, docs
 
-rows, status, hashes, all_row_states = [], {}, {}, []
+def classify_documents(docs):
+    """docs: {docno: {total, open, lines_all, lines_open}} -> ready / address / needs_work doc-number lists."""
+    ready = sorted((d for d, v in docs.items() if v["open"] == 0), key=natkey)
+    address = sorted((d for d, v in docs.items() if 0 < v["open"] <= ADDRESS_THRESHOLD), key=natkey)
+    needs_work = sorted((d for d, v in docs.items() if v["open"] > ADDRESS_THRESHOLD), key=natkey)
+    return ready, address, needs_work
+
+def build_lot_documents(lot, docs, issued_log):
+    ready, address, needs_work = classify_documents(docs)
+    ready_issued = [d for d in ready if f"{lot}|{d}" in issued_log]
+    ready_pending = [d for d in ready if f"{lot}|{d}" not in issued_log]
+
+    def lines_for(doclist, key):
+        out = []
+        for d in doclist:
+            out.extend(docs[d][key])
+        return out
+
+    return {
+        "total_documents": len(docs),
+        "ready_pending": {"count": len(ready_pending), "docs": ready_pending,
+                           "lines": lines_for(ready_pending, "lines_all")},
+        "ready_issued": {"count": len(ready_issued), "docs": ready_issued,
+                          "lines": lines_for(ready_issued, "lines_all")},
+        "address": {"count": len(address), "docs": address,
+                    "lines": lines_for(address, "lines_open"),
+                    "detail": [{"doc": d, "open": docs[d]["open"]} for d in address]},
+        "needs_work": {"count": len(needs_work), "docs": needs_work},
+    }
+
+# --- Load previous sync so a single bad read (duplicate tab, or a filter hiding rows on the
+# sheet) can fall back to last-known-good data for just that lot, instead of corrupting the
+# whole dashboard or silently under-counting. ---
+prev = json.loads(SUMMARY_PATH.read_text()) if SUMMARY_PATH.exists() else {}
+prev_status = prev.get("status", {})
+prev_rows_by_lot = {}
+for r in prev.get("rows", []):
+    prev_rows_by_lot.setdefault(r[1], []).append(r)
+prev_documents = prev.get("documents", {})
+prev_docs_raw = prev.get("_docs_raw", {})  # internal, not meant for the frontend; see below
+
+issued_log = json.loads(ISSUED_LOG_PATH.read_text()) if ISSUED_LOG_PATH.exists() else {}
+
+rows, status, hashes, all_row_states, docs_raw_by_lot = [], {}, {}, [], {}
 for lot, lot_cfg in cfg["lots"].items():
     try:
         table, raw_text = fetch(lot_cfg)
@@ -91,17 +156,37 @@ for lot, lot_cfg in cfg["lots"].items():
             raise RuntimeError(f"fetched content is byte-identical to '{dup}' — gid/sheet_name for "
                                 f"'{lot}' is almost certainly wrong and is pulling the same tab")
         hashes[lot] = h
-        lot_rows, diag, row_states = summarise(lot, table)
+        lot_rows, diag, row_states, docs_raw = summarise(lot, table)
+
+        prev_raw = prev_status.get(lot, {}).get("raw_rows")
+        if prev_raw is not None and diag["raw_rows"] < prev_raw:
+            # Row count should only ever grow (or hold steady). A drop almost always means a
+            # filter (not a filter *view* — an actual Data > Create filter) is live on the tab
+            # when we read it, which makes Sheets' CSV export silently omit the hidden rows.
+            raise RuntimeError(
+                f"row count dropped from {prev_raw} to {diag['raw_rows']} — looks like a filter "
+                f"is active on the '{lot}' tab, which hides rows from the CSV export too; "
+                f"refusing this read and keeping the last known-good data for '{lot}'"
+            )
+
         rows += lot_rows
         all_row_states += row_states
+        docs_raw_by_lot[lot] = docs_raw
         diag["content_hash"] = h
         diag["gid"] = lot_cfg
         status[lot] = diag
         print(f"[{lot}] raw_rows={diag['raw_rows']} named_rows={diag['named_rows']} "
               f"counted={diag['counted']} excluded_no_severity={diag['excluded_no_severity']} "
-              f"excluded_blank_name={diag['excluded_blank_name']} hash={h}")
+              f"excluded_blank_name={diag['excluded_blank_name']} documents={len(docs_raw)} hash={h}")
     except Exception as e:
         status[lot] = {"error": str(e)}
+        # Fall back to the previous sync's rows/documents for this lot only, so a transient bad
+        # read for one lot never erases or under-counts that lot on the live dashboard.
+        if lot in prev_rows_by_lot or lot in prev_documents:
+            status[lot]["stale_data_from_previous_sync"] = True
+            rows += prev_rows_by_lot.get(lot, [])
+            if lot in prev_docs_raw:
+                docs_raw_by_lot[lot] = prev_docs_raw[lot]
         print(f"[{lot}] ERROR: {e}", file=sys.stderr)
 
 ok_lots = [l for l, s in status.items() if "error" not in s]
@@ -158,10 +243,18 @@ for r in rows:
     combined_map[who] = [a + b for a, b in zip(combined_map[who], vals)]
 combined_rows = [[who, COMBINED_LABEL] + vals for who, vals in sorted(combined_map.items())]
 
+# --- Issuance view: per lot, which documents are fully closed (ready to issue / already
+# issued), which are almost there (<=3 open points, "address these"), and which still need
+# real work. Independent of assignee on purpose. ---
+documents_out = {lot: build_lot_documents(lot, docs, issued_log) for lot, docs in docs_raw_by_lot.items()}
+
 out = root / "site" / "data" / "summary.json"
 out.write_text(json.dumps({"updated": datetime.datetime.now(datetime.timezone.utc).isoformat(),
                            "preliminary": False, "today": TODAY_IST, "status": status, "rows": rows,
-                           "combined": combined_rows}, indent=1))
+                           "combined": combined_rows, "documents": documents_out,
+                           "_docs_raw": docs_raw_by_lot}, indent=1))
 (root / "site" / "config.json").write_text(json.dumps(cfg, indent=1))  # keep client-side refresh in sync
 print("wrote", out)
 print("TOTAL_ASSIGNED_ACROSS_LOTS", sum(r[14] for r in rows))
+print("DOCUMENTS", {lot: d["total_documents"] for lot, d in documents_out.items()})
+print("READY_TO_ISSUE_PENDING", {lot: d["ready_pending"]["count"] for lot, d in documents_out.items()})
