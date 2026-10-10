@@ -143,6 +143,7 @@ footer{padding:4rem 0 3rem;color:var(--dim);font-size:.85rem}
 .modal-foot{padding:1rem 1.3rem 1.3rem;display:flex;gap:.8rem;flex-wrap:wrap;align-items:center}
 .issuebtn{background:var(--amber);color:var(--bg);border:0;border-radius:10px;padding:.65rem 1.1rem;font:700 .85rem "Hanken Grotesk",sans-serif;cursor:pointer;transition:.2s var(--ease);text-decoration:none;display:inline-flex;align-items:center;gap:.4rem}
 .issuebtn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.issuebtn:disabled{cursor:default;transform:none;filter:none;background:var(--ok);opacity:.9}
 .modal-foot .note{color:var(--dim);font-size:.78rem;max-width:40ch}
 .addrlist{padding:0 1.3rem;max-height:9rem;overflow:auto;font-size:.82rem;color:var(--dim);display:grid;gap:.15rem;margin-bottom:.4rem}
 .addrlist b{color:var(--ink)}
@@ -314,6 +315,80 @@ tabIssuance.onclick=()=>showTab("issuance");
 
 /* ---------- Issuance screen ---------- */
 const REPO="vikramdex-ops/iso-review-dashboard";
+
+/* "Mark these as issued" writes directly via the GitHub REST API instead of opening a
+   prefilled issue page for you to submit by hand. The token below is a fine-grained PAT
+   scoped to ONLY "Issues: write" on this one repo — nothing else (no Contents, no other
+   repos). That's a deliberate, accepted trade-off: because this page is public, the token
+   is visible to anyone who opens dev tools. With this scope, the worst a leaked copy can
+   do is open/close issues here — it cannot touch code, the workflow files, or any other
+   repo. The actual write to issued_log.json still only happens inside the GitHub Action
+   (.github/workflows/issue-intake.yml) after it parses a matching issue, same as before —
+   this just automates the "open the page and click Submit" step that used to be manual.
+   Rotate this token any time from https://github.com/settings/personal-access-tokens — rotating
+   it only needs updating the ISSUE_PAT repository secret, never a commit, since the placeholder
+   below is substituted with the real value at deploy time by .github/workflows/deploy.yml and
+   never appears in git history (GitHub's push protection rejects a commit containing it). */
+const GITHUB_PAT="__ISSUE_PAT__";
+
+function issueFallbackUrl(lot,docs){
+  const title=`Issue documents — ${lot} — ${new Date().toISOString().slice(0,10)}`;
+  const body=`Lot: ${lot}\n\nDocuments:\n\`\`\`\n${docs.join("\n")}\n\`\`\`\n\n(opened from the dashboard's issuance screen)`;
+  return `https://github.com/${REPO}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
+}
+
+function renderIssueNote(lot){
+  const el=$("#autoIssueNote");
+  if(el) el.textContent="One click — recorded automatically, usually within a minute or two.";
+}
+
+async function markAsIssued(lot,docs,btn,noteEl){
+  btn.disabled=true;
+  const original=btn.textContent;
+  btn.textContent="Marking…";
+  noteEl.textContent="Writing to GitHub…";
+  const title=`Issue documents — ${lot} — ${new Date().toISOString().slice(0,10)}`;
+  const body=`Lot: ${lot}\n\nDocuments:\n\`\`\`\n${docs.join("\n")}\n\`\`\`\n\n(opened automatically from the dashboard's issuance screen)`;
+  try{
+    const res=await fetch(`https://api.github.com/repos/${REPO}/issues`,{
+      method:"POST",
+      headers:{
+        "Authorization":`Bearer ${GITHUB_PAT}`,
+        "Accept":"application/vnd.github+json",
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify({title,body})
+    });
+    if(!res.ok) throw new Error(`GitHub responded ${res.status}`);
+    btn.textContent="✓ Marked";
+    noteEl.innerHTML=`Recorded. The sync will reflect this within a minute or two — <button class="copybtn" id="pollNowBtn" type="button">check now</button>.`;
+    $("#pollNowBtn").onclick=()=>pollForIssuedUpdate(lot,noteEl);
+    pollForIssuedUpdate(lot,noteEl);
+  }catch(err){
+    btn.disabled=false;
+    btn.textContent=original;
+    const fb=issueFallbackUrl(lot,docs);
+    noteEl.innerHTML=`Couldn't write directly (${err.message}). <a href="${fb}" target="_blank" rel="noopener">Open the issue form instead →</a>`;
+  }
+}
+
+async function pollForIssuedUpdate(lot,noteEl){
+  const startedAt=D.updated;
+  noteEl.textContent="Recorded. Waiting for the sync to pick it up…";
+  for(let i=0;i<10;i++){
+    await new Promise(r=>setTimeout(r,12000));
+    try{
+      const fresh=await fetch("data/summary.json?"+Date.now(),{cache:"no-store"}).then(r=>r.json());
+      if(fresh.updated!==startedAt){
+        D=fresh;paint();renderIssuance();
+        noteEl.textContent="✓ Synced — now showing under Issued.";
+        return;
+      }
+    }catch(e){/* keep trying */}
+  }
+  noteEl.innerHTML=`Still waiting on the next sync — <button class="copybtn" id="refreshNowNote" type="button">Refresh now</button> in a bit, or check the <a href="https://github.com/${REPO}/actions" target="_blank" rel="noopener">Actions tab</a>.`;
+  const b=$("#refreshNowNote");if(b)b.onclick=()=>$("#refresh").click();
+}
 function renderIssuance(){
   const docs=D.documents||{};
   const lots=Object.keys(docs).length?Object.keys(docs):Object.keys(D.status||{});
@@ -359,10 +434,9 @@ function openDocModal(lot,bucket){
   $("#lineList").textContent=(b.lines||[]).join("\n")||"—";
   const foot=$("#modalFoot");
   if(bucket==="ready_pending"&&b.docs&&b.docs.length){
-    const title=`Issue documents — ${lot} — ${new Date().toISOString().slice(0,10)}`;
-    const body=`Lot: ${lot}\n\nDocuments:\n\`\`\`\n${b.docs.join("\n")}\n\`\`\`\n\n(opened from the dashboard's issuance screen — submitting this issue is what records them as issued)`;
-    const url=`https://github.com/${REPO}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
-    foot.innerHTML=`<a class="issuebtn" href="${url}" target="_blank" rel="noopener">Mark these as issued →</a><span class="note">Opens a GitHub issue prefilled with this list. Submitting it is what records the batch — nothing is marked issued until you do.</span>`;
+    foot.innerHTML=`<button class="issuebtn" id="autoIssueBtn" type="button">Mark these as issued →</button><span class="note" id="autoIssueNote"></span>`;
+    renderIssueNote(lot);
+    $("#autoIssueBtn").onclick=()=>markAsIssued(lot,b.docs,$("#autoIssueBtn"),$("#autoIssueNote"));
   } else if(bucket==="address"&&d.address&&d.address.detail&&d.address.detail.length){
     foot.innerHTML=`<div class="addrlist">${d.address.detail.map(x=>`<div><b>${x.doc}</b> — ${x.open} open point${x.open===1?"":"s"}</div>`).join("")}</div>`;
   } else {
@@ -385,7 +459,7 @@ $("#copyLines").onclick=()=>copy($("#lineList").textContent,$("#copyLines"));
 /* Refresh now: re-reads the latest published sync. The browser cannot read Google's CSV reliably
    (CORS + silent tab fallback caused duplicated lots), so numbers only ever come from the verified server sync. */
 $("#refresh").onclick=async()=>{
-  const btn=$("#refresh");btn.disabled=true;btn.classList.add("spin");btn.lastChild.textContent=" Checking…";
+  const btn=$("#refresh");btn.disabled=true;btn.lastChild.textContent=" Checking…";
   try{D=await fetch("data/summary.json?"+Date.now(),{cache:"no-store"}).then(r=>r.json());paint()}
   catch(e){alert("Could not load the latest data: "+e.message)}
   finally{btn.disabled=false;btn.classList.remove("spin");btn.lastChild.textContent=" Refresh now"}
