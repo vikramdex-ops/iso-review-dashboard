@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T03:54:29.086801+00:00",
+ "updated": "2026-10-10T11:45:39.677547+00:00",
  "preliminary": false,
  "today": "2026-10-10",
  "status": {
@@ -80,7 +80,7 @@
      }
     }
    },
-   "content_hash": "1fba23f36dfa",
+   "content_hash": "bd8dd2ff9573",
    "gid": "31577278"
   },
   "Lot 2": {
@@ -130,63 +130,12 @@
      }
     }
    },
-   "content_hash": "5a6de46a3c21",
+   "content_hash": "7346ff9205b1",
    "gid": "1594060800"
   },
   "Lot 3": {
-   "raw_rows": 311,
-   "named_rows": 279,
-   "counted": 279,
-   "excluded_no_severity": 0,
-   "excluded_blank_name": 32,
-   "debug": {
-    "header_cols": 23,
-    "header": [
-     "Comment No.",
-     "Document No.",
-     "Line number",
-     "Sheet",
-     "Marked PDF",
-     "Extracted iso file",
-     "RLM file",
-     "Location on drawing",
-     "Category",
-     "RLM shows",
-     "Extracted iso shows",
-     "Comment / Action required",
-     "Severity",
-     "Status",
-     "Action by",
-     "Assigned To",
-     "Modeller response",
-     "Incorporated? (Yes / No / Partial / N-A)",
-     "check print updation",
-     "Incorporated in Rev / date"
-    ],
-    "iM": 12,
-    "iN": 13,
-    "iP": 15,
-    "iQ": 16,
-    "rows_at": {
-     "2": {
-      "colA": "1607-02-01",
-      "severity": "High",
-      "assignedTo": "Karthikeyan"
-     },
-     "101": {
-      "colA": "1691-01-06",
-      "severity": "Medium",
-      "assignedTo": "Akash"
-     },
-     "301": {
-      "colA": "1717-02-03",
-      "severity": "Low",
-      "assignedTo": "Murukeshwari"
-     }
-    }
-   },
-   "content_hash": "dc2fe4a4ed56",
-   "gid": "880872163"
+   "error": "row count dropped from 311 to 279 \u2014 looks like a filter is active on the 'Lot 3' tab, which hides rows from the CSV export too; refusing this read and keeping the last known-good data for 'Lot 3'",
+   "stale_data_from_previous_sync": true
   },
   "Lot 4": {
    "raw_rows": 332,
@@ -240,7 +189,7 @@
      }
     }
    },
-   "content_hash": "195a519e672a",
+   "content_hash": "4f319326b7c2",
    "gid": "2046782283"
   }
  },
@@ -327,7 +276,7 @@
    384,
    1,
    0,
-   2
+   0
   ],
   [
    "Murukeshwari",
@@ -354,22 +303,22 @@
    "Hemnath",
    "Lot 2",
    70,
-   38,
-   29,
+   51,
+   18,
    81,
-   65,
-   16,
+   75,
+   6,
    63,
-   50,
-   12,
-   3,
+   54,
+   8,
+   1,
    0,
    1,
    214,
-   153,
-   61,
+   180,
+   34,
    0,
-   19
+   0
   ],
   [
    "Akash",
@@ -390,7 +339,8 @@
    27,
    64,
    0,
-   17
+   17,
+   0
   ],
   [
    "Dharma",
@@ -411,7 +361,8 @@
    22,
    17,
    0,
-   12
+   12,
+   0
   ],
   [
    "Karthikeyan",
@@ -432,7 +383,8 @@
    36,
    40,
    0,
-   30
+   30,
+   0
   ],
   [
    "Kowshik",
@@ -453,7 +405,8 @@
    12,
    45,
    0,
-   5
+   5,
+   0
   ],
   [
    "Murukeshwari",
@@ -473,6 +426,7 @@
    16,
    0,
    16,
+   0,
    0,
    0
   ],
@@ -502,14 +456,14 @@
    "Lot 4",
    17,
    0,
-   17,
+   16,
    0,
    0,
    0,
    37,
    0,
    37,
-   0,
+   1,
    0,
    0,
    54,
@@ -608,36 +562,36 @@
    "Hemnath",
    "All Lots (combined)",
    70,
-   38,
-   29,
+   51,
+   18,
    81,
-   65,
-   16,
+   75,
+   6,
    63,
-   50,
-   12,
-   3,
+   54,
+   8,
+   1,
    0,
    1,
    214,
-   153,
-   61,
+   180,
+   34,
    0,
-   19
+   0
   ],
   [
    "Karthikeyan",
    "All Lots (combined)",
    264,
    221,
-   43,
+   42,
    225,
    217,
    8,
    275,
    232,
    43,
-   0,
+   1,
    0,
    0,
    764,
@@ -665,7 +619,7 @@
    396,
    117,
    0,
-   7
+   5
   ],
   [
    "Murukeshwari",
@@ -2953,7 +2907,7 @@
   "Lot 2": {
    "total_documents": 26,
    "ready_pending": {
-    "count": 20,
+    "count": 23,
     "docs": [
      "P12513-12-01-15-1637",
      "P12513-12-01-15-1647",
@@ -2964,7 +2918,9 @@
      "P12513-12-01-15-1736",
      "P12513-12-01-15-1738",
      "P12513-12-01-15-1740",
+     "P12513-12-01-15-1768",
      "P12513-12-01-15-1865",
+     "P12513-12-01-15-1946",
      "P12513-12-01-15-1976",
      "P12513-12-01-15-1980",
      "P12513-12-01-15-2015",
@@ -2974,7 +2930,8 @@
      "P12513-12-39-15-1614",
      "P12513-12-39-15-1695",
      "P12513-12-39-15-1709",
-     "P12513-12-39-15-1720"
+     "P12513-12-39-15-1720",
+     "P12513-12-39-15-1723"
     ],
     "lines": [
      "2\"-D-15259-AE3S0C-FA",
@@ -3048,12 +3005,31 @@
      "1\"-IA-11008-AC4A1A-FA",
      "1\"-IA-11008-AC4A1A-FA",
      "1\"-IA-11008-AC4A1A-FA",
+     "1\"-PA-8618-AC1A1B-FA",
+     "1\"-PA-8618-AC1A1B-FA",
+     "1\"-PA-8618-AC1A1B-FA",
+     "1\"-PA-8618-AC1A1B-FA",
+     "1\"-PA-8618-AC1A1B-FA",
+     "1\"-PA-8618-AC1A1B-FA",
+     "1\"-PA-8618-AC1A1B-FA",
+     "1\"-PA-8618-AC1A1B-FA",
+     "1\"-PA-8618-AC1A1B-FA",
      "2\"-VG-11321-AE3S0C-FA",
      "2\"-VG-11321-AE3S0C-FA",
      "2\"-VG-11321-AE3S0C-FA",
      "2\"-VG-11321-AE3S0C-FA",
      "2\"-VG-11321-AE3S0C-FA",
      "2\"-VG-11321-AE3S0C-FA",
+     "1\"-D-17016-AE3S0C-FA",
+     "1\"-D-17016-AE3S0C-FA",
+     "1\"-D-17016-AE3S0C-FA",
+     "1\"-D-17016-AE3S0C-FA",
+     "1\"-D-17016-AE3S0C-FA",
+     "1\"-D-17016-AE3S0C-FA",
+     "1\"-D-17016-AE3S0C-FA",
+     "1\"-D-17016-AE3S0C-FA",
+     "1\"-D-17016-AE3S0C-FA",
+     "1\"-D-17016-AE3S0C-FA",
      "2\"-VG-11347-AE3S0C-FA (extracted) / 3/4\"-VG-11873-AC1S3A-FA (RLM)",
      "2\"-VG-11347-AE3S0C-FA (extracted) / 3/4\"-VG-11873-AC1S3A-FA (RLM)",
      "2\"-VG-11347-AE3S0C-FA (extracted) / 3/4\"-VG-11873-AC1S3A-FA (RLM)",
@@ -3134,7 +3110,23 @@
      "6\"-PO-22119-AE3S0C-FA",
      "6\"-PO-22119-AE3S0C-FA",
      "6\"-PO-22119-AE3S0C-FA",
-     "6\"-PO-22119-AE3S0C-FA"
+     "6\"-PO-22119-AE3S0C-FA",
+     "3\"-PO-22125-AE3S0C-FA",
+     "3\"-PO-22125-AE3S0C-FA",
+     "3\"-PO-22125-AE3S0C-FA",
+     "3\"-PO-22125-AE3S0C-FA",
+     "3\"-PO-22125-AE3S0C-FA",
+     "3\"-PO-22125-AE3S0C-FA",
+     "3\"-PO-22125-AE3S0C-FA",
+     "3\"-PO-22125-AE3S0C-FA",
+     "3\"-PO-22125-AE3S0C-FA",
+     "3\"-PO-22125-AE3S0C-FA",
+     "3\"-PO-22125-AE3S0C-FA",
+     "3\"-PO-22125-AE3S0C-FA",
+     "3\"-PO-22125-AE3S0C-FA",
+     "3\"-PO-22125-AE3S0C-FA",
+     "3\"-PO-22125-AE3S0C-FA",
+     "3\"-PO-22125-AE3S0C-FA"
     ]
    },
    "ready_issued": {
@@ -3143,20 +3135,27 @@
     "lines": []
    },
    "address": {
-    "count": 0,
-    "docs": [],
-    "lines": [],
-    "detail": []
+    "count": 1,
+    "docs": [
+     "P12513-12-01-15-1612"
+    ],
+    "lines": [
+     "2\"-D-15230-AE3S0C-FA",
+     "2\"-D-15230-AE3S0C-FA",
+     "2\"-D-15230-AE3S0C-FA"
+    ],
+    "detail": [
+     {
+      "doc": "P12513-12-01-15-1612",
+      "open": 3
+     }
+    ]
    },
    "needs_work": {
-    "count": 6,
+    "count": 2,
     "docs": [
-     "P12513-12-01-15-1612",
      "P12513-12-01-15-1763",
-     "P12513-12-01-15-1768",
-     "P12513-12-01-15-1811",
-     "P12513-12-01-15-1946",
-     "P12513-12-39-15-1723"
+     "P12513-12-01-15-1811"
     ]
    }
   },
@@ -7244,7 +7243,7 @@
   "Lot 2": {
    "P12513-12-01-15-1612": {
     "total": 9,
-    "open": 4,
+    "open": 3,
     "lines_all": [
      "2\"-D-15230-AE3S0C-FA",
      "2\"-D-15230-AE3S0C-FA",
@@ -7257,7 +7256,6 @@
      "2\"-D-15230-AE3S0C-FA"
     ],
     "lines_open": [
-     "2\"-D-15230-AE3S0C-FA",
      "2\"-D-15230-AE3S0C-FA",
      "2\"-D-15230-AE3S0C-FA",
      "2\"-D-15230-AE3S0C-FA"
@@ -7430,7 +7428,7 @@
    },
    "P12513-12-01-15-1768": {
     "total": 9,
-    "open": 8,
+    "open": 0,
     "lines_all": [
      "1\"-PA-8618-AC1A1B-FA",
      "1\"-PA-8618-AC1A1B-FA",
@@ -7442,20 +7440,11 @@
      "1\"-PA-8618-AC1A1B-FA",
      "1\"-PA-8618-AC1A1B-FA"
     ],
-    "lines_open": [
-     "1\"-PA-8618-AC1A1B-FA",
-     "1\"-PA-8618-AC1A1B-FA",
-     "1\"-PA-8618-AC1A1B-FA",
-     "1\"-PA-8618-AC1A1B-FA",
-     "1\"-PA-8618-AC1A1B-FA",
-     "1\"-PA-8618-AC1A1B-FA",
-     "1\"-PA-8618-AC1A1B-FA",
-     "1\"-PA-8618-AC1A1B-FA"
-    ]
+    "lines_open": []
    },
    "P12513-12-01-15-1811": {
     "total": 27,
-    "open": 21,
+    "open": 20,
     "lines_all": [
      "36\"-PO-22096-AC1S3A-FA",
      "36\"-PO-22096-AC1S3A-FA",
@@ -7486,7 +7475,6 @@
      "36\"-PO-22096-AC1S3A-FA"
     ],
     "lines_open": [
-     "36\"-PO-22096-AC1S3A-FA",
      "36\"-PO-22096-AC1S3A-FA",
      "36\"-PO-22096-AC1S3A-FA",
      "36\"-PO-22096-AC1S3A-FA",
@@ -7524,7 +7512,7 @@
    },
    "P12513-12-01-15-1946": {
     "total": 10,
-    "open": 9,
+    "open": 0,
     "lines_all": [
      "1\"-D-17016-AE3S0C-FA",
      "1\"-D-17016-AE3S0C-FA",
@@ -7537,17 +7525,7 @@
      "1\"-D-17016-AE3S0C-FA",
      "1\"-D-17016-AE3S0C-FA"
     ],
-    "lines_open": [
-     "1\"-D-17016-AE3S0C-FA",
-     "1\"-D-17016-AE3S0C-FA",
-     "1\"-D-17016-AE3S0C-FA",
-     "1\"-D-17016-AE3S0C-FA",
-     "1\"-D-17016-AE3S0C-FA",
-     "1\"-D-17016-AE3S0C-FA",
-     "1\"-D-17016-AE3S0C-FA",
-     "1\"-D-17016-AE3S0C-FA",
-     "1\"-D-17016-AE3S0C-FA"
-    ]
+    "lines_open": []
    },
    "P12513-12-01-15-1976": {
     "total": 4,
@@ -7702,7 +7680,7 @@
    },
    "P12513-12-39-15-1723": {
     "total": 16,
-    "open": 8,
+    "open": 0,
     "lines_all": [
      "3\"-PO-22125-AE3S0C-FA",
      "3\"-PO-22125-AE3S0C-FA",
@@ -7721,16 +7699,7 @@
      "3\"-PO-22125-AE3S0C-FA",
      "3\"-PO-22125-AE3S0C-FA"
     ],
-    "lines_open": [
-     "3\"-PO-22125-AE3S0C-FA",
-     "3\"-PO-22125-AE3S0C-FA",
-     "3\"-PO-22125-AE3S0C-FA",
-     "3\"-PO-22125-AE3S0C-FA",
-     "3\"-PO-22125-AE3S0C-FA",
-     "3\"-PO-22125-AE3S0C-FA",
-     "3\"-PO-22125-AE3S0C-FA",
-     "3\"-PO-22125-AE3S0C-FA"
-    ]
+    "lines_open": []
    }
   },
   "Lot 3": {
