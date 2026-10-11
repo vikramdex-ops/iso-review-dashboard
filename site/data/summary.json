@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-11T15:38:08.919846+00:00",
+ "updated": "2026-10-11T16:01:12.042970+00:00",
  "preliminary": false,
  "today": "2026-10-11",
  "status": {
@@ -10,7 +10,7 @@
    "excluded_no_severity": 20,
    "excluded_blank_name": 346,
    "debug": {
-    "header_cols": 24,
+    "header_cols": 23,
     "header": [
      "Comment No.",
      "Document No.",
@@ -80,9 +80,9 @@
      }
     }
    },
-   "content_hash": "addb9732f122",
+   "content_hash": "03fe7da4ed10",
    "gid": "31577278",
-   "fetch_method": "csv_export"
+   "fetch_method": "sheets_api"
   },
   "Lot 2": {
    "raw_rows": 241,
@@ -91,7 +91,7 @@
    "excluded_no_severity": 0,
    "excluded_blank_name": 27,
    "debug": {
-    "header_cols": 27,
+    "header_cols": 22,
     "header": [
      "Comment No.",
      "Document No.",
@@ -131,9 +131,9 @@
      }
     }
    },
-   "content_hash": "f5312b19c60b",
+   "content_hash": "16fb1b7253a7",
    "gid": "1594060800",
-   "fetch_method": "csv_export"
+   "fetch_method": "sheets_api"
   },
   "Lot 3": {
    "raw_rows": 279,
@@ -182,9 +182,9 @@
      }
     }
    },
-   "content_hash": "145883e2abba",
+   "content_hash": "5a3a6fd1c58e",
    "gid": "880872163",
-   "fetch_method": "csv_export"
+   "fetch_method": "sheets_api"
   },
   "Lot 4": {
    "raw_rows": 332,
@@ -238,9 +238,9 @@
      }
     }
    },
-   "content_hash": "4f319326b7c2",
+   "content_hash": "a1ab2346854d",
    "gid": "2046782283",
-   "fetch_method": "csv_export"
+   "fetch_method": "sheets_api"
   }
  },
  "rows": [
