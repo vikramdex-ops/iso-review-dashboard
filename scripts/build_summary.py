@@ -1,6 +1,18 @@
-"""Fetch each lot tab as CSV (sheet must be shared 'Anyone with the link: Viewer'),
-apply the summary rules, and write site/data/summary.json. No credentials needed."""
-import csv, io, json, re, sys, urllib.request, urllib.parse, hashlib, datetime, pathlib
+"""Fetch each lot tab (sheet must be shared 'Anyone with the link: Viewer'), apply the summary
+rules, and write site/data/summary.json.
+
+Two read paths:
+  - Sheets API v4 (used when GOOGLE_SHEETS_API_KEY is set): reads the tab's actual cell values
+    server-side. An active "Data > Create a filter" on a tab is a UI/display-layer construct —
+    the API ignores it and returns every row, exactly as a lead manually opening the sheet
+    would see once they cleared the filter. This is the filter-proof path and is what runs in
+    production (the key is a GitHub Actions secret, never exposed client-side).
+  - Public CSV export (fallback when no key is configured, e.g. local/dev runs): simple and
+    credential-free, but reflects whatever the tab's live filtered VIEW shows, so a filter left
+    on by a team member working the sheet hides those rows from the export for everyone,
+    including us. Fine for a quick local check; not what production should rely on.
+"""
+import csv, io, json, os, re, sys, urllib.request, urllib.parse, hashlib, datetime, pathlib
 try:
     from zoneinfo import ZoneInfo
     IST = ZoneInfo("Asia/Kolkata")
@@ -17,18 +29,56 @@ ISSUED_LOG_PATH = root / "site" / "data" / "issued_log.json"
 SUMMARY_PATH = root / "site" / "data" / "summary.json"
 ADDRESS_THRESHOLD = 3  # a document with this many or fewer open/hold points is "almost ready"
 
+GOOGLE_SHEETS_API_KEY = os.environ.get("GOOGLE_SHEETS_API_KEY", "").strip()
+FETCH_METHOD = "sheets_api" if GOOGLE_SHEETS_API_KEY else "csv_export"
+_sheet_titles_cache = None
+
 def fetch_url(url):
     with urllib.request.urlopen(url, timeout=60) as r:
         text = r.read().decode("utf-8")
     if text.lstrip().lower().startswith("<!doctype html") or text.lstrip().startswith("<HTML"):
-        raise RuntimeError("got an HTML error page, not CSV (bad gid/sheet name or not shared)")
+        raise RuntimeError("got an HTML error page, not data (bad gid/sheet name, bad API key, "
+                            "or not shared)")
     return text
 
-def fetch(gid):
-    """Export by numeric gid only. (gviz / sheet-name lookups silently fall back to the
-    FIRST tab when they can't match, which produced duplicated lots.)"""
+def _resolve_sheet_title(gid):
+    """gid -> tab title, via the spreadsheet's own metadata (not affected by filters)."""
+    global _sheet_titles_cache
+    if _sheet_titles_cache is None:
+        url = (f"https://sheets.googleapis.com/v4/spreadsheets/{cfg['sheet_id']}"
+               f"?fields=sheets.properties&key={GOOGLE_SHEETS_API_KEY}")
+        data = json.loads(fetch_url(url))
+        _sheet_titles_cache = {str(s["properties"]["sheetId"]): s["properties"]["title"]
+                                for s in data.get("sheets", [])}
+    title = _sheet_titles_cache.get(str(gid))
+    if not title:
+        raise RuntimeError(f"gid {gid} not found in this spreadsheet's tab list (Sheets API metadata)")
+    return title
+
+def fetch_via_api(gid):
+    """Sheets API v4 values.get — the filter-proof read. valueRenderOption=FORMATTED_VALUE
+    mirrors what CSV export would show (so downstream parsing in summarise() doesn't need to
+    change), the difference is this bypasses the tab's live filtered view entirely."""
+    title = _resolve_sheet_title(gid)
+    range_ = urllib.parse.quote(f"'{title.replace(chr(39), chr(39) * 2)}'")
+    url = (f"https://sheets.googleapis.com/v4/spreadsheets/{cfg['sheet_id']}/values/{range_}"
+           f"?key={GOOGLE_SHEETS_API_KEY}&valueRenderOption=FORMATTED_VALUE&majorDimension=ROWS")
+    raw_json = fetch_url(url)
+    values = json.loads(raw_json).get("values", [])
+    table = [["" if c is None else str(c) for c in row] for row in values]
+    return table, raw_json
+
+def fetch_via_csv(gid):
+    """Public CSV export by numeric gid only. (gviz / sheet-name lookups silently fall back to
+    the FIRST tab when they can't match, which previously produced duplicated lots.) Subject to
+    whatever filter is currently active on the tab — see module docstring."""
     text = fetch_url(f"https://docs.google.com/spreadsheets/d/{cfg['sheet_id']}/export?format=csv&gid={gid}")
     return list(csv.reader(io.StringIO(text))), text
+
+def fetch(gid):
+    if GOOGLE_SHEETS_API_KEY:
+        return fetch_via_api(gid)
+    return fetch_via_csv(gid)
 
 def col(header, name, fallback):
     low = [h.strip().lower() for h in header]
@@ -160,13 +210,25 @@ for lot, lot_cfg in cfg["lots"].items():
 
         prev_raw = prev_status.get(lot, {}).get("raw_rows")
         if prev_raw is not None and diag["raw_rows"] < prev_raw:
-            # Row count should only ever grow (or hold steady). A drop almost always means a
-            # filter (not a filter *view* — an actual Data > Create filter) is live on the tab
-            # when we read it, which makes Sheets' CSV export silently omit the hidden rows.
+            # Row count should only ever grow (or hold steady). Over the CSV-export path a drop
+            # almost always means a filter (an actual Data > Create a filter, not a filter
+            # *view*) is live on the tab, which makes the export silently omit hidden rows. Over
+            # the Sheets-API path that can't happen — the API reads the tab's real values
+            # regardless of any filter — so a drop there means rows were actually deleted or the
+            # tab was restructured, and still deserves a stop-and-check rather than a silent
+            # undercount.
+            if FETCH_METHOD == "sheets_api":
+                raise RuntimeError(
+                    f"row count dropped from {prev_raw} to {diag['raw_rows']} on '{lot}' — this "
+                    f"was read via the Sheets API, which isn't affected by filters, so this looks "
+                    f"like rows were actually deleted or the tab was restructured; refusing this "
+                    f"read and keeping the last known-good data for '{lot}' until it's checked"
+                )
             raise RuntimeError(
                 f"row count dropped from {prev_raw} to {diag['raw_rows']} — looks like a filter "
                 f"is active on the '{lot}' tab, which hides rows from the CSV export too; "
-                f"refusing this read and keeping the last known-good data for '{lot}'"
+                f"refusing this read and keeping the last known-good data for '{lot}'. Set "
+                f"GOOGLE_SHEETS_API_KEY to read filter-proof instead."
             )
 
         rows += lot_rows
@@ -174,6 +236,7 @@ for lot, lot_cfg in cfg["lots"].items():
         docs_raw_by_lot[lot] = docs_raw
         diag["content_hash"] = h
         diag["gid"] = lot_cfg
+        diag["fetch_method"] = FETCH_METHOD
         status[lot] = diag
         print(f"[{lot}] raw_rows={diag['raw_rows']} named_rows={diag['named_rows']} "
               f"counted={diag['counted']} excluded_no_severity={diag['excluded_no_severity']} "

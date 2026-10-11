@@ -281,8 +281,12 @@ function diag(){
   const ok=Object.values(st).filter(s=>s&&!s.error&&s.named_rows!=null);
   if(ok.length){
     const named=ok.reduce((a,s)=>a+s.named_rows,0),cnt=ok.reduce((a,s)=>a+s.counted,0),skip=named-cnt;
+    const method=ok.find(s=>s.fetch_method)?.fetch_method;
+    const methodNote=method==="sheets_api"
+      ?` <span title="Read via the Sheets API — not affected by an active filter on the sheet">· filter-proof read</span>`
+      :(method==="csv_export"?` <span title="Read via public CSV export — an active Data filter on a tab can hide rows from this" class="warn">· CSV export (set GOOGLE_SHEETS_API_KEY for filter-proof reads)</span>`:"");
     parts.unshift(`<span>Sheet check: <b>${named.toLocaleString()}</b> rows have an assignee = <b>${cnt.toLocaleString()}</b> in the table`+
-      (skip?` + <b>${skip}</b> with no severity (not categorised)`:" · all reconciled")+`</span>`);
+      (skip?` + <b>${skip}</b> with no severity (not categorised)`:" · all reconciled")+methodNote+`</span>`);
   }
   $("#diag").innerHTML=parts.join("");
 }
@@ -396,10 +400,12 @@ function renderIssuance(){
   $("#issuance-grid").innerHTML=lots.map(lot=>{
     const d=docs[lot]||{total_documents:0,ready_pending:{count:0},ready_issued:{count:0},address:{count:0},needs_work:{count:0}};
     if(d.ready_pending.count>0)anyPending=true;
-    const stale=D.status&&D.status[lot]&&D.status[lot].stale_data_from_previous_sync;
+    const lotStatus=D.status&&D.status[lot];
+    const stale=lotStatus&&lotStatus.stale_data_from_previous_sync;
+    const staleReason=stale&&lotStatus.error?lotStatus.error:"";
     return `<div class="lotcard">
       <h4>${lot}<small>${d.total_documents} document${d.total_documents===1?"":"s"}</small></h4>
-      ${stale?`<div class="stalewarn">Showing last good data for this lot — the most recent sync looked filtered or incomplete and was skipped to protect the count.</div>`:""}
+      ${stale?`<div class="stalewarn">Showing last good data for this lot — the most recent sync was skipped to protect the count.${staleReason?` <span style="opacity:.8">(${staleReason})</span>`:""}</div>`:""}
       <div class="lotrows">
         <div class="lotrow"><div class="lbl"><b>Ready to issue</b><small>fully closed, not yet marked issued</small></div>
           <button class="countbtn ready" ${d.ready_pending.count?"":"disabled"} data-lot="${lot}" data-bucket="ready_pending">${d.ready_pending.count}</button></div>

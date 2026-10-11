@@ -13,9 +13,16 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
-      - run: python scripts/build_summary.py
+      - name: Sync from Google Sheets
+        env:
+          GOOGLE_SHEETS_API_KEY: ${{ secrets.GOOGLE_SHEETS_API_KEY }}
+        run: python scripts/build_summary.py
         # No continue-on-error: if the sync fails, the job stops here and the
         # previously deployed site is left untouched instead of silently redeploying stale/placeholder data.
+        # GOOGLE_SHEETS_API_KEY (optional but recommended): reads tabs via the Sheets API instead
+        # of the public CSV export, which bypasses any active "Data > Create a filter" on a tab
+        # so a lead always gets the real, unfiltered row count. Falls back to CSV export (which
+        # a live filter CAN hide rows from) when this secret isn't set.
       - name: Commit synced data snapshot (for auditability)
         run: |
           git config user.name "iso-sync-bot"

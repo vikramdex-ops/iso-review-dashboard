@@ -97,7 +97,7 @@ Swap the column mapping and keyword rules for your own sheet's shape (see [Addin
 
 ```mermaid
 flowchart LR
-    A[("Google Sheet\nLot 1 · Lot 2 · Lot 3 · Lot 4")] -->|CSV export, by gid| B["build_summary.py"]
+    A[("Google Sheet\nLot 1 · Lot 2 · Lot 3 · Lot 4")] -->|Sheets API v4, by gid\nfilter-proof read| B["build_summary.py"]
     B -->|apply business rules| C["site/data/summary.json"]
     C --> D["GitHub Pages"]
     E["GitHub Actions\ncron · every 3h"] -.triggers.-> B
@@ -115,10 +115,24 @@ flowchart LR
 
 Every run is guarded, not best-effort:
 
+- **Filter-proof reads via the Sheets API** — when `GOOGLE_SHEETS_API_KEY` is set (recommended, see below), each tab is read through the Google Sheets API v4 rather than the public CSV export. The API returns a tab's real values regardless of any active `Data > Create a filter` on it, so a reviewer who's mid-filter on the live sheet never causes a dip in the dashboard's count. Falls back to the CSV export (which a live filter *can* hide rows from) when the key isn't configured, e.g. for a quick local run.
 - **Fetched by numeric tab `gid` only** — never by sheet name, which Google silently substitutes with the wrong tab on a mismatch.
-- **Content-hash checked across lots** — if two lots ever fetch byte-identical CSV, the run fails loudly instead of quietly duplicating a lot.
+- **Content-hash checked across lots** — if two lots ever fetch byte-identical content, the run fails loudly instead of quietly duplicating a lot.
+- **Row-count regression guard** — if a lot's row count ever drops versus the last sync, that lot's read is rejected and the previous known-good data is kept for just that lot, with the reason shown on the dashboard. (On the CSV path this usually means a filter; on the Sheets API path it means something was actually deleted or restructured — either way it's surfaced instead of silently under-counting.)
 - **All-or-nothing per sync** — if any lot can't be read, the previous deployed site is left untouched rather than publishing partial numbers.
 - **The sync itself is committed back to the repo** (`site/data/summary.json`, `closed_log.json`) — every number on the dashboard is auditable against real git history, not a black box.
+
+<details>
+<summary><b>Setting up filter-proof reads (<code>GOOGLE_SHEETS_API_KEY</code>)</b></summary>
+<br>
+
+1. In [Google Cloud Console](https://console.cloud.google.com/apis/library/sheets.googleapis.com), enable the **Google Sheets API** for a project (any project; no billing needed for this read-only, low-volume use).
+2. Create an **API key** ([Credentials](https://console.cloud.google.com/apis/credentials)) and restrict it to the Google Sheets API only — no need to restrict by IP/app, since this key only grants read access and the sheet is already link-shared.
+3. In this repo: **Settings → Secrets and variables → Actions → New repository secret**, name it `GOOGLE_SHEETS_API_KEY`, paste the key.
+4. Re-run the workflow (`workflow_dispatch`, or just wait for the next cron) — the sync log will show `fetch_method: sheets_api` instead of `csv_export`, and the dashboard's sheet-check line will say "filter-proof read".
+
+Without this secret, the dashboard still works via the public CSV export — it's just vulnerable to a team member's active filter hiding rows from that one sync (automatically recovered on their next sync once the filter is cleared, since the previous known-good number is kept in the meantime).
+</details>
 
 <br>
 
@@ -193,7 +207,7 @@ Nothing else changes. The combined view, the chips, and the totals strip all pic
 
 <details>
 <summary><b>Does Claude / this repo have write access to my Google Sheet?</b></summary>
-<br>No — it only reads the published CSV export of each tab (the sheet must be shared "Anyone with the link → Viewer"). Nothing is ever written back to the sheet.
+<br>No — it only reads each tab's values, either via a restricted, read-only Google Sheets API key or the public CSV export (the sheet must be shared "Anyone with the link → Viewer" either way). Nothing is ever written back to the sheet.
 </details>
 
 <details>
