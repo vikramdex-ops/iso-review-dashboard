@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-11T11:57:50.411689+00:00",
+ "updated": "2026-10-11T15:38:08.919846+00:00",
  "preliminary": false,
  "today": "2026-10-11",
  "status": {
@@ -81,7 +81,8 @@
     }
    },
    "content_hash": "addb9732f122",
-   "gid": "31577278"
+   "gid": "31577278",
+   "fetch_method": "csv_export"
   },
   "Lot 2": {
    "raw_rows": 241,
@@ -131,7 +132,8 @@
     }
    },
    "content_hash": "f5312b19c60b",
-   "gid": "1594060800"
+   "gid": "1594060800",
+   "fetch_method": "csv_export"
   },
   "Lot 3": {
    "raw_rows": 279,
@@ -181,7 +183,8 @@
     }
    },
    "content_hash": "145883e2abba",
-   "gid": "880872163"
+   "gid": "880872163",
+   "fetch_method": "csv_export"
   },
   "Lot 4": {
    "raw_rows": 332,
@@ -236,7 +239,8 @@
     }
    },
    "content_hash": "4f319326b7c2",
-   "gid": "2046782283"
+   "gid": "2046782283",
+   "fetch_method": "csv_export"
   }
  },
  "rows": [
