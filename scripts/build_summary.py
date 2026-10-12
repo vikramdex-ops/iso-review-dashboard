@@ -31,7 +31,8 @@ ADDRESS_THRESHOLD = 3  # a document with this many or fewer open/hold points is 
 
 GOOGLE_SHEETS_API_KEY = os.environ.get("GOOGLE_SHEETS_API_KEY", "").strip()
 FETCH_METHOD = "sheets_api" if GOOGLE_SHEETS_API_KEY else "csv_export"
-_sheet_titles_cache = None
+_sheet_titles_cache = None   # gid (str) -> title
+_title_to_gid_cache = None   # title -> gid (str)
 
 def fetch_url(url):
     with urllib.request.urlopen(url, timeout=60) as r:
@@ -41,19 +42,44 @@ def fetch_url(url):
                             "or not shared)")
     return text
 
-def _resolve_sheet_title(gid):
-    """gid -> tab title, via the spreadsheet's own metadata (not affected by filters)."""
-    global _sheet_titles_cache
+def _load_sheet_metadata():
+    """Fetch the spreadsheet's tab list once per run (gid <-> title, both directions)."""
+    global _sheet_titles_cache, _title_to_gid_cache
     if _sheet_titles_cache is None:
         url = (f"https://sheets.googleapis.com/v4/spreadsheets/{cfg['sheet_id']}"
                f"?fields=sheets.properties&key={GOOGLE_SHEETS_API_KEY}")
         data = json.loads(fetch_url(url))
-        _sheet_titles_cache = {str(s["properties"]["sheetId"]): s["properties"]["title"]
-                                for s in data.get("sheets", [])}
+        props = [s["properties"] for s in data.get("sheets", [])]
+        _sheet_titles_cache = {str(p["sheetId"]): p["title"] for p in props}
+        _title_to_gid_cache = {p["title"]: str(p["sheetId"]) for p in props}
+
+def _resolve_sheet_title(gid):
+    """gid -> tab title, via the spreadsheet's own metadata (not affected by filters)."""
+    _load_sheet_metadata()
     title = _sheet_titles_cache.get(str(gid))
     if not title:
         raise RuntimeError(f"gid {gid} not found in this spreadsheet's tab list (Sheets API metadata)")
     return title
+
+def resolve_lot_ref(ref):
+    """A config.json lot value is either a numeric gid (string, e.g. "31577278" — the stable,
+    rename-proof way to point at a tab) or "title:<Tab Name>" to have the gid looked up by the
+    tab's current name via the Sheets API — handy for onboarding a new lot without having to dig
+    its gid out of the sheet's URL. Title lookup needs GOOGLE_SHEETS_API_KEY."""
+    if isinstance(ref, str) and ref.startswith("title:"):
+        if not GOOGLE_SHEETS_API_KEY:
+            raise RuntimeError(
+                f"this lot is configured by tab title ({ref!r}) but GOOGLE_SHEETS_API_KEY isn't "
+                f"set — title lookup needs the Sheets API; use a numeric gid instead for a "
+                f"key-less run, or set the key"
+            )
+        _load_sheet_metadata()
+        title = ref[len("title:"):]
+        gid = _title_to_gid_cache.get(title)
+        if not gid:
+            raise RuntimeError(f"no tab named {title!r} found in the spreadsheet (checked via Sheets API)")
+        return gid
+    return str(ref)
 
 def fetch_via_api(gid):
     """Sheets API v4 values.get — the filter-proof read. valueRenderOption=FORMATTED_VALUE
@@ -199,7 +225,8 @@ issued_log = json.loads(ISSUED_LOG_PATH.read_text()) if ISSUED_LOG_PATH.exists()
 rows, status, hashes, all_row_states, docs_raw_by_lot = [], {}, {}, [], {}
 for lot, lot_cfg in cfg["lots"].items():
     try:
-        table, raw_text = fetch(lot_cfg)
+        lot_gid = resolve_lot_ref(lot_cfg)
+        table, raw_text = fetch(lot_gid)
         h = hashlib.sha256(raw_text.encode()).hexdigest()[:12]
         dup = next((other for other, oh in hashes.items() if oh == h), None)
         if dup:
@@ -235,7 +262,7 @@ for lot, lot_cfg in cfg["lots"].items():
         all_row_states += row_states
         docs_raw_by_lot[lot] = docs_raw
         diag["content_hash"] = h
-        diag["gid"] = lot_cfg
+        diag["gid"] = lot_gid
         diag["fetch_method"] = FETCH_METHOD
         status[lot] = diag
         print(f"[{lot}] raw_rows={diag['raw_rows']} named_rows={diag['named_rows']} "

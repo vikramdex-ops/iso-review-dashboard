@@ -97,7 +97,7 @@ Swap the column mapping and keyword rules for your own sheet's shape (see [Addin
 
 ```mermaid
 flowchart LR
-    A[("Google Sheet\nLot 1 · Lot 2 · Lot 3 · Lot 4")] -->|Sheets API v4, by gid\nfilter-proof read| B["build_summary.py"]
+    A[("Google Sheet\nLot 1 · Lot 2 · Lot 3 · Lot 4 · Lot 5 · Lot 6 · Lot 7")] -->|Sheets API v4, by gid\nfilter-proof read| B["build_summary.py"]
     B -->|apply business rules| C["site/data/summary.json"]
     C --> D["GitHub Pages"]
     E["GitHub Actions\ncron · every 3h"] -.triggers.-> B
@@ -188,10 +188,16 @@ iso-review-dashboard/
 
 ## Adding another lot
 
-Add one entry to `config.json` — the tab's numeric `gid`, same sheet:
+Add one entry to `config.json`, same sheet — either the tab's numeric `gid` (stable even if the tab gets renamed later):
 
 ```json
-"lots": { "Lot 5": "123456789" }
+"lots": { "Lot 8": "123456789" }
+```
+
+...or, if you don't want to dig the `gid` out of the sheet's URL, point at the tab by its current name instead (looked up automatically via the Sheets API, so it needs `GOOGLE_SHEETS_API_KEY` to be set):
+
+```json
+"lots": { "Lot 8": "title:lot-08" }
 ```
 
 Nothing else changes. The combined view, the chips, and the totals strip all pick it up on the next sync.
