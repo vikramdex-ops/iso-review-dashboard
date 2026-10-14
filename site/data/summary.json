@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T08:18:21.614008+00:00",
+ "updated": "2026-10-14T14:16:16.893991+00:00",
  "preliminary": false,
  "today": "2026-10-14",
  "status": {
@@ -238,7 +238,7 @@
      }
     }
    },
-   "content_hash": "ffe246ecee4e",
+   "content_hash": "d1b6d20f3834",
    "gid": "2046782283",
    "fetch_method": "sheets_api"
   },
@@ -304,7 +304,7 @@
      }
     }
    },
-   "content_hash": "1604b3bb96f8",
+   "content_hash": "79c5f3ba5a0f",
    "gid": "861257605",
    "fetch_method": "sheets_api"
   },
@@ -355,7 +355,7 @@
      }
     }
    },
-   "content_hash": "ded6094db087",
+   "content_hash": "0025caee0172",
    "gid": "398063617",
    "fetch_method": "sheets_api"
   },
@@ -636,63 +636,63 @@
    "Akash",
    "Lot 4",
    19,
-   13,
+   15,
    0,
    25,
-   22,
+   25,
    0,
    28,
-   27,
+   28,
    0,
-   6,
-   3,
-   1,
+   4,
+   0,
+   0,
    72,
-   62,
-   10,
-   0,
+   68,
+   4,
+   6,
    37
   ],
   [
    "Dharma",
    "Lot 4",
    19,
-   5,
-   13,
+   19,
+   0,
    25,
-   11,
-   14,
+   25,
+   0,
    29,
-   17,
-   12,
-   1,
+   29,
+   0,
+   0,
    0,
    0,
    73,
-   33,
-   40,
+   73,
    0,
+   40,
    11
   ],
   [
    "Karthikeyan",
    "Lot 4",
    19,
-   8,
-   11,
+   19,
+   0,
    25,
-   14,
-   11,
+   25,
+   0,
    29,
-   18,
-   11,
+   29,
+   0,
    0,
    0,
    0,
    73,
-   40,
-   33,
+   73,
    0,
+   33,
    9
   ],
   [
@@ -720,21 +720,21 @@
    "Akash",
    "Lot 5",
    65,
-   0,
-   65,
+   7,
+   58,
    56,
-   0,
-   56,
+   7,
+   49,
    39,
-   0,
-   39,
+   7,
+   32,
    0,
    0,
    0,
    160,
-   0,
-   160,
-   0,
+   21,
+   139,
+   21,
    0
   ],
   [
@@ -867,21 +867,21 @@
    "Hemnath",
    "Lot 6",
    5,
-   2,
-   3,
    5,
    0,
    5,
-   4,
+   5,
    0,
    4,
+   4,
+   0,
    0,
    0,
    0,
    14,
-   2,
-   12,
+   14,
    0,
+   12,
    2
   ],
   [
@@ -1037,84 +1037,84 @@
    "Akash",
    "All Lots (combined)",
    223,
-   62,
-   155,
+   71,
+   148,
    199,
-   91,
-   105,
+   101,
+   98,
    137,
-   76,
-   60,
-   6,
-   3,
-   1,
-   559,
-   229,
-   330,
+   84,
+   53,
+   4,
    0,
+   0,
+   559,
+   256,
+   303,
+   27,
    37
   ],
   [
    "Dharma",
    "All Lots (combined)",
    370,
-   197,
-   172,
+   211,
+   159,
    299,
-   209,
-   90,
+   223,
+   76,
    293,
-   225,
-   68,
-   1,
+   237,
+   56,
+   0,
    0,
    0,
    962,
-   631,
-   331,
-   0,
+   671,
+   291,
+   40,
    11
   ],
   [
    "Hemnath",
    "All Lots (combined)",
    211,
-   72,
-   139,
+   75,
+   136,
    173,
-   81,
-   92,
+   86,
+   87,
    125,
-   63,
-   62,
+   67,
+   58,
    0,
    0,
    0,
    509,
-   216,
-   293,
-   0,
+   228,
+   281,
+   12,
    216
   ],
   [
    "Karthikeyan",
    "All Lots (combined)",
    405,
-   242,
-   162,
+   253,
+   151,
    335,
-   245,
-   90,
+   256,
+   79,
    337,
-   267,
-   70,
+   278,
+   59,
    1,
    0,
    0,
    1077,
-   754,
-   323,
-   0,
+   787,
+   290,
+   33,
    9
   ],
   [
@@ -4121,7 +4121,7 @@
   "Lot 4": {
    "total_documents": 40,
    "ready_pending": {
-    "count": 23,
+    "count": 34,
     "docs": [
      "P12513-12-01-15-1632",
      "P12513-12-01-15-1634",
@@ -4129,6 +4129,7 @@
      "P12513-12-01-15-1645",
      "P12513-12-01-15-1662",
      "P12513-12-01-15-1689",
+     "P12513-12-01-15-1697",
      "P12513-12-01-15-1722",
      "P12513-12-01-15-1724",
      "P12513-12-01-15-1729",
@@ -4137,14 +4138,24 @@
      "P12513-12-01-15-1734",
      "P12513-12-01-15-1741",
      "P12513-12-01-15-1748",
+     "P12513-12-01-15-1823",
      "P12513-12-01-15-1827",
      "P12513-12-01-15-1836",
      "P12513-12-01-15-1840",
+     "P12513-12-01-15-1849",
      "P12513-12-01-15-1861",
      "P12513-12-01-15-1868",
      "P12513-12-01-15-1873",
+     "P12513-12-01-15-1876",
+     "P12513-12-01-15-1929",
      "P12513-12-01-15-1931",
      "P12513-12-01-15-1949",
+     "P12513-12-01-15-1966",
+     "P12513-12-01-15-1969",
+     "P12513-12-01-15-2006",
+     "P12513-12-01-15-2027",
+     "P12513-12-01-15-2114",
+     "P12513-12-39-15-1705",
      "P12513-12-39-15-1725"
     ],
     "lines": [
@@ -4216,6 +4227,15 @@
      "8\"-D-16989-AP3S0C-FA",
      "8\"-D-16989-AP3S0C-FA",
      "8\"-D-16989-AP3S0C-FA",
+     "3/4\"-DZ-8381-BS1A0A-FA",
+     "3/4\"-DZ-8381-BS1A0A-FA",
+     "3/4\"-DZ-8381-BS1A0A-FA",
+     "3/4\"-DZ-8381-BS1A0A-FA",
+     "3/4\"-DZ-8381-BS1A0A-FA",
+     "3/4\"-DZ-8381-BS1A0A-FA",
+     "3/4\"-DZ-8381-BS1A0A-FA",
+     "3/4\"-DZ-8381-BS1A0A-FA",
+     "3/4\"-DZ-8381-BS1A0A-FA",
      "2\"-IA-10990-AC4A1A-FA",
      "2\"-IA-10990-AC4A1A-FA",
      "2\"-IA-10990-AC4A1A-FA",
@@ -4272,6 +4292,20 @@
      "2\"-NN-12077-AC1A1B-FA",
      "2\"-NN-12077-AC1A1B-FA",
      "2\"-NN-12077-AC1A1B-FA",
+     "3/4\"-PO-23390-AC1S3A-FA",
+     "3/4\"-PO-23390-AC1S3A-FA",
+     "3/4\"-PO-23390-AC1S3A-FA",
+     "3/4\"-PO-23390-AC1S3A-FA",
+     "3/4\"-PO-23390-AC1S3A-FA",
+     "3/4\"-PO-23390-AC1S3A-FA",
+     "3/4\"-PO-23390-AC1S3A-FA",
+     "3/4\"-PO-23390-AC1S3A-FA",
+     "3/4\"-PO-23390-AC1S3A-FA",
+     "3/4\"-PO-23390-AC1S3A-FA",
+     "3/4\"-PO-23390-AC1S3A-FA",
+     "3/4\"-PO-23390-AC1S3A-FA",
+     "3/4\"-PO-23390-AC1S3A-FA",
+     "3/4\"-PO-23390-AC1S3A-FA",
      "32\"-PO-23395-AC1S3A-FA",
      "32\"-PO-23395-AC1S3A-FA",
      "32\"-PO-23395-AC1S3A-FA",
@@ -4294,6 +4328,15 @@
      "8\"-PW-8274-AE3S0C-FA",
      "8\"-PW-8274-AE3S0C-FA",
      "8\"-PW-8274-AE3S0C-FA",
+     "3\"-PW-8283-AE3S0C-FA",
+     "3\"-PW-8283-AE3S0C-FA",
+     "3\"-PW-8283-AE3S0C-FA",
+     "3\"-PW-8283-AE3S0C-FA",
+     "3\"-PW-8283-AE3S0C-FA",
+     "3\"-PW-8283-AE3S0C-FA",
+     "3\"-PW-8283-AE3S0C-FA",
+     "3\"-PW-8283-AE3S0C-FA",
+     "3\"-PW-8283-AE3S0C-FA",
      "2\"-VG-11317-AE3S0C-FA",
      "2\"-VG-11317-AE3S0C-FA",
      "2\"-VG-11317-AE3S0C-FA",
@@ -4316,6 +4359,17 @@
      "18\"-VG-11329-AC1S3A-FA",
      "18\"-VG-11329-AC1S3A-FA",
      "18\"-VG-11329-AC1S3A-FA",
+     "3/4\"-VG-11332-AE3S0C-FA",
+     "3/4\"-VG-11332-AE3S0C-FA",
+     "3/4\"-VG-11332-AE3S0C-FA",
+     "3/4\"-VG-11332-AE3S0C-FA",
+     "2\"-PO-23415-AC1S3A-FA",
+     "2\"-PO-23415-AC1S3A-FA",
+     "2\"-PO-23415-AC1S3A-FA",
+     "2\"-PO-23415-AC1S3A-FA",
+     "2\"-PO-23415-AC1S3A-FA",
+     "2\"-PO-23415-AC1S3A-FA",
+     "2\"-PO-23415-AC1S3A-FA",
      "2\"-VG-11868-AC1S3A-FA",
      "2\"-VG-11868-AC1S3A-FA",
      "2\"-VG-11868-AC1S3A-FA",
@@ -4328,6 +4382,64 @@
      "3/4\"-D-17019-AE3S0C-FA",
      "3/4\"-D-17019-AE3S0C-FA",
      "3/4\"-D-17019-AE3S0C-FA",
+     "1\"-NN-12206-AE3S0C-FA",
+     "1\"-NN-12206-AE3S0C-FA",
+     "1\"-NN-12206-AE3S0C-FA",
+     "1\"-NN-12206-AE3S0C-FA",
+     "1\"-NN-12206-AE3S0C-FA",
+     "1\"-NN-12206-AE3S0C-FA",
+     "1\"-NN-12206-AE3S0C-FA",
+     "1\"-NN-12206-AE3S0C-FA",
+     "1\"-PA-8623-AC1A1B-FA",
+     "1\"-PA-8623-AC1A1B-FA",
+     "1\"-PA-8623-AC1A1B-FA",
+     "1\"-PA-8623-AC1A1B-FA",
+     "1\"-PA-8623-AC1A1B-FA",
+     "1\"-PA-8623-AC1A1B-FA",
+     "1\"-PA-8623-AC1A1B-FA",
+     "1\"-PA-8623-AC1A1B-FA",
+     "1\"-PA-8623-AC1A1B-FA",
+     "3\"-WW-8154-AC1A1B-FA",
+     "3\"-WW-8154-AC1A1B-FA",
+     "3\"-WW-8154-AC1A1B-FA",
+     "3\"-WW-8154-AC1A1B-FA",
+     "3\"-WW-8154-AC1A1B-FA",
+     "3\"-WW-8154-AC1A1B-FA",
+     "3\"-WW-8154-AC1A1B-FA",
+     "3\"-WW-8154-AC1A1B-FA",
+     "3\"-WW-8154-AC1A1B-FA",
+     "3\"-WW-8154-AC1A1B-FA",
+     "3\"-WW-8154-AC1A1B-FA",
+     "3\"-WW-8154-AC1A1B-FA",
+     "3\"-WW-8154-AC1A1B-FA",
+     "2\"-WW-8160-AC1A1B-FA",
+     "2\"-WW-8160-AC1A1B-FA",
+     "2\"-WW-8160-AC1A1B-FA",
+     "2\"-WW-8160-AC1A1B-FA",
+     "2\"-WW-8160-AC1A1B-FA",
+     "2\"-WW-8160-AC1A1B-FA",
+     "2\"-WW-8160-AC1A1B-FA",
+     "2\"-WW-8160-AC1A1B-FA",
+     "2\"-WW-8160-AC1A1B-FA",
+     "20\"-FW-6121-AP3A0F-FA",
+     "20\"-FW-6121-AP3A0F-FA",
+     "20\"-FW-6121-AP3A0F-FA",
+     "20\"-FW-6121-AP3A0F-FA",
+     "20\"-FW-6121-AP3A0F-FA",
+     "20\"-FW-6121-AP3A0F-FA",
+     "20\"-FW-6121-AP3A0F-FA",
+     "20\"-FW-6121-AP3A0F-FA",
+     "20\"-FW-6121-AP3A0F-FA",
+     "20\"-FW-6121-AP3A0F-FA",
+     "20\"-FW-6121-AP3A0F-FA",
+     "20\"-FW-6121-AP3A0F-FA",
+     "20\"-FW-6121-AP3A0F-FA",
+     "20\"-FW-6121-AP3A0F-FA",
+     "2\"-PO-22104-AE3S0C-FA",
+     "2\"-PO-22104-AE3S0C-FA",
+     "2\"-PO-22104-AE3S0C-FA",
+     "2\"-PO-22104-AE3S0C-FA",
+     "2\"-PO-22104-AE3S0C-FA",
      "3\"-PO-22127-AE3S0C-FA",
      "3\"-PO-22127-AE3S0C-FA",
      "3\"-PO-22127-AE3S0C-FA",
@@ -4349,66 +4461,65 @@
     "lines": []
    },
    "address": {
-    "count": 4,
+    "count": 1,
     "docs": [
-     "P12513-12-01-15-1697",
-     "P12513-12-01-15-1876",
-     "P12513-12-01-15-1936",
-     "P12513-12-01-15-2027"
+     "P12513-12-01-15-1936"
     ],
     "lines": [
-     "3/4\"-DZ-8381-BS1A0A-FA",
-     "3/4\"-VG-11332-AE3S0C-FA",
-     "3/4\"-VG-11332-AE3S0C-FA",
-     "3/4\"-VG-11332-AE3S0C-FA",
      "3/4\"-D-17004-AE3S0C-FA",
-     "3/4\"-D-17004-AE3S0C-FA",
-     "2\"-WW-8160-AC1A1B-FA"
+     "3/4\"-D-17004-AE3S0C-FA"
     ],
     "detail": [
      {
-      "doc": "P12513-12-01-15-1697",
-      "open": 1
-     },
-     {
-      "doc": "P12513-12-01-15-1876",
-      "open": 3
-     },
-     {
       "doc": "P12513-12-01-15-1936",
       "open": 2
-     },
-     {
-      "doc": "P12513-12-01-15-2027",
-      "open": 1
      }
     ]
    },
    "needs_work": {
-    "count": 13,
+    "count": 5,
     "docs": [
-     "P12513-12-01-15-1823",
-     "P12513-12-01-15-1849",
      "P12513-12-01-15-1898",
-     "P12513-12-01-15-1929",
-     "P12513-12-01-15-1966",
-     "P12513-12-01-15-1969",
-     "P12513-12-01-15-2006",
      "P12513-12-01-15-2016",
-     "P12513-12-01-15-2114",
      "P12513-12-01-15-2141",
      "P12513-12-39-15-1601",
-     "P12513-12-39-15-1607",
-     "P12513-12-39-15-1705"
+     "P12513-12-39-15-1607"
     ]
    }
   },
   "Lot 5": {
    "total_documents": 57,
    "ready_pending": {
-    "count": 0,
-    "docs": [],
-    "lines": []
+    "count": 2,
+    "docs": [
+     "P12513-12-01-15-1686",
+     "P12513-12-01-15-1700"
+    ],
+    "lines": [
+     "2\"-D-16984-AC1S3A-FA",
+     "2\"-D-16984-AC1S3A-FA",
+     "2\"-D-16984-AC1S3A-FA",
+     "2\"-D-16984-AC1S3A-FA",
+     "2\"-D-16984-AC1S3A-FA",
+     "2\"-D-16984-AC1S3A-FA",
+     "2\"-D-16984-AC1S3A-FA",
+     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
+     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
+     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
+     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
+     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
+     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
+     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
+     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
+     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
+     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
+     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
+     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
+     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
+     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
+     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
+     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)"
+    ]
    },
    "ready_issued": {
     "count": 0,
@@ -4422,7 +4533,7 @@
     "detail": []
    },
    "needs_work": {
-    "count": 57,
+    "count": 55,
     "docs": [
      "P12513-12-01-15-1606",
      "P12513-12-01-15-1625",
@@ -4430,9 +4541,7 @@
      "P12513-12-01-15-1653",
      "P12513-12-01-15-1670",
      "P12513-12-01-15-1676",
-     "P12513-12-01-15-1686",
      "P12513-12-01-15-1694",
-     "P12513-12-01-15-1700",
      "P12513-12-01-15-1701",
      "P12513-12-01-15-1702",
      "P12513-12-01-15-1703",
@@ -4487,9 +4596,27 @@
   "Lot 6": {
    "total_documents": 6,
    "ready_pending": {
-    "count": 0,
-    "docs": [],
-    "lines": []
+    "count": 1,
+    "docs": [
+     "P12513-12-39-15-1689"
+    ],
+    "lines": [
+     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
+     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
+     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
+     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
+     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
+     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
+     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
+     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
+     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
+     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
+     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
+     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
+     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
+     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
+     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)"
+    ]
    },
    "ready_issued": {
     "count": 0,
@@ -4503,13 +4630,12 @@
     "detail": []
    },
    "needs_work": {
-    "count": 6,
+    "count": 5,
     "docs": [
      "P12513-12-01-15-1659",
      "P12513-12-01-15-1745",
      "P12513-12-01-15-2151",
      "P12513-12-39-15-1629",
-     "P12513-12-39-15-1689",
      "P12513-12-39-15-1694"
     ]
    }
@@ -9401,7 +9527,7 @@
    },
    "P12513-12-01-15-1697": {
     "total": 9,
-    "open": 1,
+    "open": 0,
     "lines_all": [
      "3/4\"-DZ-8381-BS1A0A-FA",
      "3/4\"-DZ-8381-BS1A0A-FA",
@@ -9413,9 +9539,7 @@
      "3/4\"-DZ-8381-BS1A0A-FA",
      "3/4\"-DZ-8381-BS1A0A-FA"
     ],
-    "lines_open": [
-     "3/4\"-DZ-8381-BS1A0A-FA"
-    ]
+    "lines_open": []
    },
    "P12513-12-01-15-1722": {
     "total": 6,
@@ -9531,7 +9655,7 @@
    },
    "P12513-12-01-15-1823": {
     "total": 14,
-    "open": 13,
+    "open": 0,
     "lines_all": [
      "3/4\"-PO-23390-AC1S3A-FA",
      "3/4\"-PO-23390-AC1S3A-FA",
@@ -9548,21 +9672,7 @@
      "3/4\"-PO-23390-AC1S3A-FA",
      "3/4\"-PO-23390-AC1S3A-FA"
     ],
-    "lines_open": [
-     "3/4\"-PO-23390-AC1S3A-FA",
-     "3/4\"-PO-23390-AC1S3A-FA",
-     "3/4\"-PO-23390-AC1S3A-FA",
-     "3/4\"-PO-23390-AC1S3A-FA",
-     "3/4\"-PO-23390-AC1S3A-FA",
-     "3/4\"-PO-23390-AC1S3A-FA",
-     "3/4\"-PO-23390-AC1S3A-FA",
-     "3/4\"-PO-23390-AC1S3A-FA",
-     "3/4\"-PO-23390-AC1S3A-FA",
-     "3/4\"-PO-23390-AC1S3A-FA",
-     "3/4\"-PO-23390-AC1S3A-FA",
-     "3/4\"-PO-23390-AC1S3A-FA",
-     "3/4\"-PO-23390-AC1S3A-FA"
-    ]
+    "lines_open": []
    },
    "P12513-12-01-15-1827": {
     "total": 6,
@@ -9609,7 +9719,7 @@
    },
    "P12513-12-01-15-1849": {
     "total": 9,
-    "open": 6,
+    "open": 0,
     "lines_all": [
      "3\"-PW-8283-AE3S0C-FA",
      "3\"-PW-8283-AE3S0C-FA",
@@ -9621,14 +9731,7 @@
      "3\"-PW-8283-AE3S0C-FA",
      "3\"-PW-8283-AE3S0C-FA"
     ],
-    "lines_open": [
-     "3\"-PW-8283-AE3S0C-FA",
-     "3\"-PW-8283-AE3S0C-FA",
-     "3\"-PW-8283-AE3S0C-FA",
-     "3\"-PW-8283-AE3S0C-FA",
-     "3\"-PW-8283-AE3S0C-FA",
-     "3\"-PW-8283-AE3S0C-FA"
-    ]
+    "lines_open": []
    },
    "P12513-12-01-15-1861": {
     "total": 8,
@@ -9675,18 +9778,14 @@
    },
    "P12513-12-01-15-1876": {
     "total": 4,
-    "open": 3,
+    "open": 0,
     "lines_all": [
      "3/4\"-VG-11332-AE3S0C-FA",
      "3/4\"-VG-11332-AE3S0C-FA",
      "3/4\"-VG-11332-AE3S0C-FA",
      "3/4\"-VG-11332-AE3S0C-FA"
     ],
-    "lines_open": [
-     "3/4\"-VG-11332-AE3S0C-FA",
-     "3/4\"-VG-11332-AE3S0C-FA",
-     "3/4\"-VG-11332-AE3S0C-FA"
-    ]
+    "lines_open": []
    },
    "P12513-12-01-15-1898": {
     "total": 7,
@@ -9711,7 +9810,7 @@
    },
    "P12513-12-01-15-1929": {
     "total": 7,
-    "open": 6,
+    "open": 0,
     "lines_all": [
      "2\"-PO-23415-AC1S3A-FA",
      "2\"-PO-23415-AC1S3A-FA",
@@ -9721,14 +9820,7 @@
      "2\"-PO-23415-AC1S3A-FA",
      "2\"-PO-23415-AC1S3A-FA"
     ],
-    "lines_open": [
-     "2\"-PO-23415-AC1S3A-FA",
-     "2\"-PO-23415-AC1S3A-FA",
-     "2\"-PO-23415-AC1S3A-FA",
-     "2\"-PO-23415-AC1S3A-FA",
-     "2\"-PO-23415-AC1S3A-FA",
-     "2\"-PO-23415-AC1S3A-FA"
-    ]
+    "lines_open": []
    },
    "P12513-12-01-15-1931": {
     "total": 4,
@@ -9771,7 +9863,7 @@
    },
    "P12513-12-01-15-1966": {
     "total": 8,
-    "open": 7,
+    "open": 0,
     "lines_all": [
      "1\"-NN-12206-AE3S0C-FA",
      "1\"-NN-12206-AE3S0C-FA",
@@ -9782,19 +9874,11 @@
      "1\"-NN-12206-AE3S0C-FA",
      "1\"-NN-12206-AE3S0C-FA"
     ],
-    "lines_open": [
-     "1\"-NN-12206-AE3S0C-FA",
-     "1\"-NN-12206-AE3S0C-FA",
-     "1\"-NN-12206-AE3S0C-FA",
-     "1\"-NN-12206-AE3S0C-FA",
-     "1\"-NN-12206-AE3S0C-FA",
-     "1\"-NN-12206-AE3S0C-FA",
-     "1\"-NN-12206-AE3S0C-FA"
-    ]
+    "lines_open": []
    },
    "P12513-12-01-15-1969": {
     "total": 9,
-    "open": 8,
+    "open": 0,
     "lines_all": [
      "1\"-PA-8623-AC1A1B-FA",
      "1\"-PA-8623-AC1A1B-FA",
@@ -9806,20 +9890,11 @@
      "1\"-PA-8623-AC1A1B-FA",
      "1\"-PA-8623-AC1A1B-FA"
     ],
-    "lines_open": [
-     "1\"-PA-8623-AC1A1B-FA",
-     "1\"-PA-8623-AC1A1B-FA",
-     "1\"-PA-8623-AC1A1B-FA",
-     "1\"-PA-8623-AC1A1B-FA",
-     "1\"-PA-8623-AC1A1B-FA",
-     "1\"-PA-8623-AC1A1B-FA",
-     "1\"-PA-8623-AC1A1B-FA",
-     "1\"-PA-8623-AC1A1B-FA"
-    ]
+    "lines_open": []
    },
    "P12513-12-01-15-2006": {
     "total": 13,
-    "open": 12,
+    "open": 0,
     "lines_all": [
      "3\"-WW-8154-AC1A1B-FA",
      "3\"-WW-8154-AC1A1B-FA",
@@ -9835,20 +9910,7 @@
      "3\"-WW-8154-AC1A1B-FA",
      "3\"-WW-8154-AC1A1B-FA"
     ],
-    "lines_open": [
-     "3\"-WW-8154-AC1A1B-FA",
-     "3\"-WW-8154-AC1A1B-FA",
-     "3\"-WW-8154-AC1A1B-FA",
-     "3\"-WW-8154-AC1A1B-FA",
-     "3\"-WW-8154-AC1A1B-FA",
-     "3\"-WW-8154-AC1A1B-FA",
-     "3\"-WW-8154-AC1A1B-FA",
-     "3\"-WW-8154-AC1A1B-FA",
-     "3\"-WW-8154-AC1A1B-FA",
-     "3\"-WW-8154-AC1A1B-FA",
-     "3\"-WW-8154-AC1A1B-FA",
-     "3\"-WW-8154-AC1A1B-FA"
-    ]
+    "lines_open": []
    },
    "P12513-12-01-15-2016": {
     "total": 5,
@@ -9869,7 +9931,7 @@
    },
    "P12513-12-01-15-2027": {
     "total": 9,
-    "open": 1,
+    "open": 0,
     "lines_all": [
      "2\"-WW-8160-AC1A1B-FA",
      "2\"-WW-8160-AC1A1B-FA",
@@ -9881,13 +9943,11 @@
      "2\"-WW-8160-AC1A1B-FA",
      "2\"-WW-8160-AC1A1B-FA"
     ],
-    "lines_open": [
-     "2\"-WW-8160-AC1A1B-FA"
-    ]
+    "lines_open": []
    },
    "P12513-12-01-15-2114": {
     "total": 14,
-    "open": 13,
+    "open": 0,
     "lines_all": [
      "20\"-FW-6121-AP3A0F-FA",
      "20\"-FW-6121-AP3A0F-FA",
@@ -9904,21 +9964,7 @@
      "20\"-FW-6121-AP3A0F-FA",
      "20\"-FW-6121-AP3A0F-FA"
     ],
-    "lines_open": [
-     "20\"-FW-6121-AP3A0F-FA",
-     "20\"-FW-6121-AP3A0F-FA",
-     "20\"-FW-6121-AP3A0F-FA",
-     "20\"-FW-6121-AP3A0F-FA",
-     "20\"-FW-6121-AP3A0F-FA",
-     "20\"-FW-6121-AP3A0F-FA",
-     "20\"-FW-6121-AP3A0F-FA",
-     "20\"-FW-6121-AP3A0F-FA",
-     "20\"-FW-6121-AP3A0F-FA",
-     "20\"-FW-6121-AP3A0F-FA",
-     "20\"-FW-6121-AP3A0F-FA",
-     "20\"-FW-6121-AP3A0F-FA",
-     "20\"-FW-6121-AP3A0F-FA"
-    ]
+    "lines_open": []
    },
    "P12513-12-01-15-2141": {
     "total": 8,
@@ -9945,7 +9991,7 @@
    },
    "P12513-12-39-15-1601": {
     "total": 10,
-    "open": 9,
+    "open": 4,
     "lines_all": [
      "2\"-D-15238-AE3S0C-FA",
      "2\"-D-15238-AE3S0C-FA",
@@ -9959,11 +10005,6 @@
      "2\"-D-15238-AE3S0C-FA"
     ],
     "lines_open": [
-     "2\"-D-15238-AE3S0C-FA",
-     "2\"-D-15238-AE3S0C-FA",
-     "2\"-D-15238-AE3S0C-FA",
-     "2\"-D-15238-AE3S0C-FA",
-     "2\"-D-15238-AE3S0C-FA",
      "2\"-D-15238-AE3S0C-FA",
      "2\"-D-15238-AE3S0C-FA",
      "2\"-D-15238-AE3S0C-FA",
@@ -9989,7 +10030,7 @@
    },
    "P12513-12-39-15-1705": {
     "total": 5,
-    "open": 4,
+    "open": 0,
     "lines_all": [
      "2\"-PO-22104-AE3S0C-FA",
      "2\"-PO-22104-AE3S0C-FA",
@@ -9997,12 +10038,7 @@
      "2\"-PO-22104-AE3S0C-FA",
      "2\"-PO-22104-AE3S0C-FA"
     ],
-    "lines_open": [
-     "2\"-PO-22104-AE3S0C-FA",
-     "2\"-PO-22104-AE3S0C-FA",
-     "2\"-PO-22104-AE3S0C-FA",
-     "2\"-PO-22104-AE3S0C-FA"
-    ]
+    "lines_open": []
    },
    "P12513-12-39-15-1725": {
     "total": 13,
@@ -10202,7 +10238,7 @@
    },
    "P12513-12-01-15-1686": {
     "total": 7,
-    "open": 6,
+    "open": 0,
     "lines_all": [
      "2\"-D-16984-AC1S3A-FA",
      "2\"-D-16984-AC1S3A-FA",
@@ -10212,14 +10248,7 @@
      "2\"-D-16984-AC1S3A-FA",
      "2\"-D-16984-AC1S3A-FA"
     ],
-    "lines_open": [
-     "2\"-D-16984-AC1S3A-FA",
-     "2\"-D-16984-AC1S3A-FA",
-     "2\"-D-16984-AC1S3A-FA",
-     "2\"-D-16984-AC1S3A-FA",
-     "2\"-D-16984-AC1S3A-FA",
-     "2\"-D-16984-AC1S3A-FA"
-    ]
+    "lines_open": []
    },
    "P12513-12-01-15-1694": {
     "total": 7,
@@ -10243,7 +10272,7 @@
    },
    "P12513-12-01-15-1700": {
     "total": 16,
-    "open": 15,
+    "open": 0,
     "lines_all": [
      "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
      "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
@@ -10262,23 +10291,7 @@
      "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
      "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)"
     ],
-    "lines_open": [
-     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
-     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
-     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
-     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
-     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
-     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
-     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
-     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
-     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
-     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
-     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
-     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
-     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
-     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)",
-     "4\"-FG-8580-BC1S3A-FA-H (PDS ISOMETRIC LINE ID 12-01-FG-8580-01; reduces to 3\" after the 4x3 reducer on sheet 1)"
-    ]
+    "lines_open": []
    },
    "P12513-12-01-15-1701": {
     "total": 74,
@@ -12292,7 +12305,7 @@
    },
    "P12513-12-39-15-1689": {
     "total": 15,
-    "open": 12,
+    "open": 0,
     "lines_all": [
      "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
      "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
@@ -12310,20 +12323,7 @@
      "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
      "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)"
     ],
-    "lines_open": [
-     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
-     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
-     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
-     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
-     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
-     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
-     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
-     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
-     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
-     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
-     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)",
-     "3\"-PO-22086-AE3S0C-FA (PDS iso line id 12-39-PO-22086-01)"
-    ]
+    "lines_open": []
    },
    "P12513-12-39-15-1694": {
     "total": 45,
