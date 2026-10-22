@@ -121,13 +121,20 @@ def summarise(lot, table):
     iCmt, iDoc = col(h, "comment no.", 0), col(h, "document no.", 1)
     iLine = col(h, "line number", 2)
     sample = {"header_cols": len(h), "header": h[:20],
-              "iM": iM, "iN": iN, "iP": iP, "iQ": iQ,
+              "iM": iM, "iN": iN, "iP": iP, "iQ": iQ, "iCmt": iCmt, "iDoc": iDoc, "iLine": iLine,
               "rows_at": {}}
     for i in [1, 100, 300, 500, 800, 1200, 1700, 2000]:
         if i < len(table):
             r = table[i]
             rr = r + [""] * (max(iM, iN, iP, iQ) + 1 - len(r))
-            sample["rows_at"][i + 1] = {"colA": r[0][:20], "severity": rr[iM], "assignedTo": rr[iP]}
+            sample["rows_at"][i + 1] = {"colA": r[0][:20], "severity": rr[iM], "assignedTo": rr[iP],
+                                         # TEMP diagnostic for booklet-mapping column verification —
+                                         # remove once iDoc/iLine are confirmed against real data.
+                                         "col0": (r[0] if len(r) > 0 else "")[:30],
+                                         "col1": (r[1] if len(r) > 1 else "")[:30],
+                                         "col2": (r[2] if len(r) > 2 else "")[:30],
+                                         "col3": (r[3] if len(r) > 3 else "")[:30],
+                                         "col4": (r[4] if len(r) > 4 else "")[:30]}
     stats = {}
     raw_rows = len(table) - 1
     named_rows = 0       # column P non-blank, regardless of severity
