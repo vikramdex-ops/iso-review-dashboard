@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T13:03:04.500223+00:00",
+ "updated": "2026-10-24T17:45:55.594437+00:00",
  "preliminary": false,
  "today": "2026-10-24",
  "status": {
@@ -491,7 +491,7 @@
      }
     }
    },
-   "content_hash": "eca6e43ea71e",
+   "content_hash": "ad7788647f9d",
    "gid": "180962173",
    "fetch_method": "sheets_api"
   }
@@ -1089,11 +1089,11 @@
    "Akash",
    "Lot 8",
    37,
-   1,
-   36,
+   7,
+   30,
    20,
-   2,
-   18,
+   7,
+   13,
    4,
    1,
    3,
@@ -1101,72 +1101,72 @@
    0,
    0,
    61,
-   4,
-   57,
-   4,
+   15,
+   46,
+   15,
    0
   ],
   [
    "Dharma",
    "Lot 8",
    26,
-   9,
-   17,
+   26,
+   0,
    19,
-   5,
-   14,
+   19,
+   0,
    10,
-   4,
-   6,
+   10,
+   0,
    0,
    0,
    0,
    55,
-   18,
-   37,
-   18,
+   55,
+   0,
+   55,
    0
   ],
   [
    "Karthikeyan",
    "Lot 8",
    33,
-   21,
-   12,
+   26,
+   7,
    14,
-   12,
-   2,
+   14,
+   0,
    5,
-   4,
-   1,
+   5,
+   0,
    0,
    0,
    0,
    52,
-   37,
-   15,
-   37,
+   45,
+   7,
+   45,
    0
   ],
   [
    "Kowshik",
    "Lot 8",
    32,
-   8,
-   21,
+   28,
+   1,
    16,
-   3,
-   10,
    8,
-   2,
    5,
+   8,
+   4,
+   3,
    3,
    3,
    1,
    56,
-   13,
-   43,
-   13,
+   40,
+   16,
+   40,
    0
   ]
  ],
@@ -1175,11 +1175,11 @@
    "Akash",
    "All Lots (combined)",
    260,
-   222,
-   38,
+   228,
+   32,
    219,
-   197,
-   22,
+   202,
+   17,
    141,
    136,
    5,
@@ -1187,30 +1187,30 @@
    0,
    0,
    620,
-   555,
-   65,
-   102,
+   566,
+   54,
+   113,
    66
   ],
   [
    "Dharma",
    "All Lots (combined)",
    442,
-   425,
-   17,
+   442,
+   0,
    342,
-   328,
-   14,
+   342,
+   0,
    319,
-   313,
-   6,
+   319,
+   0,
    0,
    0,
    0,
    1103,
-   1066,
-   37,
-   535,
+   1103,
+   0,
+   572,
    20
   ],
   [
@@ -1238,42 +1238,42 @@
    "Karthikeyan",
    "All Lots (combined)",
    480,
-   468,
-   12,
+   473,
+   7,
    368,
-   366,
-   2,
+   368,
+   0,
    353,
-   352,
-   1,
+   353,
+   0,
    0,
    0,
    0,
    1201,
-   1186,
-   15,
-   633,
+   1194,
+   7,
+   641,
    0
   ],
   [
    "Kowshik",
    "All Lots (combined)",
    304,
-   280,
-   21,
+   300,
+   1,
    248,
-   235,
-   10,
-   223,
-   217,
+   240,
    5,
+   223,
+   219,
+   3,
    3,
    3,
    1,
    775,
-   732,
-   43,
-   436,
+   759,
+   16,
+   463,
    0
   ],
   [
@@ -6481,7 +6481,7 @@
   "Lot 8": {
    "total_documents": 16,
    "ready_pending": {
-    "count": 9,
+    "count": 10,
     "docs": [
      "P12513-12-01-15-1622",
      "P12513-12-01-15-1685",
@@ -6489,6 +6489,7 @@
      "P12513-12-01-15-1761",
      "P12513-12-01-15-1762",
      "P12513-12-01-15-1802",
+     "P12513-12-01-15-1805",
      "P12513-12-01-15-2005",
      "P12513-12-01-15-2022",
      "P12513-12-39-15-1627"
@@ -6543,6 +6544,47 @@
      "18\"-PO-22064-AC1S3A-FA",
      "18\"-PO-22064-AC1S3A-FA",
      "18\"-PO-22064-AC1S3A-FA",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
      "3\"-WW-8153-AP3A0A-FA",
      "3\"-WW-8153-AP3A0A-FA",
      "3\"-WW-8153-AP3A0A-FA",
@@ -6591,10 +6633,9 @@
     ]
    },
    "needs_work": {
-    "count": 6,
+    "count": 5,
     "docs": [
      "P12513-12-01-15-1678",
-     "P12513-12-01-15-1805",
      "P12513-12-01-15-1829",
      "P12513-12-01-15-1888",
      "P12513-12-01-15-2138",
@@ -15757,7 +15798,7 @@
    },
    "P12513-12-01-15-1805": {
     "total": 41,
-    "open": 37,
+    "open": 0,
     "lines_all": [
      "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
      "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
@@ -15801,49 +15842,11 @@
      "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
      "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)"
     ],
-    "lines_open": [
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-     "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)"
-    ]
+    "lines_open": []
    },
    "P12513-12-01-15-1829": {
     "total": 19,
-    "open": 15,
+    "open": 7,
     "lines_all": [
      "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
      "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
@@ -15866,14 +15869,6 @@
      "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)"
     ],
     "lines_open": [
-     "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
-     "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
-     "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
-     "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
-     "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
-     "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
-     "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
-     "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
      "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
      "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
      "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
@@ -15885,7 +15880,7 @@
    },
    "P12513-12-01-15-1888": {
     "total": 37,
-    "open": 33,
+    "open": 6,
     "lines_all": [
      "36\"-VG-11344-AC1S3A-FA",
      "36\"-VG-11344-AC1S3A-FA",
@@ -15926,33 +15921,6 @@
      "36\"-VG-11344-AC1S3A-FA"
     ],
     "lines_open": [
-     "36\"-VG-11344-AC1S3A-FA",
-     "36\"-VG-11344-AC1S3A-FA",
-     "36\"-VG-11344-AC1S3A-FA",
-     "36\"-VG-11344-AC1S3A-FA",
-     "36\"-VG-11344-AC1S3A-FA",
-     "36\"-VG-11344-AC1S3A-FA",
-     "36\"-VG-11344-AC1S3A-FA",
-     "36\"-VG-11344-AC1S3A-FA",
-     "36\"-VG-11344-AC1S3A-FA",
-     "36\"-VG-11344-AC1S3A-FA",
-     "36\"-VG-11344-AC1S3A-FA",
-     "36\"-VG-11344-AC1S3A-FA",
-     "36\"-VG-11344-AC1S3A-FA",
-     "36\"-VG-11344-AC1S3A-FA",
-     "36\"-VG-11344-AC1S3A-FA",
-     "36\"-VG-11344-AC1S3A-FA",
-     "36\"-VG-11344-AC1S3A-FA",
-     "36\"-VG-11344-AC1S3A-FA",
-     "36\"-VG-11344-AC1S3A-FA",
-     "36\"-VG-11344-AC1S3A-FA",
-     "36\"-VG-11344-AC1S3A-FA",
-     "36\"-VG-11344-AC1S3A-FA",
-     "36\"-VG-11344-AC1S3A-FA",
-     "36\"-VG-11344-AC1S3A-FA",
-     "36\"-VG-11344-AC1S3A-FA",
-     "36\"-VG-11344-AC1S3A-FA",
-     "36\"-VG-11344-AC1S3A-FA",
      "36\"-VG-11344-AC1S3A-FA",
      "36\"-VG-11344-AC1S3A-FA",
      "36\"-VG-11344-AC1S3A-FA",
@@ -16024,7 +15992,7 @@
    },
    "P12513-12-39-15-1696": {
     "total": 54,
-    "open": 53,
+    "open": 42,
     "lines_all": [
      "8\"-PO-22093-AE3S0C-FA",
      "8\"-PO-22093-AE3S0C-FA",
@@ -16082,17 +16050,6 @@
      "8\"-PO-22093-AE3S0C-FA"
     ],
     "lines_open": [
-     "8\"-PO-22093-AE3S0C-FA",
-     "8\"-PO-22093-AE3S0C-FA",
-     "8\"-PO-22093-AE3S0C-FA",
-     "8\"-PO-22093-AE3S0C-FA",
-     "8\"-PO-22093-AE3S0C-FA",
-     "8\"-PO-22093-AE3S0C-FA",
-     "8\"-PO-22093-AE3S0C-FA",
-     "8\"-PO-22093-AE3S0C-FA",
-     "8\"-PO-22093-AE3S0C-FA",
-     "8\"-PO-22093-AE3S0C-FA",
-     "8\"-PO-22093-AE3S0C-FA",
      "8\"-PO-22093-AE3S0C-FA",
      "8\"-PO-22093-AE3S0C-FA",
      "8\"-PO-22093-AE3S0C-FA",
@@ -43878,228 +43835,276 @@
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1805",
    "line": "48\"-PO-22067-AC1S3A-FA and 36\"-PO-22067-AC1S3A-FA, with 6\" and 2\" branches (PDS model code 1201PO22067)",
+   "closed": true,
+   "lot": "Lot 8"
+  },
+  {
+   "doc": "P12513-12-01-15-1829",
+   "line": "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
+   "closed": true,
+   "lot": "Lot 8"
+  },
+  {
+   "doc": "P12513-12-01-15-1829",
+   "line": "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
+   "closed": true,
+   "lot": "Lot 8"
+  },
+  {
+   "doc": "P12513-12-01-15-1829",
+   "line": "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
+   "closed": true,
+   "lot": "Lot 8"
+  },
+  {
+   "doc": "P12513-12-01-15-1829",
+   "line": "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
+   "closed": true,
+   "lot": "Lot 8"
+  },
+  {
+   "doc": "P12513-12-01-15-1829",
+   "line": "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
+   "closed": true,
+   "lot": "Lot 8"
+  },
+  {
+   "doc": "P12513-12-01-15-1829",
+   "line": "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
+   "closed": true,
+   "lot": "Lot 8"
+  },
+  {
+   "doc": "P12513-12-01-15-1829",
+   "line": "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
+   "closed": true,
+   "lot": "Lot 8"
+  },
+  {
+   "doc": "P12513-12-01-15-1829",
+   "line": "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
    "closed": true,
    "lot": "Lot 8"
   },
@@ -44166,54 +44171,6 @@
   {
    "doc": "P12513-12-01-15-1829",
    "line": "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
-   "closed": false,
-   "lot": "Lot 8"
-  },
-  {
-   "doc": "P12513-12-01-15-1829",
-   "line": "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
-   "closed": false,
-   "lot": "Lot 8"
-  },
-  {
-   "doc": "P12513-12-01-15-1829",
-   "line": "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
-   "closed": false,
-   "lot": "Lot 8"
-  },
-  {
-   "doc": "P12513-12-01-15-1829",
-   "line": "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
-   "closed": false,
-   "lot": "Lot 8"
-  },
-  {
-   "doc": "P12513-12-01-15-1829",
-   "line": "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
-   "closed": false,
-   "lot": "Lot 8"
-  },
-  {
-   "doc": "P12513-12-01-15-1829",
-   "line": "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
-   "closed": false,
-   "lot": "Lot 8"
-  },
-  {
-   "doc": "P12513-12-01-15-1829",
-   "line": "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
-   "closed": false,
-   "lot": "Lot 8"
-  },
-  {
-   "doc": "P12513-12-01-15-1829",
-   "line": "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
-   "closed": false,
-   "lot": "Lot 8"
-  },
-  {
-   "doc": "P12513-12-01-15-1829",
-   "line": "3\"/4\"-PO-23397-AC1S3A-FA (title block of extracted sheets reads 1\"-PO-23397-AC1S3A-FA)",
    "closed": true,
    "lot": "Lot 8"
   },
@@ -44232,13 +44189,7 @@
   {
    "doc": "P12513-12-01-15-1888",
    "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
-   "lot": "Lot 8"
-  },
-  {
-   "doc": "P12513-12-01-15-1888",
-   "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
@@ -44250,151 +44201,157 @@
   {
    "doc": "P12513-12-01-15-1888",
    "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1888",
    "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1888",
    "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1888",
    "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1888",
    "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1888",
    "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1888",
    "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1888",
    "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1888",
    "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1888",
    "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1888",
    "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1888",
    "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1888",
    "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1888",
    "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1888",
    "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1888",
    "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1888",
    "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1888",
    "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1888",
    "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1888",
    "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1888",
    "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1888",
    "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1888",
    "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1888",
    "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
    "doc": "P12513-12-01-15-1888",
    "line": "36\"-VG-11344-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
+   "lot": "Lot 8"
+  },
+  {
+   "doc": "P12513-12-01-15-1888",
+   "line": "36\"-VG-11344-AC1S3A-FA",
+   "closed": true,
    "lot": "Lot 8"
   },
   {
@@ -44610,7 +44567,61 @@
   {
    "doc": "P12513-12-39-15-1696",
    "line": "8\"-PO-22093-AE3S0C-FA",
-   "closed": false,
+   "closed": true,
+   "lot": "Lot 8"
+  },
+  {
+   "doc": "P12513-12-39-15-1696",
+   "line": "8\"-PO-22093-AE3S0C-FA",
+   "closed": true,
+   "lot": "Lot 8"
+  },
+  {
+   "doc": "P12513-12-39-15-1696",
+   "line": "8\"-PO-22093-AE3S0C-FA",
+   "closed": true,
+   "lot": "Lot 8"
+  },
+  {
+   "doc": "P12513-12-39-15-1696",
+   "line": "8\"-PO-22093-AE3S0C-FA",
+   "closed": true,
+   "lot": "Lot 8"
+  },
+  {
+   "doc": "P12513-12-39-15-1696",
+   "line": "8\"-PO-22093-AE3S0C-FA",
+   "closed": true,
+   "lot": "Lot 8"
+  },
+  {
+   "doc": "P12513-12-39-15-1696",
+   "line": "8\"-PO-22093-AE3S0C-FA",
+   "closed": true,
+   "lot": "Lot 8"
+  },
+  {
+   "doc": "P12513-12-39-15-1696",
+   "line": "8\"-PO-22093-AE3S0C-FA",
+   "closed": true,
+   "lot": "Lot 8"
+  },
+  {
+   "doc": "P12513-12-39-15-1696",
+   "line": "8\"-PO-22093-AE3S0C-FA",
+   "closed": true,
+   "lot": "Lot 8"
+  },
+  {
+   "doc": "P12513-12-39-15-1696",
+   "line": "8\"-PO-22093-AE3S0C-FA",
+   "closed": true,
+   "lot": "Lot 8"
+  },
+  {
+   "doc": "P12513-12-39-15-1696",
+   "line": "8\"-PO-22093-AE3S0C-FA",
+   "closed": true,
    "lot": "Lot 8"
   },
   {
@@ -44622,61 +44633,7 @@
   {
    "doc": "P12513-12-39-15-1696",
    "line": "8\"-PO-22093-AE3S0C-FA",
-   "closed": false,
-   "lot": "Lot 8"
-  },
-  {
-   "doc": "P12513-12-39-15-1696",
-   "line": "8\"-PO-22093-AE3S0C-FA",
-   "closed": false,
-   "lot": "Lot 8"
-  },
-  {
-   "doc": "P12513-12-39-15-1696",
-   "line": "8\"-PO-22093-AE3S0C-FA",
-   "closed": false,
-   "lot": "Lot 8"
-  },
-  {
-   "doc": "P12513-12-39-15-1696",
-   "line": "8\"-PO-22093-AE3S0C-FA",
-   "closed": false,
-   "lot": "Lot 8"
-  },
-  {
-   "doc": "P12513-12-39-15-1696",
-   "line": "8\"-PO-22093-AE3S0C-FA",
-   "closed": false,
-   "lot": "Lot 8"
-  },
-  {
-   "doc": "P12513-12-39-15-1696",
-   "line": "8\"-PO-22093-AE3S0C-FA",
-   "closed": false,
-   "lot": "Lot 8"
-  },
-  {
-   "doc": "P12513-12-39-15-1696",
-   "line": "8\"-PO-22093-AE3S0C-FA",
-   "closed": false,
-   "lot": "Lot 8"
-  },
-  {
-   "doc": "P12513-12-39-15-1696",
-   "line": "8\"-PO-22093-AE3S0C-FA",
-   "closed": false,
-   "lot": "Lot 8"
-  },
-  {
-   "doc": "P12513-12-39-15-1696",
-   "line": "8\"-PO-22093-AE3S0C-FA",
-   "closed": false,
-   "lot": "Lot 8"
-  },
-  {
-   "doc": "P12513-12-39-15-1696",
-   "line": "8\"-PO-22093-AE3S0C-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
