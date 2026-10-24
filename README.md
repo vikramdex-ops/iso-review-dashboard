@@ -41,6 +41,10 @@
 
 <br>
 
+> **Picking this project up fresh, in any Claude account or AI assistant?** Read
+> [`HANDOFF.md`](HANDOFF.md) first — full architecture, business rules, secrets setup (no values),
+> known bugs/fixes, and current status in one place.
+
 ## What this is
 
 A single static page that always shows the current state of the ISO review register — who owns what, how much is closed, open, or on hold, split by severity and by lot, with a combined cross-lot view per reviewer. No one touches the Google Sheet export manually, no one re-runs a script, no one pushes code to refresh it. A scheduled job does that every 3 hours, and a **Refresh now** button on the page does it on demand.
@@ -52,7 +56,7 @@ The sheet stays the single source of truth. This repo only mirrors it, honestly,
 <td align="center" width="25%">
 
 **📋 4 Lots**
-<br><sub>Lot 1 – Lot 4, same rules</sub>
+<br><sub>Lot 1 – Lot 8, same rules</sub>
 
 </td>
 <td align="center" width="25%">
@@ -154,7 +158,7 @@ Everything the dashboard shows is derived mechanically from the sheet — no man
 ## On the dashboard
 
 - **Overview strip** — total assigned, closed, open, on hold, at a glance before anything else.
-- **Per-lot breakdown** — Lot 1 · Lot 2 · Lot 3 · Lot 4, filterable by chip, each row keyed by reviewer.
+- **Per-lot breakdown** — Lot 1 through Lot 8, filterable by chip, each row keyed by reviewer.
 - **Combined (by person)** — the same reviewer's numbers rolled up across *all four lots* in one line, for when lot boundaries don't matter and ownership does.
 - **Severity ledger** — proportional High / Medium / Low bars per person.
 - **Refresh now** — pulls the latest committed sync on demand, no redeploy required.
