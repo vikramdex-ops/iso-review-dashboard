@@ -9,7 +9,7 @@
 [![Deploy](https://github.com/vikramdex-ops/iso-review-dashboard/actions/workflows/deploy.yml/badge.svg)](https://github.com/vikramdex-ops/iso-review-dashboard/actions/workflows/deploy.yml)
 [![Live Dashboard](https://img.shields.io/badge/live%20dashboard-view%20now-d7a34f?style=for-the-badge&logo=githubpages&logoColor=white)](https://vikramdex-ops.github.io/iso-review-dashboard/)
 ![Sync interval](https://img.shields.io/badge/auto--sync-every%203h-6fcf7c?style=flat-square)
-![Lots tracked](https://img.shields.io/badge/lots%20tracked-4-6fb3e0?style=flat-square)
+![Lots tracked](https://img.shields.io/badge/lots%20tracked-8-6fb3e0?style=flat-square)
 ![Source](https://img.shields.io/badge/source-Google%20Sheets-34a853?style=flat-square&logo=googlesheets&logoColor=white)
 ![No backend](https://img.shields.io/badge/backend-none%20needed-8b8d96?style=flat-square)
 ![Last commit](https://img.shields.io/github/last-commit/vikramdex-ops/iso-review-dashboard?style=flat-square&color=d7a34f&label=last%20sync)
@@ -97,7 +97,7 @@ Swap the column mapping and keyword rules for your own sheet's shape (see [Addin
 
 ```mermaid
 flowchart LR
-    A[("Google Sheet\nLot 1 · Lot 2 · Lot 3 · Lot 4 · Lot 5 · Lot 6 · Lot 7")] -->|Sheets API v4, by gid\nfilter-proof read| B["build_summary.py"]
+    A[("Google Sheet\nLot 1 · Lot 2 · Lot 3 · Lot 4 · Lot 5 · Lot 6 · Lot 7 · Lot 8")] -->|Sheets API v4, by gid\nfilter-proof read| B["build_summary.py"]
     B -->|apply business rules| C["site/data/summary.json"]
     C --> D["GitHub Pages"]
     E["GitHub Actions\ncron · every 3h"] -.triggers.-> B

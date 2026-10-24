@@ -106,10 +106,6 @@ def fetch(gid):
         return fetch_via_api(gid)
     return fetch_via_csv(gid)
 
-def col(header, name, fallback):
-    low = [h.strip().lower() for h in header]
-    return low.index(name) if name in low else fallback
-
 def natkey(s):
     """Natural sort so 'DOC-2' sorts before 'DOC-10'."""
     return [int(t) if t.isdigit() else t.lower() for t in re.split(r"(\d+)", s)]
@@ -121,10 +117,18 @@ def _norm(s):
 
 def summarise(lot, table):
     h = table[0]
-    iM, iN = col(h, "severity", 12), col(h, "status", 13)
-    iP, iQ = col(h, "assigned to", 15), col(h, "modeller responce", col(h, "modeller response", 16))
-    iCmt, iDoc = col(h, "comment no.", 0), col(h, "document no.", 1)
-    iLine = col(h, "line number", 2)
+    # Fixed column-letter positions (A=Comment No., B=Document No., C=Line Number, ... M=Severity,
+    # N=Status, P=Assigned To, Q=Modeller Response), used as-is rather than matched by header text.
+    # Lot 1's header ROW has its own labeling defect — "Document No.", "Severity", "Assigned to"
+    # etc. are each typed one cell to the right of the column they actually label (confirmed via
+    # a live Sheets-API read: with name-matching, "severity" resolved to the Status text and
+    # "assigned to" resolved to the Modeller Response text for every Lot 1 row). The data itself
+    # is fine in all 7 lots; only Lot 1's header text is shifted, so trusting header names instead
+    # of fixed positions was silently reading the wrong column for severity/status/assignee/
+    # document/line on this one tab. Every lot shares the same fixed layout (per the register's
+    # own column scheme), so fixed positions are correct everywhere and immune to this defect.
+    iM, iN, iP, iQ = 12, 13, 15, 16
+    iCmt, iDoc, iLine = 0, 1, 2
     sample = {"header_cols": len(h), "header": h[:20],
               "iM": iM, "iN": iN, "iP": iP, "iQ": iQ, "iCmt": iCmt, "iDoc": iDoc, "iLine": iLine,
               "rows_at": {}}
