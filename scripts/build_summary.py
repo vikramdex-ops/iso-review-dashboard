@@ -114,6 +114,11 @@ def natkey(s):
     """Natural sort so 'DOC-2' sorts before 'DOC-10'."""
     return [int(t) if t.isdigit() else t.lower() for t in re.split(r"(\d+)", s)]
 
+def _norm(s):
+    """Normalise a doc/line string for cross-source matching (lot trackers vs. the static
+    booklet-mapping workbook): collapse whitespace, uppercase, strip."""
+    return re.sub(r"\s+", " ", (s or "").strip()).upper()
+
 def summarise(lot, table):
     h = table[0]
     iM, iN = col(h, "severity", 12), col(h, "status", 13)
@@ -127,14 +132,7 @@ def summarise(lot, table):
         if i < len(table):
             r = table[i]
             rr = r + [""] * (max(iM, iN, iP, iQ) + 1 - len(r))
-            sample["rows_at"][i + 1] = {"colA": r[0][:20], "severity": rr[iM], "assignedTo": rr[iP],
-                                         # TEMP diagnostic for booklet-mapping column verification —
-                                         # remove once iDoc/iLine are confirmed against real data.
-                                         "col0": (r[0] if len(r) > 0 else "")[:30],
-                                         "col1": (r[1] if len(r) > 1 else "")[:30],
-                                         "col2": (r[2] if len(r) > 2 else "")[:30],
-                                         "col3": (r[3] if len(r) > 3 else "")[:30],
-                                         "col4": (r[4] if len(r) > 4 else "")[:30]}
+            sample["rows_at"][i + 1] = {"colA": r[0][:20], "severity": rr[iM], "assignedTo": rr[iP]}
     stats = {}
     raw_rows = len(table) - 1
     named_rows = 0       # column P non-blank, regardless of severity
@@ -143,6 +141,7 @@ def summarise(lot, table):
     # Document-level tracking is independent of assignee/severity: a document is only "ready to
     # issue" once EVERY comment against it is closed, regardless of who owns which comment.
     docs = {}
+    line_rows = []  # every row with both doc + line populated, for cross-lot booklet matching
     for i, r in enumerate(table[1:], start=2):
         r = r + [""] * (max(iM, iN, iP, iQ, iCmt, iDoc, iLine) + 1 - len(r))
         status_l, resp_l = r[iN].strip().lower(), r[iQ].strip().lower()
@@ -157,6 +156,8 @@ def summarise(lot, table):
             if not is_closed:
                 d["open"] += 1
                 d["lines_open"].append(line)
+            if line:
+                line_rows.append({"doc": docno, "line": line, "closed": is_closed, "lot": lot})
 
         names = [n.strip() for n in r[iP].split("/") if n.strip()]
         if not names:
@@ -184,7 +185,7 @@ def summarise(lot, table):
     diag = {"raw_rows": raw_rows, "named_rows": named_rows, "counted": counted,
             "excluded_no_severity": no_severity, "excluded_blank_name": raw_rows - named_rows,
             "debug": sample}
-    return rows, diag, row_states, docs
+    return rows, diag, row_states, docs, line_rows
 
 def classify_documents(docs):
     """docs: {docno: {total, open, lines_all, lines_open}} -> ready / address / needs_work doc-number lists."""
@@ -216,6 +217,80 @@ def build_lot_documents(lot, docs, issued_log):
         "needs_work": {"count": len(needs_work), "docs": needs_work},
     }
 
+BOOKLET_MAPPING_PATH = root / "data" / "booklet_mapping.json"
+
+def load_booklet_mapping():
+    """Static (doc, line) -> Booklet No. mapping, extracted once from the user's ISO booklet
+    workbook. Returns None if the file isn't present (booklet feature silently disabled)."""
+    if not BOOKLET_MAPPING_PATH.exists():
+        return None
+    return json.loads(BOOKLET_MAPPING_PATH.read_text())
+
+def build_booklet_readiness(booklet_mapping, all_line_rows):
+    """A booklet is ready only when EVERY (doc, line) pair mapped to it is closed, across ALL
+    lots combined — booklets routinely span more than one lot. A mapped pair that has no
+    matching row in any lot's tracker at all is "blocked_missing": it was never captured by any
+    lot, so it can't silently count as either open or closed."""
+    if booklet_mapping is None:
+        return None
+    # index live rows by normalised (doc, line) -> {"closed": bool, "lots": [lot, ...]}
+    live = {}
+    for r in all_line_rows:
+        key = (_norm(r["doc"]), _norm(r["line"]))
+        entry = live.setdefault(key, {"closed": True, "lots": []})
+        entry["lots"].append(r["lot"])
+        if not r["closed"]:
+            entry["closed"] = False  # any open occurrence of this pair keeps it open
+
+    booklets = {}
+    unresolved = []
+    for item in booklet_mapping.get("resolved", []):
+        bno = item["booklet_no"]
+        b = booklets.setdefault(bno, {
+            "booklet_no": bno, "booklet_type": item.get("booklet_type", ""),
+            "total": 0, "closed": 0, "open_items": [], "missing_items": [],
+        })
+        key = (_norm(item["doc"]), _norm(item["line"]))
+        b["total"] += 1
+        found = live.get(key)
+        if found is None:
+            b["missing_items"].append({"doc": item["doc"], "line": item["line"]})
+        elif found["closed"]:
+            b["closed"] += 1
+        else:
+            b["open_items"].append({"doc": item["doc"], "line": item["line"],
+                                     "found_in_lots": sorted(set(found["lots"]))})
+
+    for bno, b in booklets.items():
+        missing = len(b["missing_items"])
+        open_ = len(b["open_items"])
+        if missing > 0:
+            b["status"] = "blocked_missing"
+        elif open_ == 0:
+            b["status"] = "ready"
+        else:
+            b["status"] = "not_ready"
+
+    for item in booklet_mapping.get("unresolved", []):
+        key = (_norm(item["doc"]), _norm(item["line"]))
+        found = live.get(key)
+        unresolved.append({
+            "doc": item["doc"], "line": item["line"],
+            "suggested_booklet_no": item.get("suggested_booklet_no", ""),
+            "closed": (found["closed"] if found else None),
+            "found_in_lots": (sorted(set(found["lots"])) if found else []),
+        })
+
+    totals = {
+        "booklets": len(booklets),
+        "ready": sum(1 for b in booklets.values() if b["status"] == "ready"),
+        "not_ready": sum(1 for b in booklets.values() if b["status"] == "not_ready"),
+        "blocked_missing": sum(1 for b in booklets.values() if b["status"] == "blocked_missing"),
+        "total_items": sum(b["total"] for b in booklets.values()),
+        "total_missing": sum(len(b["missing_items"]) for b in booklets.values()),
+    }
+    return {"totals": totals, "list": booklets, "unresolved": unresolved}
+
 # --- Load previous sync so a single bad read (duplicate tab, or a filter hiding rows on the
 # sheet) can fall back to last-known-good data for just that lot, instead of corrupting the
 # whole dashboard or silently under-counting. ---
@@ -226,10 +301,13 @@ for r in prev.get("rows", []):
     prev_rows_by_lot.setdefault(r[1], []).append(r)
 prev_documents = prev.get("documents", {})
 prev_docs_raw = prev.get("_docs_raw", {})  # internal, not meant for the frontend; see below
+prev_line_rows_by_lot = {}
+for lr in prev.get("_line_rows_raw", []):
+    prev_line_rows_by_lot.setdefault(lr["lot"], []).append(lr)
 
 issued_log = json.loads(ISSUED_LOG_PATH.read_text()) if ISSUED_LOG_PATH.exists() else {}
 
-rows, status, hashes, all_row_states, docs_raw_by_lot = [], {}, {}, [], {}
+rows, status, hashes, all_row_states, docs_raw_by_lot, all_line_rows = [], {}, {}, [], {}, []
 for lot, lot_cfg in cfg["lots"].items():
     try:
         lot_gid = resolve_lot_ref(lot_cfg)
@@ -240,7 +318,7 @@ for lot, lot_cfg in cfg["lots"].items():
             raise RuntimeError(f"fetched content is byte-identical to '{dup}' — gid/sheet_name for "
                                 f"'{lot}' is almost certainly wrong and is pulling the same tab")
         hashes[lot] = h
-        lot_rows, diag, row_states, docs_raw = summarise(lot, table)
+        lot_rows, diag, row_states, docs_raw, line_rows = summarise(lot, table)
 
         prev_raw = prev_status.get(lot, {}).get("raw_rows")
         if prev_raw is not None and diag["raw_rows"] < prev_raw:
@@ -268,6 +346,7 @@ for lot, lot_cfg in cfg["lots"].items():
         rows += lot_rows
         all_row_states += row_states
         docs_raw_by_lot[lot] = docs_raw
+        all_line_rows += line_rows
         diag["content_hash"] = h
         diag["gid"] = lot_gid
         diag["fetch_method"] = FETCH_METHOD
@@ -345,13 +424,27 @@ combined_rows = [[who, COMBINED_LABEL] + vals for who, vals in sorted(combined_m
 # real work. Independent of assignee on purpose. ---
 documents_out = {lot: build_lot_documents(lot, docs, issued_log) for lot, docs in docs_raw_by_lot.items()}
 
+# --- Booklet Issuance view: static (doc, line) -> Booklet No. mapping (from the user's ISO
+# booklet workbook) crossed against every lot's live rows, irrespective of which lot a given
+# comment happens to live in. Falls back to the previous sync's line-rows for any lot that
+# errored this run, same stale-data protection as the Summary/Issuance views. ---
+for lot in cfg["lots"]:
+    if lot not in docs_raw_by_lot and lot in prev_line_rows_by_lot:
+        all_line_rows += prev_line_rows_by_lot[lot]
+booklet_mapping = load_booklet_mapping()
+booklets_out = build_booklet_readiness(booklet_mapping, all_line_rows)
+
 out = root / "site" / "data" / "summary.json"
 out.write_text(json.dumps({"updated": datetime.datetime.now(datetime.timezone.utc).isoformat(),
                            "preliminary": False, "today": TODAY_IST, "status": status, "rows": rows,
                            "combined": combined_rows, "documents": documents_out,
-                           "_docs_raw": docs_raw_by_lot}, indent=1))
+                           "booklets": booklets_out,
+                           "_docs_raw": docs_raw_by_lot,
+                           "_line_rows_raw": all_line_rows}, indent=1))
 (root / "site" / "config.json").write_text(json.dumps(cfg, indent=1))  # keep client-side refresh in sync
 print("wrote", out)
 print("TOTAL_ASSIGNED_ACROSS_LOTS", sum(r[14] for r in rows))
 print("DOCUMENTS", {lot: d["total_documents"] for lot, d in documents_out.items()})
 print("READY_TO_ISSUE_PENDING", {lot: d["ready_pending"]["count"] for lot, d in documents_out.items()})
+if booklets_out:
+    print("BOOKLETS", booklets_out["totals"])

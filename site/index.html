@@ -119,6 +119,25 @@ footer{padding:4rem 0 3rem;color:var(--dim);font-size:.85rem}
 .countbtn.ready{color:var(--ok);border-color:oklch(0.5 0.1 150/.5)}
 .countbtn.issued{color:var(--dim)}
 .countbtn.address{color:var(--md);border-color:oklch(0.55 0.1 78/.5)}
+
+.booklet-hero .sub{max-width:62ch}
+.unresolvedwarn{background:oklch(0.26 0.04 40/.4);border:1px solid oklch(0.4 0.1 40/.5);border-radius:12px;padding:1rem 1.2rem;margin-bottom:1.6rem;font-size:.86rem;line-height:1.5}
+.unresolvedwarn b{color:var(--hi)}
+.unresolvedwarn ul{margin:.5rem 0 0;padding-left:1.1rem}
+.booklet-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.1rem;margin-bottom:2rem}
+.bkcard{background:linear-gradient(180deg,var(--panel),oklch(0.18 0.013 60));border:1px solid var(--line);border-radius:14px;padding:1.3rem 1.4rem;box-shadow:0 20px 50px -24px #000;animation:fade .9s var(--ease) both}
+.bkcard h4{font:400 1.15rem "Instrument Serif",serif;display:flex;align-items:center;justify-content:space-between;gap:.6rem}
+.bkcard h4 small{font:500 .7rem "Hanken Grotesk",sans-serif;color:var(--dim);letter-spacing:.02em;text-transform:uppercase;display:block;margin-top:.15rem}
+.bkpill{font:600 .68rem "Hanken Grotesk",sans-serif;letter-spacing:.04em;text-transform:uppercase;padding:.25rem .55rem;border-radius:99px;white-space:nowrap}
+.bkpill.ready{color:var(--ok);background:oklch(0.5 0.1 150/.15);border:1px solid oklch(0.5 0.1 150/.4)}
+.bkpill.not_ready{color:var(--md);background:oklch(0.55 0.1 78/.15);border:1px solid oklch(0.55 0.1 78/.4)}
+.bkpill.blocked_missing{color:var(--hi);background:oklch(0.5 0.15 30/.15);border:1px solid oklch(0.5 0.15 30/.4)}
+.bkbar{display:flex;height:8px;border-radius:99px;overflow:hidden;background:var(--line);margin-top:.9rem}
+.bkbar span{height:100%}
+.bkrows{margin-top:.9rem;display:grid;gap:.1rem}
+.bkrow{display:flex;align-items:center;justify-content:space-between;gap:.8rem;padding:.5rem 0;border-top:1px solid var(--line);font-size:.86rem}
+.bkrow:first-child{border-top:0}
+.bkrow small{color:var(--dim)}
 .stampwrap{position:relative;display:inline-flex}
 .stamp{position:absolute;inset:-6px -10px auto auto;top:-10px;right:-14px;font:700 .58rem "Hanken Grotesk",sans-serif;letter-spacing:.06em;color:var(--ok);border:1.5px solid var(--ok);border-radius:5px;padding:.08rem .3rem;transform:rotate(-8deg);opacity:0;animation:stampin .5s .15s var(--ease) both}
 @keyframes stampin{from{opacity:0;transform:rotate(-8deg) scale(1.6)}to{opacity:1;transform:rotate(-8deg) scale(1)}}
@@ -163,6 +182,7 @@ footer{padding:4rem 0 3rem;color:var(--dim);font-size:.85rem}
   <nav class="tabs" role="tablist" aria-label="Dashboard view">
     <button class="tab" role="tab" aria-selected="true" id="tab-summary" type="button">Summary</button>
     <button class="tab" role="tab" aria-selected="false" id="tab-issuance" type="button">Issuance<i class="tabdot" id="issuance-badge"></i></button>
+    <button class="tab" role="tab" aria-selected="false" id="tab-booklets" type="button">Booklet Issuance<i class="tabdot" id="booklets-badge"></i></button>
   </nav>
 
   <div id="view-summary">
@@ -212,6 +232,16 @@ footer{padding:4rem 0 3rem;color:var(--dim);font-size:.85rem}
       <p class="sub">A document is <b>ready to issue</b> once every comment against it — column B, any assignee — is closed. One open or on-hold point keeps it back. By document, not by person, lot by lot.</p>
     </section>
     <div class="issuance-grid" id="issuance-grid" aria-label="Document issuance status by lot"></div>
+  </div>
+
+  <div id="view-booklets" class="hidden">
+    <section class="issuance-hero booklet-hero">
+      <h3>Booklet readiness</h3>
+      <p class="sub">A booklet is <b>ready</b> only once every document+line mapped to it is closed, across every lot combined — booklets routinely span more than one lot. A mapped pair that no lot's tracker has ever recorded shows as <b>missing</b>, so nothing is silently counted as either open or done.</p>
+    </section>
+    <div class="stats" id="booklet-stats" aria-label="Booklet readiness totals"></div>
+    <div id="booklet-unresolved"></div>
+    <div class="booklet-grid" id="booklet-grid" aria-label="Booklet readiness by booklet number"></div>
   </div>
 
   <footer>Rebuilt by GitHub Actions every 3 hours from the Google Sheet register.</footer>
@@ -299,7 +329,7 @@ function clock(){
   $("#dot").classList.toggle("pre",!!D.preliminary);
 }
 function paint(){
-  stats();chips();render();clock();diag();renderIssuance();
+  stats();chips();render();clock();diag();renderIssuance();renderBooklets();
   // brief pulse to mark "data just arrived", not a continuous fake-live indicator
   const d=$("#dot");d.classList.remove("just-synced");void d.offsetWidth;d.classList.add("just-synced");
 }
@@ -307,15 +337,18 @@ fetch("data/summary.json?"+Date.now()).then(r=>r.json()).then(d=>{D=d;paint();se
  .catch(()=>{$("#tbl tbody").innerHTML='<tr><td colspan="19" class="empty">Could not load data/summary.json. Serve this page over http(s).</td></tr>'});
 
 /* ---------- Tabs ---------- */
-const tabSummary=$("#tab-summary"),tabIssuance=$("#tab-issuance");
+const tabSummary=$("#tab-summary"),tabIssuance=$("#tab-issuance"),tabBooklets=$("#tab-booklets");
 function showTab(which){
-  const sum=which==="summary";
-  tabSummary.setAttribute("aria-selected",sum);tabIssuance.setAttribute("aria-selected",!sum);
-  $("#view-summary").classList.toggle("hidden",!sum);
-  $("#view-issuance").classList.toggle("hidden",sum);
+  tabSummary.setAttribute("aria-selected",which==="summary");
+  tabIssuance.setAttribute("aria-selected",which==="issuance");
+  tabBooklets.setAttribute("aria-selected",which==="booklets");
+  $("#view-summary").classList.toggle("hidden",which!=="summary");
+  $("#view-issuance").classList.toggle("hidden",which!=="issuance");
+  $("#view-booklets").classList.toggle("hidden",which!=="booklets");
 }
 tabSummary.onclick=()=>showTab("summary");
 tabIssuance.onclick=()=>showTab("issuance");
+tabBooklets.onclick=()=>showTab("booklets");
 
 /* ---------- Issuance screen ---------- */
 const REPO="vikramdex-ops/iso-review-dashboard";
@@ -453,6 +486,65 @@ function openDocModal(lot,bucket){
 $("#modalClose").onclick=()=>{$("#modalBackdrop").hidden=true};
 $("#modalBackdrop").onclick=e=>{if(e.target.id==="modalBackdrop")$("#modalBackdrop").hidden=true};
 addEventListener("keydown",e=>{if(e.key==="Escape")$("#modalBackdrop").hidden=true});
+
+/* ---------- Booklet Issuance screen ---------- */
+const BK_STATUS_LABEL={ready:"Ready",not_ready:"Not ready",blocked_missing:"Missing items"};
+const BK_BUCKET_META={
+  open_items:{title:"Open items",sub:"These document+line pairs are mapped to this booklet but are still open or on hold in whichever lot carries them.",lineLabel:"Line numbers"},
+  missing_items:{title:"Missing from every lot",sub:"These document+line pairs are mapped to this booklet but have no matching row in any of Lot 1–7's trackers — they were never captured, so chase these down before claiming the booklet complete.",lineLabel:"Line numbers"},
+};
+function renderBooklets(){
+  const bk=D.booklets;
+  const grid=$("#booklet-grid"),statsEl=$("#booklet-stats"),unresolvedEl=$("#booklet-unresolved");
+  if(!bk){
+    $("#booklets-badge").classList.remove("on");
+    statsEl.innerHTML="";unresolvedEl.innerHTML="";
+    grid.innerHTML=`<p class="empty">No booklet mapping has been loaded yet.</p>`;
+    return;
+  }
+  const t=bk.totals,f=n=>n.toLocaleString();
+  statsEl.innerHTML=[["total","Booklets",t.booklets],["closed","Ready",t.ready],["open","Not ready",t.not_ready],["hold","Missing items",t.blocked_missing]]
+    .map(([c,l,v])=>`<div class="stat ${c}"><b>${f(v)}</b><span>${l}</span></div>`).join("");
+  $("#booklets-badge").classList.toggle("on",t.not_ready>0||t.blocked_missing>0);
+
+  const unresolved=bk.unresolved||[];
+  unresolvedEl.innerHTML=unresolved.length?`<div class="unresolvedwarn"><b>${unresolved.length} mapping row${unresolved.length===1?"":"s"}</b> in the booklet workbook ${unresolved.length===1?"wasn't":"weren't"} cleanly matched to a single booklet and needs a manual check:
+    <ul>${unresolved.map(u=>`<li><b>${u.doc}</b> / ${u.line} — suggested booklet <b>${u.suggested_booklet_no||"—"}</b>${u.found_in_lots.length?`, found ${u.closed?"closed":"open"} in ${u.found_in_lots.join(", ")}`:", not found in any lot"}</li>`).join("")}</ul></div>`:"";
+
+  const list=Object.values(bk.list||{}).sort((a,b)=>a.booklet_no.localeCompare(b.booklet_no));
+  grid.innerHTML=list.map(b=>{
+    const open=b.open_items.length,missing=b.missing_items.length,closed=b.closed;
+    return `<div class="bkcard">
+      <h4>${b.booklet_no}<small>${b.booklet_type||""}</small><span class="bkpill ${b.status}">${BK_STATUS_LABEL[b.status]}</span></h4>
+      <div class="bkbar" role="img" aria-label="${closed} closed, ${open} open, ${missing} missing of ${b.total}">
+        <span style="flex-grow:${closed};background:var(--ok)"></span><span style="flex-grow:${open};background:var(--hi)"></span><span style="flex-grow:${missing};background:var(--amber)"></span>
+      </div>
+      <div class="bkrows">
+        <div class="bkrow"><span>Closed</span><b>${closed} / ${b.total}</b></div>
+        <div class="bkrow"><span>Open</span>${open?`<button class="countbtn address" data-bk="${b.booklet_no}" data-bucket="open_items">${open}</button>`:`<span class="countbtn" style="cursor:default;color:var(--dim);border-style:dashed">0</span>`}</div>
+        <div class="bkrow"><span>Missing from all lots</span>${missing?`<button class="countbtn" style="color:var(--hi);border-color:oklch(0.5 0.15 30/.5)" data-bk="${b.booklet_no}" data-bucket="missing_items">${missing}</button>`:`<span class="countbtn" style="cursor:default;color:var(--dim);border-style:dashed">0</span>`}</div>
+      </div>
+    </div>`;
+  }).join("")||`<p class="empty">No booklets to show.</p>`;
+  grid.querySelectorAll(".countbtn[data-bk]").forEach(btn=>btn.onclick=()=>openBookletModal(btn.dataset.bk,btn.dataset.bucket));
+}
+function openBookletModal(bookletNo,bucket){
+  const b=(D.booklets&&D.booklets.list&&D.booklets.list[bookletNo])||{};
+  const items=b[bucket]||[];
+  const meta=BK_BUCKET_META[bucket];
+  $("#modalTitle").textContent=`${bookletNo} — ${meta.title} (${items.length})`;
+  $("#modalSub").textContent=meta.sub;
+  $("#lineListLabel").textContent=meta.lineLabel;
+  $("#docList").textContent=items.map(i=>i.doc).join("\n")||"—";
+  $("#lineList").textContent=items.map(i=>i.line).join("\n")||"—";
+  const foot=$("#modalFoot");
+  if(bucket==="open_items"&&items.some(i=>i.found_in_lots&&i.found_in_lots.length)){
+    foot.innerHTML=`<div class="addrlist">${items.map(i=>`<div><b>${i.doc}</b> / ${i.line} — open in ${(i.found_in_lots||[]).join(", ")||"—"}</div>`).join("")}</div>`;
+  } else {
+    foot.innerHTML="";
+  }
+  $("#modalBackdrop").hidden=false;
+}
 function copy(text,btn){
   navigator.clipboard.writeText(text).then(()=>{
     const old=btn.textContent;btn.textContent="Copied!";btn.classList.add("copied");
