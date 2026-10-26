@@ -188,7 +188,7 @@ footer{padding:4rem 0 3rem;color:var(--dim);font-size:.85rem}
   <div id="view-summary">
   <div class="hero">
     <h1><span class="l">Every comment,</span><span class="l"><em>accounted</em> for.</span></h1>
-    <p class="sub">Live status of ISO review comments by assignee and severity, read from the register and refreshed every three hours.</p>
+    <p class="sub">Live status of ISO review comments by assignee and severity, read from the register and refreshed every 45 minutes.</p>
   </div>
 
   <div class="stats" id="stats" aria-label="Overall totals"></div>
@@ -244,7 +244,7 @@ footer{padding:4rem 0 3rem;color:var(--dim);font-size:.85rem}
     <div class="booklet-grid" id="booklet-grid" aria-label="Booklet readiness by booklet number"></div>
   </div>
 
-  <footer>Rebuilt by GitHub Actions every 3 hours from the Google Sheet register.</footer>
+  <footer>Rebuilt by GitHub Actions every 45 minutes from the Google Sheet register.</footer>
 </div>
 
 <div class="modal-backdrop" id="modalBackdrop" hidden>
@@ -321,7 +321,7 @@ function diag(){
   $("#diag").innerHTML=parts.join("");
 }
 function clock(){
-  const u=new Date(D.updated),m=Math.max(0,Math.round((Date.now()-u)/6e4)),nx=new Date(u.getTime()+108e5);
+  const u=new Date(D.updated),m=Math.max(0,Math.round((Date.now()-u)/6e4)),nx=new Date(u.getTime()+27e5);
   const ago=m<1?"just now":m<60?m+" min ago":Math.floor(m/60)+"h "+m%60+"m ago";
   const day=D.today?new Date(D.today+"T00:00:00+05:30").toLocaleDateString(undefined,{day:"numeric",month:"short"}):"";
   $("#sync").textContent=D.preliminary?"Preliminary snapshot · awaiting first live sync"
