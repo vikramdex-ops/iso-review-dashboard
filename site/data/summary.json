@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26T07:16:08.153062+00:00",
+ "updated": "2026-10-26T07:18:51.081342+00:00",
  "preliminary": false,
  "today": "2026-10-26",
  "status": {
@@ -491,7 +491,7 @@
      }
     }
    },
-   "content_hash": "353386f080b8",
+   "content_hash": "a3c670f27532",
    "gid": "180962173",
    "fetch_method": "sheets_api"
   },
@@ -545,7 +545,7 @@
      }
     }
    },
-   "content_hash": "220916154451",
+   "content_hash": "7f0b6bb9cacf",
    "gid": "23469838",
    "fetch_method": "sheets_api"
   }
@@ -1146,8 +1146,8 @@
    12,
    25,
    20,
-   11,
-   9,
+   12,
+   8,
    4,
    3,
    1,
@@ -1155,9 +1155,9 @@
    0,
    0,
    61,
-   26,
-   35,
-   11,
+   27,
+   34,
+   12,
    0
   ],
   [
@@ -1227,8 +1227,8 @@
    "Dharma",
    "Lot 9",
    18,
-   0,
-   18,
+   1,
+   17,
    11,
    0,
    11,
@@ -1239,9 +1239,9 @@
    0,
    0,
    36,
-   0,
-   36,
-   0,
+   1,
+   35,
+   1,
    0
   ],
   [
@@ -1337,8 +1337,8 @@
    233,
    27,
    219,
-   206,
-   13,
+   207,
+   12,
    141,
    138,
    3,
@@ -1346,17 +1346,17 @@
    0,
    0,
    620,
-   577,
-   43,
-   11,
+   578,
+   42,
+   12,
    0
   ],
   [
    "Dharma",
    "All Lots (combined)",
    460,
-   442,
-   18,
+   443,
+   17,
    353,
    342,
    11,
@@ -1367,9 +1367,9 @@
    0,
    0,
    1139,
-   1103,
-   36,
-   0,
+   1104,
+   35,
+   1,
    0
   ],
   [
@@ -6855,10 +6855,10 @@
    "booklets": 5,
    "ready": 0,
    "not_ready": 5,
-   "total_items": 470,
-   "closed_items": 403,
-   "open_items": 32,
-   "not_in_lot_items": 35,
+   "total_docs": 467,
+   "closed_docs": 401,
+   "open_docs": 31,
+   "not_in_lot_docs": 35,
    "excluded_booklets": 4,
    "excluded_items": 131
   },
@@ -6866,420 +6866,8026 @@
    "P12513-12-99-15-1601": {
     "booklet_no": "P12513-12-99-15-1601",
     "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)",
-    "total": 315,
-    "closed": 284,
-    "open_items": [
+    "total_docs": 314,
+    "closed_docs": 283,
+    "open_docs": 19,
+    "not_in_lot_docs": 12,
+    "status": "not_ready",
+    "documents": [
      {
-      "doc": "P12513-12-01-15-1720",
-      "line": "1\"-IA-10988-AC4A1A-FA",
-      "found_in_lots": [
-       "Lot 9"
-      ]
-     },
-     {
-      "doc": "P12513-12-01-15-1728",
-      "line": "1\"-IA-10996-AC4A1A-FA",
-      "found_in_lots": [
-       "Lot 9"
-      ]
-     },
-     {
-      "doc": "P12513-12-01-15-1735",
-      "line": "1\"-IA-11003-AC4A1A-FA",
-      "found_in_lots": [
+      "doc": "P12513-12-01-15-1601",
+      "status": "closed",
+      "comments_total": 96,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
        "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "6\"-BG-8006-BC1S3A-FA-H",
+        "plan_status": "Pending (0/31 sheets completed)",
+        "in_lot": true
+       }
       ]
      },
      {
-      "doc": "P12513-12-01-15-1737",
-      "line": "1\"-IA-11005-AC4A1A-FA",
-      "found_in_lots": [
-       "Lot 9"
-      ]
-     },
-     {
-      "doc": "P12513-12-01-15-1740",
-      "line": "1\"-IA-11008-AC4A1A-FA",
-      "found_in_lots": [
+      "doc": "P12513-12-01-15-1602",
+      "status": "closed",
+      "comments_total": 39,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
        "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "12\"-BG-8007-BC1S3A-FA-H",
+        "plan_status": "Pending (0/12 sheets completed)",
+        "in_lot": true
+       }
       ]
      },
      {
-      "doc": "P12513-12-01-15-1946",
-      "line": "1\"-D-17016-AE3S0C-FA",
-      "found_in_lots": [
+      "doc": "P12513-12-01-15-1605",
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "2\"-D-15222-AE3S0C-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1607",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15224-AE3S0C-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1615",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
        "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15233-AE3S0C-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
       ]
      },
      {
-      "doc": "P12513-12-01-15-1795",
-      "line": "40\"-PO-22052-AC1S3A-FA",
-      "found_in_lots": [
-       "Lot 9"
+      "doc": "P12513-12-01-15-1617",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"-D-15235-AE3S0C-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
       ]
      },
      {
-      "doc": "P12513-12-01-15-1799",
-      "line": "2\"-PO-22059-AE3SOC-FA",
-      "found_in_lots": [
-       "Lot 9"
+      "doc": "P12513-12-01-15-1618",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3"
+      ],
+      "lines": [
+       {
+        "line": "3\"-D-15236-AE3S0C-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
       ]
      },
      {
-      "doc": "P12513-12-01-15-1800",
-      "line": "2\"-PO-22060-AE3SOC-FA",
-      "found_in_lots": [
-       "Lot 9"
+      "doc": "P12513-12-01-15-1621",
+      "status": "closed",
+      "comments_total": 15,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "8\"-D-15240-AE3S0C-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
       ]
      },
      {
-      "doc": "P12513-12-01-15-1829",
-      "line": "3/4\"-PO-23397-AC1S3A-FA",
-      "found_in_lots": [
+      "doc": "P12513-12-01-15-1622",
+      "status": "closed",
+      "comments_total": 18,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
        "Lot 8"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15241-AE3S0C-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
       ]
      },
      {
-      "doc": "P12513-12-01-15-2009",
-      "line": "1\"-WW-8157-AC1A1B-FA",
-      "found_in_lots": [
-       "Lot 9"
-      ]
-     },
-     {
-      "doc": "P12513-12-39-15-1696",
-      "line": "8\"PO-22093-AE3S0C-FA",
-      "found_in_lots": [
-       "Lot 8"
-      ]
-     },
-     {
-      "doc": "P12513-12-01-15-1725",
-      "line": "1\"-IA-10993-AC4A1A-FA",
-      "found_in_lots": [
+      "doc": "P12513-12-01-15-1623",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
        "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "4\"-D-15242-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
       ]
      },
      {
-      "doc": "P12513-12-01-15-1865",
-      "line": "2\"-VG-11321-AE3S0C-FA",
-      "found_in_lots": [
+      "doc": "P12513-12-01-15-1625",
+      "status": "closed",
+      "comments_total": 14,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "8\"-D-15245-AE3S0C-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1626",
+      "status": "closed",
+      "comments_total": 12,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3"
+      ],
+      "lines": [
+       {
+        "line": "8\"-D-15246-AE3S0C-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1627",
+      "status": "closed",
+      "comments_total": 6,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
        "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "8\"-D-15247-AE3S0C-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
       ]
      },
      {
-      "doc": "P12513-12-01-15-1976",
-      "line": "3/4\"-VG-11873-AC1S3A-FA",
-      "found_in_lots": [
+      "doc": "P12513-12-01-15-1628",
+      "status": "closed",
+      "comments_total": 19,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15248-AE3S0C-FA",
+        "plan_status": "All completed (5/5 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1630",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
        "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15250-AE3S0C-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
       ]
      },
      {
-      "doc": "P12513-12-01-15-1977",
-      "line": "3/4\"-VG-11874-AC1S3A-FA",
-      "found_in_lots": [
-       "Lot 9"
+      "doc": "P12513-12-01-15-1631",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"-D-15252-AE3S0C-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1632",
+      "status": "closed",
+      "comments_total": 29,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15254-AE3S0C-FA",
+        "plan_status": "Pending (0/10 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1633",
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "2\"-D-15255-AE3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1634",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15256-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1635",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15257-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1637",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1",
+       "Lot 2"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15259-AE3S0C-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1639",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15261-AE3S0C-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1641",
+      "status": "closed",
+      "comments_total": 12,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15264-AE3S0C-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1642",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15265-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1643",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15266-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1644",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15267-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1645",
+      "status": "closed",
+      "comments_total": 12,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "1/2\"-D-15268-AE3S0C-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1646",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-15269-AE3S0C-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1647",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1",
+       "Lot 2"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15270-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1648",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15271-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1649",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-51272-AE3S0C-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1653",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15685-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1654",
+      "status": "closed",
+      "comments_total": 6,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "4\"-D-15962-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1655",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "14\"-D-16946-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1660",
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "1/2\"-D-16951-AE3S0C-FA",
+        "plan_status": "Pending (0/3 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1662",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "1/2\"-D-16953-AE3S0C-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1664",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-16956-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1665",
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "2\"-D-16957-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1666",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-D-16958-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1667",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-D-16959-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1668",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-D-16960-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1669",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-D-16961-BE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1670",
+      "status": "closed",
+      "comments_total": 13,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-16962-BE3S0C-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1672",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-VG-11902-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1675",
+      "status": "not_in_lot",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-NN-12203-AE3SOC-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       },
+       {
+        "line": "1\"-VG-11904-AC1S3A-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1676",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-16973-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1677",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-16974-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1679",
+      "status": "closed",
+      "comments_total": 17,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-PG-11358-AE3S0C-FA",
+        "plan_status": "Pending (0/4 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1686",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-16984-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1687",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-16986-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1692",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 2"
+      ],
+      "lines": [
+       {
+        "line": "1/2\"-D-16993-AE3S0C-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": true
+       }
       ]
      },
      {
       "doc": "P12513-12-01-15-1693",
-      "line": "2\"-D-16995-AC1S3A-FA",
-      "found_in_lots": [
+      "status": "open",
+      "comments_total": 7,
+      "comments_open": 6,
+      "open_in_lots": [
        "Lot 9"
+      ],
+      "in_lots": [
+       "Lot 9"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-16995-AC1S3A-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1694",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-16996-AE3S0C-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1697",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-DZ-8381-BS1A0A-FA",
+        "plan_status": "Pending (0/8 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1699",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3"
+      ],
+      "lines": [
+       {
+        "line": "2\"-FG-8086-AC1S3A-FA",
+        "plan_status": "All completed (4/4 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1700",
+      "status": "closed",
+      "comments_total": 16,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "4\"-FG-8580-BC1S3A-FA-H",
+        "plan_status": "All completed (7/7 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1701",
+      "status": "closed",
+      "comments_total": 74,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "6\"-FG-8581-BC1S3A-FA-H",
+        "plan_status": "Pending (0/34 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1702",
+      "status": "closed",
+      "comments_total": 45,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "02\"-FG-8582-BC1S3A-FA-H",
+        "plan_status": "Pending (0/17 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1703",
+      "status": "closed",
+      "comments_total": 38,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "20\"-FG-8583-BC1S3A-FA",
+        "plan_status": "All completed (8/8 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1704",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "20\"-FG-8584-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1705",
+      "status": "closed",
+      "comments_total": 47,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "2\"-FG-8585-BC1S3A-FA-H",
+        "plan_status": "All completed (15/15 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1706",
+      "status": "closed",
+      "comments_total": 12,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "20\"-FG-8587-BC1S3A-FA",
+        "plan_status": "All completed (5/5 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1707",
+      "status": "closed",
+      "comments_total": 24,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "20\"-FG-8588-BC1S3A-FA",
+        "plan_status": "All completed (6/6 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1708",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-FG-8589-BC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1709",
+      "status": "closed",
+      "comments_total": 17,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "2\"-FG-8590-AC1S3A-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1710",
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "2\"-FG-8591-AC1S3A-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1711",
+      "status": "closed",
+      "comments_total": 14,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "4\"-IA-10979-AC4A1A-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1712",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-10980-AC4A1A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1713",
+      "status": "closed",
+      "comments_total": 12,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-10981-AC4A1A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1715",
+      "status": "closed",
+      "comments_total": 18,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "2\"-IA-10983-AC4A1A-FA",
+        "plan_status": "All completed (7/7 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1716",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-10984-AC4A1A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1717",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-10985-AC4A1A-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1718",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-10986-AC4A1A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1719",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-10987-AC4A1A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1720",
+      "status": "open",
+      "comments_total": 7,
+      "comments_open": 6,
+      "open_in_lots": [
+       "Lot 9"
+      ],
+      "in_lots": [
+       "Lot 9"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-10988-AC4A1A-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1721",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-10989-AC4A1A-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1722",
+      "status": "closed",
+      "comments_total": 15,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4",
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "2\"-IA-10990-AC4A1A-FA",
+        "plan_status": "Pending (0/5 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1723",
+      "status": "closed",
+      "comments_total": 6,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-10991-AC4A1A-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1724",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-10992-AC4A1A-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1725",
+      "status": "open",
+      "comments_total": 7,
+      "comments_open": 2,
+      "open_in_lots": [
+       "Lot 1"
+      ],
+      "in_lots": [
+       "Lot 1",
+       "Lot 2"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-10993-AC4A1A-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1726",
+      "status": "closed",
+      "comments_total": 6,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 8"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-10994-AC4A1A-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1727",
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "2\"-IA-10995-AC4A1A-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1728",
+      "status": "open",
+      "comments_total": 7,
+      "comments_open": 6,
+      "open_in_lots": [
+       "Lot 9"
+      ],
+      "in_lots": [
+       "Lot 9"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-10996-AC4A1A-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1729",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-10997-AC4A1A-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1730",
+      "status": "closed",
+      "comments_total": 2,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-10998-AC4A1A-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1731",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-10999-AC4A1A-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1732",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "2\"-IA-11000-AC4A1A-FA",
+        "plan_status": "Pending (0/7 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1733",
+      "status": "closed",
+      "comments_total": 10,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-IA-11001-AC4A1A-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1734",
+      "status": "closed",
+      "comments_total": 6,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-11002-AC4A1A-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1735",
+      "status": "open",
+      "comments_total": 13,
+      "comments_open": 2,
+      "open_in_lots": [
+       "Lot 1"
+      ],
+      "in_lots": [
+       "Lot 1",
+       "Lot 2"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-11003-AC4A1A-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1736",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 2"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-11004-AC4A1A-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1737",
+      "status": "open",
+      "comments_total": 10,
+      "comments_open": 9,
+      "open_in_lots": [
+       "Lot 9"
+      ],
+      "in_lots": [
+       "Lot 9"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-11005-AC4A1A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1738",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 2"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-11006-AC4A1A-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1739",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-11007-AC4A1A-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1740",
+      "status": "open",
+      "comments_total": 13,
+      "comments_open": 2,
+      "open_in_lots": [
+       "Lot 1"
+      ],
+      "in_lots": [
+       "Lot 1",
+       "Lot 2"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-11008-AC4A1A-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1741",
+      "status": "closed",
+      "comments_total": 6,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-11009-AC4A1A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1742",
+      "status": "closed",
+      "comments_total": 16,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-NN-12010-AC1A1B-FA",
+        "plan_status": "All completed (6/6 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1743",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "2\"-NN-12011-AC1S3A-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1744",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "1\"-NN-12012-AC1A1B-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1746",
+      "status": "closed",
+      "comments_total": 17,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "2\"-NN-12014-AC1A1B-FA",
+        "plan_status": "All completed (7/7 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1751",
+      "status": "closed",
+      "comments_total": 23,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1",
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "2\"-NN-12077-AC1A1B-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1752",
+      "status": "closed",
+      "comments_total": 21,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"-NN-12081-AC1A1B-FA",
+        "plan_status": "All completed (5/5 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1753",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3"
+      ],
+      "lines": [
+       {
+        "line": "1\"-VG-11865-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1756",
+      "status": "closed",
+      "comments_total": 10,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-NN-12207-AE3SOC-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1757",
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "1\"-NN-12208-AE3SOC-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1758",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "2\"-NN-12209-AE3SOC-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1759",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "1\"-NN-12210-AE3SOC-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1760",
+      "status": "closed",
+      "comments_total": 10,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-NN-12211-AE3S0C-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1761",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 8"
+      ],
+      "lines": [
+       {
+        "line": "1\"-NN-12212-AE3SOC-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1763",
+      "status": "closed",
+      "comments_total": 12,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 2"
+      ],
+      "lines": [
+       {
+        "line": "1\"-NN-12214-AC1S3A-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1766",
+      "status": "closed",
+      "comments_total": 10,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-NN-12223-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1767",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-PA-8617-AC1A1B-FA",
+        "plan_status": "Pending (0/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1768",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 2"
+      ],
+      "lines": [
+       {
+        "line": "2\"-PA-8618-AC1A1B-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1769",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3"
+      ],
+      "lines": [
+       {
+        "line": "3\"-PA-8619-AC1A1B-FA",
+        "plan_status": "All completed (4/4 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1770",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-PA-8620-AC1A1B-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1771",
+      "status": "closed",
+      "comments_total": 10,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-PA-8621-AC1A1B-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1772",
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "1\"-PA-8622-AC1A1B-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1773",
+      "status": "closed",
+      "comments_total": 37,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "36\"-PG-11350-AE3S0C-FA",
+        "plan_status": "Pending (0/19 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1774",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "36\"-PG-11352-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1775",
+      "status": "closed",
+      "comments_total": 34,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "16\"-PG-11353-AC1S3A-FA",
+        "plan_status": "All completed (11/11 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1776",
+      "status": "closed",
+      "comments_total": 17,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "12\"-PG-11354-BC1S3A-FA",
+        "plan_status": "All completed (4/4 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1778",
+      "status": "closed",
+      "comments_total": 12,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "12\"-PG-11356-BC1S3A-FA",
+        "plan_status": "Pending (0/4 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1779",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "42\"-PG-11357-AC1S3A-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1781",
+      "status": "closed",
+      "comments_total": 88,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "4\"-PG-12198-AE3S0C-FA",
+        "plan_status": "All completed (41/41 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1782",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-VG-11903-AC1S3A-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1795",
+      "status": "open",
+      "comments_total": 59,
+      "comments_open": 57,
+      "open_in_lots": [
+       "Lot 9"
+      ],
+      "in_lots": [
+       "Lot 9"
+      ],
+      "lines": [
+       {
+        "line": "40\"-PO-22052-AC1S3A-FA",
+        "plan_status": "All completed (14/14 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1797",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3"
+      ],
+      "lines": [
+       {
+        "line": "2\"-PO-22057-AE3S0C-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1799",
+      "status": "open",
+      "comments_total": 16,
+      "comments_open": 14,
+      "open_in_lots": [
+       "Lot 9"
+      ],
+      "in_lots": [
+       "Lot 9"
+      ],
+      "lines": [
+       {
+        "line": "2\"-PO-22059-AE3SOC-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1800",
+      "status": "open",
+      "comments_total": 23,
+      "comments_open": 22,
+      "open_in_lots": [
+       "Lot 9"
+      ],
+      "in_lots": [
+       "Lot 9"
+      ],
+      "lines": [
+       {
+        "line": "2\"-PO-22060-AE3SOC-FA",
+        "plan_status": "Pending (0/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1801",
+      "status": "closed",
+      "comments_total": 27,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "8\"-PO-22063-AE3S0C-FA",
+        "plan_status": "Pending (0/6 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1802",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 8"
+      ],
+      "lines": [
+       {
+        "line": "18\"-PO-22064-AC1S3A-FA",
+        "plan_status": "Pending (0/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1803",
+      "status": "closed",
+      "comments_total": 24,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "42\"-PO-22065-AC1S3A-FA",
+        "plan_status": "Pending (0/9 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1805",
+      "status": "closed",
+      "comments_total": 41,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 8"
+      ],
+      "lines": [
+       {
+        "line": "48\"-PO-22067-AC1S3A-FA",
+        "plan_status": "Pending (0/15 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1806",
+      "status": "closed",
+      "comments_total": 22,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3"
+      ],
+      "lines": [
+       {
+        "line": "24\"-PO-22068-AC1S3A-FA",
+        "plan_status": "All completed (5/5 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1807",
+      "status": "closed",
+      "comments_total": 15,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "2\"-PO-22069-AE3S0C-FA",
+        "plan_status": "All completed (6/6 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1809",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "4\"-PO-22071-AE3S0C-FA",
+        "plan_status": "Pending (0/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1810",
+      "status": "closed",
+      "comments_total": 13,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"-PO-22072-AE3S0C-FA",
+        "plan_status": "All completed (6/6 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1812",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "6\"-PO-22097-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1814",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "8\"-PO-22077-AE3S0C-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1815",
+      "status": "closed",
+      "comments_total": 13,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-PO-23378-AC1S3A-FA",
+        "plan_status": "Pending (0/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1819",
+      "status": "closed",
+      "comments_total": 10,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "6\"-PO-23382-AC1S3A-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1823",
+      "status": "closed",
+      "comments_total": 14,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-PO-23390-AC1S3A-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1825",
+      "status": "closed",
+      "comments_total": 17,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "6\"-PO-23393-AE3S0C-FA",
+        "plan_status": "Pending (0/4 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1826",
+      "status": "closed",
+      "comments_total": 15,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "6\"-PO-23394-AE3S0C-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1829",
+      "status": "open",
+      "comments_total": 19,
+      "comments_open": 1,
+      "open_in_lots": [
+       "Lot 8"
+      ],
+      "in_lots": [
+       "Lot 8"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-PO-23397-AC1S3A-FA",
+        "plan_status": "Pending (0/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1835",
+      "status": "closed",
+      "comments_total": 6,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "6\"-PO-23403-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1837",
+      "status": "closed",
+      "comments_total": 10,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "2\"-PO-23405-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1839",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "24\"-PO-23410-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1850",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-PW-8284-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1851",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-PW-8285-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1852",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-PW-8286-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1853",
+      "status": "closed",
+      "comments_total": 13,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "2\"-PW-8287-AE3S0C-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1854",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-PW-8288-AE3S0C-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
       ]
      },
      {
       "doc": "P12513-12-01-15-1860",
-      "line": "28\"-VG-11315-AC1S3A-FA",
-      "found_in_lots": [
+      "status": "open",
+      "comments_total": 25,
+      "comments_open": 24,
+      "open_in_lots": [
        "Lot 9"
+      ],
+      "in_lots": [
+       "Lot 9"
+      ],
+      "lines": [
+       {
+        "line": "28\"-VG-11315-AC1S3A-FA",
+        "plan_status": "All completed (4/4 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1861",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "2\"-VG-11317-AE3S0C-FA",
+        "plan_status": "All completed (4/4 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1862",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "16\"-VG-11318-AE3S0C-FA",
+        "plan_status": "All completed (5/5 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1863",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-VG-11319-AE3S0C-FA",
+        "plan_status": "All completed (4/4 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1864",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3"
+      ],
+      "lines": [
+       {
+        "line": "16\"-VG-11320-AE3S0C-FA",
+        "plan_status": "All completed (5/5 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1865",
+      "status": "open",
+      "comments_total": 9,
+      "comments_open": 2,
+      "open_in_lots": [
+       "Lot 1"
+      ],
+      "in_lots": [
+       "Lot 1",
+       "Lot 2"
+      ],
+      "lines": [
+       {
+        "line": "2\"-VG-11321-AE3S0C-FA",
+        "plan_status": "Pending (0/4 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1866",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "16\"-VG-11322-AE3S0C-FA",
+        "plan_status": "All completed (5/5 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1867",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-VG-11323-AE3S0C-FA",
+        "plan_status": "All completed (4/4 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1868",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "16\"-VG-11324-AE3S0C-FA",
+        "plan_status": "All completed (5/5 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1870",
+      "status": "closed",
+      "comments_total": 6,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "18\"-VG-11326-AC1S3A-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1871",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "18\"-VG-11327-AC1S3A-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1872",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "18\"-VG-11328-AC1S3A-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1873",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "18\"-VG-11329-ACIS3A-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1874",
+      "status": "closed",
+      "comments_total": 2,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "8\"-VG-11330-ACIS3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1875",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "28\"VG-11331-AE3S0C-FA",
+        "plan_status": "Pending (0/6 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1876",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-VG-11332-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1877",
+      "status": "closed",
+      "comments_total": 3,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-VG-11333-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1878",
+      "status": "closed",
+      "comments_total": 2,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-VG-11334-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1879",
+      "status": "closed",
+      "comments_total": 3,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-VG-11335-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1880",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "20\"-VG-11336-AE3SOC-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1881",
+      "status": "closed",
+      "comments_total": 6,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "20\"-VG-11337-AE3SOC-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1882",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "20\"-VG-11338-AE3SOC-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1883",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "20\"-VG-11339-AE3SOC-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1884",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "20\"-VG-11340-AC1S3A-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1885",
+      "status": "closed",
+      "comments_total": 10,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "20\"-VG-11341-AC1S3A-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1886",
+      "status": "closed",
+      "comments_total": 12,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "20\"-VG-11342-AC1S3A-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1887",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "20\"-VG-11343-AC1S3A-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": true
+       }
       ]
      },
      {
       "doc": "P12513-12-01-15-1888",
-      "line": "36\"-VG-11344-AC1S3A-FA",
-      "found_in_lots": [
+      "status": "open",
+      "comments_total": 37,
+      "comments_open": 6,
+      "open_in_lots": [
        "Lot 8"
+      ],
+      "in_lots": [
+       "Lot 8"
+      ],
+      "lines": [
+       {
+        "line": "36\"-VG-11344-AC1S3A-FA",
+        "plan_status": "Pending (0/6 sheets completed)",
+        "in_lot": true
+       }
       ]
-     }
-    ],
-    "not_in_lot_items": [
-     {
-      "doc": "P12513-12-01-15-1605",
-      "line": "2\"-D-15222-AE3S0C-FA"
      },
      {
-      "doc": "P12513-12-01-15-1633",
-      "line": "2\"-D-15255-AE3S0C-FA"
+      "doc": "P12513-12-01-15-1889",
+      "status": "closed",
+      "comments_total": 20,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "36\"-VG-11345-AE3SOC-FA-H",
+        "plan_status": "Pending (0/13 sheets completed)",
+        "in_lot": true
+       }
+      ]
      },
      {
-      "doc": "P12513-12-01-15-1757",
-      "line": "1\"-NN-12208-AE3SOC-FA"
+      "doc": "P12513-12-01-15-1890",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "24\"-VG-11346-AE3S0C-FA-H",
+        "plan_status": "Pending (0/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
      },
      {
-      "doc": "P12513-12-01-15-1727",
-      "line": "2\"-IA-10995-AC4A1A-FA"
+      "doc": "P12513-12-01-15-1891",
+      "status": "closed",
+      "comments_total": 6,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-VG-11347-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
      },
      {
-      "doc": "P12513-12-01-15-1772",
-      "line": "1\"-PA-8622-AC1A1B-FA"
+      "doc": "P12513-12-01-15-1892",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "16\"-VG-11348-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
      },
      {
-      "doc": "P12513-12-01-15-1660",
-      "line": "1/2\"-D-16951-AE3S0C-FA"
+      "doc": "P12513-12-01-15-1893",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3"
+      ],
+      "lines": [
+       {
+        "line": "2\"-VG-11349-AC1S34-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
      },
      {
-      "doc": "P12513-12-01-15-1710",
-      "line": "2\"-FG-8591-AC1S3A-FA"
-     },
-     {
-      "doc": "P12513-12-01-15-2123",
-      "line": "8\"-FW-6130-AF1A0F-FA"
-     },
-     {
-      "doc": "P12513-12-01-15-2046",
-      "line": "6\"-FZ-8010-AF1A0F-FA"
-     },
-     {
-      "doc": "P12513-12-01-15-1665",
-      "line": "2\"-D-16957-AE3S0C-FA"
+      "doc": "P12513-12-01-15-1894",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "16\"-VG-11354-BE3SOC-FA-H",
+        "plan_status": "All completed (4/4 sheets completed)",
+        "in_lot": true
+       }
+      ]
      },
      {
       "doc": "P12513-12-01-15-1895",
-      "line": "16\"-VG-11355-BE3SOC-FA-H"
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "16\"-VG-11355-BE3SOC-FA-H",
+        "plan_status": "All completed (4/4 sheets completed)",
+        "in_lot": false
+       }
+      ]
      },
      {
-      "doc": "P12513-12-01-15-1675",
-      "line": "1\"-VG-11904-AC1S3A-FA"
+      "doc": "P12513-12-01-15-1896",
+      "status": "closed",
+      "comments_total": 3,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "28\"-VG-11356-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1897",
+      "status": "closed",
+      "comments_total": 26,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-VG-11361-AE3S0C-FA",
+        "plan_status": "All completed (10/10 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1898",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "2\"-VG-11362-AC1S34-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1899",
+      "status": "closed",
+      "comments_total": 6,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-VG-11363-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1900",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "36\"-VG-11364-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1901",
+      "status": "closed",
+      "comments_total": 14,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "40\"-VG-11866-AC1S34-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1902",
+      "status": "closed",
+      "comments_total": 100,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-VG-11357-AE3SOC-FA",
+        "plan_status": "All completed (77/77 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1915",
+      "status": "closed",
+      "comments_total": 22,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-Z-8164-AS1A0A-FA",
+        "plan_status": "Pending (0/8 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1916",
+      "status": "closed",
+      "comments_total": 10,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "2\"-BZ-8165-AS1A0A-FA",
+        "plan_status": "All completed (9/9 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1917",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "1\"-Z-8166-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1918",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-16975-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1919",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-16999-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1921",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-FG-8592-AC1S3A-FA-H",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1922",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "2\"-FG-8593-BC1S3A-FA-H",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1923",
+      "status": "closed",
+      "comments_total": 10,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3"
+      ],
+      "lines": [
+       {
+        "line": "24\"-PO-23411-AE3S0C-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1927",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "42\"-PG-11359-AE3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1928",
+      "status": "closed",
+      "comments_total": 10,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "6\"-PO-23414-AC1S3A-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1929",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "2\"-PO-23415-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1930",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-VG-11867-AC1S34-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1931",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "2\"-VG-11868-AC1S34-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1932",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "8\"-PO-23413-AC1S34-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1933",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-D-17001-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1934",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-D-17002-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1935",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-17003-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1936",
+      "status": "closed",
+      "comments_total": 3,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-17004-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1937",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-17005-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1938",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-17006-AE3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1939",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-17007-AE3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1940",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-17008-AC1S3A-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1942",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-17012-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1943",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-D-17013-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1944",
+      "status": "closed",
+      "comments_total": 12,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-17014-AE3S0C-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1945",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-17015-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1946",
+      "status": "open",
+      "comments_total": 12,
+      "comments_open": 2,
+      "open_in_lots": [
+       "Lot 1"
+      ],
+      "in_lots": [
+       "Lot 1",
+       "Lot 2"
+      ],
+      "lines": [
+       {
+        "line": "1\"-D-17016-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1947",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-D-17017-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1948",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-17018-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1949",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-17019-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1950",
+      "status": "closed",
+      "comments_total": 3,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-17020-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1951",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-17021-AE3S0C-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1952",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-17022-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1953",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-17023-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1954",
+      "status": "closed",
+      "comments_total": 18,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-17024-AE3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1955",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-17025-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1956",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-17026-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1957",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-17027-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1958",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-17028-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1959",
+      "status": "closed",
+      "comments_total": 3,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-11010-AC4A1A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1960",
+      "status": "closed",
+      "comments_total": 13,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-IA-11011-AC4A1A-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1961",
+      "status": "closed",
+      "comments_total": 6,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-11012-AC4A1A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1962",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-NN-12197-AS1A0A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1964",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "2\"-NN-12204-AE3SOC-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1965",
+      "status": "closed",
+      "comments_total": 10,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-NN-12205-AE3S0C-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1966",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "1\"-NN-12206-AE3SOC-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1967",
+      "status": "closed",
+      "comments_total": 13,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "2\"-NN-12219-AC1A1B-FA",
+        "plan_status": "Pending (0/5 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1968",
+      "status": "closed",
+      "comments_total": 12,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "1\"-NN-12220-AC1A1B-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1969",
+      "status": "closed",
+      "comments_total": 16,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4",
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "1\"-PA-8623-AC1A1B-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1970",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "2\"-PA-8624-AC1A1B-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1972",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-VG-11869-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1973",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-VG-11870-AC1S3A-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1974",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-VG-11871-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1975",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-VG-11872-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1976",
+      "status": "open",
+      "comments_total": 6,
+      "comments_open": 1,
+      "open_in_lots": [
+       "Lot 1"
+      ],
+      "in_lots": [
+       "Lot 1",
+       "Lot 2"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-VG-11873-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1977",
+      "status": "open",
+      "comments_total": 8,
+      "comments_open": 7,
+      "open_in_lots": [
+       "Lot 9"
+      ],
+      "in_lots": [
+       "Lot 9"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-VG-11874-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1978",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-VG-11875-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1979",
+      "status": "closed",
+      "comments_total": 20,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3"
+      ],
+      "lines": [
+       {
+        "line": "2\"-VG-11876-AC1S3A-FA",
+        "plan_status": "All completed (4/4 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1980",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 2"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-VG-11877-AC1S3A-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1981",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-VG-11878-AC1S3A-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1982",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-VG-11879-AC1S3A-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1983",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-VG-11880-AC1S3A-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1984",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-VG-11881-AC1S3A-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1985",
+      "status": "closed",
+      "comments_total": 34,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-VG-11882-AC1S3A-FA",
+        "plan_status": "Pending (0/6 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2002",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-VG-11899-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2003",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-VG-11900-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2004",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-VG-11901-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2006",
+      "status": "closed",
+      "comments_total": 13,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "3\"-WW-8154-AC1A1B-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2007",
+      "status": "closed",
+      "comments_total": 10,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "1\"-WW-8155-AC1A1B-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2008",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-WW-8156-AC1A1B-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2009",
+      "status": "open",
+      "comments_total": 7,
+      "comments_open": 6,
+      "open_in_lots": [
+       "Lot 9"
+      ],
+      "in_lots": [
+       "Lot 9"
+      ],
+      "lines": [
+       {
+        "line": "1\"-WW-8157-AC1A1B-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2010",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-WW-8158-AC1A1B-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2012",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "8\"-PO-22121-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2014",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-17029-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2015",
+      "status": "closed",
+      "comments_total": 6,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 2"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-17030-AE3S0C-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2016",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "1\"-PA-8625-AC1A1B-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2018",
+      "status": "closed",
+      "comments_total": 6,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 2"
+      ],
+      "lines": [
+       {
+        "line": "1\"-Z-8167-AE3S0C-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2020",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-11014-AC4A1A-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2021",
+      "status": "closed",
+      "comments_total": 3,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-11015-AC4A1A-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2022",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 8"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-11016-AC4A1A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2023",
+      "status": "closed",
+      "comments_total": 2,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-IA-11017-AC4A1A-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2026",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "2\"-WW-8159-AC1A1B-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2027",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "2\"-WW8160-AC1A1B-FA",
+        "plan_status": "All completed (4/4 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2046",
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "6\"-FZ-8010-AF1A0F-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2105",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "8\"-FW-6112-AF1A0F-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2106",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "6\"-FW-6113-AF1A0F-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2107",
+      "status": "closed",
+      "comments_total": 6,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "4\"-FW-6114-AF1A0F-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2108",
+      "status": "closed",
+      "comments_total": 6,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "4\"-FW-6115-AF1A0F-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2109",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "4\"-FW-6116-AF1A0F-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2110",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "4\"-FW-6117-AF1A0F-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2111",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "4\"-FW-6118-AF1A0F-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2112",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "4\"-FW-6119-AF1A0F-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2113",
+      "status": "closed",
+      "comments_total": 6,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "4\"-FW-6120-AF1A0F-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2117",
+      "status": "closed",
+      "comments_total": 13,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1",
+       "Lot 2"
+      ],
+      "lines": [
+       {
+        "line": "8\"-FW-6124-AF1A0F-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2118",
+      "status": "closed",
+      "comments_total": 6,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "8\"-FW-6125-AF1A0F-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2119",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "8\"-FW-6126-AF1A0F-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2120",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "8\"-FW-6127-AF1A0F-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2121",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "8\"-FW-6128-AF1A0F-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2123",
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "8\"-FW-6130-AF1A0F-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2126",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 2"
+      ],
+      "lines": [
+       {
+        "line": "6\"-FW-6133-AF1A0F-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2127",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "6\"-FW-6134-AF1A0F-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2128",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "6\"-FW-6135-AF1A0F-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2129",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "6\"-FW-6136-AF1A0F-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2130",
+      "status": "closed",
+      "comments_total": 6,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "6\"-FW-6137-AF1A0F-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2131",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "4\"-FW-6459-AF1A0F-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2132",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "6\"-FW-6460-AF1A0F-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2133",
+      "status": "closed",
+      "comments_total": 19,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "6\"-FZ-8000-AF1AOF-FA",
+        "plan_status": "Pending (0/6 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2135",
+      "status": "closed",
+      "comments_total": 27,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "6\"-FZ-8002-AF1AOF-FA",
+        "plan_status": "Pending (0/6 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2137",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-FZ-8004-AF1A0F-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2138",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 8"
+      ],
+      "lines": [
+       {
+        "line": "2\"-FZ-8005-AF1A0F-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2141",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "6\"-FZ-8008-AF1A0F-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2142",
+      "status": "closed",
+      "comments_total": 13,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "6\"-FZ-8009-AF1AOF-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2144",
+      "status": "closed",
+      "comments_total": 21,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "6\"-FZ-8011-AF1AOF-FA",
+        "plan_status": "All completed (5/5 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2146",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "4\"FW-6471-AF1A0F-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1626",
+      "status": "closed",
+      "comments_total": 10,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 6"
+      ],
+      "lines": [
+       {
+        "line": "2\"D-15647-AE3S0C-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1668",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"D-16994-AE3S0C-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1672",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1/2\"NN-12196-AE3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1676",
+      "status": "closed",
+      "comments_total": 10,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"WW-8146-AC1A1B-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1696",
+      "status": "open",
+      "comments_total": 54,
+      "comments_open": 34,
+      "open_in_lots": [
+       "Lot 8"
+      ],
+      "in_lots": [
+       "Lot 8"
+      ],
+      "lines": [
+       {
+        "line": "8\"PO-22093-AE3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
      }
-    ],
-    "status": "not_ready"
+    ]
    },
    "P12513-12-01-15-1755": {
     "booklet_no": "P12513-12-01-15-1755",
     "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}",
-    "total": 48,
-    "closed": 30,
-    "open_items": [
+    "total_docs": 47,
+    "closed_docs": 30,
+    "open_docs": 3,
+    "not_in_lot_docs": 14,
+    "status": "not_ready",
+    "documents": [
      {
-      "doc": "P12513-12-01-15-1678",
-      "line": "3\"-D-15260-AP3S0C-FA",
-      "found_in_lots": [
-       "Lot 8"
+      "doc": "P12513-12-01-15-1614",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3"
+      ],
+      "lines": [
+       {
+        "line": "8\"-D-15232-AP3S0C-FA",
+        "plan_status": "Pending (0/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1616",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"-D-15234-AP3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1619",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"-D-15237-AP3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1620",
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "4\"-D-15239-AP3S0C-FA",
+        "plan_status": "Pending (0/6 sheets completed)",
+        "in_lot": false
+       }
       ]
      },
      {
       "doc": "P12513-12-01-15-1624",
-      "line": "8\"-D-15243-AP3S0C-FA",
-      "found_in_lots": [
+      "status": "open",
+      "comments_total": 26,
+      "comments_open": 23,
+      "open_in_lots": [
        "Lot 9"
+      ],
+      "in_lots": [
+       "Lot 9"
+      ],
+      "lines": [
+       {
+        "line": "8\"-D-15243-AP3S0C-FA",
+        "plan_status": "Pending (0/4 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1629",
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "14\"-D-15249-AP3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1651",
+      "status": "closed",
+      "comments_total": 10,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "4\"-D-15274-AP3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1656",
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "4\"-D-16947-AP3S0C-FA",
+        "plan_status": "Pending (0/4 sheets completed)",
+        "in_lot": false
+       }
       ]
      },
      {
       "doc": "P12513-12-01-15-1657",
-      "line": "8\"-D-16948-AP3S0C-FA",
-      "found_in_lots": [
+      "status": "open",
+      "comments_total": 10,
+      "comments_open": 2,
+      "open_in_lots": [
        "Lot 1"
+      ],
+      "in_lots": [
+       "Lot 1",
+       "Lot 2"
+      ],
+      "lines": [
+       {
+        "line": "8\"-D-16948-AP3S0C-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1658",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-16949-AP3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1659",
+      "status": "closed",
+      "comments_total": 13,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 6"
+      ],
+      "lines": [
+       {
+        "line": "3\"-D-16950-AP3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1675",
+      "status": "closed",
+      "comments_total": 24,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3"
+      ],
+      "lines": [
+       {
+        "line": "10\"-D-16971-AP3S0C-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
       ]
      },
      {
       "doc": "P12513-12-01-15-1678",
-      "line": "3\"-D-16976-AP3S0C-FA",
-      "found_in_lots": [
+      "status": "open",
+      "comments_total": 8,
+      "comments_open": 7,
+      "open_in_lots": [
        "Lot 8"
+      ],
+      "in_lots": [
+       "Lot 8"
+      ],
+      "lines": [
+       {
+        "line": "3\"-D-15260-AP3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       },
+       {
+        "line": "3\"-D-16976-AP3S0C-FA",
+        "plan_status": "Pending (0/3 sheets completed)",
+        "in_lot": true
+       }
       ]
-     }
-    ],
-    "not_in_lot_items": [
-     {
-      "doc": "P12513-12-01-15-2134",
-      "line": "6\"-FZ-8001-AP3A0F-FA"
-     },
-     {
-      "doc": "P12513-12-01-15-2136",
-      "line": "6\"-FZ-8003-AP3A0F-FA"
-     },
-     {
-      "doc": "P12513-12-01-15-2140",
-      "line": "6\"-FZ-8007-AP3A0F-FA"
-     },
-     {
-      "doc": "P12513-12-01-15-2139",
-      "line": "6\"-FZ-8006-AP3A0F-FA"
-     },
-     {
-      "doc": "P12513-12-01-15-1620",
-      "line": "4\"-D-15239-AP3S0C-FA"
-     },
-     {
-      "doc": "P12513-12-01-15-1629",
-      "line": "14\"-D-15249-AP3S0C-FA"
-     },
-     {
-      "doc": "P12513-12-01-15-2603",
-      "line": "4\"-D-15260-AP3S0C-FA"
-     },
-     {
-      "doc": "P12513-12-01-15-1656",
-      "line": "4\"-D-16947-AP3S0C-FA"
      },
      {
       "doc": "P12513-12-01-15-1679",
-      "line": "4\"-D-16977-AP3S0C-FA"
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "4\"-D-16977-AP3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1680",
+      "status": "closed",
+      "comments_total": 12,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"-D-16978-AP3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1681",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"-D-16979-AP3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1682",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"-D-16980-AP3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1683",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"-D-16981-AP3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1684",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"-D-16982-AP3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1685",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 8"
+      ],
+      "lines": [
+       {
+        "line": "8\"-D-16983-AP3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1688",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3"
+      ],
+      "lines": [
+       {
+        "line": "3\"-D-16987-AP3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1689",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "8\"-D-16989-AP3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1690",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"-D-16990-AP3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1691",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3"
+      ],
+      "lines": [
+       {
+        "line": "8\"-D-16992-AP3S0C-FA",
+        "plan_status": "Pending (0/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1859",
+      "status": "closed",
+      "comments_total": 21,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "16\"-SD-17006-AP3S0C-FA",
+        "plan_status": "Pending (0/16 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2005",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 8"
+      ],
+      "lines": [
+       {
+        "line": "3\"-WW-8153-AP3A0A-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2100",
+      "status": "closed",
+      "comments_total": 35,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "20\"FW-6107-AP3A0F-FA",
+        "plan_status": "Pending (0/10 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2101",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "20\"-FW-6108-AP3A0F-FA",
+        "plan_status": "Pending (0/5 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2102",
+      "status": "closed",
+      "comments_total": 18,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "20\"-FW-6109-AP3A0F-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2103",
+      "status": "closed",
+      "comments_total": 6,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "8\"-FW-6110-AP3A0F-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2104",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "8\"-FW-6111-AP3A0F-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2114",
+      "status": "closed",
+      "comments_total": 14,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "20\"-FW-6121-AP3A0F-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2115",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3"
+      ],
+      "lines": [
+       {
+        "line": "20\"-FW-6122-AP3A0F-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
      },
      {
       "doc": "P12513-12-01-15-2116",
-      "line": "20\"-FW-6123-AP3A0F-FA"
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "20\"-FW-6123-AP3A0F-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": false
+       }
+      ]
      },
      {
       "doc": "P12513-12-01-15-2124",
-      "line": "8\"-FW-6131-AP3A0F-FA"
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "8\"-FW-6131-AP3A0F-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2134",
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "6\"-FZ-8001-AP3A0F-FA",
+        "plan_status": "Pending (0/4 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2136",
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "6\"-FZ-8003-AP3A0F-FA",
+        "plan_status": "Pending (0/5 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2139",
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "6\"-FZ-8006-AP3A0F-FA",
+        "plan_status": "Pending (0/4 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2140",
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "6\"-FZ-8007-AP3A0F-FA",
+        "plan_status": "Pending (1/4 sheets completed)",
+        "in_lot": false
+       }
+      ]
      },
      {
       "doc": "P12513-12-01-15-2145",
-      "line": "6\"-FW-6470-AP3A0F-FA"
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "6\"-FW-6470-AP3A0F-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2148",
+      "status": "closed",
+      "comments_total": 13,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "4\"-FW-6466-AP3A0F-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2149",
+      "status": "closed",
+      "comments_total": 12,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "4\"-FW-6467-AP3A0F-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2150",
+      "status": "closed",
+      "comments_total": 10,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "6\"-FW-6468-AP3A0F-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2151",
+      "status": "closed",
+      "comments_total": 16,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 6"
+      ],
+      "lines": [
+       {
+        "line": "6\"-FW-6469-AP3A0F-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2603",
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "4\"-D-15260-AP3S0C-FA",
+        "plan_status": "Pending (0/5 sheets completed)",
+        "in_lot": false
+       }
+      ]
      },
      {
       "doc": "P12513-12-01-15-2604",
-      "line": "2\"-FZ-8004-AP3A0F-FA"
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "2\"-FZ-8004-AP3A0F-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": false
+       }
+      ]
      },
      {
       "doc": "P12513-12-01-15-2605",
-      "line": "2\"-FZ-8005-AP3A0F-FA"
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "2\"-FZ-8005-AP3A0F-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": false
+       }
+      ]
      }
-    ],
-    "status": "not_ready"
+    ]
    },
    "P12513-12-01-15-1638": {
     "booklet_no": "P12513-12-01-15-1638",
     "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)",
-    "total": 51,
-    "closed": 47,
-    "open_items": [
+    "total_docs": 50,
+    "closed_docs": 46,
+    "open_docs": 2,
+    "not_in_lot_docs": 2,
+    "status": "not_ready",
+    "documents": [
+     {
+      "doc": "P12513-12-01-15-1606",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "8\"-D-15223-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1609",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15226-AC1S3A-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1610",
+      "status": "closed",
+      "comments_total": 12,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15228-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1611",
+      "status": "closed",
+      "comments_total": 14,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15229-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1612",
+      "status": "closed",
+      "comments_total": 18,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1",
+       "Lot 2"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15230-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1613",
+      "status": "closed",
+      "comments_total": 16,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15231-AE3S0C-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
      {
       "doc": "P12513-12-01-15-1636",
-      "line": "2\"-D-15258-AE3S0C-FA",
-      "found_in_lots": [
+      "status": "open",
+      "comments_total": 13,
+      "comments_open": 12,
+      "open_in_lots": [
        "Lot 9"
+      ],
+      "in_lots": [
+       "Lot 9"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15258-AE3S0C-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1640",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15263-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1673",
+      "status": "closed",
+      "comments_total": 10,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "8\"-D-16968-AE3S0C-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1674",
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "2\"-D-16969-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1698",
+      "status": "closed",
+      "comments_total": 17,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "8\"-PO-22095-AE3S0C-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1747",
+      "status": "closed",
+      "comments_total": 10,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "2\"-NN-12015-AC1A1B-FA",
+        "plan_status": "All completed (3/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1749",
+      "status": "closed",
+      "comments_total": 15,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3",
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "1\"-NN-12013-AC1A1B-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       },
+       {
+        "line": "1\"-NN-12078-AC1A1B-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1762",
+      "status": "closed",
+      "comments_total": 2,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 8"
+      ],
+      "lines": [
+       {
+        "line": "1\"-NN-12213-AE3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1777",
+      "status": "closed",
+      "comments_total": 55,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "10\"-PG-11355-AC1S3A-FA",
+        "plan_status": "Pending (0/18 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1796",
+      "status": "closed",
+      "comments_total": 10,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-PO-22056-AE3S0C-FA",
+        "plan_status": "Pending (0/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1798",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-PO-22058-AE3S0C-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1804",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "32\"-PO-22066-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1808",
+      "status": "closed",
+      "comments_total": 15,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "16\"-PO-22070-AC1S3A-FA",
+        "plan_status": "Pending (0/3 sheets completed)",
+        "in_lot": true
+       }
       ]
      },
      {
       "doc": "P12513-12-01-15-1811",
-      "line": "36\"-PO-22096-AC1S3A-FA",
-      "found_in_lots": [
+      "status": "open",
+      "comments_total": 29,
+      "comments_open": 1,
+      "open_in_lots": [
        "Lot 1"
+      ],
+      "in_lots": [
+       "Lot 1",
+       "Lot 2"
+      ],
+      "lines": [
+       {
+        "line": "36\"-PO-22096-AC1S3A-FA",
+        "plan_status": "Pending (0/10 sheets completed)",
+        "in_lot": true
+       }
       ]
-     }
-    ],
-    "not_in_lot_items": [
+     },
      {
-      "doc": "P12513-12-01-15-1674",
-      "line": "2\"-D-16969-AE3S0C-FA"
+      "doc": "P12513-12-01-15-1813",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "32\"-PO-22129-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1816",
+      "status": "closed",
+      "comments_total": 6,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "24\"-PO-23379-AC1S3A-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1817",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "24\"-PO-23380-AC1S3A-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1818",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "36\"-PO-23381-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1820",
+      "status": "closed",
+      "comments_total": 13,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "8\"-PO-23383-AE3S0C-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1821",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "32\"-PO-23387-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1822",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-PO-23388-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1824",
+      "status": "closed",
+      "comments_total": 6,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-PO-23391-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1827",
+      "status": "closed",
+      "comments_total": 6,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "32\"-PO-23395-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1828",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "32\"-PO-23396-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1830",
+      "status": "closed",
+      "comments_total": 10,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3"
+      ],
+      "lines": [
+       {
+        "line": "2\"-PO-23398-AC1S3A-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1831",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "24\"-PO-23399-AC1S3A-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1832",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "32\"-PO-23400-AC1S3A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1833",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "24\"-PO-23401-AC1S3A-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1834",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "24\"-PO-23402-AC1S3A-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1836",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "32\"-PO-23404-AC1S3A-FA",
+        "plan_status": "All completed (4/4 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1838",
+      "status": "closed",
+      "comments_total": 6,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"-PO-23407-AC1S3A-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1840",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "8\"-PW-8274-AE3S0C-FA",
+        "plan_status": "All completed (8/8 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1841",
+      "status": "closed",
+      "comments_total": 22,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"-PW-8275-AE3S0C-FA",
+        "plan_status": "Pending (0/9 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1842",
+      "status": "closed",
+      "comments_total": 6,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3"
+      ],
+      "lines": [
+       {
+        "line": "8\"-PW-8276-AE3S0C-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
      },
      {
       "doc": "P12513-12-01-15-1843",
-      "line": "8\"-PW-8277-AE3S0C-FA"
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "8\"-PW-8277-AE3S0C-FA",
+        "plan_status": "All completed (6/6 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1844",
+      "status": "closed",
+      "comments_total": 16,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "8\"-PW-8278-AE3S0C-FA",
+        "plan_status": "All completed (6/6 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1845",
+      "status": "closed",
+      "comments_total": 20,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "6\"-PW-8279-AE3S0C-FA",
+        "plan_status": "All completed (6/6 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1846",
+      "status": "closed",
+      "comments_total": 45,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "6\"-PW-8280-AE3S0C-FA",
+        "plan_status": "All completed (16/16 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1847",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "8\"-PW-8281-AE3S0C-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1848",
+      "status": "closed",
+      "comments_total": 25,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "6\"-PW-8282-AE3S0C-FA",
+        "plan_status": "All completed (8/8 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1849",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "3\"-PW-8283-AE3S0C-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1869",
+      "status": "closed",
+      "comments_total": 19,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "8\"-VG-11325-AE3S0C-FA",
+        "plan_status": "All completed (5/5 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1924",
+      "status": "closed",
+      "comments_total": 22,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3"
+      ],
+      "lines": [
+       {
+        "line": "8\"-PO-23412-AE3S0C-FA",
+        "plan_status": "All completed (8/8 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1926",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-NN-12218-AC1S3A-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
      }
-    ],
-    "status": "not_ready"
+    ]
    },
    "P12513-12-39-15-1751": {
     "booklet_no": "P12513-12-39-15-1751",
     "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)",
-    "total": 50,
-    "closed": 37,
-    "open_items": [
+    "total_docs": 50,
+    "closed_docs": 37,
+    "open_docs": 7,
+    "not_in_lot_docs": 6,
+    "status": "not_ready",
+    "documents": [
+     {
+      "doc": "P12513-12-39-15-1601",
+      "status": "closed",
+      "comments_total": 10,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15238-AE3S0C-FA",
+        "plan_status": "Pending (0/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1602",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15251-AE3S0C-FA",
+        "plan_status": "Pending (0/4 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1603",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15262-AE3S0C-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1605",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-15277-AE3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1607",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "1\"-D-15279-AE3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1614",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 2"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-15288-AE3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1617",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-15634-AE3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1619",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-15636-AE3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1627",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 8"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-15645-AE3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1631",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3/4\"-D-15649-AE3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1634",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15652-AE3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1635",
+      "status": "closed",
+      "comments_total": 20,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15654-AE3S0C-FA",
+        "plan_status": "Pending (0/4 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1643",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15662-AE3S0C-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
      {
       "doc": "P12513-12-39-15-1655",
-      "line": "2\"-D-15675-AE3S0C-FA",
-      "found_in_lots": [
+      "status": "open",
+      "comments_total": 17,
+      "comments_open": 16,
+      "open_in_lots": [
        "Lot 9"
+      ],
+      "in_lots": [
+       "Lot 9"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15675-AE3S0C-FA",
+        "plan_status": "Pending (0/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1658",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-D-15678-AE3S0C-FA",
+        "plan_status": "Pending (0/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1671",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1/2\"-NN-12195-AE3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1674",
+      "status": "closed",
+      "comments_total": 4,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "1\"-NN-12202-AE3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1680",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"-PO-22073-AE3S0C-FA",
+        "plan_status": "Pending (0/5 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1681",
+      "status": "closed",
+      "comments_total": 9,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"-PO-22074-AE3S0C-FA",
+        "plan_status": "Pending (0/6 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1682",
+      "status": "closed",
+      "comments_total": 11,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"-PO-22075-AE3S0C-FA",
+        "plan_status": "Pending (0/5 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1686",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "6\"-PO-22082-AE3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1688",
+      "status": "closed",
+      "comments_total": 10,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"-PO-22084-AE3S0C-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1689",
+      "status": "closed",
+      "comments_total": 15,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 6"
+      ],
+      "lines": [
+       {
+        "line": "3\"-PO-22086-AE3S0C-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1690",
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "6\"-PO-22087-AE3S0C-FA",
+        "plan_status": "Pending (0/11 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1691",
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "6\"-PO-22088-AE3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1692",
+      "status": "closed",
+      "comments_total": 51,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "3\"-PO-22089-AE3S0C-FA",
+        "plan_status": "Pending (0/12 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1693",
+      "status": "closed",
+      "comments_total": 12,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"-PO-22090-AE3S0C-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1694",
+      "status": "closed",
+      "comments_total": 45,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 6"
+      ],
+      "lines": [
+       {
+        "line": "6\"-PO-22091-AE3S0C-FA",
+        "plan_status": "Pending (0/11 sheets completed)",
+        "in_lot": true
+       }
       ]
      },
      {
       "doc": "P12513-12-39-15-1695",
-      "line": "6\"-PO-22092-AE3S0C-FA",
-      "found_in_lots": [
+      "status": "open",
+      "comments_total": 16,
+      "comments_open": 4,
+      "open_in_lots": [
        "Lot 1"
+      ],
+      "in_lots": [
+       "Lot 1",
+       "Lot 2"
+      ],
+      "lines": [
+       {
+        "line": "6\"-PO-22092-AE3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
       ]
      },
      {
       "doc": "P12513-12-39-15-1700",
-      "line": "3\"-PO-22099-AE3S0C-FA",
-      "found_in_lots": [
+      "status": "open",
+      "comments_total": 9,
+      "comments_open": 8,
+      "open_in_lots": [
        "Lot 7"
+      ],
+      "in_lots": [
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "3\"-PO-22099-AE3S0C-FA",
+        "plan_status": "Pending (0/5 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1701",
+      "status": "closed",
+      "comments_total": 10,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"-PO-22100-AE3S0C-FA",
+        "plan_status": "Pending (0/6 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1702",
+      "status": "closed",
+      "comments_total": 14,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"-PO-22101-AE3S0C-FA",
+        "plan_status": "Pending (0/6 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1704",
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "2\"-PO-22103-AE3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1705",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "2\"-PO-22104-AE3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
       ]
      },
      {
       "doc": "P12513-12-39-15-1706",
-      "line": "2\"-PO-22105-AE3S0C-FA",
-      "found_in_lots": [
+      "status": "open",
+      "comments_total": 4,
+      "comments_open": 3,
+      "open_in_lots": [
        "Lot 8"
+      ],
+      "in_lots": [
+       "Lot 8"
+      ],
+      "lines": [
+       {
+        "line": "2\"-PO-22105-AE3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1707",
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "2\"-PO-22106-AE3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1708",
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "2\"-PO-22107-AE3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": false
+       }
       ]
      },
      {
       "doc": "P12513-12-39-15-1709",
-      "line": "2\"-PO-22108-AE3S0C-FA",
-      "found_in_lots": [
+      "status": "open",
+      "comments_total": 12,
+      "comments_open": 4,
+      "open_in_lots": [
        "Lot 1"
+      ],
+      "in_lots": [
+       "Lot 1",
+       "Lot 2"
+      ],
+      "lines": [
+       {
+        "line": "2\"-PO-22108-AE3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1711",
+      "status": "closed",
+      "comments_total": 14,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"-PO-22110-AE3S0C-FA",
+        "plan_status": "Pending (0/6 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1712",
+      "status": "closed",
+      "comments_total": 13,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"-PO-22111-AE3S0C-FA",
+        "plan_status": "Pending (0/5 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1713",
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "6\"-PO-22112-AE3S0C-FA",
+        "plan_status": "Pending (0/5 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1714",
+      "status": "closed",
+      "comments_total": 17,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "6\"-PO-22113-AE3S0C-FA",
+        "plan_status": "Pending (0/5 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1715",
+      "status": "closed",
+      "comments_total": 17,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "6\"-PO-22114-AE3S0C-FA",
+        "plan_status": "Pending (0/6 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1716",
+      "status": "closed",
+      "comments_total": 20,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "6\"-PO-22115-AE3S0C-FA",
+        "plan_status": "Pending (0/6 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1717",
+      "status": "closed",
+      "comments_total": 18,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 3"
+      ],
+      "lines": [
+       {
+        "line": "6\"-PO-22116-AE3S0C-FA",
+        "plan_status": "Pending (0/6 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1718",
+      "status": "closed",
+      "comments_total": 25,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5",
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "6\"-PO-22117-AE3S0C-FA",
+        "plan_status": "Pending (0/6 sheets completed)",
+        "in_lot": true
+       }
       ]
      },
      {
       "doc": "P12513-12-39-15-1720",
-      "line": "6\"-PO-22119-AE3S0C-FA",
-      "found_in_lots": [
+      "status": "open",
+      "comments_total": 22,
+      "comments_open": 1,
+      "open_in_lots": [
        "Lot 1"
+      ],
+      "in_lots": [
+       "Lot 1",
+       "Lot 2"
+      ],
+      "lines": [
+       {
+        "line": "6\"-PO-22119-AE3S0C-FA",
+        "plan_status": "Pending (0/6 sheets completed)",
+        "in_lot": true
+       }
       ]
      },
      {
       "doc": "P12513-12-39-15-1723",
-      "line": "3\"-PO-22125-AE3S0C-FA",
-      "found_in_lots": [
+      "status": "open",
+      "comments_total": 18,
+      "comments_open": 1,
+      "open_in_lots": [
        "Lot 1"
+      ],
+      "in_lots": [
+       "Lot 1",
+       "Lot 2"
+      ],
+      "lines": [
+       {
+        "line": "3\"-PO-22125-AE3S0C-FA",
+        "plan_status": "Pending (0/5 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1724",
+      "status": "closed",
+      "comments_total": 18,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 7"
+      ],
+      "lines": [
+       {
+        "line": "3\"-PO-22126-AE3S0C-FA",
+        "plan_status": "Pending (0/5 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1725",
+      "status": "closed",
+      "comments_total": 13,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 4"
+      ],
+      "lines": [
+       {
+        "line": "3\"-PO-22127-AE3S0C-FA",
+        "plan_status": "Pending (0/6 sheets completed)",
+        "in_lot": true
+       }
       ]
      }
-    ],
-    "not_in_lot_items": [
-     {
-      "doc": "P12513-12-39-15-1690",
-      "line": "6\"-PO-22087-AE3S0C-FA"
-     },
-     {
-      "doc": "P12513-12-39-15-1691",
-      "line": "6\"-PO-22088-AE3S0C-FA"
-     },
-     {
-      "doc": "P12513-12-39-15-1704",
-      "line": "2\"-PO-22103-AE3S0C-FA"
-     },
-     {
-      "doc": "P12513-12-39-15-1707",
-      "line": "2\"-PO-22106-AE3S0C-FA"
-     },
-     {
-      "doc": "P12513-12-39-15-1708",
-      "line": "2\"-PO-22107-AE3S0C-FA"
-     },
-     {
-      "doc": "P12513-12-39-15-1713",
-      "line": "6\"-PO-22112-AE3S0C-FA"
-     }
-    ],
-    "status": "not_ready"
+    ]
    },
    "P12513-12-39-15-1722": {
     "booklet_no": "P12513-12-39-15-1722",
     "booklet_type": "ISO for Flare Area - UG (GRE) {P12513-12-39-15-1722}",
-    "total": 6,
-    "closed": 5,
-    "open_items": [],
-    "not_in_lot_items": [
+    "total_docs": 6,
+    "closed_docs": 5,
+    "open_docs": 0,
+    "not_in_lot_docs": 1,
+    "status": "not_ready",
+    "documents": [
+     {
+      "doc": "P12513-12-39-15-1611",
+      "status": "closed",
+      "comments_total": 6,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"-D-15284-AP3S0C-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
      {
       "doc": "P12513-12-39-15-1612",
-      "line": "3\"-D-15285-AP3S0C-FA"
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "3\"-D-15285-AP3S0C-FA",
+        "plan_status": "Pending (0/1 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1615",
+      "status": "closed",
+      "comments_total": 15,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 5"
+      ],
+      "lines": [
+       {
+        "line": "4\"-D-15289-AP3S0C-FA",
+        "plan_status": "Pending (0/3 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1675",
+      "status": "closed",
+      "comments_total": 7,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "2\"-WW-8151-AP3A0A-FA",
+        "plan_status": "All completed (1/1 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1732",
+      "status": "closed",
+      "comments_total": 8,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "16\"-SD-17005-AP3S0C-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1746",
+      "status": "closed",
+      "comments_total": 5,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [
+       "Lot 1"
+      ],
+      "lines": [
+       {
+        "line": "3\"-D-16997-AP3S0C-FA",
+        "plan_status": "Pending (0/2 sheets completed)",
+        "in_lot": true
+       }
+      ]
      }
-    ],
-    "status": "not_ready"
+    ]
    }
   },
   "excluded": {
@@ -15250,7 +22856,7 @@
    },
    "P12513-12-39-15-1696": {
     "total": 54,
-    "open": 35,
+    "open": 34,
     "lines_all": [
      "8\"-PO-22093-AE3S0C-FA",
      "8\"-PO-22093-AE3S0C-FA",
@@ -15308,7 +22914,6 @@
      "8\"-PO-22093-AE3S0C-FA"
     ],
     "lines_open": [
-     "8\"-PO-22093-AE3S0C-FA",
      "8\"-PO-22093-AE3S0C-FA",
      "8\"-PO-22093-AE3S0C-FA",
      "8\"-PO-22093-AE3S0C-FA",
@@ -15668,7 +23273,7 @@
    },
    "P12513-12-01-15-1799": {
     "total": 16,
-    "open": 15,
+    "open": 14,
     "lines_all": [
      "2\"-PO-22059-AE3S0C-FA",
      "2\"-PO-22059-AE3S0C-FA",
@@ -15688,7 +23293,6 @@
      "2\"-PO-22059-AE3S0C-FA"
     ],
     "lines_open": [
-     "2\"-PO-22059-AE3S0C-FA",
      "2\"-PO-22059-AE3S0C-FA",
      "2\"-PO-22059-AE3S0C-FA",
      "2\"-PO-22059-AE3S0C-FA",
@@ -44640,7 +52244,7 @@
   {
    "doc": "P12513-12-39-15-1696",
    "line": "8\"-PO-22093-AE3S0C-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 8"
   },
   {
@@ -45480,7 +53084,7 @@
   {
    "doc": "P12513-12-01-15-1799",
    "line": "2\"-PO-22059-AE3S0C-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
