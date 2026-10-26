@@ -230,70 +230,107 @@ def load_booklet_mapping():
         return None
     return json.loads(BOOKLET_MAPPING_PATH.read_text())
 
-def build_booklet_readiness(booklet_mapping, all_line_rows):
-    """A booklet is ready only when EVERY (doc, line) pair mapped to it is closed, across ALL
-    lots combined — booklets routinely span more than one lot. A mapped pair that has no
-    matching row in any lot's tracker at all is "blocked_missing": it was never captured by any
-    lot, so it can't silently count as either open or closed."""
+_LID_RE = re.compile(r"(?<![A-Z0-9])([A-Z]{1,3})-?(\d{4,5})(?!\d)")
+
+def _line_ids(text):
+    """Line identity = service code + line number (e.g. "D-16977"), so size, spec, missing
+    hyphens and notes like "(SHEET 2: ...)" in a tracker's line cell don't break a match."""
+    return {f"{a}-{b}" for a, b in _LID_RE.findall((text or "").upper())}
+
+def build_booklet_readiness(booklet_mapping, all_line_rows, docs_raw_by_lot):
+    """Booklet readiness from data/booklet_mapping.json (v3, built by build_booklet_mapping.py).
+
+    Demolition booklets are excluded from the mapping altogether (owner decision 2026-10-26).
+    Matching, per mapped item (doc, line):
+      - a document that belongs to ONE booklet is matched on the document number alone, using
+        every comment row against it in every lot (one document = one booklet, per the
+        workbook's source-file check);
+      - a document whose lines are split across booklets ("split_documents") is matched on
+        document + line ID, so each of its rows counts toward the right booklet;
+      - "alias_docs" are tracker document numbers verified to carry that exact line.
+    An item is closed when every matching row is closed, open when any is open, and
+    "not yet in any lot" when no lot has reviewed it yet. A booklet is ready only when every
+    item is closed."""
     if booklet_mapping is None:
         return None
-    # index live rows by normalised (doc, line) -> {"closed": bool, "lots": [lot, ...]}
-    live = {}
+    items = booklet_mapping.get("items", [])
+    split = set(booklet_mapping.get("split_documents", {}))
+
+    doc_agg = {}
+    for lot, docs in docs_raw_by_lot.items():
+        for d, v in docs.items():
+            a = doc_agg.setdefault(_norm(d), {"total": 0, "open": 0, "lots": set(), "open_lots": set()})
+            a["total"] += v["total"]
+            a["open"] += v["open"]
+            a["lots"].add(lot)
+            if v["open"]:
+                a["open_lots"].add(lot)
+    rows_by_doc = {}
     for r in all_line_rows:
-        key = (_norm(r["doc"]), _norm(r["line"]))
-        entry = live.setdefault(key, {"closed": True, "lots": []})
-        entry["lots"].append(r["lot"])
-        if not r["closed"]:
-            entry["closed"] = False  # any open occurrence of this pair keeps it open
+        rows_by_doc.setdefault(_norm(r["doc"]), []).append(r)
 
-    booklets = {}
-    unresolved = []
-    for item in booklet_mapping.get("resolved", []):
-        bno = item["booklet_no"]
-        b = booklets.setdefault(bno, {
-            "booklet_no": bno, "booklet_type": item.get("booklet_type", ""),
-            "total": 0, "closed": 0, "open_items": [], "missing_items": [],
-        })
-        key = (_norm(item["doc"]), _norm(item["line"]))
+    def rows_for(doc, lid):
+        return [r for r in rows_by_doc.get(_norm(doc), []) if lid in _line_ids(r["line"])]
+
+    booklets, unassigned = {}, []
+    for it in items:
+        bno = it["booklet_no"]
+        b = booklets.setdefault(bno, {"booklet_no": bno, "booklet_type": it.get("booklet_type", ""),
+                                      "total": 0, "closed": 0, "open_items": [], "not_in_lot_items": []})
         b["total"] += 1
-        found = live.get(key)
-        if found is None:
-            b["missing_items"].append({"doc": item["doc"], "line": item["line"]})
-        elif found["closed"]:
+        doc, lid = it["doc"], it["line_id"]
+        if doc in split:
+            hits = rows_for(doc, lid)
+            found = bool(hits)
+            is_open = any(not r["closed"] for r in hits)
+            lots = sorted({r["lot"] for r in hits if not r["closed"]})
+        else:
+            a = doc_agg.get(_norm(doc))
+            found = bool(a and a["total"])
+            is_open = bool(a and a["open"])
+            lots = sorted(a["open_lots"]) if a else []
+            hits = []
+        for alias in it.get("alias_docs", []):
+            ah = rows_for(alias, lid)
+            if ah:
+                found = True
+                if any(not r["closed"] for r in ah):
+                    is_open = True
+                    lots = sorted(set(lots) | {r["lot"] for r in ah if not r["closed"]})
+        entry = {"doc": doc, "line": it["line"]}
+        if not found:
+            b["not_in_lot_items"].append(entry)
+        elif is_open:
+            entry["found_in_lots"] = lots
+            b["open_items"].append(entry)
+        else:
             b["closed"] += 1
-        else:
-            b["open_items"].append({"doc": item["doc"], "line": item["line"],
-                                     "found_in_lots": sorted(set(found["lots"]))})
 
-    for bno, b in booklets.items():
-        missing = len(b["missing_items"])
-        open_ = len(b["open_items"])
-        if missing > 0:
-            b["status"] = "blocked_missing"
-        elif open_ == 0:
-            b["status"] = "ready"
-        else:
-            b["status"] = "not_ready"
+    # rows of split documents that match none of that document's mapped lines -> surface, never drop
+    for d in split:
+        mapped = {it["line_id"] for it in items if it["doc"] == d}
+        for r in rows_by_doc.get(_norm(d), []):
+            if not (_line_ids(r["line"]) & mapped):
+                unassigned.append({"doc": r["doc"], "line": r["line"], "lot": r["lot"]})
 
-    for item in booklet_mapping.get("unresolved", []):
-        key = (_norm(item["doc"]), _norm(item["line"]))
-        found = live.get(key)
-        unresolved.append({
-            "doc": item["doc"], "line": item["line"],
-            "suggested_booklet_no": item.get("suggested_booklet_no", ""),
-            "closed": (found["closed"] if found else None),
-            "found_in_lots": (sorted(set(found["lots"])) if found else []),
-        })
+    for b in booklets.values():
+        b["status"] = "ready" if not b["open_items"] and not b["not_in_lot_items"] else "not_ready"
 
+    excluded = booklet_mapping.get("excluded_booklets", {})
     totals = {
         "booklets": len(booklets),
         "ready": sum(1 for b in booklets.values() if b["status"] == "ready"),
         "not_ready": sum(1 for b in booklets.values() if b["status"] == "not_ready"),
-        "blocked_missing": sum(1 for b in booklets.values() if b["status"] == "blocked_missing"),
         "total_items": sum(b["total"] for b in booklets.values()),
-        "total_missing": sum(len(b["missing_items"]) for b in booklets.values()),
+        "closed_items": sum(b["closed"] for b in booklets.values()),
+        "open_items": sum(len(b["open_items"]) for b in booklets.values()),
+        "not_in_lot_items": sum(len(b["not_in_lot_items"]) for b in booklets.values()),
+        "excluded_booklets": len(excluded),
+        "excluded_items": sum(e.get("items", 0) for e in excluded.values()),
     }
-    return {"totals": totals, "list": booklets, "unresolved": unresolved}
+    return {"totals": totals, "list": booklets, "excluded": excluded,
+            "decisions": booklet_mapping.get("decisions", []),
+            "unresolved": booklet_mapping.get("unresolved", []), "unassigned_rows": unassigned}
 
 # --- Load previous sync so a single bad read (duplicate tab, or a filter hiding rows on the
 # sheet) can fall back to last-known-good data for just that lot, instead of corrupting the
@@ -436,7 +473,7 @@ for lot in cfg["lots"]:
     if lot not in docs_raw_by_lot and lot in prev_line_rows_by_lot:
         all_line_rows += prev_line_rows_by_lot[lot]
 booklet_mapping = load_booklet_mapping()
-booklets_out = build_booklet_readiness(booklet_mapping, all_line_rows)
+booklets_out = build_booklet_readiness(booklet_mapping, all_line_rows, docs_raw_by_lot)
 
 out = root / "site" / "data" / "summary.json"
 out.write_text(json.dumps({"updated": datetime.datetime.now(datetime.timezone.utc).isoformat(),
