@@ -121,6 +121,25 @@ footer{padding:4rem 0 3rem;color:var(--dim);font-size:.85rem}
 .countbtn.address{color:var(--md);border-color:oklch(0.55 0.1 78/.5)}
 
 .booklet-hero .sub{max-width:62ch}
+.bkdone{margin-top:.8rem;color:var(--ok);font-size:.85rem}
+.dtrack-sec{margin:1rem 0 2.5rem}
+.dtrack-head{display:flex;flex-wrap:wrap;align-items:center;gap:.8rem 1.2rem;margin-bottom:.9rem}
+.dtrack-head h3{font:400 1.6rem "Instrument Serif",serif;margin-right:auto}
+.dtrack-head .chip small{opacity:.75;margin-left:.2rem}
+.dtrack-tools{display:flex;gap:.5rem;flex-wrap:wrap;width:100%}
+.dtrack-tools select,.dtrack-tools input{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:99px;padding:.35rem .9rem;font:inherit;font-size:.85rem}
+.dtrack-tools input{flex:1;min-width:12rem}
+.dtrack-wrap{border:1px solid var(--line);border-radius:14px;overflow:auto;max-height:70vh;background:var(--panel)}
+table.dtrack{table-layout:auto;font-size:.8rem;min-width:860px}
+table.dtrack th,table.dtrack td{text-align:left;white-space:normal;position:static;width:auto;background:none;vertical-align:top;font-weight:400}
+table.dtrack th{position:sticky;top:0;background:oklch(0.22 0.014 60);z-index:2;font-weight:600}
+table.dtrack td b{font-weight:600}
+table.dtrack td div{white-space:nowrap}
+table.dtrack td div.miss{color:var(--amber)}
+.dpill{display:inline-block;padding:.12rem .55rem;border-radius:99px;font-size:.72rem;white-space:nowrap;border:1px solid var(--line)}
+.dpill.closed{color:var(--ok);border-color:oklch(0.5 0.1 150/.5)}
+.dpill.open{color:var(--hi);border-color:oklch(0.5 0.15 30/.5)}
+.dpill.not_in_lot{color:var(--amber);border-color:oklch(0.6 0.12 75/.5)}
 .bknote{color:var(--dim);font-size:.82rem;line-height:1.5;margin:-.6rem 0 1.4rem}
 .bknote b{color:var(--ink)}
 .bknote details{display:inline}
@@ -242,11 +261,12 @@ footer{padding:4rem 0 3rem;color:var(--dim);font-size:.85rem}
   <div id="view-booklets" class="hidden">
     <section class="issuance-hero booklet-hero">
       <h3>Booklet readiness</h3>
-      <p class="sub">A booklet is <b>ready</b> only once every document+line mapped to it is closed, across every lot combined — booklets routinely span more than one lot. Demolition booklets are excluded. Each document is matched on its document number across every lot (a document belongs to one booklet); the two documents whose lines are split between booklets are matched on document + line. A mapped document that no lot has reviewed yet shows as <b>not yet in any lot</b> — it holds the booklet back, but it is not a mapping error.</p>
+      <p class="sub">Tracked by <b>document</b>. A document is closed once every comment against it — in whichever lots carry it — is closed. A booklet is <b>ready to issue</b> when every one of its documents is closed: together they complete the booklet. Documents that no lot has reviewed yet are listed in the document tracker below so they can be chased.</p>
     </section>
     <div class="stats" id="booklet-stats" aria-label="Booklet readiness totals"></div>
     <div id="booklet-unresolved"></div>
     <div class="booklet-grid" id="booklet-grid" aria-label="Booklet readiness by booklet number"></div>
+    <section id="doc-tracker" class="dtrack-sec" aria-label="Document tracker"></section>
   </div>
 
   <footer>Rebuilt by GitHub Actions every 45 minutes from the Google Sheet register.</footer>
@@ -492,66 +512,92 @@ $("#modalClose").onclick=()=>{$("#modalBackdrop").hidden=true};
 $("#modalBackdrop").onclick=e=>{if(e.target.id==="modalBackdrop")$("#modalBackdrop").hidden=true};
 addEventListener("keydown",e=>{if(e.key==="Escape")$("#modalBackdrop").hidden=true});
 
-/* ---------- Booklet Issuance screen ---------- */
-const BK_STATUS_LABEL={ready:"Ready",not_ready:"Not ready"};
+/* ---------- Booklet Issuance screen (tracked by DOCUMENT) ---------- */
+const BK_STATUS_LABEL={ready:"Ready to issue",not_ready:"Not ready"};
+const DOC_STATUS={closed:"Closed",open:"Open",not_in_lot:"Not yet in any lot"};
 const BK_BUCKET_META={
-  open_items:{title:"Open items",sub:"These document+line pairs are mapped to this booklet but are still open or on hold in whichever lot carries them.",lineLabel:"Line numbers"},
-  not_in_lot_items:{title:"Not yet in any lot",sub:"These documents are mapped to this booklet but no lot's tracker has reviewed them yet. They hold the booklet back until they are reviewed and closed.",lineLabel:"Line numbers"},
+  open:{title:"Open documents",sub:"Documents in this booklet that still have open or on-hold comments. Close every comment on a document to close the document."},
+  not_in_lot:{title:"Documents not yet in any lot",sub:"Documents mapped to this booklet that no lot's tracker has reviewed yet. They need to be reviewed and closed before the booklet can be issued."},
+  closed:{title:"Closed documents",sub:"Every comment against these documents is closed."},
 };
+const trk={status:"not_in_lot",booklet:"all",q:""};
+function bkShort(n){return (n||"").replace(/^P12513-12-/,"")}
 function renderBooklets(){
   const bk=D.booklets;
   const grid=$("#booklet-grid"),statsEl=$("#booklet-stats"),unresolvedEl=$("#booklet-unresolved");
-  if(!bk){
+  if(!bk||!bk.list){
     $("#booklets-badge").classList.remove("on");
-    statsEl.innerHTML="";unresolvedEl.innerHTML="";
+    statsEl.innerHTML="";unresolvedEl.innerHTML="";$("#doc-tracker").innerHTML="";
     grid.innerHTML=`<p class="empty">No booklet mapping has been loaded yet.</p>`;
     return;
   }
-  const t=bk.totals,f=n=>n.toLocaleString();
-  statsEl.innerHTML=[["total","Booklets",t.booklets],["closed","Ready",t.ready],["open","Not ready",t.not_ready],["hold","Items not yet in any lot",t.not_in_lot_items||0]]
-    .map(([c,l,v])=>`<div class="stat ${c}"><b>${f(v)}</b><span>${l}</span></div>`).join("");
+  const t=bk.totals,f=n=>(n||0).toLocaleString();
+  statsEl.innerHTML=[["total","Booklets ready to issue",`${f(t.ready)} / ${f(t.booklets)}`],["closed","Documents closed",`${f(t.closed_docs)} / ${f(t.total_docs)}`],["open","Documents open",f(t.open_docs)],["hold","Documents not yet in any lot",f(t.not_in_lot_docs)]]
+    .map(([c,l,v])=>`<div class="stat ${c}"><b>${v}</b><span>${l}</span></div>`).join("");
   $("#booklets-badge").classList.toggle("on",t.not_ready>0);
 
-  const unresolved=bk.unresolved||[],unassigned=bk.unassigned_rows||[],ex=bk.excluded||{},dec=bk.decisions||[];
-  const exNames=Object.entries(ex).map(([n,e])=>`${n} (${(e.booklet_type||"").replace(/\s*\(.*$/,"")})`);
-  const noteHtml=`<div class="bknote">Excluded from issuance: <b>${t.excluded_booklets||0} demolition booklet${t.excluded_booklets===1?"":"s"}</b> (${f(t.excluded_items||0)} items)${exNames.length?` — ${exNames.join(", ")}`:""}.${dec.length?` <details><summary>${dec.length} booklet decision${dec.length===1?"":"s"} applied to the workbook mapping</summary><ul>${dec.map(d=>`<li><b>${d.doc}</b> / ${d.line} → <b>${d.booklet_no}</b> — ${d.basis}</li>`).join("")}</ul></details>`:""}</div>`
-    +(unassigned.length?`<div class="unresolvedwarn"><b>${unassigned.length} tracker row${unassigned.length===1?"":"s"}</b> of a split document match none of its mapped lines and need a manual check:<ul>${unassigned.map(u=>`<li><b>${u.doc}</b> / ${u.line} (${u.lot})</li>`).join("")}</ul></div>`:"");
-  unresolvedEl.innerHTML=unresolved.length?`<div class="unresolvedwarn"><b>${unresolved.length} mapping row${unresolved.length===1?"":"s"}</b> in the booklet workbook ${unresolved.length===1?"wasn't":"weren't"} cleanly matched to a single booklet and needs a manual check:
-    <ul>${unresolved.map(u=>`<li><b>${u.doc}</b> / ${u.line} — suggested booklet <b>${u.suggested_booklet_no||"—"}</b>${u.found_in_lots.length?`, found ${u.closed?"closed":"open"} in ${u.found_in_lots.join(", ")}`:", not found in any lot"}</li>`).join("")}</ul></div>`:"";
-  unresolvedEl.innerHTML=noteHtml+unresolvedEl.innerHTML;
+  const unassigned=bk.unassigned_rows||[],ex=bk.excluded||{},dec=bk.decisions||[],unresolved=bk.unresolved||[];
+  const exNames=Object.entries(ex).map(([n,e])=>`${bkShort(n)} (${(e.booklet_type||"").replace(/\s*\(.*$/,"")})`);
+  unresolvedEl.innerHTML=`<div class="bknote">Counted by <b>document</b>: a document is closed when every comment against it, in every lot, is closed; a booklet is ready to issue when all of its documents are closed. Excluded from issuance: <b>${t.excluded_booklets||0} demolition booklet${t.excluded_booklets===1?"":"s"}</b>${exNames.length?` — ${exNames.join(", ")}`:""}.${dec.length?` <details><summary>${dec.length} booklet decision${dec.length===1?"":"s"} applied to the workbook mapping</summary><ul>${dec.map(d=>`<li><b>${d.doc}</b> / ${d.line} → <b>${d.booklet_no}</b> — ${d.basis}</li>`).join("")}</ul></details>`:""}</div>`
+    +(unassigned.length?`<div class="unresolvedwarn"><b>${unassigned.length} tracker row${unassigned.length===1?"":"s"}</b> of a split document match none of its mapped lines and need a manual check:<ul>${unassigned.map(u=>`<li><b>${u.doc}</b> / ${u.line} (${u.lot})</li>`).join("")}</ul></div>`:"")
+    +(unresolved.length?`<div class="unresolvedwarn"><b>${unresolved.length} mapping row${unresolved.length===1?"":"s"}</b> need a manual check:<ul>${unresolved.map(u=>`<li><b>${u.doc}</b> / ${u.line}</li>`).join("")}</ul></div>`:"");
 
-  const list=Object.values(bk.list||{}).sort((a,b)=>a.booklet_no.localeCompare(b.booklet_no));
+  const list=Object.values(bk.list).sort((a,b)=>a.booklet_no.localeCompare(b.booklet_no));
+  const btn=(b,k,n,style)=>n?`<button class="countbtn" style="${style}" data-bk="${b.booklet_no}" data-bucket="${k}">${n}</button>`:`<span class="countbtn" style="cursor:default;color:var(--dim);border-style:dashed">0</span>`;
   grid.innerHTML=list.map(b=>{
-    const open=b.open_items.length,missing=(b.not_in_lot_items||[]).length,closed=b.closed;
+    const c=b.closed_docs,o=b.open_docs,m=b.not_in_lot_docs,pct=b.total_docs?Math.floor(100*c/b.total_docs):0;
     return `<div class="bkcard">
       <h4>${b.booklet_no}<small>${b.booklet_type||""}</small><span class="bkpill ${b.status}">${BK_STATUS_LABEL[b.status]}</span></h4>
-      <div class="bkbar" role="img" aria-label="${closed} closed, ${open} open, ${missing} not yet in any lot, of ${b.total}">
-        <span style="flex-grow:${closed};background:var(--ok)"></span><span style="flex-grow:${open};background:var(--hi)"></span><span style="flex-grow:${missing};background:var(--amber)"></span>
+      <div class="bkbar" role="img" aria-label="${c} closed, ${o} open, ${m} not yet in any lot, of ${b.total_docs} documents">
+        <span style="flex-grow:${c};background:var(--ok)"></span><span style="flex-grow:${o};background:var(--hi)"></span><span style="flex-grow:${m};background:var(--amber)"></span>
       </div>
       <div class="bkrows">
-        <div class="bkrow"><span>Closed</span><b>${closed} / ${b.total}</b></div>
-        <div class="bkrow"><span>Open</span>${open?`<button class="countbtn address" data-bk="${b.booklet_no}" data-bucket="open_items">${open}</button>`:`<span class="countbtn" style="cursor:default;color:var(--dim);border-style:dashed">0</span>`}</div>
-        <div class="bkrow"><span>Not yet in any lot</span>${missing?`<button class="countbtn" style="color:var(--amber);border-color:oklch(0.6 0.12 75/.5)" data-bk="${b.booklet_no}" data-bucket="not_in_lot_items">${missing}</button>`:`<span class="countbtn" style="cursor:default;color:var(--dim);border-style:dashed">0</span>`}</div>
+        <div class="bkrow"><span>Documents closed <small>${pct}%</small></span>${c?`<button class="countbtn" style="font-size:1rem;color:var(--ok)" data-bk="${b.booklet_no}" data-bucket="closed">${c} / ${b.total_docs}</button>`:`<b>0 / ${b.total_docs}</b>`}</div>
+        <div class="bkrow"><span>Open documents</span>${btn(b,"open",o,"color:var(--hi)")}</div>
+        <div class="bkrow"><span>Not yet in any lot</span>${btn(b,"not_in_lot",m,"color:var(--amber);border-color:oklch(0.6 0.12 75/.5)")}</div>
       </div>
+      ${b.status==="ready"?`<p class="bkdone">All ${b.total_docs} documents closed — booklet complete.</p>`:""}
     </div>`;
   }).join("")||`<p class="empty">No booklets to show.</p>`;
-  grid.querySelectorAll(".countbtn[data-bk]").forEach(btn=>btn.onclick=()=>openBookletModal(btn.dataset.bk,btn.dataset.bucket));
+  grid.querySelectorAll(".countbtn[data-bk]").forEach(x=>x.onclick=()=>openBookletModal(x.dataset.bk,x.dataset.bucket));
+  renderDocTracker();
+}
+function allBookletDocs(){
+  const out=[];
+  Object.values((D.booklets&&D.booklets.list)||{}).sort((a,b)=>a.booklet_no.localeCompare(b.booklet_no))
+    .forEach(b=>b.documents.forEach(d=>out.push({...d,booklet_no:b.booklet_no})));
+  return out;
+}
+function renderDocTracker(){
+  const el=$("#doc-tracker"),bk=D.booklets,all=allBookletDocs();
+  const cnt=k=>all.filter(d=>(k==="all"||d.status===k)&&(trk.booklet==="all"||d.booklet_no===trk.booklet)).length;
+  const q=trk.q.trim().toUpperCase();
+  const rows=all.filter(d=>(trk.status==="all"||d.status===trk.status)&&(trk.booklet==="all"||d.booklet_no===trk.booklet)
+    &&(!q||d.doc.toUpperCase().includes(q)||d.lines.some(l=>l.line.toUpperCase().includes(q))));
+  const books=Object.keys(bk.list).sort();
+  el.innerHTML=`<div class="dtrack-head"><h3>Document tracker</h3>
+      <div class="chips" role="group" aria-label="Filter by document status">${[["not_in_lot","Not yet in any lot"],["open","Open"],["closed","Closed"],["all","All"]].map(([k,l])=>`<button class="chip" type="button" data-st="${k}" aria-pressed="${trk.status===k}">${l} <small>${cnt(k)}</small></button>`).join("")}</div>
+      <div class="dtrack-tools"><select id="trkBooklet" aria-label="Filter by booklet"><option value="all">All booklets</option>${books.map(n=>`<option value="${n}" ${trk.booklet===n?"selected":""}>${n}</option>`).join("")}</select>
+      <input id="trkQ" type="search" placeholder="Find document or line…" value="${trk.q.replace(/"/g,"&quot;")}" aria-label="Find document or line">
+      <button class="chip" type="button" id="trkCopy">Copy list</button></div></div>
+    <div class="dtrack-wrap"><table class="dtrack"><thead><tr><th>Booklet</th><th>Document No.</th><th>Line number(s)</th><th>Status</th><th>Comments open / total</th><th>Lots</th><th>Extraction plan (workbook)</th></tr></thead><tbody>
+    ${rows.map(d=>`<tr class="st-${d.status}"><td>${bkShort(d.booklet_no)}</td><td><b>${d.doc}</b></td><td>${d.lines.map(l=>`<div${l.in_lot?"":` class="miss" title="No lot has reviewed this line yet"`}>${l.line}</div>`).join("")}</td><td><span class="dpill ${d.status}">${DOC_STATUS[d.status]}</span></td><td>${d.comments_total?`${d.comments_open} / ${d.comments_total}`:"—"}</td><td>${(d.status==="open"?d.open_in_lots:d.in_lots).join(", ")||"—"}</td><td>${[...new Set(d.lines.map(l=>l.plan_status).filter(Boolean))].join("; ")||"—"}</td></tr>`).join("")||`<tr><td colspan="7" class="empty">No documents match.</td></tr>`}
+    </tbody></table></div>`;
+  el.querySelectorAll(".chip[data-st]").forEach(c=>c.onclick=()=>{trk.status=c.dataset.st;renderDocTracker()});
+  $("#trkBooklet").onchange=e=>{trk.booklet=e.target.value;renderDocTracker()};
+  const qi=$("#trkQ");qi.oninput=e=>{trk.q=e.target.value;const pos=e.target.selectionStart;renderDocTracker();const n=$("#trkQ");n.focus();n.setSelectionRange(pos,pos)};
+  $("#trkCopy").onclick=()=>copy(["Booklet\tDocument No.\tLine number\tStatus\tComments open/total\tExtraction plan"].concat(rows.flatMap(d=>d.lines.map(l=>[d.booklet_no,d.doc,l.line,DOC_STATUS[d.status],d.comments_total?`${d.comments_open}/${d.comments_total}`:"",l.plan_status].join("\t")))).join("\n"),$("#trkCopy"));
 }
 function openBookletModal(bookletNo,bucket){
   const b=(D.booklets&&D.booklets.list&&D.booklets.list[bookletNo])||{};
-  const items=b[bucket]||[];
+  const docs=(b.documents||[]).filter(d=>d.status===bucket);
   const meta=BK_BUCKET_META[bucket];
-  $("#modalTitle").textContent=`${bookletNo} — ${meta.title} (${items.length})`;
+  $("#modalTitle").textContent=`${bookletNo} — ${meta.title} (${docs.length})`;
   $("#modalSub").textContent=meta.sub;
-  $("#lineListLabel").textContent=meta.lineLabel;
-  $("#docList").textContent=items.map(i=>i.doc).join("\n")||"—";
-  $("#lineList").textContent=items.map(i=>i.line).join("\n")||"—";
-  const foot=$("#modalFoot");
-  if(bucket==="open_items"&&items.some(i=>i.found_in_lots&&i.found_in_lots.length)){
-    foot.innerHTML=`<div class="addrlist">${items.map(i=>`<div><b>${i.doc}</b> / ${i.line} — open in ${(i.found_in_lots||[]).join(", ")||"—"}</div>`).join("")}</div>`;
-  } else {
-    foot.innerHTML="";
-  }
+  $("#lineListLabel").textContent="Line numbers";
+  $("#docList").textContent=docs.map(d=>d.doc).join("\n")||"—";
+  $("#lineList").textContent=docs.map(d=>d.lines.map(l=>l.line).join(" | ")).join("\n")||"—";
+  $("#modalFoot").innerHTML=docs.length?`<div class="addrlist">${docs.map(d=>`<div><b>${d.doc}</b> — ${bucket==="open"?`${d.comments_open} of ${d.comments_total} comments open in ${d.open_in_lots.join(", ")||"—"}`:bucket==="closed"?`${d.comments_total} comments closed (${d.in_lots.join(", ")})`:`not reviewed in any lot yet${d.lines.some(l=>l.in_lot)?` (line${d.lines.filter(l=>!l.in_lot).length>1?"s":""} ${d.lines.filter(l=>!l.in_lot).map(l=>l.line).join(", ")})`:""}`}${[...new Set(d.lines.map(l=>l.plan_status).filter(Boolean))].length?` · plan: ${[...new Set(d.lines.map(l=>l.plan_status).filter(Boolean))].join("; ")}`:""}</div>`).join("")}</div>`:"";
   $("#modalBackdrop").hidden=false;
 }
 function copy(text,btn){
