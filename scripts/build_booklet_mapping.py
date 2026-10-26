@@ -21,6 +21,9 @@ Rules applied (agreed with the project owner, 2026-10-26):
   5. Owner-confirmed decisions are recorded in CONFIRMED below and applied last.
   6. A tracker row logged under a different document number is accepted as an alias only when
      the line ID matches exactly AND that other document is not itself in the mapping.
+  7. Designer remarks (v3, 2026-10-26): rows whose "Doc+Line Status" starts with "Superseded" or
+     "Deleted" are dropped from readiness and listed under "superseded" (e.g. 2604 -> 2137,
+     2605 -> 2138, 1675 VG-11904 -> 1672, 1710 deleted by RLM). 2046 is renamed 2143 in the workbook.
 """
 import json, re, sys, datetime, collections, pathlib
 
@@ -65,8 +68,14 @@ def main(path):
     rows = [dict(zip(hdr, r)) for r in ws.iter_rows(min_row=2, values_only=True) if any(r)]
 
     excluded = collections.OrderedDict()
-    types, items, decisions, problems = {}, [], [], []
+    types, items, decisions, problems, superseded = {}, [], [], [], []
     for r in rows:
+        st = str(r.get("Doc+Line Status") or "").strip()
+        if st.lower().startswith(("superseded", "deleted")):
+            superseded.append({"doc": str(r["DRAWING NO."] or "").strip(), "line": str(r["Line Number"] or "").strip(),
+                               "booklet_no": (r["Booklet No."] or "").strip(), "status": st,
+                               "remark": str(r.get("Remarks") or "").split(" | ")[0]})
+            continue
         btype = (r["Booklet (Line List Type)"] or "").strip()
         bno = (r["Booklet No."] or "").strip()
         if btype.startswith("Demolition"):
@@ -153,15 +162,16 @@ def main(path):
         "split_documents": split_docs,
         "decisions": decisions,
         "items": final,
+        "superseded": superseded,
         "unresolved": [],
     }
     OUT.write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n")
     c = collections.Counter(it["booklet_no"] for it in final)
     print(f"wrote {OUT}: {len(final)} items in {len(c)} booklets; excluded {sum(e['items'] for e in excluded.values())} "
-          f"demolition items in {len(excluded)} booklets; {len(decisions)} decisions; split docs {split_docs}")
+          f"demolition items in {len(excluded)} booklets; {len(decisions)} decisions; {len(superseded)} superseded/deleted; split docs {split_docs}")
     for b, n in sorted(c.items()):
         print(f"  {b}  {n:4d}  {types.get(b, '')}")
 
 
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else "FST_ISO_Booklet_Mapping_v2.xlsx")
+    main(sys.argv[1] if len(sys.argv) > 1 else "FST_ISO_Booklet_Mapping_v3.xlsx")
