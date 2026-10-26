@@ -106,6 +106,12 @@ def main(path):
         if btype:
             types[bno] = btype
         it = {"doc": doc, "line": line, "line_id": lid, "booklet_no": bno}
+        # where this document+line stands in the ISO extraction plan (workbook columns)
+        plan = str(r.get("Doc+Line Status") or "").strip()
+        if r.get("Sheets / Items") not in (None, ""):
+            plan += f" ({r.get('Completed') or 0}/{r.get('Sheets / Items')} sheets completed)"
+        if plan:
+            it["plan_status"] = plan
         alias = ALIASES.get(doc, {}).get(lid)
         if alias:
             it["alias_docs"] = [alias]
