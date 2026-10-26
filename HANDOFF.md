@@ -22,7 +22,7 @@ A static dashboard that reads an "As-Built ISO Review Register" Google Sheet (on
   closed everywhere, and the dashboard flags any mapped pair that's missing from every lot's
   tracker entirely (never captured) so it can be chased down before the booklet is claimed done
 
-It refreshes itself automatically — a GitHub Action reads the sheet every 3 hours (plus on every
+It refreshes itself automatically — a GitHub Action reads the sheet every 45 minutes (plus on every
 push, plus on demand), computes everything, and redeploys. **Nobody should ever need to write or
 push code just to get fresh numbers onto the site.**
 
@@ -49,7 +49,7 @@ GitHub Pages                      (the live site)
 ```
 
 - `.github/workflows/deploy.yml` — the whole pipeline. Triggers: `push` to `main`, `schedule`
-  (every 3 hours, cron `0 */3 * * *`), and `workflow_dispatch` (manual "run now").
+  (every 45 minutes via four staggered crons `0 0-21/3`, `45 0-21/3`, `30 1-22/3`, `15 2-23/3`), and `workflow_dispatch` (manual "run now").
 - `.github/workflows/issue-intake.yml` — handles the "mark documents as issued" write path (§5).
 - No database, no server, no API you have to host. The only moving part is the Python script and
   two small JSON files it maintains (`closed_log.json`, `issued_log.json`) in `site/data/`.
