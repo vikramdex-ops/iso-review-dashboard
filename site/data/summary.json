@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26T06:56:35.944776+00:00",
+ "updated": "2026-10-26T06:59:31.206094+00:00",
  "preliminary": false,
  "today": "2026-10-26",
  "status": {
@@ -6852,15 +6852,500 @@
  },
  "booklets": {
   "totals": {
-   "booklets": 0,
+   "booklets": 5,
    "ready": 0,
-   "not_ready": 0,
-   "blocked_missing": 0,
-   "total_items": 0,
-   "total_missing": 0
+   "not_ready": 5,
+   "total_items": 470,
+   "closed_items": 403,
+   "open_items": 32,
+   "not_in_lot_items": 35,
+   "excluded_booklets": 4,
+   "excluded_items": 131
   },
-  "list": {},
-  "unresolved": []
+  "list": {
+   "P12513-12-99-15-1601": {
+    "booklet_no": "P12513-12-99-15-1601",
+    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)",
+    "total": 315,
+    "closed": 284,
+    "open_items": [
+     {
+      "doc": "P12513-12-01-15-1720",
+      "line": "1\"-IA-10988-AC4A1A-FA",
+      "found_in_lots": [
+       "Lot 9"
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1728",
+      "line": "1\"-IA-10996-AC4A1A-FA",
+      "found_in_lots": [
+       "Lot 9"
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1735",
+      "line": "1\"-IA-11003-AC4A1A-FA",
+      "found_in_lots": [
+       "Lot 1"
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1737",
+      "line": "1\"-IA-11005-AC4A1A-FA",
+      "found_in_lots": [
+       "Lot 9"
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1740",
+      "line": "1\"-IA-11008-AC4A1A-FA",
+      "found_in_lots": [
+       "Lot 1"
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1946",
+      "line": "1\"-D-17016-AE3S0C-FA",
+      "found_in_lots": [
+       "Lot 1"
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1795",
+      "line": "40\"-PO-22052-AC1S3A-FA",
+      "found_in_lots": [
+       "Lot 9"
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1799",
+      "line": "2\"-PO-22059-AE3SOC-FA",
+      "found_in_lots": [
+       "Lot 9"
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1800",
+      "line": "2\"-PO-22060-AE3SOC-FA",
+      "found_in_lots": [
+       "Lot 9"
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1829",
+      "line": "3/4\"-PO-23397-AC1S3A-FA",
+      "found_in_lots": [
+       "Lot 8"
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-2009",
+      "line": "1\"-WW-8157-AC1A1B-FA",
+      "found_in_lots": [
+       "Lot 9"
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1696",
+      "line": "8\"PO-22093-AE3S0C-FA",
+      "found_in_lots": [
+       "Lot 8"
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1725",
+      "line": "1\"-IA-10993-AC4A1A-FA",
+      "found_in_lots": [
+       "Lot 1"
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1865",
+      "line": "2\"-VG-11321-AE3S0C-FA",
+      "found_in_lots": [
+       "Lot 1"
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1976",
+      "line": "3/4\"-VG-11873-AC1S3A-FA",
+      "found_in_lots": [
+       "Lot 1"
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1977",
+      "line": "3/4\"-VG-11874-AC1S3A-FA",
+      "found_in_lots": [
+       "Lot 9"
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1693",
+      "line": "2\"-D-16995-AC1S3A-FA",
+      "found_in_lots": [
+       "Lot 9"
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1860",
+      "line": "28\"-VG-11315-AC1S3A-FA",
+      "found_in_lots": [
+       "Lot 9"
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1888",
+      "line": "36\"-VG-11344-AC1S3A-FA",
+      "found_in_lots": [
+       "Lot 8"
+      ]
+     }
+    ],
+    "not_in_lot_items": [
+     {
+      "doc": "P12513-12-01-15-1605",
+      "line": "2\"-D-15222-AE3S0C-FA"
+     },
+     {
+      "doc": "P12513-12-01-15-1633",
+      "line": "2\"-D-15255-AE3S0C-FA"
+     },
+     {
+      "doc": "P12513-12-01-15-1757",
+      "line": "1\"-NN-12208-AE3SOC-FA"
+     },
+     {
+      "doc": "P12513-12-01-15-1727",
+      "line": "2\"-IA-10995-AC4A1A-FA"
+     },
+     {
+      "doc": "P12513-12-01-15-1772",
+      "line": "1\"-PA-8622-AC1A1B-FA"
+     },
+     {
+      "doc": "P12513-12-01-15-1660",
+      "line": "1/2\"-D-16951-AE3S0C-FA"
+     },
+     {
+      "doc": "P12513-12-01-15-1710",
+      "line": "2\"-FG-8591-AC1S3A-FA"
+     },
+     {
+      "doc": "P12513-12-01-15-2123",
+      "line": "8\"-FW-6130-AF1A0F-FA"
+     },
+     {
+      "doc": "P12513-12-01-15-2046",
+      "line": "6\"-FZ-8010-AF1A0F-FA"
+     },
+     {
+      "doc": "P12513-12-01-15-1665",
+      "line": "2\"-D-16957-AE3S0C-FA"
+     },
+     {
+      "doc": "P12513-12-01-15-1895",
+      "line": "16\"-VG-11355-BE3SOC-FA-H"
+     },
+     {
+      "doc": "P12513-12-01-15-1675",
+      "line": "1\"-VG-11904-AC1S3A-FA"
+     }
+    ],
+    "status": "not_ready"
+   },
+   "P12513-12-01-15-1755": {
+    "booklet_no": "P12513-12-01-15-1755",
+    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}",
+    "total": 48,
+    "closed": 30,
+    "open_items": [
+     {
+      "doc": "P12513-12-01-15-1678",
+      "line": "3\"-D-15260-AP3S0C-FA",
+      "found_in_lots": [
+       "Lot 8"
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1624",
+      "line": "8\"-D-15243-AP3S0C-FA",
+      "found_in_lots": [
+       "Lot 9"
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1657",
+      "line": "8\"-D-16948-AP3S0C-FA",
+      "found_in_lots": [
+       "Lot 1"
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1678",
+      "line": "3\"-D-16976-AP3S0C-FA",
+      "found_in_lots": [
+       "Lot 8"
+      ]
+     }
+    ],
+    "not_in_lot_items": [
+     {
+      "doc": "P12513-12-01-15-2134",
+      "line": "6\"-FZ-8001-AP3A0F-FA"
+     },
+     {
+      "doc": "P12513-12-01-15-2136",
+      "line": "6\"-FZ-8003-AP3A0F-FA"
+     },
+     {
+      "doc": "P12513-12-01-15-2140",
+      "line": "6\"-FZ-8007-AP3A0F-FA"
+     },
+     {
+      "doc": "P12513-12-01-15-2139",
+      "line": "6\"-FZ-8006-AP3A0F-FA"
+     },
+     {
+      "doc": "P12513-12-01-15-1620",
+      "line": "4\"-D-15239-AP3S0C-FA"
+     },
+     {
+      "doc": "P12513-12-01-15-1629",
+      "line": "14\"-D-15249-AP3S0C-FA"
+     },
+     {
+      "doc": "P12513-12-01-15-2603",
+      "line": "4\"-D-15260-AP3S0C-FA"
+     },
+     {
+      "doc": "P12513-12-01-15-1656",
+      "line": "4\"-D-16947-AP3S0C-FA"
+     },
+     {
+      "doc": "P12513-12-01-15-1679",
+      "line": "4\"-D-16977-AP3S0C-FA"
+     },
+     {
+      "doc": "P12513-12-01-15-2116",
+      "line": "20\"-FW-6123-AP3A0F-FA"
+     },
+     {
+      "doc": "P12513-12-01-15-2124",
+      "line": "8\"-FW-6131-AP3A0F-FA"
+     },
+     {
+      "doc": "P12513-12-01-15-2145",
+      "line": "6\"-FW-6470-AP3A0F-FA"
+     },
+     {
+      "doc": "P12513-12-01-15-2604",
+      "line": "2\"-FZ-8004-AP3A0F-FA"
+     },
+     {
+      "doc": "P12513-12-01-15-2605",
+      "line": "2\"-FZ-8005-AP3A0F-FA"
+     }
+    ],
+    "status": "not_ready"
+   },
+   "P12513-12-01-15-1638": {
+    "booklet_no": "P12513-12-01-15-1638",
+    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)",
+    "total": 51,
+    "closed": 47,
+    "open_items": [
+     {
+      "doc": "P12513-12-01-15-1636",
+      "line": "2\"-D-15258-AE3S0C-FA",
+      "found_in_lots": [
+       "Lot 9"
+      ]
+     },
+     {
+      "doc": "P12513-12-01-15-1811",
+      "line": "36\"-PO-22096-AC1S3A-FA",
+      "found_in_lots": [
+       "Lot 1"
+      ]
+     }
+    ],
+    "not_in_lot_items": [
+     {
+      "doc": "P12513-12-01-15-1674",
+      "line": "2\"-D-16969-AE3S0C-FA"
+     },
+     {
+      "doc": "P12513-12-01-15-1843",
+      "line": "8\"-PW-8277-AE3S0C-FA"
+     }
+    ],
+    "status": "not_ready"
+   },
+   "P12513-12-39-15-1751": {
+    "booklet_no": "P12513-12-39-15-1751",
+    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)",
+    "total": 50,
+    "closed": 37,
+    "open_items": [
+     {
+      "doc": "P12513-12-39-15-1655",
+      "line": "2\"-D-15675-AE3S0C-FA",
+      "found_in_lots": [
+       "Lot 9"
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1695",
+      "line": "6\"-PO-22092-AE3S0C-FA",
+      "found_in_lots": [
+       "Lot 1"
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1700",
+      "line": "3\"-PO-22099-AE3S0C-FA",
+      "found_in_lots": [
+       "Lot 7"
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1706",
+      "line": "2\"-PO-22105-AE3S0C-FA",
+      "found_in_lots": [
+       "Lot 8"
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1709",
+      "line": "2\"-PO-22108-AE3S0C-FA",
+      "found_in_lots": [
+       "Lot 1"
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1720",
+      "line": "6\"-PO-22119-AE3S0C-FA",
+      "found_in_lots": [
+       "Lot 1"
+      ]
+     },
+     {
+      "doc": "P12513-12-39-15-1723",
+      "line": "3\"-PO-22125-AE3S0C-FA",
+      "found_in_lots": [
+       "Lot 1"
+      ]
+     }
+    ],
+    "not_in_lot_items": [
+     {
+      "doc": "P12513-12-39-15-1690",
+      "line": "6\"-PO-22087-AE3S0C-FA"
+     },
+     {
+      "doc": "P12513-12-39-15-1691",
+      "line": "6\"-PO-22088-AE3S0C-FA"
+     },
+     {
+      "doc": "P12513-12-39-15-1704",
+      "line": "2\"-PO-22103-AE3S0C-FA"
+     },
+     {
+      "doc": "P12513-12-39-15-1707",
+      "line": "2\"-PO-22106-AE3S0C-FA"
+     },
+     {
+      "doc": "P12513-12-39-15-1708",
+      "line": "2\"-PO-22107-AE3S0C-FA"
+     },
+     {
+      "doc": "P12513-12-39-15-1713",
+      "line": "6\"-PO-22112-AE3S0C-FA"
+     }
+    ],
+    "status": "not_ready"
+   },
+   "P12513-12-39-15-1722": {
+    "booklet_no": "P12513-12-39-15-1722",
+    "booklet_type": "ISO for Flare Area - UG (GRE) {P12513-12-39-15-1722}",
+    "total": 6,
+    "closed": 5,
+    "open_items": [],
+    "not_in_lot_items": [
+     {
+      "doc": "P12513-12-39-15-1612",
+      "line": "3\"-D-15285-AP3S0C-FA"
+     }
+    ],
+    "status": "not_ready"
+   }
+  },
+  "excluded": {
+   "P12513-12-01-15-1913": {
+    "booklet_type": "Demolition ISO for CDS-AG (P12513-12-01-15-1913)",
+    "items": 43
+   },
+   "P12513-12-01-15-1914": {
+    "booklet_type": "Demolition ISO for CDS-UG (P12513-12-01-15-1914)",
+    "items": 10
+   },
+   "P12513-12-39-15-1677": {
+    "booklet_type": "Demolition ISO for Flare-AG (P12513-12-39-15-1677)",
+    "items": 73
+   },
+   "P12513-12-39-15-1678": {
+    "booklet_type": "Demolition ISO for Flare-UG (P12513-12-39-15-1678)",
+    "items": 5
+   }
+  },
+  "decisions": [
+   {
+    "doc": "P12513-12-01-15-1678",
+    "line": "3\"-D-15260-AP3S0C-FA",
+    "booklet_no": "P12513-12-01-15-1755",
+    "basis": "Workbook suggestion confirmed by the project owner on 2026-10-26; also GRE spec (rule 4)."
+   },
+   {
+    "doc": "P12513-12-01-15-2005",
+    "line": "3\"-WW-8153-AP3A0A-FA",
+    "booklet_no": "P12513-12-01-15-1755",
+    "basis": "GRE line (spec AP...) in area 01; workbook listed 1601 but flags it as breaking one-line-one-booklet; every other GRE line in the workbook sits in 1755."
+   },
+   {
+    "doc": "P12513-12-01-15-2134",
+    "line": "6\"-FZ-8001-AP3A0F-FA",
+    "booklet_no": "P12513-12-01-15-1755",
+    "basis": "GRE line (spec AP...) in area 01; workbook listed 1601 but flags it as breaking one-line-one-booklet; every other GRE line in the workbook sits in 1755."
+   },
+   {
+    "doc": "P12513-12-01-15-2100",
+    "line": "20\"FW-6107-AP3A0F-FA",
+    "booklet_no": "P12513-12-01-15-1755",
+    "basis": "GRE line (spec AP...) in area 01; workbook listed 1601 but flags it as breaking one-line-one-booklet; every other GRE line in the workbook sits in 1755."
+   },
+   {
+    "doc": "P12513-12-01-15-2136",
+    "line": "6\"-FZ-8003-AP3A0F-FA",
+    "booklet_no": "P12513-12-01-15-1755",
+    "basis": "GRE line (spec AP...) in area 01; workbook listed 1601 but flags it as breaking one-line-one-booklet; every other GRE line in the workbook sits in 1755."
+   },
+   {
+    "doc": "P12513-12-01-15-2140",
+    "line": "6\"-FZ-8007-AP3A0F-FA",
+    "booklet_no": "P12513-12-01-15-1755",
+    "basis": "GRE line (spec AP...) in area 01; workbook listed 1601 but flags it as breaking one-line-one-booklet; every other GRE line in the workbook sits in 1755."
+   },
+   {
+    "doc": "P12513-12-01-15-2139",
+    "line": "6\"-FZ-8006-AP3A0F-FA",
+    "booklet_no": "P12513-12-01-15-1755",
+    "basis": "GRE line (spec AP...) in area 01; workbook listed 1601 but flags it as breaking one-line-one-booklet; every other GRE line in the workbook sits in 1755."
+   }
+  ],
+  "unresolved": [],
+  "unassigned_rows": []
  },
  "_docs_raw": {
   "Lot 1": {
