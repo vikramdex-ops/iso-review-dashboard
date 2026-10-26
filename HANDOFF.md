@@ -183,7 +183,8 @@ Claude account/org). If you don't have access to that, everything essential is h
 history (`git log`).
 
 As of the last update to this file:
-- 8 lots are live (Lot 1 – Lot 8), each read via the Sheets API, fixed-column parsing.
+- 9 lots are live (Lot 1 – Lot 9), each read via the Sheets API, fixed-column parsing.
+- Lot 9 (tab `lot-09`, gid 23469838) added 2026-10-26. Header in row 1 like every other lot; column P "Assigned To" inserted so Modeller Response sits in Q. Whole documents per person, 13 docs split 3/3/2/3/2 (Hemnath, Dharma, Murukeshwari, Karthikeyan, Kowshik), comment counts balanced as evenly as that split allows.
 - Summary, Issuance, and Booklet Issuance screens are all live and wired to real data.
 - Known pending/cosmetic items: a couple of stale "Lot 1-4" mentions remain in `README.md`
   (the badge count and architecture diagram were updated to 8, two prose mentions weren't yet).
