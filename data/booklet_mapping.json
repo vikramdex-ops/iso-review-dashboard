@@ -96,6 +96,7 @@
    "line": "2\"-D-15222-AE3S0C-FA",
    "line_id": "D-15222",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (3/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -103,6 +104,7 @@
    "line": "3\"-D-15235-AE3S0C-FA",
    "line_id": "D-15235",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -110,6 +112,7 @@
    "line": "3\"-D-15236-AE3S0C-FA",
    "line_id": "D-15236",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -117,6 +120,7 @@
    "line": "8\"-D-15240-AE3S0C-FA",
    "line_id": "D-15240",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -124,6 +128,7 @@
    "line": "2\"-D-15241-AE3S0C-FA",
    "line_id": "D-15241",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -131,6 +136,7 @@
    "line": "8\"-D-15247-AE3S0C-FA",
    "line_id": "D-15247",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -138,6 +144,7 @@
    "line": "2\"-D-15250-AE3S0C-FA",
    "line_id": "D-15250",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -145,6 +152,7 @@
    "line": "3\"-D-15252-AE3S0C-FA",
    "line_id": "D-15252",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -152,6 +160,7 @@
    "line": "2\"-D-15255-AE3S0C-FA",
    "line_id": "D-15255",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -159,6 +168,7 @@
    "line": "2\"-D-15256-AE3S0C-FA",
    "line_id": "D-15256",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -166,6 +176,7 @@
    "line": "2\"-D-15257-AE3S0C-FA",
    "line_id": "D-15257",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -173,6 +184,7 @@
    "line": "2\"-D-15259-AE3S0C-FA",
    "line_id": "D-15259",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -180,6 +192,7 @@
    "line": "2\"-D-15264-AE3S0C-FA",
    "line_id": "D-15264",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -187,6 +200,7 @@
    "line": "2\"-D-15266-AE3S0C-FA",
    "line_id": "D-15266",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -194,6 +208,7 @@
    "line": "2\"-D-15267-AE3S0C-FA",
    "line_id": "D-15267",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -201,6 +216,7 @@
    "line": "3/4\"-D-15269-AE3S0C-FA",
    "line_id": "D-15269",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (3/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -208,6 +224,7 @@
    "line": "2\"-D-15270-AE3S0C-FA",
    "line_id": "D-15270",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -215,6 +232,7 @@
    "line": "2\"-D-15271-AE3S0C-FA",
    "line_id": "D-15271",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -222,6 +240,7 @@
    "line": "1\"-NN-12207-AE3SOC-FA",
    "line_id": "NN-12207",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -229,6 +248,7 @@
    "line": "1\"-NN-12208-AE3SOC-FA",
    "line_id": "NN-12208",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -236,6 +256,7 @@
    "line": "2\"-NN-12209-AE3SOC-FA",
    "line_id": "NN-12209",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -243,6 +264,7 @@
    "line": "1\"-NN-12210-AE3SOC-FA",
    "line_id": "NN-12210",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -250,6 +272,7 @@
    "line": "1\"-NN-12212-AE3SOC-FA",
    "line_id": "NN-12212",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -257,6 +280,7 @@
    "line": "1\"-NN-12214-AC1S3A-FA",
    "line_id": "NN-12214",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -264,6 +288,7 @@
    "line": "3\"-PA-8619-AC1A1B-FA",
    "line_id": "PA-8619",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (4/4 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -271,6 +296,7 @@
    "line": "1\"-NN-12203-AE3SOC-FA",
    "line_id": "NN-12203",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "alias_docs": [
     "P12513-12-01-15-1963"
    ],
@@ -281,6 +307,7 @@
    "line": "2\"-NN-12204-AE3SOC-FA",
    "line_id": "NN-12204",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -288,6 +315,7 @@
    "line": "1\"-NN-12206-AE3SOC-FA",
    "line_id": "NN-12206",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -295,6 +323,7 @@
    "line": "3/4\"-D-51272-AE3S0C-FA",
    "line_id": "D-51272",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (3/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -302,6 +331,7 @@
    "line": "4\"-D-15962-AE3S0C-FA",
    "line_id": "D-15962",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -309,6 +339,7 @@
    "line": "14\"-D-16946-AE3S0C-FA",
    "line_id": "D-16946",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -316,6 +347,7 @@
    "line": "1\"-D-16958-AE3S0C-FA",
    "line_id": "D-16958",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -323,6 +355,7 @@
    "line": "1\"-D-16959-AE3S0C-FA",
    "line_id": "D-16959",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -330,6 +363,7 @@
    "line": "1\"-D-16960-AE3S0C-FA",
    "line_id": "D-16960",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -337,6 +371,7 @@
    "line": "1\"-D-16961-BE3S0C-FA",
    "line_id": "D-16961",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -344,6 +379,7 @@
    "line": "2\"-D-16962-BE3S0C-FA",
    "line_id": "D-16962",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (3/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -351,6 +387,7 @@
    "line": "2\"-D-16973-AC1S3A-FA",
    "line_id": "D-16973",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -358,6 +395,7 @@
    "line": "2\"-D-16974-AC1S3A-FA",
    "line_id": "D-16974",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -365,6 +403,7 @@
    "line": "3\"-D-15260-AP3S0C-FA",
    "line_id": "D-15260",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -372,6 +411,7 @@
    "line": "2\"-D-16984-AC1S3A-FA",
    "line_id": "D-16984",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -379,6 +419,7 @@
    "line": "2\"-D-16986-AC1S3A-FA",
    "line_id": "D-16986",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -386,6 +427,7 @@
    "line": "1/2\"-D-16993-AE3S0C-FA",
    "line_id": "D-16993",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (3/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -393,6 +435,7 @@
    "line": "2\"-FG-8086-AC1S3A-FA",
    "line_id": "FG-8086",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (4/4 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -400,6 +443,7 @@
    "line": "2\"-FG-8589-BC1S3A-FA",
    "line_id": "FG-8589",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -407,6 +451,7 @@
    "line": "2\"-FG-8590-AC1S3A-FA",
    "line_id": "FG-8590",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -414,6 +459,7 @@
    "line": "1\"-IA-10980-AC4A1A-FA",
    "line_id": "IA-10980",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -421,6 +467,7 @@
    "line": "1\"-IA-10981-AC4A1A-FA",
    "line_id": "IA-10981",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -428,6 +475,7 @@
    "line": "1\"-IA-10984-AC4A1A-FA",
    "line_id": "IA-10984",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -435,6 +483,7 @@
    "line": "1\"-IA-10985-AC4A1A-FA",
    "line_id": "IA-10985",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -442,6 +491,7 @@
    "line": "1\"-IA-10986-AC4A1A-FA",
    "line_id": "IA-10986",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -449,6 +499,7 @@
    "line": "1\"-IA-10987-AC4A1A-FA",
    "line_id": "IA-10987",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -456,6 +507,7 @@
    "line": "1\"-IA-10988-AC4A1A-FA",
    "line_id": "IA-10988",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -463,6 +515,7 @@
    "line": "1\"-IA-10991-AC4A1A-FA",
    "line_id": "IA-10991",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -470,6 +523,7 @@
    "line": "1\"-IA-10992-AC4A1A-FA",
    "line_id": "IA-10992",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -477,6 +531,7 @@
    "line": "1\"-IA-10994-AC4A1A-FA",
    "line_id": "IA-10994",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -484,6 +539,7 @@
    "line": "2\"-IA-10995-AC4A1A-FA",
    "line_id": "IA-10995",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -491,6 +547,7 @@
    "line": "1\"-IA-10996-AC4A1A-FA",
    "line_id": "IA-10996",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -498,6 +555,7 @@
    "line": "1\"-IA-10998-AC4A1A-FA",
    "line_id": "IA-10998",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -505,6 +563,7 @@
    "line": "1\"-IA-10999-AC4A1A-FA",
    "line_id": "IA-10999",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -512,6 +571,7 @@
    "line": "1\"-IA-11003-AC4A1A-FA",
    "line_id": "IA-11003",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -519,6 +579,7 @@
    "line": "1\"-IA-11005-AC4A1A-FA",
    "line_id": "IA-11005",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -526,6 +587,7 @@
    "line": "1\"-IA-11007-AC4A1A-FA",
    "line_id": "IA-11007",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -533,6 +595,7 @@
    "line": "1\"-IA-11008-AC4A1A-FA",
    "line_id": "IA-11008",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -540,6 +603,7 @@
    "line": "2\"-NN-12010-AC1A1B-FA",
    "line_id": "NN-12010",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (6/6 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -547,6 +611,7 @@
    "line": "2\"-NN-12011-AC1S3A-FA",
    "line_id": "NN-12011",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (3/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -554,6 +619,7 @@
    "line": "2\"-D-16999-AE3S0C-FA",
    "line_id": "D-16999",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -561,6 +627,7 @@
    "line": "2\"-FG-8592-AC1S3A-FA-H",
    "line_id": "FG-8592",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -568,6 +635,7 @@
    "line": "2\"-FG-8593-BC1S3A-FA-H",
    "line_id": "FG-8593",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -575,6 +643,7 @@
    "line": "3/4\"-D-17014-AE3S0C-FA",
    "line_id": "D-17014",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -582,6 +651,7 @@
    "line": "3/4\"-D-17015-AE3S0C-FA",
    "line_id": "D-17015",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -589,6 +659,7 @@
    "line": "1\"-D-17016-AE3S0C-FA",
    "line_id": "D-17016",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -596,6 +667,7 @@
    "line": "1\"-D-17017-AE3S0C-FA",
    "line_id": "D-17017",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -603,6 +675,7 @@
    "line": "3/4\"-D-17018-AE3S0C-FA",
    "line_id": "D-17018",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -610,6 +683,7 @@
    "line": "3/4\"-D-17019-AE3S0C-FA",
    "line_id": "D-17019",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -617,6 +691,7 @@
    "line": "3/4\"-D-17020-AE3S0C-FA",
    "line_id": "D-17020",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -624,6 +699,7 @@
    "line": "3/4\"-D-17022-AE3S0C-FA",
    "line_id": "D-17022",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -631,6 +707,7 @@
    "line": "3/4\"-D-17023-AE3S0C-FA",
    "line_id": "D-17023",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -638,6 +715,7 @@
    "line": "3/4\"-D-17024-AE3S0C-FA",
    "line_id": "D-17024",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -645,6 +723,7 @@
    "line": "3/4\"-D-17025-AE3S0C-FA",
    "line_id": "D-17025",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -652,6 +731,7 @@
    "line": "3/4\"-D-17026-AE3S0C-FA",
    "line_id": "D-17026",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -659,6 +739,7 @@
    "line": "3/4\"-D-17027-AE3S0C-FA",
    "line_id": "D-17027",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -666,6 +747,7 @@
    "line": "3/4\"-D-17028-AE3S0C-FA",
    "line_id": "D-17028",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -673,6 +755,7 @@
    "line": "3/4\"-D-17029-AE3S0C-FA",
    "line_id": "D-17029",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -680,6 +763,7 @@
    "line": "2\"-D-17030-AE3S0C-FA",
    "line_id": "D-17030",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -687,6 +771,7 @@
    "line": "1\"-NN-12220-AC1A1B-FA",
    "line_id": "NN-12220",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -694,6 +779,7 @@
    "line": "2\"-NN-12014-AC1A1B-FA",
    "line_id": "NN-12014",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (7/7 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -701,6 +787,7 @@
    "line": "1\"-NN-12012-AC1A1B-FA",
    "line_id": "NN-12012",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -708,6 +795,7 @@
    "line": "2\"-PA-8620-AC1A1B-FA",
    "line_id": "PA-8620",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (3/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -715,6 +803,7 @@
    "line": "2\"-PA-8618-AC1A1B-FA",
    "line_id": "PA-8618",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -722,6 +811,7 @@
    "line": "2\"-PA-8617-AC1A1B-FA",
    "line_id": "PA-8617",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -729,6 +819,7 @@
    "line": "2\"-PG-11358-AE3S0C-FA",
    "line_id": "PG-11358",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/4 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -736,6 +827,7 @@
    "line": "1\"-PA-8621-AC1A1B-FA",
    "line_id": "PA-8621",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -743,6 +835,7 @@
    "line": "1\"-PA-8622-AC1A1B-FA",
    "line_id": "PA-8622",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -750,6 +843,7 @@
    "line": "40\"-PO-22052-AC1S3A-FA",
    "line_id": "PO-22052",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (14/14 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -757,6 +851,7 @@
    "line": "2\"-PO-22057-AE3S0C-FA",
    "line_id": "PO-22057",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -764,6 +859,7 @@
    "line": "2\"-PO-22059-AE3SOC-FA",
    "line_id": "PO-22059",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -771,6 +867,7 @@
    "line": "2\"-PO-22060-AE3SOC-FA",
    "line_id": "PO-22060",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -778,6 +875,7 @@
    "line": "24\"-PO-22068-AC1S3A-FA",
    "line_id": "PO-22068",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (5/5 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -785,6 +883,7 @@
    "line": "2\"-PO-22069-AE3S0C-FA",
    "line_id": "PO-22069",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (6/6 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -792,6 +891,7 @@
    "line": "4\"-PO-22071-AE3S0C-FA",
    "line_id": "PO-22071",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -799,6 +899,7 @@
    "line": "3\"-PO-22072-AE3S0C-FA",
    "line_id": "PO-22072",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (6/6 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -806,6 +907,7 @@
    "line": "6\"-PO-22097-AE3S0C-FA",
    "line_id": "PO-22097",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -813,6 +915,7 @@
    "line": "8\"-PO-22077-AE3S0C-FA",
    "line_id": "PO-22077",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -820,6 +923,7 @@
    "line": "6\"-PO-23382-AC1S3A-FA",
    "line_id": "PO-23382",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (3/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -827,6 +931,7 @@
    "line": "3/4\"-PO-23390-AC1S3A-FA",
    "line_id": "PO-23390",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -834,6 +939,7 @@
    "line": "3/4\"-PO-23397-AC1S3A-FA",
    "line_id": "PO-23397",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -841,6 +947,7 @@
    "line": "2\"-PO-23405-AE3S0C-FA",
    "line_id": "PO-23405",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -848,6 +955,7 @@
    "line": "1\"-PW-8284-AE3S0C-FA",
    "line_id": "PW-8284",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -855,6 +963,7 @@
    "line": "1\"-PW-8285-AE3S0C-FA",
    "line_id": "PW-8285",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -862,6 +971,7 @@
    "line": "1\"-PW-8286-AE3S0C-FA",
    "line_id": "PW-8286",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -869,6 +979,7 @@
    "line": "2\"-PW-8287-AE3S0C-FA",
    "line_id": "PW-8287",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -876,6 +987,7 @@
    "line": "1\"-PW-8288-AE3S0C-FA",
    "line_id": "PW-8288",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -883,6 +995,7 @@
    "line": "3/4\"-VG-11332-AE3S0C-FA",
    "line_id": "VG-11332",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -890,6 +1003,7 @@
    "line": "3/4\"-VG-11333-AE3S0C-FA",
    "line_id": "VG-11333",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -897,6 +1011,7 @@
    "line": "3/4\"-VG-11334-AE3S0C-FA",
    "line_id": "VG-11334",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -904,6 +1019,7 @@
    "line": "3/4\"-VG-11335-AE3S0C-FA",
    "line_id": "VG-11335",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -911,6 +1027,7 @@
    "line": "16\"-VG-11348-AE3S0C-FA",
    "line_id": "VG-11348",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -918,6 +1035,7 @@
    "line": "2\"-VG-11349-AC1S34-FA",
    "line_id": "VG-11349",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -925,6 +1043,7 @@
    "line": "2\"-VG-11362-AC1S34-FA",
    "line_id": "VG-11362",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -932,6 +1051,7 @@
    "line": "40\"-VG-11866-AC1S34-FA",
    "line_id": "VG-11866",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -939,6 +1059,7 @@
    "line": "1\"-Z-8166-AE3S0C-FA",
    "line_id": "Z-8166",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -946,6 +1067,7 @@
    "line": "24\"-PO-23411-AE3S0C-FA",
    "line_id": "PO-23411",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (3/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -953,6 +1075,7 @@
    "line": "2\"-VG-11867-AC1S34-FA",
    "line_id": "VG-11867",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -960,6 +1083,7 @@
    "line": "2\"-VG-11868-AC1S34-FA",
    "line_id": "VG-11868",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -967,6 +1091,7 @@
    "line": "8\"-PO-23413-AC1S34-FA",
    "line_id": "PO-23413",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -974,6 +1099,7 @@
    "line": "1\"-PA-8623-AC1A1B-FA",
    "line_id": "PA-8623",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -981,6 +1107,7 @@
    "line": "2\"-PA-8624-AC1A1B-FA",
    "line_id": "PA-8624",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (3/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -988,6 +1115,7 @@
    "line": "2\"-VG-11347-AE3S0C-FA",
    "line_id": "VG-11347",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -995,6 +1123,7 @@
    "line": "3\"-WW-8154-AC1A1B-FA",
    "line_id": "WW-8154",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1002,6 +1131,7 @@
    "line": "1\"-WW-8155-AC1A1B-FA",
    "line_id": "WW-8155",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1009,6 +1139,7 @@
    "line": "1\"-WW-8157-AC1A1B-FA",
    "line_id": "WW-8157",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1016,6 +1147,7 @@
    "line": "1\"-WW-8158-AC1A1B-FA",
    "line_id": "WW-8158",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1023,6 +1155,7 @@
    "line": "8\"-PO-22121-AE3S0C-FA",
    "line_id": "PO-22121",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1030,6 +1163,7 @@
    "line": "1\"-IA-10997-AC4A1A-FA",
    "line_id": "IA-10997",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1037,6 +1171,7 @@
    "line": "1\"-PA-8625-AC1A1B-FA",
    "line_id": "PA-8625",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1044,6 +1179,7 @@
    "line": "1/2\"NN-12196-AE3S0C-FA",
    "line_id": "NN-12196",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1051,6 +1187,7 @@
    "line": "3\"WW-8146-AC1A1B-FA",
    "line_id": "WW-8146",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1058,6 +1195,7 @@
    "line": "2\"D-15647-AE3S0C-FA",
    "line_id": "D-15647",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/2 sheets completed)",
    "alias_docs": [
     "P12513-12-39-15-1629"
    ],
@@ -1068,6 +1206,7 @@
    "line": "3\"D-16994-AE3S0C-FA",
    "line_id": "D-16994",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1075,6 +1214,7 @@
    "line": "8\"PO-22093-AE3S0C-FA",
    "line_id": "PO-22093",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1082,6 +1222,7 @@
    "line": "6\"-BG-8006-BC1S3A-FA-H",
    "line_id": "BG-8006",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/31 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1089,6 +1230,7 @@
    "line": "12\"-BG-8007-BC1S3A-FA-H",
    "line_id": "BG-8007",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/12 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1096,6 +1238,7 @@
    "line": "2\"-D-15224-AE3S0C-FA",
    "line_id": "D-15224",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1103,6 +1246,7 @@
    "line": "2\"-D-15233-AE3S0C-FA",
    "line_id": "D-15233",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1110,6 +1254,7 @@
    "line": "4\"-D-15242-AE3S0C-FA",
    "line_id": "D-15242",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1117,6 +1262,7 @@
    "line": "8\"-D-15245-AE3S0C-FA",
    "line_id": "D-15245",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1124,6 +1270,7 @@
    "line": "8\"-D-15246-AE3S0C-FA",
    "line_id": "D-15246",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1131,6 +1278,7 @@
    "line": "2\"-D-15248-AE3S0C-FA",
    "line_id": "D-15248",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (5/5 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1138,6 +1286,7 @@
    "line": "2\"-D-15261-AE3S0C-FA",
    "line_id": "D-15261",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (3/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1145,6 +1294,7 @@
    "line": "2\"-D-15265-AE3S0C-FA",
    "line_id": "D-15265",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1152,6 +1302,7 @@
    "line": "1/2\"-D-16951-AE3S0C-FA",
    "line_id": "D-16951",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1159,6 +1310,7 @@
    "line": "1/2\"-D-16953-AE3S0C-FA",
    "line_id": "D-16953",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (3/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1166,6 +1318,7 @@
    "line": "2\"-D-16996-AE3S0C-FA",
    "line_id": "D-16996",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1173,6 +1326,7 @@
    "line": "3/4\"-DZ-8381-BS1A0A-FA",
    "line_id": "DZ-8381",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/8 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1180,6 +1334,7 @@
    "line": "20\"-FG-8583-BC1S3A-FA",
    "line_id": "FG-8583",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (8/8 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1187,6 +1342,7 @@
    "line": "20\"-FG-8584-AC1S3A-FA",
    "line_id": "FG-8584",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1194,6 +1350,7 @@
    "line": "20\"-FG-8587-BC1S3A-FA",
    "line_id": "FG-8587",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (5/5 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1201,6 +1358,7 @@
    "line": "4\"-IA-10979-AC4A1A-FA",
    "line_id": "IA-10979",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (3/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1208,6 +1366,7 @@
    "line": "2\"-IA-10983-AC4A1A-FA",
    "line_id": "IA-10983",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (7/7 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1215,6 +1374,7 @@
    "line": "1\"-IA-10989-AC4A1A-FA",
    "line_id": "IA-10989",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1222,6 +1382,7 @@
    "line": "2\"-IA-10990-AC4A1A-FA",
    "line_id": "IA-10990",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/5 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1229,6 +1390,7 @@
    "line": "1\"-IA-10993-AC4A1A-FA",
    "line_id": "IA-10993",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1236,6 +1398,7 @@
    "line": "2\"-IA-11000-AC4A1A-FA",
    "line_id": "IA-11000",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/7 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1243,6 +1406,7 @@
    "line": "2\"-IA-11001-AC4A1A-FA",
    "line_id": "IA-11001",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1250,6 +1414,7 @@
    "line": "1\"-IA-11002-AC4A1A-FA",
    "line_id": "IA-11002",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1257,6 +1422,7 @@
    "line": "1\"-IA-11004-AC4A1A-FA",
    "line_id": "IA-11004",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1264,6 +1430,7 @@
    "line": "1\"-IA-11006-AC4A1A-FA",
    "line_id": "IA-11006",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1271,6 +1438,7 @@
    "line": "1\"-IA-11009-AC4A1A-FA",
    "line_id": "IA-11009",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1278,6 +1446,7 @@
    "line": "1\"-NN-12013-AC1A1B-FA",
    "line_id": "NN-12013",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -1285,6 +1454,7 @@
    "line": "2\"-NN-12077-AC1A1B-FA",
    "line_id": "NN-12077",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (3/3 sheets completed)",
    "alias_docs": [
     "P12513-12-01-15-1748"
    ],
@@ -1295,6 +1465,7 @@
    "line": "3\"-NN-12081-AC1A1B-FA",
    "line_id": "NN-12081",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (5/5 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1302,6 +1473,7 @@
    "line": "1\"-NN-12211-AE3S0C-FA",
    "line_id": "NN-12211",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1309,6 +1481,7 @@
    "line": "2\"-VG-11903-AC1S3A-FA",
    "line_id": "VG-11903",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1316,6 +1489,7 @@
    "line": "8\"-PO-22063-AE3S0C-FA",
    "line_id": "PO-22063",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/6 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1323,6 +1497,7 @@
    "line": "18\"-PO-22064-AC1S3A-FA",
    "line_id": "PO-22064",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1330,6 +1505,7 @@
    "line": "3/4\"-PO-23378-AC1S3A-FA",
    "line_id": "PO-23378",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1337,6 +1513,7 @@
    "line": "6\"-PO-23393-AE3S0C-FA",
    "line_id": "PO-23393",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/4 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1344,6 +1521,7 @@
    "line": "6\"-PO-23394-AE3S0C-FA",
    "line_id": "PO-23394",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1351,6 +1529,7 @@
    "line": "24\"-PO-23410-AC1S3A-FA",
    "line_id": "PO-23410",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1358,6 +1537,7 @@
    "line": "2\"-VG-11317-AE3S0C-FA",
    "line_id": "VG-11317",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (4/4 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1365,6 +1545,7 @@
    "line": "2\"-VG-11319-AE3S0C-FA",
    "line_id": "VG-11319",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (4/4 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1372,6 +1553,7 @@
    "line": "2\"-VG-11321-AE3S0C-FA",
    "line_id": "VG-11321",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/4 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1379,6 +1561,7 @@
    "line": "2\"-VG-11323-AE3S0C-FA",
    "line_id": "VG-11323",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (4/4 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1386,6 +1569,7 @@
    "line": "24\"-VG-11346-AE3S0C-FA-H",
    "line_id": "VG-11346",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1393,6 +1577,7 @@
    "line": "2\"-VG-11361-AE3S0C-FA",
    "line_id": "VG-11361",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (10/10 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1400,6 +1585,7 @@
    "line": "42\"-PG-11359-AE3S0C-FA",
    "line_id": "PG-11359",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1407,6 +1593,7 @@
    "line": "6\"-PO-23414-AC1S3A-FA",
    "line_id": "PO-23414",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1414,6 +1601,7 @@
    "line": "1\"-D-17001-AE3S0C-FA",
    "line_id": "D-17001",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1421,6 +1609,7 @@
    "line": "1\"-D-17002-AE3S0C-FA",
    "line_id": "D-17002",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1428,6 +1617,7 @@
    "line": "3/4\"-D-17003-AE3S0C-FA",
    "line_id": "D-17003",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1435,6 +1625,7 @@
    "line": "3/4\"-D-17004-AE3S0C-FA",
    "line_id": "D-17004",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1442,6 +1633,7 @@
    "line": "3/4\"-D-17005-AE3S0C-FA",
    "line_id": "D-17005",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1449,6 +1641,7 @@
    "line": "3/4\"-D-17006-AE3S0C-FA",
    "line_id": "D-17006",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1456,6 +1649,7 @@
    "line": "3/4\"-D-17007-AE3S0C-FA",
    "line_id": "D-17007",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1463,6 +1657,7 @@
    "line": "3/4\"-D-17012-AE3S0C-FA",
    "line_id": "D-17012",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1470,6 +1665,7 @@
    "line": "1\"-D-17013-AE3S0C-FA",
    "line_id": "D-17013",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1477,6 +1673,7 @@
    "line": "3/4\"-D-17021-AE3S0C-FA",
    "line_id": "D-17021",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1484,6 +1681,7 @@
    "line": "1\"-IA-11010-AC4A1A-FA",
    "line_id": "IA-11010",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1491,6 +1689,7 @@
    "line": "2\"-IA-11011-AC4A1A-FA",
    "line_id": "IA-11011",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1498,6 +1697,7 @@
    "line": "1\"-IA-11012-AC4A1A-FA",
    "line_id": "IA-11012",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1505,6 +1705,7 @@
    "line": "2\"-NN-12197-AS1A0A-FA",
    "line_id": "NN-12197",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1512,6 +1713,7 @@
    "line": "2\"-NN-12205-AE3S0C-FA",
    "line_id": "NN-12205",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1519,6 +1721,7 @@
    "line": "2\"-NN-12219-AC1A1B-FA",
    "line_id": "NN-12219",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/5 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1526,6 +1729,7 @@
    "line": "1\"-VG-11869-AC1S3A-FA",
    "line_id": "VG-11869",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1533,6 +1737,7 @@
    "line": "3/4\"-VG-11870-AC1S3A-FA",
    "line_id": "VG-11870",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1540,6 +1745,7 @@
    "line": "3/4\"-VG-11871-AC1S3A-FA",
    "line_id": "VG-11871",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1547,6 +1753,7 @@
    "line": "3/4\"-VG-11872-AC1S3A-FA",
    "line_id": "VG-11872",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1554,6 +1761,7 @@
    "line": "3/4\"-VG-11873-AC1S3A-FA",
    "line_id": "VG-11873",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1561,6 +1769,7 @@
    "line": "3/4\"-VG-11874-AC1S3A-FA",
    "line_id": "VG-11874",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1568,6 +1777,7 @@
    "line": "3/4\"-VG-11875-AC1S3A-FA",
    "line_id": "VG-11875",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1575,6 +1785,7 @@
    "line": "3/4\"-VG-11877-AC1S3A-FA",
    "line_id": "VG-11877",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1582,6 +1793,7 @@
    "line": "3/4\"-VG-11878-AC1S3A-FA",
    "line_id": "VG-11878",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1589,6 +1801,7 @@
    "line": "3/4\"-VG-11879-AC1S3A-FA",
    "line_id": "VG-11879",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1596,6 +1809,7 @@
    "line": "3/4\"-VG-11880-AC1S3A-FA",
    "line_id": "VG-11880",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1603,6 +1817,7 @@
    "line": "2\"-VG-11881-AC1S3A-FA",
    "line_id": "VG-11881",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1610,6 +1825,7 @@
    "line": "1\"-Z-8167-AE3S0C-FA",
    "line_id": "Z-8167",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1617,6 +1833,7 @@
    "line": "1\"-IA-11014-AC4A1A-FA",
    "line_id": "IA-11014",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1624,6 +1841,7 @@
    "line": "1\"-IA-11016-AC4A1A-FA",
    "line_id": "IA-11016",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1631,6 +1849,7 @@
    "line": "2\"-WW-8159-AC1A1B-FA",
    "line_id": "WW-8159",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1638,6 +1857,7 @@
    "line": "2\"-WW8160-AC1A1B-FA",
    "line_id": "WW-8160",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (4/4 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1645,6 +1865,7 @@
    "line": "2\"-D-15254-AE3S0C-FA",
    "line_id": "D-15254",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/10 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1652,6 +1873,7 @@
    "line": "2\"-D-16995-AC1S3A-FA",
    "line_id": "D-16995",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1659,6 +1881,7 @@
    "line": "02\"-FG-8582-BC1S3A-FA-H",
    "line_id": "FG-8582",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/17 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1666,6 +1889,7 @@
    "line": "20\"-FG-8588-BC1S3A-FA",
    "line_id": "FG-8588",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (6/6 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1673,6 +1897,7 @@
    "line": "2\"-FG-8591-AC1S3A-FA",
    "line_id": "FG-8591",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1680,6 +1905,7 @@
    "line": "1\"-VG-11865-AC1S3A-FA",
    "line_id": "VG-11865",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1687,6 +1913,7 @@
    "line": "36\"-PG-11350-AE3S0C-FA",
    "line_id": "PG-11350",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/19 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1694,6 +1921,7 @@
    "line": "36\"-PG-11352-AC1S3A-FA",
    "line_id": "PG-11352",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1701,6 +1929,7 @@
    "line": "42\"-PG-11357-AC1S3A-FA",
    "line_id": "PG-11357",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1708,6 +1937,7 @@
    "line": "42\"-PO-22065-AC1S3A-FA",
    "line_id": "PO-22065",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/9 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1715,6 +1945,7 @@
    "line": "48\"-PO-22067-AC1S3A-FA",
    "line_id": "PO-22067",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/15 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1722,6 +1953,7 @@
    "line": "28\"VG-11331-AE3S0C-FA",
    "line_id": "VG-11331",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/6 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1729,6 +1961,7 @@
    "line": "28\"-VG-11356-AC1S3A-FA",
    "line_id": "VG-11356",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1736,6 +1969,7 @@
    "line": "3/4\"-VG-11363-AC1S3A-FA",
    "line_id": "VG-11363",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1743,6 +1977,7 @@
    "line": "2\"-D-16975-AC1S3A-FA",
    "line_id": "D-16975",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1750,6 +1985,7 @@
    "line": "2\"-D-17008-AC1S3A-FA",
    "line_id": "D-17008",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1757,6 +1993,7 @@
    "line": "2\"-VG-11882-AC1S3A-FA",
    "line_id": "VG-11882",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/6 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1764,6 +2001,7 @@
    "line": "1\"-VG-11902-AC1S3A-FA",
    "line_id": "VG-11902",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1771,6 +2009,7 @@
    "line": "3/4\"-VG-11899-AC1S3A-FA",
    "line_id": "VG-11899",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1778,6 +2017,7 @@
    "line": "3/4\"-VG-11900-AC1S3A-FA",
    "line_id": "VG-11900",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1785,6 +2025,7 @@
    "line": "3/4\"-VG-11901-AC1S3A-FA",
    "line_id": "VG-11901",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1792,6 +2033,7 @@
    "line": "1\"-IA-11015-AC4A1A-FA",
    "line_id": "IA-11015",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1799,6 +2041,7 @@
    "line": "1\"-IA-11017-AC4A1A-FA",
    "line_id": "IA-11017",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1806,6 +2049,7 @@
    "line": "8\"-FW-6112-AF1A0F-FA",
    "line_id": "FW-6112",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1813,6 +2057,7 @@
    "line": "6\"-FW-6113-AF1A0F-FA",
    "line_id": "FW-6113",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1820,6 +2065,7 @@
    "line": "4\"-FW-6114-AF1A0F-FA",
    "line_id": "FW-6114",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1827,6 +2073,7 @@
    "line": "4\"-FW-6115-AF1A0F-FA",
    "line_id": "FW-6115",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1834,6 +2081,7 @@
    "line": "4\"-FW-6116-AF1A0F-FA",
    "line_id": "FW-6116",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1841,6 +2089,7 @@
    "line": "4\"-FW-6117-AF1A0F-FA",
    "line_id": "FW-6117",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1848,6 +2097,7 @@
    "line": "4\"-FW-6118-AF1A0F-FA",
    "line_id": "FW-6118",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1855,6 +2105,7 @@
    "line": "4\"-FW-6119-AF1A0F-FA",
    "line_id": "FW-6119",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1862,6 +2113,7 @@
    "line": "4\"-FW-6120-AF1A0F-FA",
    "line_id": "FW-6120",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1869,6 +2121,7 @@
    "line": "8\"-FW-6124-AF1A0F-FA",
    "line_id": "FW-6124",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1876,6 +2129,7 @@
    "line": "8\"-FW-6125-AF1A0F-FA",
    "line_id": "FW-6125",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1883,6 +2137,7 @@
    "line": "8\"-FW-6126-AF1A0F-FA",
    "line_id": "FW-6126",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1890,6 +2145,7 @@
    "line": "8\"-FW-6127-AF1A0F-FA",
    "line_id": "FW-6127",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1897,6 +2153,7 @@
    "line": "8\"-FW-6128-AF1A0F-FA",
    "line_id": "FW-6128",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1904,6 +2161,7 @@
    "line": "8\"-FW-6130-AF1A0F-FA",
    "line_id": "FW-6130",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1911,6 +2169,7 @@
    "line": "6\"-FW-6133-AF1A0F-FA",
    "line_id": "FW-6133",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1918,6 +2177,7 @@
    "line": "6\"-FW-6134-AF1A0F-FA",
    "line_id": "FW-6134",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1925,6 +2185,7 @@
    "line": "6\"-FW-6135-AF1A0F-FA",
    "line_id": "FW-6135",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1932,6 +2193,7 @@
    "line": "6\"-FW-6136-AF1A0F-FA",
    "line_id": "FW-6136",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1939,6 +2201,7 @@
    "line": "6\"-FW-6137-AF1A0F-FA",
    "line_id": "FW-6137",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1946,6 +2209,7 @@
    "line": "4\"-FW-6459-AF1A0F-FA",
    "line_id": "FW-6459",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1953,6 +2217,7 @@
    "line": "6\"-FW-6460-AF1A0F-FA",
    "line_id": "FW-6460",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1960,6 +2225,7 @@
    "line": "2\"-FZ-8004-AF1A0F-FA",
    "line_id": "FZ-8004",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1967,6 +2233,7 @@
    "line": "2\"-FZ-8005-AF1A0F-FA",
    "line_id": "FZ-8005",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1974,6 +2241,7 @@
    "line": "6\"-FZ-8008-AF1A0F-FA",
    "line_id": "FZ-8008",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1981,6 +2249,7 @@
    "line": "6\"-FZ-8010-AF1A0F-FA",
    "line_id": "FZ-8010",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1988,6 +2257,7 @@
    "line": "4\"FW-6471-AF1A0F-FA",
    "line_id": "FW-6471",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -1995,6 +2265,7 @@
    "line": "1\"-WW-8156-AC1A1B-FA",
    "line_id": "WW-8156",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2002,6 +2273,7 @@
    "line": "1/2\"-D-15268-AE3S0C-FA",
    "line_id": "D-15268",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (3/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2009,6 +2281,7 @@
    "line": "2\"-D-15685-AE3S0C-FA",
    "line_id": "D-15685",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2016,6 +2289,7 @@
    "line": "2\"-D-16956-AE3S0C-FA",
    "line_id": "D-16956",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2023,6 +2297,7 @@
    "line": "2\"-D-16957-AE3S0C-FA",
    "line_id": "D-16957",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2030,6 +2305,7 @@
    "line": "4\"-FG-8580-BC1S3A-FA-H",
    "line_id": "FG-8580",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (7/7 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2037,6 +2313,7 @@
    "line": "6\"-FG-8581-BC1S3A-FA-H",
    "line_id": "FG-8581",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/34 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2044,6 +2321,7 @@
    "line": "2\"-FG-8585-BC1S3A-FA-H",
    "line_id": "FG-8585",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (15/15 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2051,6 +2329,7 @@
    "line": "1\"-NN-12223-AE3S0C-FA",
    "line_id": "NN-12223",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2058,6 +2337,7 @@
    "line": "16\"-PG-11353-AC1S3A-FA",
    "line_id": "PG-11353",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (11/11 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2065,6 +2345,7 @@
    "line": "12\"-PG-11354-BC1S3A-FA",
    "line_id": "PG-11354",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (4/4 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2072,6 +2353,7 @@
    "line": "12\"-PG-11356-BC1S3A-FA",
    "line_id": "PG-11356",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/4 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2079,6 +2361,7 @@
    "line": "4\"-PG-12198-AE3S0C-FA",
    "line_id": "PG-12198",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (41/41 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2086,6 +2369,7 @@
    "line": "6\"-PO-23403-AE3S0C-FA",
    "line_id": "PO-23403",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2093,6 +2377,7 @@
    "line": "28\"-VG-11315-AC1S3A-FA",
    "line_id": "VG-11315",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (4/4 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2100,6 +2385,7 @@
    "line": "16\"-VG-11318-AE3S0C-FA",
    "line_id": "VG-11318",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (5/5 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2107,6 +2393,7 @@
    "line": "16\"-VG-11320-AE3S0C-FA",
    "line_id": "VG-11320",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (5/5 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2114,6 +2401,7 @@
    "line": "16\"-VG-11322-AE3S0C-FA",
    "line_id": "VG-11322",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (5/5 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2121,6 +2409,7 @@
    "line": "16\"-VG-11324-AE3S0C-FA",
    "line_id": "VG-11324",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (5/5 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2128,6 +2417,7 @@
    "line": "18\"-VG-11326-AC1S3A-FA",
    "line_id": "VG-11326",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (3/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2135,6 +2425,7 @@
    "line": "18\"-VG-11327-AC1S3A-FA",
    "line_id": "VG-11327",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (3/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2142,6 +2433,7 @@
    "line": "18\"-VG-11328-AC1S3A-FA",
    "line_id": "VG-11328",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (3/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2149,6 +2441,7 @@
    "line": "18\"-VG-11329-ACIS3A-FA",
    "line_id": "VG-11329",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (3/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2156,6 +2449,7 @@
    "line": "8\"-VG-11330-ACIS3A-FA",
    "line_id": "VG-11330",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2163,6 +2457,7 @@
    "line": "20\"-VG-11336-AE3SOC-FA",
    "line_id": "VG-11336",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2170,6 +2465,7 @@
    "line": "20\"-VG-11337-AE3SOC-FA",
    "line_id": "VG-11337",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2177,6 +2473,7 @@
    "line": "20\"-VG-11338-AE3SOC-FA",
    "line_id": "VG-11338",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2184,6 +2481,7 @@
    "line": "20\"-VG-11339-AE3SOC-FA",
    "line_id": "VG-11339",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2191,6 +2489,7 @@
    "line": "20\"-VG-11340-AC1S3A-FA",
    "line_id": "VG-11340",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (3/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2198,6 +2497,7 @@
    "line": "20\"-VG-11341-AC1S3A-FA",
    "line_id": "VG-11341",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (3/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2205,6 +2505,7 @@
    "line": "20\"-VG-11342-AC1S3A-FA",
    "line_id": "VG-11342",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (3/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2212,6 +2513,7 @@
    "line": "20\"-VG-11343-AC1S3A-FA",
    "line_id": "VG-11343",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (3/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2219,6 +2521,7 @@
    "line": "36\"-VG-11344-AC1S3A-FA",
    "line_id": "VG-11344",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/6 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2226,6 +2529,7 @@
    "line": "36\"-VG-11345-AE3SOC-FA-H",
    "line_id": "VG-11345",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/13 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2233,6 +2537,7 @@
    "line": "16\"-VG-11354-BE3SOC-FA-H",
    "line_id": "VG-11354",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (4/4 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2240,6 +2545,7 @@
    "line": "16\"-VG-11355-BE3SOC-FA-H",
    "line_id": "VG-11355",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (4/4 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2247,6 +2553,7 @@
    "line": "36\"-VG-11364-AC1S3A-FA",
    "line_id": "VG-11364",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2254,6 +2561,7 @@
    "line": "3/4\"-VG-11357-AE3SOC-FA",
    "line_id": "VG-11357",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (77/77 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2261,6 +2569,7 @@
    "line": "3/4\"-Z-8164-AS1A0A-FA",
    "line_id": "Z-8164",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/8 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2268,6 +2577,7 @@
    "line": "2\"-BZ-8165-AS1A0A-FA",
    "line_id": "BZ-8165",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (9/9 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2275,6 +2585,7 @@
    "line": "2\"-PO-23415-AC1S3A-FA",
    "line_id": "PO-23415",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2282,6 +2593,7 @@
    "line": "2\"-VG-11876-AC1S3A-FA",
    "line_id": "VG-11876",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (4/4 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2289,6 +2601,7 @@
    "line": "6\"-FZ-8000-AF1AOF-FA",
    "line_id": "FZ-8000",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/6 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2296,6 +2609,7 @@
    "line": "6\"-FZ-8002-AF1AOF-FA",
    "line_id": "FZ-8002",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/6 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2303,6 +2617,7 @@
    "line": "6\"-FZ-8009-AF1AOF-FA",
    "line_id": "FZ-8009",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (3/3 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2310,6 +2625,7 @@
    "line": "6\"-FZ-8011-AF1AOF-FA",
    "line_id": "FZ-8011",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "All completed (5/5 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
@@ -2317,6 +2633,7 @@
    "line": "3\"-WW-8153-AP3A0A-FA",
    "line_id": "WW-8153",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -2324,6 +2641,7 @@
    "line": "6\"-FZ-8001-AP3A0F-FA",
    "line_id": "FZ-8001",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/4 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -2331,6 +2649,7 @@
    "line": "20\"FW-6107-AP3A0F-FA",
    "line_id": "FW-6107",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/10 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -2338,6 +2657,7 @@
    "line": "6\"-FZ-8003-AP3A0F-FA",
    "line_id": "FZ-8003",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/5 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -2345,6 +2665,7 @@
    "line": "6\"-FZ-8007-AP3A0F-FA",
    "line_id": "FZ-8007",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (1/4 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -2352,6 +2673,7 @@
    "line": "6\"-FZ-8006-AP3A0F-FA",
    "line_id": "FZ-8006",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/4 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -2359,6 +2681,7 @@
    "line": "2\"-D-15238-AE3S0C-FA",
    "line_id": "D-15238",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/3 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2366,6 +2689,7 @@
    "line": "2\"-D-15251-AE3S0C-FA",
    "line_id": "D-15251",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/4 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2373,6 +2697,7 @@
    "line": "2\"-D-15262-AE3S0C-FA",
    "line_id": "D-15262",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2380,6 +2705,7 @@
    "line": "3/4\"-D-15277-AE3S0C-FA",
    "line_id": "D-15277",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2387,6 +2713,7 @@
    "line": "1\"-D-15279-AE3S0C-FA",
    "line_id": "D-15279",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2394,6 +2721,7 @@
    "line": "3/4\"-D-15288-AE3S0C-FA",
    "line_id": "D-15288",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2401,6 +2729,7 @@
    "line": "3/4\"-D-15634-AE3S0C-FA",
    "line_id": "D-15634",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2408,6 +2737,7 @@
    "line": "3/4\"-D-15636-AE3S0C-FA",
    "line_id": "D-15636",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2415,6 +2745,7 @@
    "line": "3/4\"-D-15645-AE3S0C-FA",
    "line_id": "D-15645",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2422,6 +2753,7 @@
    "line": "3/4\"-D-15649-AE3S0C-FA",
    "line_id": "D-15649",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2429,6 +2761,7 @@
    "line": "2\"-D-15652-AE3S0C-FA",
    "line_id": "D-15652",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2436,6 +2769,7 @@
    "line": "2\"-D-15654-AE3S0C-FA",
    "line_id": "D-15654",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/4 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2443,6 +2777,7 @@
    "line": "2\"-D-15662-AE3S0C-FA",
    "line_id": "D-15662",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2450,6 +2785,7 @@
    "line": "2\"-D-15675-AE3S0C-FA",
    "line_id": "D-15675",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/3 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2457,6 +2793,7 @@
    "line": "2\"-D-15678-AE3S0C-FA",
    "line_id": "D-15678",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/3 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2464,6 +2801,7 @@
    "line": "1/2\"-NN-12195-AE3S0C-FA",
    "line_id": "NN-12195",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2471,6 +2809,7 @@
    "line": "1\"-NN-12202-AE3S0C-FA",
    "line_id": "NN-12202",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2478,6 +2817,7 @@
    "line": "3\"-PO-22073-AE3S0C-FA",
    "line_id": "PO-22073",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/5 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2485,6 +2825,7 @@
    "line": "3\"-PO-22074-AE3S0C-FA",
    "line_id": "PO-22074",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/6 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2492,6 +2833,7 @@
    "line": "3\"-PO-22075-AE3S0C-FA",
    "line_id": "PO-22075",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/5 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2499,6 +2841,7 @@
    "line": "6\"-PO-22082-AE3S0C-FA",
    "line_id": "PO-22082",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2506,6 +2849,7 @@
    "line": "3\"-PO-22084-AE3S0C-FA",
    "line_id": "PO-22084",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2513,6 +2857,7 @@
    "line": "3\"-PO-22086-AE3S0C-FA",
    "line_id": "PO-22086",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2520,6 +2865,7 @@
    "line": "6\"-PO-22087-AE3S0C-FA",
    "line_id": "PO-22087",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/11 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2527,6 +2873,7 @@
    "line": "6\"-PO-22088-AE3S0C-FA",
    "line_id": "PO-22088",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2534,6 +2881,7 @@
    "line": "3\"-PO-22089-AE3S0C-FA",
    "line_id": "PO-22089",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/12 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2541,6 +2889,7 @@
    "line": "3\"-PO-22090-AE3S0C-FA",
    "line_id": "PO-22090",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2548,6 +2897,7 @@
    "line": "6\"-PO-22091-AE3S0C-FA",
    "line_id": "PO-22091",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/11 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2555,6 +2905,7 @@
    "line": "6\"-PO-22092-AE3S0C-FA",
    "line_id": "PO-22092",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2562,6 +2913,7 @@
    "line": "3\"-PO-22099-AE3S0C-FA",
    "line_id": "PO-22099",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/5 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2569,6 +2921,7 @@
    "line": "3\"-PO-22100-AE3S0C-FA",
    "line_id": "PO-22100",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/6 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2576,6 +2929,7 @@
    "line": "3\"-PO-22101-AE3S0C-FA",
    "line_id": "PO-22101",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/6 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2583,6 +2937,7 @@
    "line": "2\"-PO-22103-AE3S0C-FA",
    "line_id": "PO-22103",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2590,6 +2945,7 @@
    "line": "2\"-PO-22104-AE3S0C-FA",
    "line_id": "PO-22104",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2597,6 +2953,7 @@
    "line": "2\"-PO-22105-AE3S0C-FA",
    "line_id": "PO-22105",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2604,6 +2961,7 @@
    "line": "2\"-PO-22106-AE3S0C-FA",
    "line_id": "PO-22106",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2611,6 +2969,7 @@
    "line": "2\"-PO-22107-AE3S0C-FA",
    "line_id": "PO-22107",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2618,6 +2977,7 @@
    "line": "2\"-PO-22108-AE3S0C-FA",
    "line_id": "PO-22108",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2625,6 +2985,7 @@
    "line": "3\"-PO-22110-AE3S0C-FA",
    "line_id": "PO-22110",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/6 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2632,6 +2993,7 @@
    "line": "3\"-PO-22111-AE3S0C-FA",
    "line_id": "PO-22111",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/5 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2639,6 +3001,7 @@
    "line": "6\"-PO-22112-AE3S0C-FA",
    "line_id": "PO-22112",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/5 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2646,6 +3009,7 @@
    "line": "6\"-PO-22113-AE3S0C-FA",
    "line_id": "PO-22113",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/5 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2653,6 +3017,7 @@
    "line": "6\"-PO-22114-AE3S0C-FA",
    "line_id": "PO-22114",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/6 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2660,6 +3025,7 @@
    "line": "6\"-PO-22115-AE3S0C-FA",
    "line_id": "PO-22115",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/6 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2667,6 +3033,7 @@
    "line": "6\"-PO-22116-AE3S0C-FA",
    "line_id": "PO-22116",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/6 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2674,6 +3041,7 @@
    "line": "6\"-PO-22117-AE3S0C-FA",
    "line_id": "PO-22117",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/6 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2681,6 +3049,7 @@
    "line": "6\"-PO-22119-AE3S0C-FA",
    "line_id": "PO-22119",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/6 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2688,6 +3057,7 @@
    "line": "3\"-PO-22125-AE3S0C-FA",
    "line_id": "PO-22125",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/5 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2695,6 +3065,7 @@
    "line": "3\"-PO-22126-AE3S0C-FA",
    "line_id": "PO-22126",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/5 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2702,6 +3073,7 @@
    "line": "3\"-PO-22127-AE3S0C-FA",
    "line_id": "PO-22127",
    "booklet_no": "P12513-12-39-15-1751",
+   "plan_status": "Pending (0/6 sheets completed)",
    "booklet_type": "ISO For Flare Area (P12513-12-39-15-1751)"
   },
   {
@@ -2709,6 +3081,7 @@
    "line": "8\"-D-15223-AC1S3A-FA",
    "line_id": "D-15223",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2716,6 +3089,7 @@
    "line": "2\"-D-15226-AC1S3A-FA",
    "line_id": "D-15226",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2723,6 +3097,7 @@
    "line": "2\"-D-15228-AE3S0C-FA",
    "line_id": "D-15228",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2730,6 +3105,7 @@
    "line": "2\"-D-15229-AE3S0C-FA",
    "line_id": "D-15229",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2737,6 +3113,7 @@
    "line": "2\"-D-15230-AE3S0C-FA",
    "line_id": "D-15230",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2744,6 +3121,7 @@
    "line": "2\"-D-15231-AE3S0C-FA",
    "line_id": "D-15231",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (3/3 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2751,6 +3129,7 @@
    "line": "2\"-D-15258-AE3S0C-FA",
    "line_id": "D-15258",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2758,6 +3137,7 @@
    "line": "2\"-D-15263-AE3S0C-FA",
    "line_id": "D-15263",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2765,6 +3145,7 @@
    "line": "8\"-D-16968-AE3S0C-FA",
    "line_id": "D-16968",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2772,6 +3153,7 @@
    "line": "2\"-D-16969-AE3S0C-FA",
    "line_id": "D-16969",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2779,6 +3161,7 @@
    "line": "2\"-NN-12015-AC1A1B-FA",
    "line_id": "NN-12015",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (3/3 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2786,6 +3169,7 @@
    "line": "1\"-NN-12078-AC1A1B-FA",
    "line_id": "NN-12078",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2793,6 +3177,7 @@
    "line": "1\"-NN-12213-AE3S0C-FA",
    "line_id": "NN-12213",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2800,6 +3185,7 @@
    "line": "2\"-NN-12218-AC1S3A-FA",
    "line_id": "NN-12218",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2807,6 +3193,7 @@
    "line": "10\"-PG-11355-AC1S3A-FA",
    "line_id": "PG-11355",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "Pending (0/18 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2814,6 +3201,7 @@
    "line": "2\"-PO-22056-AE3S0C-FA",
    "line_id": "PO-22056",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "Pending (0/3 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2821,6 +3209,7 @@
    "line": "2\"-PO-22058-AE3S0C-FA",
    "line_id": "PO-22058",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2828,6 +3217,7 @@
    "line": "32\"-PO-22066-AC1S3A-FA",
    "line_id": "PO-22066",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2835,6 +3225,7 @@
    "line": "16\"-PO-22070-AC1S3A-FA",
    "line_id": "PO-22070",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "Pending (0/3 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2842,6 +3233,7 @@
    "line": "8\"-PO-22095-AE3S0C-FA",
    "line_id": "PO-22095",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (3/3 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2849,6 +3241,7 @@
    "line": "36\"-PO-22096-AC1S3A-FA",
    "line_id": "PO-22096",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "Pending (0/10 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2856,6 +3249,7 @@
    "line": "32\"-PO-22129-AC1S3A-FA",
    "line_id": "PO-22129",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2863,6 +3257,7 @@
    "line": "24\"-PO-23379-AC1S3A-FA",
    "line_id": "PO-23379",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2870,6 +3265,7 @@
    "line": "24\"-PO-23380-AC1S3A-FA",
    "line_id": "PO-23380",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2877,6 +3273,7 @@
    "line": "36\"-PO-23381-AC1S3A-FA",
    "line_id": "PO-23381",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2884,6 +3281,7 @@
    "line": "8\"-PO-23383-AE3S0C-FA",
    "line_id": "PO-23383",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2891,6 +3289,7 @@
    "line": "32\"-PO-23387-AC1S3A-FA",
    "line_id": "PO-23387",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2898,6 +3297,7 @@
    "line": "2\"-PO-23388-AC1S3A-FA",
    "line_id": "PO-23388",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2905,6 +3305,7 @@
    "line": "2\"-PO-23391-AC1S3A-FA",
    "line_id": "PO-23391",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2912,6 +3313,7 @@
    "line": "32\"-PO-23395-AC1S3A-FA",
    "line_id": "PO-23395",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2919,6 +3321,7 @@
    "line": "32\"-PO-23396-AC1S3A-FA",
    "line_id": "PO-23396",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2926,6 +3329,7 @@
    "line": "2\"-PO-23398-AC1S3A-FA",
    "line_id": "PO-23398",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2933,6 +3337,7 @@
    "line": "24\"-PO-23399-AC1S3A-FA",
    "line_id": "PO-23399",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2940,6 +3345,7 @@
    "line": "32\"-PO-23400-AC1S3A-FA",
    "line_id": "PO-23400",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2947,6 +3353,7 @@
    "line": "24\"-PO-23401-AC1S3A-FA",
    "line_id": "PO-23401",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2954,6 +3361,7 @@
    "line": "24\"-PO-23402-AC1S3A-FA",
    "line_id": "PO-23402",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2961,6 +3369,7 @@
    "line": "32\"-PO-23404-AC1S3A-FA",
    "line_id": "PO-23404",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (4/4 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2968,6 +3377,7 @@
    "line": "3\"-PO-23407-AC1S3A-FA",
    "line_id": "PO-23407",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2975,6 +3385,7 @@
    "line": "8\"-PO-23412-AE3S0C-FA",
    "line_id": "PO-23412",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (8/8 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2982,6 +3393,7 @@
    "line": "8\"-PW-8274-AE3S0C-FA",
    "line_id": "PW-8274",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (8/8 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2989,6 +3401,7 @@
    "line": "3\"-PW-8275-AE3S0C-FA",
    "line_id": "PW-8275",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "Pending (0/9 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -2996,6 +3409,7 @@
    "line": "8\"-PW-8276-AE3S0C-FA",
    "line_id": "PW-8276",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -3003,6 +3417,7 @@
    "line": "8\"-PW-8277-AE3S0C-FA",
    "line_id": "PW-8277",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (6/6 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -3010,6 +3425,7 @@
    "line": "8\"-PW-8278-AE3S0C-FA",
    "line_id": "PW-8278",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (6/6 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -3017,6 +3433,7 @@
    "line": "6\"-PW-8279-AE3S0C-FA",
    "line_id": "PW-8279",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (6/6 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -3024,6 +3441,7 @@
    "line": "6\"-PW-8280-AE3S0C-FA",
    "line_id": "PW-8280",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (16/16 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -3031,6 +3449,7 @@
    "line": "8\"-PW-8281-AE3S0C-FA",
    "line_id": "PW-8281",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -3038,6 +3457,7 @@
    "line": "6\"-PW-8282-AE3S0C-FA",
    "line_id": "PW-8282",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (8/8 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -3045,6 +3465,7 @@
    "line": "3\"-PW-8283-AE3S0C-FA",
    "line_id": "PW-8283",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (2/2 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -3052,6 +3473,7 @@
    "line": "8\"-VG-11325-AE3S0C-FA",
    "line_id": "VG-11325",
    "booklet_no": "P12513-12-01-15-1638",
+   "plan_status": "All completed (5/5 sheets completed)",
    "booklet_type": "ISO for CDS Area (P12513-12-01-15-1638)"
   },
   {
@@ -3059,6 +3481,7 @@
    "line": "3\"-D-15284-AP3S0C-FA",
    "line_id": "D-15284",
    "booklet_no": "P12513-12-39-15-1722",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "ISO for Flare Area - UG (GRE) {P12513-12-39-15-1722}"
   },
   {
@@ -3066,6 +3489,7 @@
    "line": "3\"-D-15285-AP3S0C-FA",
    "line_id": "D-15285",
    "booklet_no": "P12513-12-39-15-1722",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for Flare Area - UG (GRE) {P12513-12-39-15-1722}"
   },
   {
@@ -3073,6 +3497,7 @@
    "line": "4\"-D-15289-AP3S0C-FA",
    "line_id": "D-15289",
    "booklet_no": "P12513-12-39-15-1722",
+   "plan_status": "Pending (0/3 sheets completed)",
    "booklet_type": "ISO for Flare Area - UG (GRE) {P12513-12-39-15-1722}"
   },
   {
@@ -3080,6 +3505,7 @@
    "line": "3\"-D-16997-AP3S0C-FA",
    "line_id": "D-16997",
    "booklet_no": "P12513-12-39-15-1722",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "ISO for Flare Area - UG (GRE) {P12513-12-39-15-1722}"
   },
   {
@@ -3087,6 +3513,7 @@
    "line": "16\"-SD-17005-AP3S0C-FA",
    "line_id": "SD-17005",
    "booklet_no": "P12513-12-39-15-1722",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "ISO for Flare Area - UG (GRE) {P12513-12-39-15-1722}"
   },
   {
@@ -3094,6 +3521,7 @@
    "line": "2\"-WW-8151-AP3A0A-FA",
    "line_id": "WW-8151",
    "booklet_no": "P12513-12-39-15-1722",
+   "plan_status": "All completed (1/1 sheets completed)",
    "booklet_type": "ISO for Flare Area - UG (GRE) {P12513-12-39-15-1722}"
   },
   {
@@ -3101,6 +3529,7 @@
    "line": "8\"-D-15232-AP3S0C-FA",
    "line_id": "D-15232",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/3 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3108,6 +3537,7 @@
    "line": "3\"-D-15234-AP3S0C-FA",
    "line_id": "D-15234",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3115,6 +3545,7 @@
    "line": "3\"-D-15237-AP3S0C-FA",
    "line_id": "D-15237",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3122,6 +3553,7 @@
    "line": "4\"-D-15239-AP3S0C-FA",
    "line_id": "D-15239",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/6 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3129,6 +3561,7 @@
    "line": "8\"-D-15243-AP3S0C-FA",
    "line_id": "D-15243",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/4 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3136,6 +3569,7 @@
    "line": "14\"-D-15249-AP3S0C-FA",
    "line_id": "D-15249",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3143,6 +3577,7 @@
    "line": "4\"-D-15260-AP3S0C-FA",
    "line_id": "D-15260",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/5 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3150,6 +3585,7 @@
    "line": "4\"-D-15274-AP3S0C-FA",
    "line_id": "D-15274",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3157,6 +3593,7 @@
    "line": "4\"-D-16947-AP3S0C-FA",
    "line_id": "D-16947",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/4 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3164,6 +3601,7 @@
    "line": "8\"-D-16948-AP3S0C-FA",
    "line_id": "D-16948",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3171,6 +3609,7 @@
    "line": "2\"-D-16949-AP3S0C-FA",
    "line_id": "D-16949",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3178,6 +3617,7 @@
    "line": "3\"-D-16950-AP3S0C-FA",
    "line_id": "D-16950",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3185,6 +3625,7 @@
    "line": "10\"-D-16971-AP3S0C-FA",
    "line_id": "D-16971",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3192,6 +3633,7 @@
    "line": "3\"-D-16976-AP3S0C-FA",
    "line_id": "D-16976",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/3 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3199,6 +3641,7 @@
    "line": "4\"-D-16977-AP3S0C-FA",
    "line_id": "D-16977",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3206,6 +3649,7 @@
    "line": "3\"-D-16978-AP3S0C-FA",
    "line_id": "D-16978",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3213,6 +3657,7 @@
    "line": "3\"-D-16979-AP3S0C-FA",
    "line_id": "D-16979",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3220,6 +3665,7 @@
    "line": "3\"-D-16980-AP3S0C-FA",
    "line_id": "D-16980",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3227,6 +3673,7 @@
    "line": "3\"-D-16981-AP3S0C-FA",
    "line_id": "D-16981",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3234,6 +3681,7 @@
    "line": "3\"-D-16982-AP3S0C-FA",
    "line_id": "D-16982",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3241,6 +3689,7 @@
    "line": "8\"-D-16983-AP3S0C-FA",
    "line_id": "D-16983",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3248,6 +3697,7 @@
    "line": "3\"-D-16987-AP3S0C-FA",
    "line_id": "D-16987",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3255,6 +3705,7 @@
    "line": "8\"-D-16989-AP3S0C-FA",
    "line_id": "D-16989",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3262,6 +3713,7 @@
    "line": "3\"-D-16990-AP3S0C-FA",
    "line_id": "D-16990",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3269,6 +3721,7 @@
    "line": "8\"-D-16992-AP3S0C-FA",
    "line_id": "D-16992",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/3 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3276,6 +3729,7 @@
    "line": "20\"-FW-6108-AP3A0F-FA",
    "line_id": "FW-6108",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/5 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3283,6 +3737,7 @@
    "line": "20\"-FW-6109-AP3A0F-FA",
    "line_id": "FW-6109",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3290,6 +3745,7 @@
    "line": "8\"-FW-6110-AP3A0F-FA",
    "line_id": "FW-6110",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3297,6 +3753,7 @@
    "line": "8\"-FW-6111-AP3A0F-FA",
    "line_id": "FW-6111",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3304,6 +3761,7 @@
    "line": "20\"-FW-6121-AP3A0F-FA",
    "line_id": "FW-6121",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3311,6 +3769,7 @@
    "line": "20\"-FW-6122-AP3A0F-FA",
    "line_id": "FW-6122",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3318,6 +3777,7 @@
    "line": "20\"-FW-6123-AP3A0F-FA",
    "line_id": "FW-6123",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3325,6 +3785,7 @@
    "line": "8\"-FW-6131-AP3A0F-FA",
    "line_id": "FW-6131",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3332,6 +3793,7 @@
    "line": "6\"-FW-6470-AP3A0F-FA",
    "line_id": "FW-6470",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3339,6 +3801,7 @@
    "line": "4\"-FW-6466-AP3A0F-FA",
    "line_id": "FW-6466",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3346,6 +3809,7 @@
    "line": "4\"-FW-6467-AP3A0F-FA",
    "line_id": "FW-6467",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3353,6 +3817,7 @@
    "line": "6\"-FW-6468-AP3A0F-FA",
    "line_id": "FW-6468",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3360,6 +3825,7 @@
    "line": "6\"-FW-6469-AP3A0F-FA",
    "line_id": "FW-6469",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/2 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3367,6 +3833,7 @@
    "line": "2\"-FZ-8004-AP3A0F-FA",
    "line_id": "FZ-8004",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3374,6 +3841,7 @@
    "line": "2\"-FZ-8005-AP3A0F-FA",
    "line_id": "FZ-8005",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3381,6 +3849,7 @@
    "line": "16\"-SD-17006-AP3S0C-FA",
    "line_id": "SD-17006",
    "booklet_no": "P12513-12-01-15-1755",
+   "plan_status": "Pending (0/16 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
@@ -3388,6 +3857,7 @@
    "line": "1\"-VG-11904-AC1S3A-FA",
    "line_id": "VG-11904",
    "booklet_no": "P12513-12-99-15-1601",
+   "plan_status": "Pending (0/1 sheets completed)",
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   }
  ],
