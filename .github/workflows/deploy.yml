@@ -1,7 +1,14 @@
 name: Refresh data and deploy
 on:
   push: { branches: [main] }
-  schedule: [{ cron: "0 */3 * * *" }]   # every 3 hours (UTC)
+  # Every 45 minutes (UTC). Cron has no 45-minute step (*/45 fires at :00 and :45), and the
+  # 45-minute cycle repeats every 3 hours, so four staggered 3-hourly crons give an exact
+  # 00:00, 00:45, 01:30, 02:15, 03:00 ... cadence.
+  schedule:
+    - cron: "0 0-21/3 * * *"
+    - cron: "45 0-21/3 * * *"
+    - cron: "30 1-22/3 * * *"
+    - cron: "15 2-23/3 * * *"
   workflow_dispatch:
 permissions: { contents: write, pages: write, id-token: write }
 concurrency: { group: pages, cancel-in-progress: true }
