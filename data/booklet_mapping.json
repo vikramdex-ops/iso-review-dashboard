@@ -1,5 +1,5 @@
 {
- "_source": "v2.xlsx, sheet 'Booklet Mapping (Doc+Line)'; rebuilt by scripts/build_booklet_mapping.py",
+ "_source": "FST_ISO_Booklet_Mapping_v3.xlsx, sheet 'Booklet Mapping (Doc+Line)'; rebuilt by scripts/build_booklet_mapping.py",
  "_generated": "2026-10-26",
  "_version": 3,
  "_rules": [
@@ -16,7 +16,10 @@
   "are all GRE area-01 lines, so they are assigned to 1755 by this rule.",
   "5. Owner-confirmed decisions are recorded in CONFIRMED below and applied last.",
   "6. A tracker row logged under a different document number is accepted as an alias only when",
-  "the line ID matches exactly AND that other document is not itself in the mapping."
+  "the line ID matches exactly AND that other document is not itself in the mapping.",
+  "7. Designer remarks (v3, 2026-10-26): rows whose \"Doc+Line Status\" starts with \"Superseded\" or",
+  "\"Deleted\" are dropped from readiness and listed under \"superseded\" (e.g. 2604 -> 2137,",
+  "2605 -> 2138, 1675 VG-11904 -> 1672, 1710 deleted by RLM). 2046 is renamed 2143 in the workbook."
  ],
  "excluded_booklets": {
   "P12513-12-01-15-1913": {
@@ -1893,14 +1896,6 @@
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
-   "doc": "P12513-12-01-15-1710",
-   "line": "2\"-FG-8591-AC1S3A-FA",
-   "line_id": "FG-8591",
-   "booklet_no": "P12513-12-99-15-1601",
-   "plan_status": "Pending (0/2 sheets completed)",
-   "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
-  },
-  {
    "doc": "P12513-12-01-15-1753",
    "line": "1\"-VG-11865-AC1S3A-FA",
    "line_id": "VG-11865",
@@ -2245,7 +2240,7 @@
    "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
   },
   {
-   "doc": "P12513-12-01-15-2046",
+   "doc": "P12513-12-01-15-2143",
    "line": "6\"-FZ-8010-AF1A0F-FA",
    "line_id": "FZ-8010",
    "booklet_no": "P12513-12-99-15-1601",
@@ -3829,36 +3824,42 @@
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
   },
   {
-   "doc": "P12513-12-01-15-2604",
-   "line": "2\"-FZ-8004-AP3A0F-FA",
-   "line_id": "FZ-8004",
-   "booklet_no": "P12513-12-01-15-1755",
-   "plan_status": "Pending (0/1 sheets completed)",
-   "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
-  },
-  {
-   "doc": "P12513-12-01-15-2605",
-   "line": "2\"-FZ-8005-AP3A0F-FA",
-   "line_id": "FZ-8005",
-   "booklet_no": "P12513-12-01-15-1755",
-   "plan_status": "Pending (0/1 sheets completed)",
-   "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
-  },
-  {
    "doc": "P12513-12-01-15-1859",
    "line": "16\"-SD-17006-AP3S0C-FA",
    "line_id": "SD-17006",
    "booklet_no": "P12513-12-01-15-1755",
    "plan_status": "Pending (0/16 sheets completed)",
    "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}"
+  }
+ ],
+ "superseded": [
+  {
+   "doc": "P12513-12-01-15-1710",
+   "line": "2\"-FG-8591-AC1S3A-FA",
+   "booklet_no": "P12513-12-99-15-1601",
+   "status": "Deleted (designer remark)",
+   "remark": "Designer remark 26-Oct-2026 (Missing ISO - FST 1.xlsx, col H): RLM deleted this document."
+  },
+  {
+   "doc": "P12513-12-01-15-2604",
+   "line": "2\"-FZ-8004-AP3A0F-FA",
+   "booklet_no": "P12513-12-01-15-1755",
+   "status": "Superseded (designer remark)",
+   "remark": "Designer remark 26-Oct-2026 (Missing ISO - FST 1.xlsx, col H): 2604 is referenced, but 2137 is available in its place (line 2\"-FZ-8004 tracked under 2137)."
+  },
+  {
+   "doc": "P12513-12-01-15-2605",
+   "line": "2\"-FZ-8005-AP3A0F-FA",
+   "booklet_no": "P12513-12-01-15-1755",
+   "status": "Superseded (designer remark)",
+   "remark": "Designer remark 26-Oct-2026 (Missing ISO - FST 1.xlsx, col H): 2605 is referenced, but 2138 is available in its place (line 2\"-FZ-8005 tracked under 2138)."
   },
   {
    "doc": "P12513-12-01-15-1675",
    "line": "1\"-VG-11904-AC1S3A-FA",
-   "line_id": "VG-11904",
    "booklet_no": "P12513-12-99-15-1601",
-   "plan_status": "Pending (0/1 sheets completed)",
-   "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)"
+   "status": "Superseded (designer remark)",
+   "remark": "Designer remark 26-Oct-2026 (Missing ISO - FST 1.xlsx, col H): 1675 is referenced, but 1672 is available in its place (1672 carries 3/4\"-VG-11902)."
   }
  ],
  "unresolved": []
