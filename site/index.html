@@ -321,7 +321,7 @@ function diag(){
   $("#diag").innerHTML=parts.join("");
 }
 function clock(){
-  const u=new Date(D.updated),m=Math.max(0,Math.round((Date.now()-u)/6e4)),nx=new Date(u.getTime()+27e5);
+  const u=new Date(D.updated),m=Math.max(0,Math.round((Date.now()-u)/6e4)),nx=new Date(Math.ceil(Date.now()/27e5)*27e5);
   const ago=m<1?"just now":m<60?m+" min ago":Math.floor(m/60)+"h "+m%60+"m ago";
   const day=D.today?new Date(D.today+"T00:00:00+05:30").toLocaleDateString(undefined,{day:"numeric",month:"short"}):"";
   $("#sync").textContent=D.preliminary?"Preliminary snapshot · awaiting first live sync"
