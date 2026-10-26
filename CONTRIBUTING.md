@@ -12,7 +12,7 @@ For anything beyond a small fix, open an issue first describing what you want to
 config.json                 # sheet id, lot → tab-gid map, status keywords
 scripts/build_summary.py    # fetch each tab as CSV → apply rules → write site/data/summary.json
 site/index.html             # the dashboard itself — single file, no build step, no framework
-.github/workflows/deploy.yml  # cron (3h) + manual dispatch → run the sync → commit the data → deploy
+.github/workflows/deploy.yml  # cron (45 min) + manual dispatch → run the sync → commit the data → deploy
 ```
 
 There's no build tooling. `site/index.html` is read and edited directly; `scripts/build_summary.py` is plain Python 3.12 with only the standard library (`csv`, `urllib`, `hashlib`, `datetime`, `zoneinfo`) — no dependencies to install.
