@@ -8,7 +8,7 @@
 
 [![Deploy](https://github.com/vikramdex-ops/iso-review-dashboard/actions/workflows/deploy.yml/badge.svg)](https://github.com/vikramdex-ops/iso-review-dashboard/actions/workflows/deploy.yml)
 [![Live Dashboard](https://img.shields.io/badge/live%20dashboard-view%20now-d7a34f?style=for-the-badge&logo=githubpages&logoColor=white)](https://vikramdex-ops.github.io/iso-review-dashboard/)
-![Sync interval](https://img.shields.io/badge/auto--sync-every%203h-6fcf7c?style=flat-square)
+![Sync interval](https://img.shields.io/badge/auto--sync-every%2045min-6fcf7c?style=flat-square)
 ![Lots tracked](https://img.shields.io/badge/lots%20tracked-8-6fb3e0?style=flat-square)
 ![Source](https://img.shields.io/badge/source-Google%20Sheets-34a853?style=flat-square&logo=googlesheets&logoColor=white)
 ![No backend](https://img.shields.io/badge/backend-none%20needed-8b8d96?style=flat-square)
@@ -47,7 +47,7 @@
 
 ## What this is
 
-A single static page that always shows the current state of the ISO review register — who owns what, how much is closed, open, or on hold, split by severity and by lot, with a combined cross-lot view per reviewer. No one touches the Google Sheet export manually, no one re-runs a script, no one pushes code to refresh it. A scheduled job does that every 3 hours, and a **Refresh now** button on the page does it on demand.
+A single static page that always shows the current state of the ISO review register — who owns what, how much is closed, open, or on hold, split by severity and by lot, with a combined cross-lot view per reviewer. No one touches the Google Sheet export manually, no one re-runs a script, no one pushes code to refresh it. A scheduled job does that every 45 minutes, and a **Refresh now** button on the page does it on demand.
 
 The sheet stays the single source of truth. This repo only mirrors it, honestly, into something a lead can glance at.
 
@@ -61,7 +61,7 @@ The sheet stays the single source of truth. This repo only mirrors it, honestly,
 </td>
 <td align="center" width="25%">
 
-**⏱ Every 3 hours**
+**⏱ Every 45 minutes**
 <br><sub>cron-driven, no manual trigger</sub>
 
 </td>
@@ -104,7 +104,7 @@ flowchart LR
     A[("Google Sheet\nLot 1 · Lot 2 · Lot 3 · Lot 4 · Lot 5 · Lot 6 · Lot 7 · Lot 8")] -->|Sheets API v4, by gid\nfilter-proof read| B["build_summary.py"]
     B -->|apply business rules| C["site/data/summary.json"]
     C --> D["GitHub Pages"]
-    E["GitHub Actions\ncron · every 3h"] -.triggers.-> B
+    E["GitHub Actions\ncron · every 45 min"] -.triggers.-> B
     F["Refresh now button"] -.re-reads latest sync.-> D
     D --> G["👤 Your lead, anywhere"]
 
@@ -187,7 +187,7 @@ iso-review-dashboard/
 │   └── data/
 │       ├── summary.json          # latest synced snapshot (committed every run)
 │       └── closed_log.json       # per-row first-closed date, for day-aware counts
-└── .github/workflows/deploy.yml  # cron (3h) + manual dispatch → sync → commit → deploy
+└── .github/workflows/deploy.yml  # cron (45 min) + manual dispatch → sync → commit → deploy
 ```
 
 ## Adding another lot
