@@ -82,9 +82,13 @@ GitHub Pages                      (the live site)
   + line number, e.g. `D-16977`), which is immune to size/spec/hyphen/typo differences in tracker
   line text. `alias_docs` cover three lines the trackers log under another document number
   (1963→1675, 1748→1751, 39-1629→39-1626), accepted only because the line ID matches exactly and
-  the other document is not itself mapped. An item is closed / open / **not yet in any lot**
-  (no lot has reviewed that document yet — holds the booklet back, but is not a mapping error).
-  A booklet is ready only when every item is closed. Decisions applied on top of the workbook are
+  the other document is not itself mapped. Readiness is tracked by **document**, not by comment rows or line items
+  (owner decision 2026-10-26): a document is closed once every comment against it, in every lot,
+  is closed; open while any comment is open/on hold; **not yet in any lot** when no lot has
+  reviewed it (holds the booklet back, but is not a mapping error). A booklet is ready to issue
+  only when all of its documents are closed. The Booklet screen's document tracker lists every
+  booklet document with its line(s), status, open/total comments, lots and the workbook's
+  extraction-plan status (`plan_status`), filterable and copyable. Decisions applied on top of the workbook are
   recorded in the JSON (`decisions`) and shown on the dashboard: 1678 → 1755 (owner-confirmed), and
   2005/2100/2134/2136/2139/2140 → 1755 (GRE "AP" spec lines; the workbook flags them as breaking
   one-line-one-booklet, and every other GRE line in the workbook sits in 1755/1722). To apply a
