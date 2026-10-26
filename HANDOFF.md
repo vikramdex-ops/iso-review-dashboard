@@ -72,11 +72,24 @@ GitHub Pages                      (the live site)
 - **Document-level (Issuance screen)**: a document (column B) is "ready to issue" only when
   EVERY comment against it — any assignee — is closed. `ADDRESS_THRESHOLD = 3`: a document with
   ≤3 open/hold points left is "address these", otherwise "needs more work".
-- **Booklet-level**: a static mapping (`data/booklet_mapping.json`, extracted once from a
-  user-supplied Excel workbook) says which (Document No., Line Number) pairs belong to which
-  ISO booklet. A booklet is "ready" only when every mapped pair is closed, checked across ALL
-  lots combined (a booklet can span more than one lot). A mapped pair with no matching row in
-  ANY lot is `blocked_missing` — flagged, never silently treated as open or closed.
+- **Booklet-level** (revised 2026-10-26): a static mapping (`data/booklet_mapping.json`, v3, built
+  from the owner's `FST_ISO_Booklet_Mapping_v2.xlsx` by `scripts/build_booklet_mapping.py`) lists the
+  (Document No., Line) items in each ISO booklet. **Demolition booklets (1913, 1914, 39-1677,
+  39-1678) are excluded from issuance entirely** (owner decision). Matching: a document that
+  belongs to one booklet is matched on the document number alone across every lot (the
+  workbook's source-file check: one document = one booklet); the documents whose lines are split
+  between booklets (`split_documents`: 1675, 1679) are matched on document + line ID (service code
+  + line number, e.g. `D-16977`), which is immune to size/spec/hyphen/typo differences in tracker
+  line text. `alias_docs` cover three lines the trackers log under another document number
+  (1963→1675, 1748→1751, 39-1629→39-1626), accepted only because the line ID matches exactly and
+  the other document is not itself mapped. An item is closed / open / **not yet in any lot**
+  (no lot has reviewed that document yet — holds the booklet back, but is not a mapping error).
+  A booklet is ready only when every item is closed. Decisions applied on top of the workbook are
+  recorded in the JSON (`decisions`) and shown on the dashboard: 1678 → 1755 (owner-confirmed), and
+  2005/2100/2134/2136/2139/2140 → 1755 (GRE "AP" spec lines; the workbook flags them as breaking
+  one-line-one-booklet, and every other GRE line in the workbook sits in 1755/1722). To apply a
+  revised workbook: `pip install openpyxl && python3 scripts/build_booklet_mapping.py <file.xlsx>`
+  — it refuses to write if any check fails.
 - **"Completed Today / Yesterday"**: there's no close-date column in the sheet, so
   `site/data/closed_log.json` records the first IST calendar day each (lot, comment) row is ever
   observed closed. A first-ever run tags everything "baseline" instead of inflating day one.
