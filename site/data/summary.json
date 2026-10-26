@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26T13:33:15.520550+00:00",
+ "updated": "2026-10-26T13:47:30.070266+00:00",
  "preliminary": false,
  "today": "2026-10-26",
  "status": {
@@ -545,7 +545,7 @@
      }
     }
    },
-   "content_hash": "71f6f48ed177",
+   "content_hash": "b68ccb105f5a",
    "gid": "23469838",
    "fetch_method": "sheets_api"
   }
@@ -1224,6 +1224,27 @@
    0
   ],
   [
+   "Akash",
+   "Lot 9",
+   4,
+   0,
+   4,
+   4,
+   0,
+   4,
+   5,
+   0,
+   5,
+   0,
+   0,
+   0,
+   13,
+   0,
+   13,
+   0,
+   0
+  ],
+  [
    "Dharma",
    "Lot 9",
    18,
@@ -1268,21 +1289,21 @@
   [
    "Karthikeyan",
    "Lot 9",
-   16,
+   12,
    0,
-   16,
-   11,
+   12,
+   7,
    0,
-   11,
-   10,
+   7,
+   5,
    0,
-   10,
+   5,
    0,
    0,
    0,
-   37,
+   24,
    0,
-   37,
+   24,
    0,
    0
   ],
@@ -1333,21 +1354,21 @@
   [
    "Akash",
    "All Lots (combined)",
-   260,
+   264,
    258,
-   2,
-   219,
+   6,
+   223,
    215,
-   4,
-   141,
-   139,
-   2,
-   0,
-   0,
-   0,
-   620,
-   612,
    8,
+   146,
+   139,
+   7,
+   0,
+   0,
+   0,
+   633,
+   612,
+   21,
    46,
    0
   ],
@@ -1396,21 +1417,21 @@
   [
    "Karthikeyan",
    "All Lots (combined)",
-   496,
+   492,
    480,
-   16,
-   379,
+   12,
+   375,
    368,
-   11,
-   363,
+   7,
+   358,
    353,
-   10,
+   5,
    0,
    0,
    0,
-   1238,
+   1225,
    1201,
-   37,
+   24,
    7,
    0
   ],
@@ -7028,10 +7049,10 @@
    "booklets": 5,
    "ready": 0,
    "not_ready": 5,
-   "total_docs": 467,
-   "closed_docs": 409,
+   "total_docs": 464,
+   "closed_docs": 410,
    "open_docs": 23,
-   "not_in_lot_docs": 35,
+   "not_in_lot_docs": 31,
    "excluded_booklets": 4,
    "excluded_items": 131
   },
@@ -7039,10 +7060,10 @@
    "P12513-12-99-15-1601": {
     "booklet_no": "P12513-12-99-15-1601",
     "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)",
-    "total_docs": 314,
-    "closed_docs": 290,
+    "total_docs": 313,
+    "closed_docs": 291,
     "open_docs": 12,
-    "not_in_lot_docs": 12,
+    "not_in_lot_docs": 10,
     "status": "not_ready",
     "documents": [
      {
@@ -7789,7 +7810,7 @@
      },
      {
       "doc": "P12513-12-01-15-1675",
-      "status": "not_in_lot",
+      "status": "closed",
       "comments_total": 9,
       "comments_open": 0,
       "open_in_lots": [],
@@ -7801,11 +7822,6 @@
         "line": "1\"-NN-12203-AE3SOC-FA",
         "plan_status": "All completed (2/2 sheets completed)",
         "in_lot": true
-       },
-       {
-        "line": "1\"-VG-11904-AC1S3A-FA",
-        "plan_status": "Pending (0/1 sheets completed)",
-        "in_lot": false
        }
       ]
      },
@@ -8146,21 +8162,6 @@
         "line": "2\"-FG-8590-AC1S3A-FA",
         "plan_status": "All completed (2/2 sheets completed)",
         "in_lot": true
-       }
-      ]
-     },
-     {
-      "doc": "P12513-12-01-15-1710",
-      "status": "not_in_lot",
-      "comments_total": 0,
-      "comments_open": 0,
-      "open_in_lots": [],
-      "in_lots": [],
-      "lines": [
-       {
-        "line": "2\"-FG-8591-AC1S3A-FA",
-        "plan_status": "Pending (0/2 sheets completed)",
-        "in_lot": false
        }
       ]
      },
@@ -11794,21 +11795,6 @@
       ]
      },
      {
-      "doc": "P12513-12-01-15-2046",
-      "status": "not_in_lot",
-      "comments_total": 0,
-      "comments_open": 0,
-      "open_in_lots": [],
-      "in_lots": [],
-      "lines": [
-       {
-        "line": "6\"-FZ-8010-AF1A0F-FA",
-        "plan_status": "All completed (2/2 sheets completed)",
-        "in_lot": false
-       }
-      ]
-     },
-     {
       "doc": "P12513-12-01-15-2105",
       "status": "closed",
       "comments_total": 5,
@@ -12284,6 +12270,21 @@
       ]
      },
      {
+      "doc": "P12513-12-01-15-2143",
+      "status": "not_in_lot",
+      "comments_total": 0,
+      "comments_open": 0,
+      "open_in_lots": [],
+      "in_lots": [],
+      "lines": [
+       {
+        "line": "6\"-FZ-8010-AF1A0F-FA",
+        "plan_status": "All completed (2/2 sheets completed)",
+        "in_lot": false
+       }
+      ]
+     },
+     {
       "doc": "P12513-12-01-15-2144",
       "status": "closed",
       "comments_total": 21,
@@ -12407,10 +12408,10 @@
    "P12513-12-01-15-1755": {
     "booklet_no": "P12513-12-01-15-1755",
     "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}",
-    "total_docs": 47,
+    "total_docs": 45,
     "closed_docs": 31,
     "open_docs": 2,
-    "not_in_lot_docs": 14,
+    "not_in_lot_docs": 12,
     "status": "not_ready",
     "documents": [
      {
@@ -13160,36 +13161,6 @@
        {
         "line": "4\"-D-15260-AP3S0C-FA",
         "plan_status": "Pending (0/5 sheets completed)",
-        "in_lot": false
-       }
-      ]
-     },
-     {
-      "doc": "P12513-12-01-15-2604",
-      "status": "not_in_lot",
-      "comments_total": 0,
-      "comments_open": 0,
-      "open_in_lots": [],
-      "in_lots": [],
-      "lines": [
-       {
-        "line": "2\"-FZ-8004-AP3A0F-FA",
-        "plan_status": "Pending (0/1 sheets completed)",
-        "in_lot": false
-       }
-      ]
-     },
-     {
-      "doc": "P12513-12-01-15-2605",
-      "status": "not_in_lot",
-      "comments_total": 0,
-      "comments_open": 0,
-      "open_in_lots": [],
-      "in_lots": [],
-      "lines": [
-       {
-        "line": "2\"-FZ-8005-AP3A0F-FA",
-        "plan_status": "Pending (0/1 sheets completed)",
         "in_lot": false
        }
       ]
