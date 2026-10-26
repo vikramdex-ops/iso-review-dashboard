@@ -238,19 +238,20 @@ def _line_ids(text):
     return {f"{a}-{b}" for a, b in _LID_RE.findall((text or "").upper())}
 
 def build_booklet_readiness(booklet_mapping, all_line_rows, docs_raw_by_lot):
-    """Booklet readiness from data/booklet_mapping.json (v3, built by build_booklet_mapping.py).
+    """Booklet readiness, tracked by DOCUMENT (not by comment rows or line items).
 
-    Demolition booklets are excluded from the mapping altogether (owner decision 2026-10-26).
-    Matching, per mapped item (doc, line):
-      - a document that belongs to ONE booklet is matched on the document number alone, using
-        every comment row against it in every lot (one document = one booklet, per the
-        workbook's source-file check);
-      - a document whose lines are split across booklets ("split_documents") is matched on
-        document + line ID, so each of its rows counts toward the right booklet;
-      - "alias_docs" are tracker document numbers verified to carry that exact line.
-    An item is closed when every matching row is closed, open when any is open, and
-    "not yet in any lot" when no lot has reviewed it yet. A booklet is ready only when every
-    item is closed."""
+    data/booklet_mapping.json (v3, built by build_booklet_mapping.py) lists the (doc, line) items
+    of each booklet; demolition booklets are excluded from it (owner decision 2026-10-26).
+    Each booklet is the set of its distinct documents. A document's comment rows are found:
+      - by document number across every lot, when the document belongs to one booklet (the
+        workbook's source-file check: one document = one booklet);
+      - by document + line ID (e.g. "D-16977") for "split_documents" whose lines sit in two
+        booklets, so each booklet only sees its own lines' comments;
+      - plus "alias_docs": tracker document numbers verified to carry that exact line.
+    Document status: "closed" when it has comment rows and every one is closed; "open" when any
+    comment is still open/on hold; "not_in_lot" when no lot has reviewed it yet (or, for a split
+    document, one of its lines in this booklet has no rows yet). A booklet is ready to issue only
+    when every one of its documents is closed — the documents together complete the booklet."""
     if booklet_mapping is None:
         return None
     items = booklet_mapping.get("items", [])
@@ -272,39 +273,52 @@ def build_booklet_readiness(booklet_mapping, all_line_rows, docs_raw_by_lot):
     def rows_for(doc, lid):
         return [r for r in rows_by_doc.get(_norm(doc), []) if lid in _line_ids(r["line"])]
 
-    booklets, unassigned = {}, []
+    # group mapped items into (booklet -> document -> lines)
+    grouped = {}
     for it in items:
-        bno = it["booklet_no"]
-        b = booklets.setdefault(bno, {"booklet_no": bno, "booklet_type": it.get("booklet_type", ""),
-                                      "total": 0, "closed": 0, "open_items": [], "not_in_lot_items": []})
-        b["total"] += 1
-        doc, lid = it["doc"], it["line_id"]
-        if doc in split:
-            hits = rows_for(doc, lid)
-            found = bool(hits)
-            is_open = any(not r["closed"] for r in hits)
-            lots = sorted({r["lot"] for r in hits if not r["closed"]})
-        else:
-            a = doc_agg.get(_norm(doc))
-            found = bool(a and a["total"])
-            is_open = bool(a and a["open"])
-            lots = sorted(a["open_lots"]) if a else []
-            hits = []
-        for alias in it.get("alias_docs", []):
-            ah = rows_for(alias, lid)
-            if ah:
-                found = True
-                if any(not r["closed"] for r in ah):
-                    is_open = True
-                    lots = sorted(set(lots) | {r["lot"] for r in ah if not r["closed"]})
-        entry = {"doc": doc, "line": it["line"]}
-        if not found:
-            b["not_in_lot_items"].append(entry)
-        elif is_open:
-            entry["found_in_lots"] = lots
-            b["open_items"].append(entry)
-        else:
-            b["closed"] += 1
+        b = grouped.setdefault(it["booklet_no"], {"type": it.get("booklet_type", ""), "docs": {}})
+        b["docs"].setdefault(it["doc"], []).append(it)
+
+    booklets, unassigned = {}, []
+    for bno, g in grouped.items():
+        docs_out = []
+        for doc, its in g["docs"].items():
+            lines, total, open_, lots, all_lots, missing_lines = [], 0, 0, set(), set(), 0
+            if doc not in split:   # document-level: every comment against it in every lot
+                a = doc_agg.get(_norm(doc))
+                if a and a["total"]:
+                    total, open_ = a["total"], a["open"]
+                    lots |= a["open_lots"]
+                    all_lots |= a["lots"]
+            for it in its:
+                hits = rows_for(doc, it["line_id"]) if doc in split else []
+                for alias in it.get("alias_docs", []):
+                    hits += rows_for(alias, it["line_id"])
+                if doc in split or it.get("alias_docs"):
+                    if doc in split or not total:
+                        total += len(hits)
+                        open_ += sum(1 for r in hits if not r["closed"])
+                    lots |= {r["lot"] for r in hits if not r["closed"]}
+                    all_lots |= {r["lot"] for r in hits}
+                found = bool(hits) or (doc not in split and total > 0)
+                if not found:
+                    missing_lines += 1
+                lines.append({"line": it["line"], "plan_status": it.get("plan_status", ""),
+                              "in_lot": found})
+            if open_:
+                st = "open"
+            elif missing_lines or not total:
+                st = "not_in_lot"
+            else:
+                st = "closed"
+            docs_out.append({"doc": doc, "status": st, "comments_total": total, "comments_open": open_,
+                             "open_in_lots": sorted(lots), "in_lots": sorted(all_lots), "lines": lines})
+        docs_out.sort(key=lambda d: natkey(d["doc"]))
+        n = {k: sum(1 for d in docs_out if d["status"] == k) for k in ("closed", "open", "not_in_lot")}
+        booklets[bno] = {"booklet_no": bno, "booklet_type": g["type"], "total_docs": len(docs_out),
+                         "closed_docs": n["closed"], "open_docs": n["open"], "not_in_lot_docs": n["not_in_lot"],
+                         "status": "ready" if n["closed"] == len(docs_out) else "not_ready",
+                         "documents": docs_out}
 
     # rows of split documents that match none of that document's mapped lines -> surface, never drop
     for d in split:
@@ -313,18 +327,16 @@ def build_booklet_readiness(booklet_mapping, all_line_rows, docs_raw_by_lot):
             if not (_line_ids(r["line"]) & mapped):
                 unassigned.append({"doc": r["doc"], "line": r["line"], "lot": r["lot"]})
 
-    for b in booklets.values():
-        b["status"] = "ready" if not b["open_items"] and not b["not_in_lot_items"] else "not_ready"
-
     excluded = booklet_mapping.get("excluded_booklets", {})
+    bl = booklets.values()
     totals = {
         "booklets": len(booklets),
-        "ready": sum(1 for b in booklets.values() if b["status"] == "ready"),
-        "not_ready": sum(1 for b in booklets.values() if b["status"] == "not_ready"),
-        "total_items": sum(b["total"] for b in booklets.values()),
-        "closed_items": sum(b["closed"] for b in booklets.values()),
-        "open_items": sum(len(b["open_items"]) for b in booklets.values()),
-        "not_in_lot_items": sum(len(b["not_in_lot_items"]) for b in booklets.values()),
+        "ready": sum(1 for b in bl if b["status"] == "ready"),
+        "not_ready": sum(1 for b in bl if b["status"] == "not_ready"),
+        "total_docs": sum(b["total_docs"] for b in bl),
+        "closed_docs": sum(b["closed_docs"] for b in bl),
+        "open_docs": sum(b["open_docs"] for b in bl),
+        "not_in_lot_docs": sum(b["not_in_lot_docs"] for b in bl),
         "excluded_booklets": len(excluded),
         "excluded_items": sum(e.get("items", 0) for e in excluded.values()),
     }
