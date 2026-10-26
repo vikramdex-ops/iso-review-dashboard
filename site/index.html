@@ -121,6 +121,11 @@ footer{padding:4rem 0 3rem;color:var(--dim);font-size:.85rem}
 .countbtn.address{color:var(--md);border-color:oklch(0.55 0.1 78/.5)}
 
 .booklet-hero .sub{max-width:62ch}
+.bknote{color:var(--dim);font-size:.82rem;line-height:1.5;margin:-.6rem 0 1.4rem}
+.bknote b{color:var(--ink)}
+.bknote details{display:inline}
+.bknote summary{cursor:pointer;display:inline;text-decoration:underline dotted}
+.bknote ul{margin:.5rem 0 0;padding-left:1.1rem}
 .unresolvedwarn{background:oklch(0.26 0.04 40/.4);border:1px solid oklch(0.4 0.1 40/.5);border-radius:12px;padding:1rem 1.2rem;margin-bottom:1.6rem;font-size:.86rem;line-height:1.5}
 .unresolvedwarn b{color:var(--hi)}
 .unresolvedwarn ul{margin:.5rem 0 0;padding-left:1.1rem}
@@ -237,7 +242,7 @@ footer{padding:4rem 0 3rem;color:var(--dim);font-size:.85rem}
   <div id="view-booklets" class="hidden">
     <section class="issuance-hero booklet-hero">
       <h3>Booklet readiness</h3>
-      <p class="sub">A booklet is <b>ready</b> only once every document+line mapped to it is closed, across every lot combined — booklets routinely span more than one lot. A mapped pair that no lot's tracker has ever recorded shows as <b>missing</b>, so nothing is silently counted as either open or done.</p>
+      <p class="sub">A booklet is <b>ready</b> only once every document+line mapped to it is closed, across every lot combined — booklets routinely span more than one lot. Demolition booklets are excluded. Each document is matched on its document number across every lot (a document belongs to one booklet); the two documents whose lines are split between booklets are matched on document + line. A mapped document that no lot has reviewed yet shows as <b>not yet in any lot</b> — it holds the booklet back, but it is not a mapping error.</p>
     </section>
     <div class="stats" id="booklet-stats" aria-label="Booklet readiness totals"></div>
     <div id="booklet-unresolved"></div>
@@ -488,10 +493,10 @@ $("#modalBackdrop").onclick=e=>{if(e.target.id==="modalBackdrop")$("#modalBackdr
 addEventListener("keydown",e=>{if(e.key==="Escape")$("#modalBackdrop").hidden=true});
 
 /* ---------- Booklet Issuance screen ---------- */
-const BK_STATUS_LABEL={ready:"Ready",not_ready:"Not ready",blocked_missing:"Missing items"};
+const BK_STATUS_LABEL={ready:"Ready",not_ready:"Not ready"};
 const BK_BUCKET_META={
   open_items:{title:"Open items",sub:"These document+line pairs are mapped to this booklet but are still open or on hold in whichever lot carries them.",lineLabel:"Line numbers"},
-  missing_items:{title:"Missing from every lot",sub:"These document+line pairs are mapped to this booklet but have no matching row in any of Lot 1–7's trackers — they were never captured, so chase these down before claiming the booklet complete.",lineLabel:"Line numbers"},
+  not_in_lot_items:{title:"Not yet in any lot",sub:"These documents are mapped to this booklet but no lot's tracker has reviewed them yet. They hold the booklet back until they are reviewed and closed.",lineLabel:"Line numbers"},
 };
 function renderBooklets(){
   const bk=D.booklets;
@@ -503,26 +508,30 @@ function renderBooklets(){
     return;
   }
   const t=bk.totals,f=n=>n.toLocaleString();
-  statsEl.innerHTML=[["total","Booklets",t.booklets],["closed","Ready",t.ready],["open","Not ready",t.not_ready],["hold","Missing items",t.blocked_missing]]
+  statsEl.innerHTML=[["total","Booklets",t.booklets],["closed","Ready",t.ready],["open","Not ready",t.not_ready],["hold","Items not yet in any lot",t.not_in_lot_items||0]]
     .map(([c,l,v])=>`<div class="stat ${c}"><b>${f(v)}</b><span>${l}</span></div>`).join("");
-  $("#booklets-badge").classList.toggle("on",t.not_ready>0||t.blocked_missing>0);
+  $("#booklets-badge").classList.toggle("on",t.not_ready>0);
 
-  const unresolved=bk.unresolved||[];
+  const unresolved=bk.unresolved||[],unassigned=bk.unassigned_rows||[],ex=bk.excluded||{},dec=bk.decisions||[];
+  const exNames=Object.entries(ex).map(([n,e])=>`${n} (${(e.booklet_type||"").replace(/\s*\(.*$/,"")})`);
+  const noteHtml=`<div class="bknote">Excluded from issuance: <b>${t.excluded_booklets||0} demolition booklet${t.excluded_booklets===1?"":"s"}</b> (${f(t.excluded_items||0)} items)${exNames.length?` — ${exNames.join(", ")}`:""}.${dec.length?` <details><summary>${dec.length} booklet decision${dec.length===1?"":"s"} applied to the workbook mapping</summary><ul>${dec.map(d=>`<li><b>${d.doc}</b> / ${d.line} → <b>${d.booklet_no}</b> — ${d.basis}</li>`).join("")}</ul></details>`:""}</div>`
+    +(unassigned.length?`<div class="unresolvedwarn"><b>${unassigned.length} tracker row${unassigned.length===1?"":"s"}</b> of a split document match none of its mapped lines and need a manual check:<ul>${unassigned.map(u=>`<li><b>${u.doc}</b> / ${u.line} (${u.lot})</li>`).join("")}</ul></div>`:"");
   unresolvedEl.innerHTML=unresolved.length?`<div class="unresolvedwarn"><b>${unresolved.length} mapping row${unresolved.length===1?"":"s"}</b> in the booklet workbook ${unresolved.length===1?"wasn't":"weren't"} cleanly matched to a single booklet and needs a manual check:
     <ul>${unresolved.map(u=>`<li><b>${u.doc}</b> / ${u.line} — suggested booklet <b>${u.suggested_booklet_no||"—"}</b>${u.found_in_lots.length?`, found ${u.closed?"closed":"open"} in ${u.found_in_lots.join(", ")}`:", not found in any lot"}</li>`).join("")}</ul></div>`:"";
+  unresolvedEl.innerHTML=noteHtml+unresolvedEl.innerHTML;
 
   const list=Object.values(bk.list||{}).sort((a,b)=>a.booklet_no.localeCompare(b.booklet_no));
   grid.innerHTML=list.map(b=>{
-    const open=b.open_items.length,missing=b.missing_items.length,closed=b.closed;
+    const open=b.open_items.length,missing=(b.not_in_lot_items||[]).length,closed=b.closed;
     return `<div class="bkcard">
       <h4>${b.booklet_no}<small>${b.booklet_type||""}</small><span class="bkpill ${b.status}">${BK_STATUS_LABEL[b.status]}</span></h4>
-      <div class="bkbar" role="img" aria-label="${closed} closed, ${open} open, ${missing} missing of ${b.total}">
+      <div class="bkbar" role="img" aria-label="${closed} closed, ${open} open, ${missing} not yet in any lot, of ${b.total}">
         <span style="flex-grow:${closed};background:var(--ok)"></span><span style="flex-grow:${open};background:var(--hi)"></span><span style="flex-grow:${missing};background:var(--amber)"></span>
       </div>
       <div class="bkrows">
         <div class="bkrow"><span>Closed</span><b>${closed} / ${b.total}</b></div>
         <div class="bkrow"><span>Open</span>${open?`<button class="countbtn address" data-bk="${b.booklet_no}" data-bucket="open_items">${open}</button>`:`<span class="countbtn" style="cursor:default;color:var(--dim);border-style:dashed">0</span>`}</div>
-        <div class="bkrow"><span>Missing from all lots</span>${missing?`<button class="countbtn" style="color:var(--hi);border-color:oklch(0.5 0.15 30/.5)" data-bk="${b.booklet_no}" data-bucket="missing_items">${missing}</button>`:`<span class="countbtn" style="cursor:default;color:var(--dim);border-style:dashed">0</span>`}</div>
+        <div class="bkrow"><span>Not yet in any lot</span>${missing?`<button class="countbtn" style="color:var(--amber);border-color:oklch(0.6 0.12 75/.5)" data-bk="${b.booklet_no}" data-bucket="not_in_lot_items">${missing}</button>`:`<span class="countbtn" style="cursor:default;color:var(--dim);border-style:dashed">0</span>`}</div>
       </div>
     </div>`;
   }).join("")||`<p class="empty">No booklets to show.</p>`;
