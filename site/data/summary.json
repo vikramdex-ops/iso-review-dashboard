@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T09:57:44.947706+00:00",
+ "updated": "2026-10-27T11:54:23.980305+00:00",
  "preliminary": false,
  "today": "2026-10-27",
  "status": {
@@ -539,13 +539,13 @@
       "assignedTo": "Hemnath"
      },
      "101": {
-      "colA": "1795-06-05",
+      "colA": "-38193",
       "severity": "High",
-      "assignedTo": "Murukeshwari"
+      "assignedTo": "KOWSHIK"
      }
     }
    },
-   "content_hash": "856cba022bdf",
+   "content_hash": "fcf4779d5586",
    "gid": "23469838",
    "fetch_method": "sheets_api"
   }
@@ -1226,30 +1226,30 @@
   [
    "Akash",
    "Lot 9",
+   5,
    4,
    1,
-   3,
+   7,
    4,
-   2,
-   2,
-   5,
    3,
+   7,
+   5,
    2,
    0,
    0,
    0,
+   19,
    13,
    6,
-   7,
-   6,
+   13,
    0
   ],
   [
    "Dharma",
    "Lot 9",
    38,
-   20,
-   12,
+   26,
+   6,
    25,
    13,
    7,
@@ -1260,9 +1260,9 @@
    5,
    1,
    82,
-   46,
-   36,
-   22,
+   52,
+   30,
+   28,
    24
   ],
   [
@@ -1289,43 +1289,22 @@
   [
    "Kowshik",
    "Lot 9",
-   8,
+   31,
    0,
-   8,
-   6,
-   0,
-   6,
-   2,
-   0,
-   2,
-   0,
-   0,
-   0,
-   16,
-   0,
-   16,
-   0,
-   0
-  ],
-  [
-   "Murukeshwari",
-   "Lot 9",
+   21,
+   31,
+   1,
    24,
-   0,
-   24,
-   28,
-   0,
-   28,
    11,
    0,
-   11,
-   0,
-   0,
-   0,
-   63,
-   0,
-   63,
-   0,
+   9,
+   10,
+   6,
+   2,
+   73,
+   1,
+   72,
+   1,
    0
   ]
  ],
@@ -1333,30 +1312,30 @@
   [
    "Akash",
    "All Lots (combined)",
-   264,
-   259,
-   5,
-   223,
-   217,
-   6,
-   146,
-   142,
+   265,
+   262,
+   3,
+   226,
+   219,
+   7,
+   148,
+   144,
    4,
    0,
    0,
    0,
-   633,
-   618,
-   15,
-   6,
+   639,
+   625,
+   14,
+   13,
    46
   ],
   [
    "Dharma",
    "All Lots (combined)",
    480,
-   462,
-   12,
+   468,
+   6,
    367,
    355,
    7,
@@ -1367,9 +1346,9 @@
    5,
    1,
    1185,
-   1149,
-   36,
-   22,
+   1155,
+   30,
+   28,
    24
   ],
   [
@@ -1417,42 +1396,42 @@
   [
    "Kowshik",
    "All Lots (combined)",
-   312,
+   335,
    304,
-   8,
-   254,
-   248,
-   6,
-   225,
+   21,
+   279,
+   249,
+   24,
+   234,
    223,
-   2,
-   0,
-   0,
-   0,
-   791,
-   775,
-   16,
+   9,
    10,
+   6,
+   2,
+   848,
+   776,
+   72,
+   11,
    6
   ],
   [
    "Murukeshwari",
    "All Lots (combined)",
-   58,
    34,
-   24,
-   57,
+   34,
+   0,
    29,
-   28,
-   37,
+   29,
+   0,
    26,
-   11,
+   26,
    0,
    0,
    0,
-   152,
+   0,
    89,
-   63,
+   89,
+   0,
    0,
    0
   ]
@@ -6921,7 +6900,7 @@
   "Lot 9": {
    "total_documents": 13,
    "ready_pending": {
-    "count": 7,
+    "count": 8,
     "docs": [
      "P12513-12-01-15-1624",
      "P12513-12-01-15-1693",
@@ -6929,6 +6908,7 @@
      "P12513-12-01-15-1737",
      "P12513-12-01-15-1799",
      "P12513-12-01-15-1800",
+     "P12513-12-01-15-1977",
      "P12513-12-01-15-2009"
     ],
     "lines": [
@@ -7021,6 +7001,14 @@
      "2\"-PO-22060-AE3S0C-FA",
      "2\"-PO-22060-AE3S0C-FA",
      "2\"-PO-22060-AE3S0C-FA",
+     "3/4\"-VG-11874-AC1S3A-FA",
+     "3/4\"-VG-11874-AC1S3A-FA",
+     "3/4\"-VG-11874-AC1S3A-FA",
+     "3/4\"-VG-11874-AC1S3A-FA",
+     "3/4\"-VG-11874-AC1S3A-FA",
+     "3/4\"-VG-11874-AC1S3A-FA",
+     "3/4\"-VG-11874-AC1S3A-FA",
+     "3/4\"-VG-11874-AC1S3A-FA",
      "1\"-WW-8157-AC1A1B-FA",
      "1\"-WW-8157-AC1A1B-FA",
      "1\"-WW-8157-AC1A1B-FA",
@@ -7042,13 +7030,12 @@
     "detail": []
    },
    "needs_work": {
-    "count": 6,
+    "count": 5,
     "docs": [
      "P12513-12-01-15-1636",
      "P12513-12-01-15-1720",
      "P12513-12-01-15-1795",
      "P12513-12-01-15-1860",
-     "P12513-12-01-15-1977",
      "P12513-12-39-15-1655"
     ]
    }
@@ -7060,8 +7047,8 @@
    "ready": 0,
    "not_ready": 5,
    "total_docs": 464,
-   "closed_docs": 414,
-   "open_docs": 19,
+   "closed_docs": 415,
+   "open_docs": 18,
    "not_in_lot_docs": 31,
    "excluded_booklets": 4,
    "excluded_items": 131
@@ -7071,8 +7058,8 @@
     "booklet_no": "P12513-12-99-15-1601",
     "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)",
     "total_docs": 313,
-    "closed_docs": 293,
-    "open_docs": 10,
+    "closed_docs": 294,
+    "open_docs": 9,
     "not_in_lot_docs": 10,
     "status": "not_ready",
     "documents": [
@@ -9189,7 +9176,7 @@
       "doc": "P12513-12-01-15-1795",
       "status": "open",
       "comments_total": 59,
-      "comments_open": 57,
+      "comments_open": 56,
       "open_in_lots": [
        "Lot 9"
       ],
@@ -9667,7 +9654,7 @@
       "doc": "P12513-12-01-15-1860",
       "status": "open",
       "comments_total": 25,
-      "comments_open": 24,
+      "comments_open": 18,
       "open_in_lots": [
        "Lot 9"
       ],
@@ -11324,12 +11311,10 @@
      },
      {
       "doc": "P12513-12-01-15-1977",
-      "status": "open",
+      "status": "closed",
       "comments_total": 8,
-      "comments_open": 7,
-      "open_in_lots": [
-       "Lot 9"
-      ],
+      "comments_open": 0,
+      "open_in_lots": [],
       "in_lots": [
        "Lot 9"
       ],
@@ -23175,7 +23160,7 @@
    },
    "P12513-12-01-15-1795": {
     "total": 59,
-    "open": 57,
+    "open": 56,
     "lines_all": [
      "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
      "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
@@ -23238,7 +23223,6 @@
      "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)"
     ],
     "lines_open": [
-     "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
      "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
      "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
      "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
@@ -23352,7 +23336,7 @@
    },
    "P12513-12-01-15-1860": {
     "total": 25,
-    "open": 24,
+    "open": 18,
     "lines_all": [
      "28\"-VG-11315-AC1S3A-FA",
      "28\"-VG-11315-AC1S3A-FA",
@@ -23381,12 +23365,6 @@
      "28\"-VG-11315-AC1S3A-FA"
     ],
     "lines_open": [
-     "28\"-VG-11315-AC1S3A-FA",
-     "28\"-VG-11315-AC1S3A-FA",
-     "28\"-VG-11315-AC1S3A-FA",
-     "28\"-VG-11315-AC1S3A-FA",
-     "28\"-VG-11315-AC1S3A-FA",
-     "28\"-VG-11315-AC1S3A-FA",
      "28\"-VG-11315-AC1S3A-FA",
      "28\"-VG-11315-AC1S3A-FA",
      "28\"-VG-11315-AC1S3A-FA",
@@ -23409,7 +23387,7 @@
    },
    "P12513-12-01-15-1977": {
     "total": 8,
-    "open": 7,
+    "open": 0,
     "lines_all": [
      "3/4\"-VG-11874-AC1S3A-FA",
      "3/4\"-VG-11874-AC1S3A-FA",
@@ -23420,15 +23398,7 @@
      "3/4\"-VG-11874-AC1S3A-FA",
      "3/4\"-VG-11874-AC1S3A-FA"
     ],
-    "lines_open": [
-     "3/4\"-VG-11874-AC1S3A-FA",
-     "3/4\"-VG-11874-AC1S3A-FA",
-     "3/4\"-VG-11874-AC1S3A-FA",
-     "3/4\"-VG-11874-AC1S3A-FA",
-     "3/4\"-VG-11874-AC1S3A-FA",
-     "3/4\"-VG-11874-AC1S3A-FA",
-     "3/4\"-VG-11874-AC1S3A-FA"
-    ]
+    "lines_open": []
    },
    "P12513-12-01-15-2009": {
     "total": 7,
@@ -52717,7 +52687,7 @@
   {
    "doc": "P12513-12-01-15-1795",
    "line": "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
@@ -53293,37 +53263,37 @@
   {
    "doc": "P12513-12-01-15-1860",
    "line": "28\"-VG-11315-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1860",
    "line": "28\"-VG-11315-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1860",
    "line": "28\"-VG-11315-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1860",
    "line": "28\"-VG-11315-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1860",
    "line": "28\"-VG-11315-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1860",
    "line": "28\"-VG-11315-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
@@ -53443,43 +53413,43 @@
   {
    "doc": "P12513-12-01-15-1977",
    "line": "3/4\"-VG-11874-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1977",
    "line": "3/4\"-VG-11874-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1977",
    "line": "3/4\"-VG-11874-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1977",
    "line": "3/4\"-VG-11874-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1977",
    "line": "3/4\"-VG-11874-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1977",
    "line": "3/4\"-VG-11874-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1977",
    "line": "3/4\"-VG-11874-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
