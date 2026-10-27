@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T11:54:23.980305+00:00",
+ "updated": "2026-10-27T14:32:26.360260+00:00",
  "preliminary": false,
  "today": "2026-10-27",
  "status": {
@@ -545,7 +545,7 @@
      }
     }
    },
-   "content_hash": "fcf4779d5586",
+   "content_hash": "0d7f155ffc32",
    "gid": "23469838",
    "fetch_method": "sheets_api"
   }
@@ -1227,21 +1227,21 @@
    "Akash",
    "Lot 9",
    5,
-   4,
-   1,
-   7,
-   4,
-   3,
-   7,
    5,
-   2,
+   0,
+   7,
+   7,
+   0,
+   7,
+   7,
+   0,
    0,
    0,
    0,
    19,
-   13,
-   6,
-   13,
+   19,
+   0,
+   19,
    0
   ],
   [
@@ -1251,18 +1251,18 @@
    26,
    6,
    25,
-   13,
-   7,
+   17,
+   3,
    19,
-   13,
-   5,
+   16,
+   2,
    6,
    5,
    1,
    82,
-   52,
-   30,
-   28,
+   59,
+   23,
+   35,
    24
   ],
   [
@@ -1313,21 +1313,21 @@
    "Akash",
    "All Lots (combined)",
    265,
-   262,
-   3,
+   263,
+   2,
    226,
-   219,
-   7,
-   148,
-   144,
+   222,
    4,
+   148,
+   146,
+   2,
    0,
    0,
    0,
    639,
-   625,
-   14,
-   13,
+   631,
+   8,
+   19,
    46
   ],
   [
@@ -1337,18 +1337,18 @@
    468,
    6,
    367,
-   355,
-   7,
+   359,
+   3,
    338,
-   332,
-   5,
+   335,
+   2,
    6,
    5,
    1,
    1185,
-   1155,
-   30,
-   28,
+   1162,
+   23,
+   35,
    24
   ],
   [
@@ -6900,10 +6900,11 @@
   "Lot 9": {
    "total_documents": 13,
    "ready_pending": {
-    "count": 8,
+    "count": 9,
     "docs": [
      "P12513-12-01-15-1624",
      "P12513-12-01-15-1693",
+     "P12513-12-01-15-1720",
      "P12513-12-01-15-1728",
      "P12513-12-01-15-1737",
      "P12513-12-01-15-1799",
@@ -6945,6 +6946,13 @@
      "2\"-D-16995-AC1S3A-FA",
      "2\"-D-16995-AC1S3A-FA",
      "2\"-D-16995-AC1S3A-FA",
+     "1\"-IA-10988-AC4A1A-FA",
+     "1\"-IA-10988-AC4A1A-FA",
+     "1\"-IA-10988-AC4A1A-FA",
+     "1\"-IA-10988-AC4A1A-FA",
+     "1\"-IA-10988-AC4A1A-FA",
+     "1\"-IA-10988-AC4A1A-FA",
+     "1\"-IA-10988-AC4A1A-FA",
      "1\"-IA-10996-AC4A1A-FA",
      "1\"-IA-10996-AC4A1A-FA",
      "1\"-IA-10996-AC4A1A-FA",
@@ -7030,10 +7038,9 @@
     "detail": []
    },
    "needs_work": {
-    "count": 5,
+    "count": 4,
     "docs": [
      "P12513-12-01-15-1636",
-     "P12513-12-01-15-1720",
      "P12513-12-01-15-1795",
      "P12513-12-01-15-1860",
      "P12513-12-39-15-1655"
@@ -7047,8 +7054,8 @@
    "ready": 0,
    "not_ready": 5,
    "total_docs": 464,
-   "closed_docs": 415,
-   "open_docs": 18,
+   "closed_docs": 416,
+   "open_docs": 17,
    "not_in_lot_docs": 31,
    "excluded_booklets": 4,
    "excluded_items": 131
@@ -7058,8 +7065,8 @@
     "booklet_no": "P12513-12-99-15-1601",
     "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)",
     "total_docs": 313,
-    "closed_docs": 294,
-    "open_docs": 9,
+    "closed_docs": 295,
+    "open_docs": 8,
     "not_in_lot_docs": 10,
     "status": "not_ready",
     "documents": [
@@ -8300,12 +8307,10 @@
      },
      {
       "doc": "P12513-12-01-15-1720",
-      "status": "open",
+      "status": "closed",
       "comments_total": 7,
-      "comments_open": 6,
-      "open_in_lots": [
-       "Lot 9"
-      ],
+      "comments_open": 0,
+      "open_in_lots": [],
       "in_lots": [
        "Lot 9"
       ],
@@ -9654,7 +9659,7 @@
       "doc": "P12513-12-01-15-1860",
       "status": "open",
       "comments_total": 25,
-      "comments_open": 18,
+      "comments_open": 11,
       "open_in_lots": [
        "Lot 9"
       ],
@@ -23108,7 +23113,7 @@
    },
    "P12513-12-01-15-1720": {
     "total": 7,
-    "open": 6,
+    "open": 0,
     "lines_all": [
      "1\"-IA-10988-AC4A1A-FA",
      "1\"-IA-10988-AC4A1A-FA",
@@ -23118,14 +23123,7 @@
      "1\"-IA-10988-AC4A1A-FA",
      "1\"-IA-10988-AC4A1A-FA"
     ],
-    "lines_open": [
-     "1\"-IA-10988-AC4A1A-FA",
-     "1\"-IA-10988-AC4A1A-FA",
-     "1\"-IA-10988-AC4A1A-FA",
-     "1\"-IA-10988-AC4A1A-FA",
-     "1\"-IA-10988-AC4A1A-FA",
-     "1\"-IA-10988-AC4A1A-FA"
-    ]
+    "lines_open": []
    },
    "P12513-12-01-15-1728": {
     "total": 7,
@@ -23336,7 +23334,7 @@
    },
    "P12513-12-01-15-1860": {
     "total": 25,
-    "open": 18,
+    "open": 11,
     "lines_all": [
      "28\"-VG-11315-AC1S3A-FA",
      "28\"-VG-11315-AC1S3A-FA",
@@ -23365,13 +23363,6 @@
      "28\"-VG-11315-AC1S3A-FA"
     ],
     "lines_open": [
-     "28\"-VG-11315-AC1S3A-FA",
-     "28\"-VG-11315-AC1S3A-FA",
-     "28\"-VG-11315-AC1S3A-FA",
-     "28\"-VG-11315-AC1S3A-FA",
-     "28\"-VG-11315-AC1S3A-FA",
-     "28\"-VG-11315-AC1S3A-FA",
-     "28\"-VG-11315-AC1S3A-FA",
      "28\"-VG-11315-AC1S3A-FA",
      "28\"-VG-11315-AC1S3A-FA",
      "28\"-VG-11315-AC1S3A-FA",
@@ -52531,37 +52522,7 @@
   {
    "doc": "P12513-12-01-15-1720",
    "line": "1\"-IA-10988-AC4A1A-FA",
-   "closed": false,
-   "lot": "Lot 9"
-  },
-  {
-   "doc": "P12513-12-01-15-1720",
-   "line": "1\"-IA-10988-AC4A1A-FA",
-   "closed": false,
-   "lot": "Lot 9"
-  },
-  {
-   "doc": "P12513-12-01-15-1720",
-   "line": "1\"-IA-10988-AC4A1A-FA",
-   "closed": false,
-   "lot": "Lot 9"
-  },
-  {
-   "doc": "P12513-12-01-15-1720",
-   "line": "1\"-IA-10988-AC4A1A-FA",
-   "closed": false,
-   "lot": "Lot 9"
-  },
-  {
-   "doc": "P12513-12-01-15-1720",
-   "line": "1\"-IA-10988-AC4A1A-FA",
-   "closed": false,
-   "lot": "Lot 9"
-  },
-  {
-   "doc": "P12513-12-01-15-1720",
-   "line": "1\"-IA-10988-AC4A1A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
@@ -52571,8 +52532,32 @@
    "lot": "Lot 9"
   },
   {
-   "doc": "P12513-12-01-15-1728",
-   "line": "1\"-IA-10996-AC4A1A-FA",
+   "doc": "P12513-12-01-15-1720",
+   "line": "1\"-IA-10988-AC4A1A-FA",
+   "closed": true,
+   "lot": "Lot 9"
+  },
+  {
+   "doc": "P12513-12-01-15-1720",
+   "line": "1\"-IA-10988-AC4A1A-FA",
+   "closed": true,
+   "lot": "Lot 9"
+  },
+  {
+   "doc": "P12513-12-01-15-1720",
+   "line": "1\"-IA-10988-AC4A1A-FA",
+   "closed": true,
+   "lot": "Lot 9"
+  },
+  {
+   "doc": "P12513-12-01-15-1720",
+   "line": "1\"-IA-10988-AC4A1A-FA",
+   "closed": true,
+   "lot": "Lot 9"
+  },
+  {
+   "doc": "P12513-12-01-15-1720",
+   "line": "1\"-IA-10988-AC4A1A-FA",
    "closed": true,
    "lot": "Lot 9"
   },
@@ -52613,8 +52598,8 @@
    "lot": "Lot 9"
   },
   {
-   "doc": "P12513-12-01-15-1737",
-   "line": "1\"-IA-11005-AC4A1A-FA",
+   "doc": "P12513-12-01-15-1728",
+   "line": "1\"-IA-10996-AC4A1A-FA",
    "closed": true,
    "lot": "Lot 9"
   },
@@ -52673,6 +52658,12 @@
    "lot": "Lot 9"
   },
   {
+   "doc": "P12513-12-01-15-1737",
+   "line": "1\"-IA-11005-AC4A1A-FA",
+   "closed": true,
+   "lot": "Lot 9"
+  },
+  {
    "doc": "P12513-12-01-15-1795",
    "line": "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
    "closed": false,
@@ -53299,43 +53290,43 @@
   {
    "doc": "P12513-12-01-15-1860",
    "line": "28\"-VG-11315-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1860",
    "line": "28\"-VG-11315-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1860",
    "line": "28\"-VG-11315-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1860",
    "line": "28\"-VG-11315-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1860",
    "line": "28\"-VG-11315-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1860",
    "line": "28\"-VG-11315-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1860",
    "line": "28\"-VG-11315-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
