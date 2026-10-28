@@ -9,13 +9,17 @@ For anything beyond a small fix, open an issue first describing what you want to
 ## Project shape
 
 ```
-config.json                 # sheet id, lot → tab-gid map, status keywords
-scripts/build_summary.py    # fetch each tab as CSV → apply rules → write site/data/summary.json
-site/index.html             # the dashboard itself — single file, no build step, no framework
-.github/workflows/deploy.yml  # cron (45 min) + manual dispatch → run the sync → commit the data → deploy
+config.json                       # sheet id, lot → tab-gid map, status keywords
+data/booklet_mapping.json         # booklet → document + line mapping (built offline from the workbook)
+scripts/build_summary.py          # read each tab (Sheets API, CSV fallback) → apply rules → write site/data/summary.json
+scripts/build_booklet_mapping.py  # offline: mapping workbook (.xlsx, needs openpyxl) → data/booklet_mapping.json
+scripts/apply_issued.py           # records "Mark as issued" batches into site/data/issued_log.json
+site/index.html                   # the dashboard itself — single file, no build step, no framework
+.github/workflows/deploy.yml      # cron (every 45 min at :07/:52/:37/:22 UTC) + push + manual dispatch → sync → commit → deploy
+.github/workflows/issue-intake.yml  # "Mark as issued" write path
 ```
 
-There's no build tooling. `site/index.html` is read and edited directly; `scripts/build_summary.py` is plain Python 3.12 with only the standard library (`csv`, `urllib`, `hashlib`, `datetime`, `zoneinfo`) — no dependencies to install.
+There's no build tooling. `site/index.html` is read and edited directly; `scripts/build_summary.py` is plain Python 3.12 with only the standard library (the offline mapping builder alone needs `openpyxl`) (`csv`, `urllib`, `hashlib`, `datetime`, `zoneinfo`) — no dependencies to install.
 
 ## Running the sync locally
 
