@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T05:03:31.386237+00:00",
+ "updated": "2026-10-28T05:41:48.190594+00:00",
  "preliminary": false,
  "today": "2026-10-28",
  "status": {
@@ -545,7 +545,7 @@
      }
     }
    },
-   "content_hash": "70789cd4ae28",
+   "content_hash": "205db675ea7e",
    "gid": "23469838",
    "fetch_method": "sheets_api"
   }
@@ -1290,21 +1290,21 @@
    "Kowshik",
    "Lot 9",
    31,
-   0,
-   21,
+   6,
+   15,
    31,
-   1,
-   24,
+   6,
+   19,
    11,
-   0,
-   9,
+   1,
+   7,
    10,
    6,
-   2,
+   3,
    73,
-   1,
-   72,
-   0,
+   13,
+   60,
+   12,
    1
   ]
  ],
@@ -1397,21 +1397,21 @@
    "Kowshik",
    "All Lots (combined)",
    335,
-   304,
-   21,
+   310,
+   15,
    279,
-   249,
-   24,
+   254,
+   19,
    234,
-   223,
-   9,
+   224,
+   7,
    10,
    6,
-   2,
+   3,
    848,
-   776,
-   72,
-   0,
+   788,
+   60,
+   12,
    11
   ],
   [
@@ -9194,7 +9194,7 @@
       "doc": "P12513-12-01-15-1795",
       "status": "open",
       "comments_total": 59,
-      "comments_open": 56,
+      "comments_open": 44,
       "open_in_lots": [
        "Lot 9"
       ],
@@ -23156,7 +23156,7 @@
    },
    "P12513-12-01-15-1795": {
     "total": 59,
-    "open": 56,
+    "open": 44,
     "lines_all": [
      "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
      "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
@@ -23219,18 +23219,6 @@
      "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)"
     ],
     "lines_open": [
-     "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
-     "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
-     "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
-     "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
-     "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
-     "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
-     "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
-     "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
-     "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
-     "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
-     "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
-     "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
      "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
      "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
      "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
@@ -52682,19 +52670,7 @@
   {
    "doc": "P12513-12-01-15-1795",
    "line": "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
-   "closed": false,
-   "lot": "Lot 9"
-  },
-  {
-   "doc": "P12513-12-01-15-1795",
-   "line": "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
-   "closed": false,
-   "lot": "Lot 9"
-  },
-  {
-   "doc": "P12513-12-01-15-1795",
-   "line": "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
@@ -52712,55 +52688,67 @@
   {
    "doc": "P12513-12-01-15-1795",
    "line": "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1795",
    "line": "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1795",
    "line": "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1795",
    "line": "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1795",
    "line": "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1795",
    "line": "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1795",
    "line": "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1795",
    "line": "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1795",
    "line": "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
-   "closed": false,
+   "closed": true,
+   "lot": "Lot 9"
+  },
+  {
+   "doc": "P12513-12-01-15-1795",
+   "line": "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
+   "closed": true,
+   "lot": "Lot 9"
+  },
+  {
+   "doc": "P12513-12-01-15-1795",
+   "line": "40\"-PO-22052-AC1S3A-FA (PDS line ID 12-01-PO-22052-01)",
+   "closed": true,
    "lot": "Lot 9"
   },
   {
