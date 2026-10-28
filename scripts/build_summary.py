@@ -461,7 +461,7 @@ else:
     print(f"Completed today ({TODAY_IST}):", {f"{k[1]} ({k[0]})": v for k, v in completed_today.items()} or "none")
     print(f"Completed yesterday ({YESTERDAY_IST}):", {f"{k[1]} ({k[0]})": v for k, v in completed_yesterday.items()} or "none")
 
-# --- Combined view: same rows, aggregated per assignee across every lot (Lot 1-4, ignoring
+# --- Combined view: same rows, aggregated per assignee across every lot (Lot 1-9, ignoring
 # lot segregation) so the reviewer can also see one line per person for the whole register. ---
 COMBINED_LABEL = "All Lots (combined)"
 combined_map = {}
