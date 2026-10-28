@@ -346,19 +346,27 @@ function diag(){
   $("#diag").innerHTML=parts.join("");
 }
 function clock(){
-  const u=new Date(D.updated),m=Math.max(0,Math.round((Date.now()-u)/6e4)),nx=new Date(Math.ceil(Date.now()/27e5)*27e5);
+  const u=new Date(D.updated),m=Math.max(0,Math.round((Date.now()-u)/6e4)),nx=new Date(Math.ceil((Date.now()-42e4)/27e5)*27e5+42e4);
   const ago=m<1?"just now":m<60?m+" min ago":Math.floor(m/60)+"h "+m%60+"m ago";
   const day=D.today?new Date(D.today+"T00:00:00+05:30").toLocaleDateString(undefined,{day:"numeric",month:"short"}):"";
   $("#sync").textContent=D.preliminary?"Preliminary snapshot · awaiting first live sync"
     :`Synced ${ago} · next auto-refresh ~${nx.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}`+(day?` · "Completed Today" = closed on ${day} IST`:"");
   $("#dot").classList.toggle("pre",!!D.preliminary);
 }
+/* A page left open must not keep showing the data it first loaded: every 5 minutes (and whenever the
+   tab comes back into view) re-read the published sync and repaint only if a newer one has landed. */
+async function poll(){
+  if(document.hidden)return;
+  try{const f=await fetch("data/summary.json?"+Date.now(),{cache:"no-store"}).then(r=>r.json());
+    if(D&&f.updated!==D.updated){D=f;paint()}}catch(e){}
+}
+document.addEventListener("visibilitychange",()=>{if(!document.hidden)poll()});
 function paint(){
   stats();chips();render();clock();diag();renderIssuance();renderBooklets();
   // brief pulse to mark "data just arrived", not a continuous fake-live indicator
   const d=$("#dot");d.classList.remove("just-synced");void d.offsetWidth;d.classList.add("just-synced");
 }
-fetch("data/summary.json?"+Date.now()).then(r=>r.json()).then(d=>{D=d;paint();setInterval(clock,6e4)})
+fetch("data/summary.json?"+Date.now()).then(r=>r.json()).then(d=>{D=d;paint();setInterval(clock,6e4);setInterval(poll,3e5)})
  .catch(()=>{$("#tbl tbody").innerHTML='<tr><td colspan="19" class="empty">Could not load data/summary.json. Serve this page over http(s).</td></tr>'});
 
 /* ---------- Tabs ---------- */
