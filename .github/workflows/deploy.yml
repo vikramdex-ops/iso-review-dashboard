@@ -3,12 +3,13 @@ on:
   push: { branches: [main] }
   # Every 45 minutes (UTC). Cron has no 45-minute step (*/45 fires at :00 and :45), and the
   # 45-minute cycle repeats every 3 hours, so four staggered 3-hourly crons give an exact
-  # 00:00, 00:45, 01:30, 02:15, 03:00 ... cadence.
+  # 00:07, 00:52, 01:37, 02:22, 03:07 ... cadence. Offset by 7 minutes because GitHub delays and
+  # drops scheduled runs most often at :00/:15/:30/:45, when every repo's cron fires at once.
   schedule:
-    - cron: "0 0-21/3 * * *"
-    - cron: "45 0-21/3 * * *"
-    - cron: "30 1-22/3 * * *"
-    - cron: "15 2-23/3 * * *"
+    - cron: "7 0-21/3 * * *"
+    - cron: "52 0-21/3 * * *"
+    - cron: "37 1-22/3 * * *"
+    - cron: "22 2-23/3 * * *"
   workflow_dispatch:
 permissions: { contents: write, pages: write, id-token: write }
 concurrency: { group: pages, cancel-in-progress: true }
