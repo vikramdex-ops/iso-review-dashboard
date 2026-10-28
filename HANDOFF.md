@@ -23,7 +23,9 @@ A static dashboard that reads an "As-Built ISO Review Register" Google Sheet (on
   tracker entirely (never captured) so it can be chased down before the booklet is claimed done
 
 It refreshes itself automatically — a GitHub Action reads the sheet every 45 minutes (plus on every
-push, plus on demand), computes everything, and redeploys. **Nobody should ever need to write or
+push, plus on demand), computes everything, and redeploys. This runs entirely on GitHub's servers;
+nobody's PC needs to be on. A page left open re-reads the published sync every 5 minutes (and when
+its tab regains focus), so it never sits on stale data. **Nobody should ever need to write or
 push code just to get fresh numbers onto the site.**
 
 - **Live site**: https://vikramdex-ops.github.io/iso-review-dashboard/
@@ -49,7 +51,9 @@ GitHub Pages                      (the live site)
 ```
 
 - `.github/workflows/deploy.yml` — the whole pipeline. Triggers: `push` to `main`, `schedule`
-  (every 45 minutes via four staggered crons `0 0-21/3`, `45 0-21/3`, `30 1-22/3`, `15 2-23/3`), and `workflow_dispatch` (manual "run now").
+  (every 45 minutes via four staggered crons `7 0-21/3`, `52 0-21/3`, `37 1-22/3`, `22 2-23/3`, i.e.
+  00:07, 00:52, 01:37, 02:22 … UTC), and `workflow_dispatch` (manual "run now"). The 7-minute offset is
+  deliberate — see §7 (GitHub drops scheduled runs most at :00/:15/:30/:45).
 - `.github/workflows/issue-intake.yml` — handles the "mark documents as issued" write path (§5).
 - No database, no server, no API you have to host. The only moving part is the Python script and
   two small JSON files it maintains (`closed_log.json`, `issued_log.json`) in `site/data/`.
@@ -73,7 +77,7 @@ GitHub Pages                      (the live site)
   EVERY comment against it — any assignee — is closed. `ADDRESS_THRESHOLD = 3`: a document with
   ≤3 open/hold points left is "address these", otherwise "needs more work".
 - **Booklet-level** (revised 2026-10-26): a static mapping (`data/booklet_mapping.json`, v3, built
-  from the owner's `FST_ISO_Booklet_Mapping_v2.xlsx` by `scripts/build_booklet_mapping.py`) lists the
+  from the owner's `FST_ISO_Booklet_Mapping_v3.xlsx` by `scripts/build_booklet_mapping.py`) lists the
   (Document No., Line) items in each ISO booklet. **Demolition booklets (1913, 1914, 39-1677,
   39-1678) are excluded from issuance entirely** (owner decision). Matching: a document that
   belongs to one booklet is matched on the document number alone across every lot (the
@@ -91,7 +95,12 @@ GitHub Pages                      (the live site)
   extraction-plan status (`plan_status`), filterable and copyable. Decisions applied on top of the workbook are
   recorded in the JSON (`decisions`) and shown on the dashboard: 1678 → 1755 (owner-confirmed), and
   2005/2100/2134/2136/2139/2140 → 1755 (GRE "AP" spec lines; the workbook flags them as breaking
-  one-line-one-booklet, and every other GRE line in the workbook sits in 1755/1722). To apply a
+  one-line-one-booklet, and every other GRE line in the workbook sits in 1755/1722). **Designer remarks
+  (workbook v3, 2026-10-26)**: rows whose Doc+Line Status reads "Superseded" or "Deleted" are dropped
+  from readiness and listed under `superseded` in the JSON — 2604 → 2137 and 2605 → 2138 (the lines are
+  tracked under those documents), 1675 VG-11904 → 1672, and 1710 deleted by the RLM; 2046 was renamed
+  2143 (the drawing's title block reads 2143). Result: 464 booklet documents, 31 not yet in any lot
+  (owner-confirmed count, 2026-10-26). To apply a
   revised workbook: `pip install openpyxl && python3 scripts/build_booklet_mapping.py <file.xlsx>`
   — it refuses to write if any check fails.
 - **"Completed Today / Yesterday"**: there's no close-date column in the sheet, so
@@ -168,6 +177,13 @@ it, independent of anything else.
   the same underlying tab. Fixed by the duplicate-content-hash check (§3) plus moving off
   unreliable gviz/sheet-name lookups.
 - **Filtered-view undercounting**: see §4 — fully resolved by the Sheets API migration.
+- **"Synced 3h ago" while syncs were running** (2026-10-28): two causes, neither a broken pipeline
+  (it runs on GitHub, not on anyone's PC). (a) The page loaded `summary.json` once and never again, so a
+  tab left open showed its load-time data forever — fixed by polling every 5 minutes + on tab focus.
+  (b) GitHub does not guarantee `schedule` runs; on 2026-10-27 only ~13 of 32 slots ran, worst gap ~2h50m,
+  every run that did fire succeeded. Mitigated by moving the crons off the quarter-hour (:07/:52/:37/:22).
+  If every slot must fire, the remaining option is an external trigger (e.g. a Google Apps Script
+  time-driven trigger calling `workflow_dispatch` with a token that has `Actions: write`) — not set up.
 - **Lot 1 header-label shift** (2026-10-24): Lot 1's header ROW had "Document No.", "Severity",
   "Status", "Assigned to", "Modeller Responce" each typed ONE CELL to the right of the column
   they actually label (a data-entry defect in that one tab, not a code bug — Lots 2-7's headers
@@ -182,7 +198,9 @@ it, independent of anything else.
 ```
 config.json                  sheet_id, lot name -> tab gid (or "title:<tab name>"), done/hold word lists
 scripts/build_summary.py     the entire sync + business-rule engine (see §3)
-data/booklet_mapping.json    static Document+Line -> Booklet No. mapping (from a one-time Excel import)
+data/booklet_mapping.json    static Document+Line -> Booklet No. mapping (built from the mapping workbook, v3)
+scripts/build_booklet_mapping.py  offline: workbook (.xlsx) -> data/booklet_mapping.json (needs openpyxl)
+scripts/apply_issued.py      records "Mark as issued" batches into issued_log.json (§5)
 site/index.html              the whole frontend (cinematic single-page dashboard, no build step)
 site/data/summary.json       the latest computed output (committed by the Action for auditability)
 site/data/closed_log.json    first-closed-date ledger, for "Completed Today/Yesterday"
@@ -203,8 +221,12 @@ As of the last update to this file:
 - 9 lots are live (Lot 1 – Lot 9), each read via the Sheets API, fixed-column parsing.
 - Lot 9 (tab `lot-09`, gid 23469838) added 2026-10-26. Header in row 1 like every other lot; column P "Assigned To" inserted so Modeller Response sits in Q. Whole documents per person, 13 docs split 3/3/2/3/2 (Hemnath, Dharma, Murukeshwari, Karthikeyan, Kowshik), comment counts balanced as evenly as that split allows.
 - Summary, Issuance, and Booklet Issuance screens are all live and wired to real data.
-- Known pending/cosmetic items: a couple of stale "Lot 1-4" mentions remain in `README.md`
-  (the badge count and architecture diagram were updated to 8, two prose mentions weren't yet).
+- Booklet Issuance (as of 2026-10-28): 5 booklets, 464 documents, 0 ready; 31 documents not yet in
+  any lot. Of those, 30 were extracted, verified against title blocks and packed for checking
+  (`Missing 31 FST ISO - For Checking` on the team share, PDF + RLM per document); 2116 is pending
+  the 3D team, and 1679's D-16977 line has an RLM but no extraction yet.
+- README, CONTRIBUTING, banner and this file reflect Lot 9, the 45-minute schedule (:07 offset),
+  document-based booklet readiness and the v3 mapping.
 - No other known open bugs at the time of writing.
 
 ## 10. How to resume work in a brand-new Claude session
