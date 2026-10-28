@@ -212,7 +212,7 @@ table.dtrack td div.miss{color:var(--amber)}
   <div id="view-summary">
   <div class="hero">
     <h1><span class="l">Every comment,</span><span class="l"><em>accounted</em> for.</span></h1>
-    <p class="sub">Live status of ISO review comments by assignee and severity, read from the register and refreshed every 45 minutes.</p>
+    <p class="sub">Live status of ISO review comments by assignee and severity, read from the register and synced every 45 minutes; an open page picks up each new sync on its own.</p>
   </div>
 
   <div class="stats" id="stats" aria-label="Overall totals"></div>
@@ -269,7 +269,7 @@ table.dtrack td div.miss{color:var(--amber)}
     <section id="doc-tracker" class="dtrack-sec" aria-label="Document tracker"></section>
   </div>
 
-  <footer>Rebuilt by GitHub Actions every 45 minutes from the Google Sheet register.</footer>
+  <footer>Rebuilt by GitHub Actions every 45 minutes from the Google Sheet register (runs in the cloud — no PC needs to be on). This page re-checks for a newer sync every 5 minutes.</footer>
 </div>
 
 <div class="modal-backdrop" id="modalBackdrop" hidden>
