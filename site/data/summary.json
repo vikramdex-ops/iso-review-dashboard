@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T05:58:44.507538+00:00",
+ "updated": "2026-10-28T06:01:22.657130+00:00",
  "preliminary": false,
  "today": "2026-10-28",
  "status": {
@@ -83,7 +83,7 @@
      }
     }
    },
-   "content_hash": "204d50d45157",
+   "content_hash": "f7a31f2da819",
    "gid": "31577278",
    "fetch_method": "sheets_api"
   },
@@ -545,7 +545,7 @@
      }
     }
    },
-   "content_hash": "10c7df8553bb",
+   "content_hash": "da77760e6f8e",
    "gid": "23469838",
    "fetch_method": "sheets_api"
   }
@@ -1248,21 +1248,21 @@
    "Dharma",
    "Lot 9",
    38,
-   33,
-   5,
+   37,
+   1,
    25,
-   23,
-   2,
+   24,
+   1,
    19,
-   17,
-   2,
+   18,
+   1,
    0,
    0,
    0,
    82,
-   73,
-   9,
-   14,
+   79,
+   3,
+   20,
    35
   ],
   [
@@ -1334,21 +1334,21 @@
    "Dharma",
    "All Lots (combined)",
    480,
-   475,
-   5,
+   479,
+   1,
    367,
-   365,
-   2,
+   366,
+   1,
    338,
-   336,
-   2,
+   337,
+   1,
    0,
    0,
    0,
    1185,
-   1176,
-   9,
-   14,
+   1182,
+   3,
+   20,
    35
   ],
   [
@@ -7046,16 +7046,26 @@
     "lines": []
    },
    "address": {
-    "count": 0,
-    "docs": [],
-    "lines": [],
-    "detail": []
+    "count": 1,
+    "docs": [
+     "P12513-12-01-15-1860"
+    ],
+    "lines": [
+     "28\"-VG-11315-AC1S3A-FA",
+     "28\"-VG-11315-AC1S3A-FA",
+     "28\"-VG-11315-AC1S3A-FA"
+    ],
+    "detail": [
+     {
+      "doc": "P12513-12-01-15-1860",
+      "open": 3
+     }
+    ]
    },
    "needs_work": {
-    "count": 3,
+    "count": 2,
     "docs": [
      "P12513-12-01-15-1795",
-     "P12513-12-01-15-1860",
      "P12513-12-39-15-1655"
     ]
    }
@@ -9672,7 +9682,7 @@
       "doc": "P12513-12-01-15-1860",
       "status": "open",
       "comments_total": 25,
-      "comments_open": 9,
+      "comments_open": 3,
       "open_in_lots": [
        "Lot 9"
       ],
@@ -23320,7 +23330,7 @@
    },
    "P12513-12-01-15-1860": {
     "total": 25,
-    "open": 9,
+    "open": 3,
     "lines_all": [
      "28\"-VG-11315-AC1S3A-FA",
      "28\"-VG-11315-AC1S3A-FA",
@@ -23349,12 +23359,6 @@
      "28\"-VG-11315-AC1S3A-FA"
     ],
     "lines_open": [
-     "28\"-VG-11315-AC1S3A-FA",
-     "28\"-VG-11315-AC1S3A-FA",
-     "28\"-VG-11315-AC1S3A-FA",
-     "28\"-VG-11315-AC1S3A-FA",
-     "28\"-VG-11315-AC1S3A-FA",
-     "28\"-VG-11315-AC1S3A-FA",
      "28\"-VG-11315-AC1S3A-FA",
      "28\"-VG-11315-AC1S3A-FA",
      "28\"-VG-11315-AC1S3A-FA"
@@ -53322,19 +53326,13 @@
   {
    "doc": "P12513-12-01-15-1860",
    "line": "28\"-VG-11315-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1860",
    "line": "28\"-VG-11315-AC1S3A-FA",
-   "closed": false,
-   "lot": "Lot 9"
-  },
-  {
-   "doc": "P12513-12-01-15-1860",
-   "line": "28\"-VG-11315-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
@@ -53352,19 +53350,25 @@
   {
    "doc": "P12513-12-01-15-1860",
    "line": "28\"-VG-11315-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1860",
    "line": "28\"-VG-11315-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 9"
   },
   {
    "doc": "P12513-12-01-15-1860",
    "line": "28\"-VG-11315-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
+   "lot": "Lot 9"
+  },
+  {
+   "doc": "P12513-12-01-15-1860",
+   "line": "28\"-VG-11315-AC1S3A-FA",
+   "closed": true,
    "lot": "Lot 9"
   },
   {
