@@ -1,10 +1,10 @@
-"""Regenerate data/booklet_mapping.json from the booklet workbook (FST_ISO_Booklet_Mapping_v*.xlsx).
+"""Regenerate data/booklet_mapping.json from the booklet workbook (FST_ISO_Booklet_Mapping_v*.xlsx; current: v3).
 
 Offline tool (needs openpyxl): run it locally whenever a revised workbook arrives, review the
 printed checks, and commit the JSON. The sync itself (build_summary.py) only reads the JSON.
 
     pip install openpyxl
-    python3 scripts/build_booklet_mapping.py path/to/FST_ISO_Booklet_Mapping_v2.xlsx
+    python3 scripts/build_booklet_mapping.py path/to/FST_ISO_Booklet_Mapping_v3.xlsx
 
 Rules applied (agreed with the project owner, 2026-10-26):
   1. Demolition booklets are excluded from issuance readiness entirely (any booklet whose type
