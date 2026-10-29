@@ -312,7 +312,7 @@ def build_booklet_readiness(booklet_mapping, all_line_rows, docs_raw_by_lot):
             else:
                 st = "closed"
             docs_out.append({"doc": doc, "status": st, "comments_total": total, "comments_open": open_,
-                             "open_in_lots": sorted(lots), "in_lots": sorted(all_lots), "lines": lines})
+                             "open_in_lots": sorted(lots, key=natkey), "in_lots": sorted(all_lots, key=natkey), "lines": lines})
         docs_out.sort(key=lambda d: natkey(d["doc"]))
         n = {k: sum(1 for d in docs_out if d["status"] == k) for k in ("closed", "open", "not_in_lot")}
         booklets[bno] = {"booklet_no": bno, "booklet_type": g["type"], "total_docs": len(docs_out),
