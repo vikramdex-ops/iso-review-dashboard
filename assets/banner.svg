@@ -61,7 +61,7 @@
   </g>
 
   <text x="64" y="160" fill="#f3f1ea" font-family="Georgia, 'Times New Roman', serif" font-size="68" font-weight="400" letter-spacing="-1">As&#8211;Built ISO Review</text>
-  <text x="66" y="206" fill="#9a9ba3" font-family="Hanken Grotesk, Helvetica, Arial, sans-serif" font-size="19">Nine lots, one register &#8212; synced straight from the review sheet, no manual rebuilds.</text>
+  <text x="66" y="206" fill="#9a9ba3" font-family="Hanken Grotesk, Helvetica, Arial, sans-serif" font-size="19">Ten lots, one register &#8212; synced straight from the review sheet, no manual rebuilds.</text>
 
   <g transform="translate(66,248)" font-family="Hanken Grotesk, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6b74">
     <text x="0" y="0">GOOGLE SHEETS</text>
