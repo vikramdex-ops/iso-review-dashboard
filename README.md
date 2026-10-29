@@ -47,7 +47,7 @@
 
 ## What this is
 
-A single static page that always shows the current state of the ISO review register — who owns what, how much is closed, open, or on hold, split by severity and by lot, with a combined cross-lot view per reviewer. No one touches the Google Sheet export manually, no one re-runs a script, no one pushes code to refresh it. A scheduled job in GitHub Actions does that every 45 minutes — on GitHub's servers, so nobody's PC needs to be on — and a page left open picks up each new sync on its own within 5 minutes (or instantly with **Refresh now**).
+A single static page that always shows the current state of the ISO review register — who owns what, how much is closed, open, or on hold, split by severity and by lot, with a combined cross-lot view per reviewer. No one touches the Google Sheet export manually, no one re-runs a script, no one pushes code to refresh it. A scheduled job in GitHub Actions does that every 45 minutes — on GitHub's servers, so nobody's PC needs to be on — and a page left open picks up each new sync on its own within 5 minutes (or on demand with **Refresh now**, which runs a fresh sync from the sheet in about 1–2 minutes).
 
 The sheet stays the single source of truth. This repo only mirrors it, honestly, into something a lead can glance at.
 
@@ -106,7 +106,8 @@ flowchart LR
     C --> D["GitHub Pages"]
     H["data/booklet_mapping.json\nbooklet → document + line"] --> B
     E["GitHub Actions\ncron · every 45 min\n(:07 :52 :37 :22 UTC)"] -.triggers.-> B
-    F["Open page\nchecks every 5 min + Refresh now"] -.re-reads latest sync.-> D
+    F["Open page\nchecks every 5 min"] -.re-reads latest sync.-> D
+    F -."Refresh now\n(opens [refresh] issue)".-> B
     D --> G["👤 Your lead, anywhere"]
 
     style A fill:#15171c,stroke:#2a2d36,color:#f2f0ea
@@ -119,7 +120,7 @@ flowchart LR
     style G fill:#15171c,stroke:#6fcf7c,color:#f2f0ea
 ```
 
-**When it runs.** Every 45 minutes, at 00:07, 00:52, 01:37, 02:22 UTC and so on (05:37, 06:22, 07:07 … IST), plus on every push and on demand (`workflow_dispatch`). The times sit 7 minutes off the quarter-hour on purpose: GitHub delays or skips scheduled runs most often at :00/:15/:30/:45, when every repository's cron fires at once. GitHub does not guarantee scheduled runs, so on a busy day an occasional slot can still be skipped — the next one catches up, and nothing is lost because each run reads the whole sheet.
+**When it runs.** Every 45 minutes, at 00:07, 00:52, 01:37, 02:22 UTC and so on (05:37, 06:22, 07:07 … IST), plus on every push, on demand (`workflow_dispatch`), and whenever someone clicks **Refresh now** on the page (it opens a `[refresh]` issue that the workflow picks up, syncs, deploys and closes). The times sit 7 minutes off the quarter-hour on purpose: GitHub delays or skips scheduled runs most often at :00/:15/:30/:45, when every repository's cron fires at once. GitHub does not guarantee scheduled runs, so on a busy day an occasional slot can still be skipped — the next one catches up, and nothing is lost because each run reads the whole sheet.
 
 Every run is guarded, not best-effort:
 
@@ -178,7 +179,7 @@ Three screens, one page:
 - a **document tracker** lists every booklet document with its line(s), status, open/total comments, lots and extraction-plan status — filter by status or booklet, search, and copy the list to chase what's outstanding.
 
 **Everywhere**
-- **Stays current while open** — the page re-reads the published sync every 5 minutes and whenever its tab comes back into view; **Refresh now** does the same instantly.
+- **Stays current while open** — the page re-reads the published sync every 5 minutes and whenever its tab comes back into view; **Refresh now** runs a real sync from the sheet straight away and shows the result as soon as it lands (usually 1–2 minutes).
 - **Sheet reconciliation line** — states plainly how many rows were read vs. counted vs. excluded, so a mismatch is visible, not hidden.
 
 <details>
@@ -210,7 +211,7 @@ iso-review-dashboard/
 │       ├── closed_log.json       # per-row first-closed date, for day-aware counts
 │       └── issued_log.json       # documents marked as issued
 └── .github/workflows/
-    ├── deploy.yml                # cron (every 45 min) + push + manual dispatch → sync → commit → deploy
+    ├── deploy.yml                # cron (every 45 min) + push + manual dispatch + Refresh-now issues → sync → commit → deploy
     └── issue-intake.yml          # "Mark as issued" write path
 ```
 
