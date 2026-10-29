@@ -230,14 +230,19 @@ Claude account/org). If you don't have access to that, everything essential is h
 history (`git log`).
 
 As of the last update to this file:
-- 9 lots are live (Lot 1 – Lot 9), each read via the Sheets API, fixed-column parsing.
+- 10 lots are live (Lot 1 – Lot 10), each read via the Sheets API, fixed-column parsing.
 - Lot 9 (tab `lot-09`, gid 23469838) added 2026-10-26. Header in row 1 like every other lot; column P "Assigned To" inserted so Modeller Response sits in Q. Whole documents per person, 13 docs split 3/3/2/3/2 (Hemnath, Dharma, Murukeshwari, Karthikeyan, Kowshik), comment counts balanced as evenly as that split allows.
+- Lot 10 (tab `lot-10`, gid 15300442) added 2026-10-29: 31 documents, 373 rows. Same layout as Lot 9
+  (header row 1, Assigned To in P, Modeller response in Q); it arrived already assigned, whole documents
+  per person, and adds a sixth reviewer, **Akash**. 342 comments counted; the 31 `OK` / `Closed` rows
+  ("no action" records) have no assignee, so they count toward document closure but not toward anyone's
+  totals. `Query` status rows count as open.
 - Summary, Issuance, and Booklet Issuance screens are all live and wired to real data.
-- Booklet Issuance (as of 2026-10-28): 5 booklets, 464 documents, 0 ready; 31 documents not yet in
-  any lot. Of those, 30 were extracted, verified against title blocks and packed for checking
-  (`Missing 31 FST ISO - For Checking` on the team share, PDF + RLM per document); 2116 is pending
-  the 3D team, and 1679's D-16977 line has an RLM but no extraction yet.
-- README, CONTRIBUTING, banner and this file reflect Lot 9, the 45-minute schedule (:07 offset),
+- Booklet Issuance (as of 2026-10-29, after Lot 10): 5 booklets, 464 documents, 431 closed, 32 open,
+  0 ready. Lot 10 is the batch of previously missing documents (`Missing 31 FST ISO - For Checking`),
+  so only one document is still not in any lot: 1679, whose line 4"-D-16977 has an RLM but no
+  extraction yet.
+- README, CONTRIBUTING, banner and this file reflect Lot 10, the 45-minute schedule (:07 offset),
   document-based booklet readiness and the v3 mapping.
 - No other known open bugs at the time of writing.
 
