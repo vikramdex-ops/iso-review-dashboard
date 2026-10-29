@@ -9,7 +9,7 @@
 [![Deploy](https://github.com/vikramdex-ops/iso-review-dashboard/actions/workflows/deploy.yml/badge.svg)](https://github.com/vikramdex-ops/iso-review-dashboard/actions/workflows/deploy.yml)
 [![Live Dashboard](https://img.shields.io/badge/live%20dashboard-view%20now-d7a34f?style=for-the-badge&logo=githubpages&logoColor=white)](https://vikramdex-ops.github.io/iso-review-dashboard/)
 ![Sync interval](https://img.shields.io/badge/auto--sync-every%2045min-6fcf7c?style=flat-square)
-![Lots tracked](https://img.shields.io/badge/lots%20tracked-9-6fb3e0?style=flat-square)
+![Lots tracked](https://img.shields.io/badge/lots%20tracked-10-6fb3e0?style=flat-square)
 ![Source](https://img.shields.io/badge/source-Google%20Sheets-34a853?style=flat-square&logo=googlesheets&logoColor=white)
 ![No backend](https://img.shields.io/badge/backend-none%20needed-8b8d96?style=flat-square)
 ![Last commit](https://img.shields.io/github/last-commit/vikramdex-ops/iso-review-dashboard?style=flat-square&color=d7a34f&label=last%20sync)
@@ -55,8 +55,8 @@ The sheet stays the single source of truth. This repo only mirrors it, honestly,
 <tr>
 <td align="center" width="25%">
 
-**📋 9 Lots**
-<br><sub>Lot 1 – Lot 9, same rules</sub>
+**📋 10 Lots**
+<br><sub>Lot 1 – Lot 10, same rules</sub>
 
 </td>
 <td align="center" width="25%">
@@ -101,7 +101,7 @@ Swap the column mapping and keyword rules for your own sheet's shape (see [Addin
 
 ```mermaid
 flowchart LR
-    A[("Google Sheet\nLot 1 … Lot 9")] -->|Sheets API v4, by gid\nfilter-proof read| B["build_summary.py"]
+    A[("Google Sheet\nLot 1 … Lot 10")] -->|Sheets API v4, by gid\nfilter-proof read| B["build_summary.py"]
     B -->|apply business rules| C["site/data/summary.json"]
     C --> D["GitHub Pages"]
     H["data/booklet_mapping.json\nbooklet → document + line"] --> B
@@ -166,8 +166,8 @@ Three screens, one page:
 
 **Summary**
 - **Overview strip** — total assigned, closed, open, on hold, at a glance before anything else.
-- **Per-lot breakdown** — Lot 1 through Lot 9, filterable by chip, each row keyed by reviewer.
-- **Combined (by person)** — the same reviewer's numbers rolled up across *all nine lots* in one line, for when lot boundaries don't matter and ownership does.
+- **Per-lot breakdown** — Lot 1 through Lot 10, filterable by chip, each row keyed by reviewer.
+- **Combined (by person)** — the same reviewer's numbers rolled up across *all ten lots* in one line, for when lot boundaries don't matter and ownership does.
 - **Severity ledger** — proportional High / Medium / Low bars per person.
 
 **Issuance** — per document: ready to issue (every comment closed), "address these" (≤3 points left) or "needs more work", with **Mark as issued** to record a batch that has gone out.
@@ -231,13 +231,13 @@ It refuses to write if any check fails, and records every decision it applies (o
 Add one entry to `config.json`, same sheet — either the tab's numeric `gid` (stable even if the tab gets renamed later):
 
 ```json
-"lots": { "Lot 10": "123456789" }
+"lots": { "Lot 11": "123456789" }
 ```
 
 ...or, if you don't want to dig the `gid` out of the sheet's URL, point at the tab by its current name instead (looked up automatically via the Sheets API, so it needs `GOOGLE_SHEETS_API_KEY` to be set):
 
 ```json
-"lots": { "Lot 10": "title:lot-10" }
+"lots": { "Lot 11": "title:lot-11" }
 ```
 
 Nothing else changes. The combined view, the chips, and the totals strip all pick it up on the next sync.
