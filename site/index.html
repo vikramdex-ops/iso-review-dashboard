@@ -269,7 +269,7 @@ table.dtrack td div.miss{color:var(--amber)}
     <section id="doc-tracker" class="dtrack-sec" aria-label="Document tracker"></section>
   </div>
 
-  <footer>Rebuilt by GitHub Actions every 45 minutes from the Google Sheet register (runs in the cloud — no PC needs to be on). This page re-checks for a newer sync every 5 minutes.</footer>
+  <footer>Rebuilt by GitHub Actions every 45 minutes from the Google Sheet register (runs in the cloud — no PC needs to be on). This page re-checks for a newer sync every 5 minutes; <b>Refresh now</b> runs a fresh sync from the sheet straight away (about 1–2 minutes).</footer>
 </div>
 
 <div class="modal-backdrop" id="modalBackdrop" hidden>
@@ -617,13 +617,45 @@ function copy(text,btn){
 $("#copyDocs").onclick=()=>copy($("#docList").textContent,$("#copyDocs"));
 $("#copyLines").onclick=()=>copy($("#lineList").textContent,$("#copyLines"));
 
-/* Refresh now: re-reads the latest published sync. The browser cannot read Google's CSV reliably
-   (CORS + silent tab fallback caused duplicated lots), so numbers only ever come from the verified server sync. */
+/* "Refresh now" = run a real sync from the sheet, not just re-read the last published one.
+   It opens a "[refresh] ..." issue with the same Issues-only token "Mark as issued" uses;
+   .github/workflows/deploy.yml picks that up, syncs the sheet, deploys, and closes the issue.
+   The button then watches summary.json until the new sync lands (usually 1–2 minutes).
+   The browser never reads the sheet itself (CORS + silent tab fallback once duplicated lots),
+   so numbers only ever come from the verified server-side sync. */
+let refreshing=false;
+const loadSummary=()=>fetch("data/summary.json?"+Date.now(),{cache:"no-store"}).then(r=>r.json());
 $("#refresh").onclick=async()=>{
-  const btn=$("#refresh");btn.disabled=true;btn.lastChild.textContent=" Checking…";
-  try{D=await fetch("data/summary.json?"+Date.now(),{cache:"no-store"}).then(r=>r.json());paint()}
-  catch(e){alert("Could not load the latest data: "+e.message)}
-  finally{btn.disabled=false;btn.classList.remove("spin");btn.lastChild.textContent=" Refresh now"}
+  if(refreshing)return;refreshing=true;
+  const btn=$("#refresh"),label=t=>btn.lastChild.textContent=" "+t;
+  btn.disabled=true;btn.classList.add("spin");label("Requesting sync…");
+  const startedAt=D&&D.updated,t0=Date.now();
+  try{
+    let triggered=false;
+    if(!GITHUB_PAT.startsWith("__")){
+      try{
+        const res=await fetch(`https://api.github.com/repos/${REPO}/issues`,{method:"POST",
+          headers:{"Authorization":`Bearer ${GITHUB_PAT}`,"Accept":"application/vnd.github+json","Content-Type":"application/json"},
+          body:JSON.stringify({title:`[refresh] Sync requested from the dashboard — ${new Date().toISOString().slice(0,16).replace("T"," ")} UTC`,
+            body:"Opened by the dashboard's **Refresh now** button. The deploy workflow syncs the sheet, redeploys, and closes this automatically."})});
+        triggered=res.ok;
+      }catch(e){}
+    }
+    if(!triggered){ // no token on this copy of the page, or GitHub refused: at least show the latest published sync
+      D=await loadSummary();paint();
+      btn.title="Couldn't start a sync from here — showing the latest scheduled sync instead.";
+      label("Showing latest sync");await new Promise(r=>setTimeout(r,2500));return;
+    }
+    while(Date.now()-t0<5*60e3){
+      const sec=Math.round((Date.now()-t0)/1e3);
+      label(`Syncing from sheet… ${Math.floor(sec/60)}:${String(sec%60).padStart(2,"0")}`);
+      await new Promise(r=>setTimeout(r,5e3));
+      try{const f=await loadSummary();if(f.updated!==startedAt){D=f;paint();btn.title="";label("✓ Up to date");await new Promise(r=>setTimeout(r,2500));return}}catch(e){}
+    }
+    btn.title="The sync is taking longer than usual — check the Actions tab on GitHub. The page will pick it up on its own when it lands.";
+    label("Still syncing — will update itself");await new Promise(r=>setTimeout(r,4e3));
+  }catch(e){alert("Could not load the latest data: "+e.message)}
+  finally{refreshing=false;btn.disabled=false;btn.classList.remove("spin");label("Refresh now")}
 };
 
 /* projector beam + dust */
