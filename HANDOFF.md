@@ -25,7 +25,8 @@ A static dashboard that reads an "As-Built ISO Review Register" Google Sheet (on
 It refreshes itself automatically — a GitHub Action reads the sheet every 45 minutes (plus on every
 push, plus on demand), computes everything, and redeploys. This runs entirely on GitHub's servers;
 nobody's PC needs to be on. A page left open re-reads the published sync every 5 minutes (and when
-its tab regains focus), so it never sits on stale data. **Nobody should ever need to write or
+its tab regains focus), so it never sits on stale data, and its **Refresh now** button runs a fresh
+sync from the sheet on the spot (≈1–2 minutes) instead of waiting for the next slot. **Nobody should ever need to write or
 push code just to get fresh numbers onto the site.**
 
 - **Live site**: https://vikramdex-ops.github.io/iso-review-dashboard/
@@ -52,8 +53,12 @@ GitHub Pages                      (the live site)
 
 - `.github/workflows/deploy.yml` — the whole pipeline. Triggers: `push` to `main`, `schedule`
   (every 45 minutes via four staggered crons `7 0-21/3`, `52 0-21/3`, `37 1-22/3`, `22 2-23/3`, i.e.
-  00:07, 00:52, 01:37, 02:22 … UTC), and `workflow_dispatch` (manual "run now"). The 7-minute offset is
-  deliberate — see §7 (GitHub drops scheduled runs most at :00/:15/:30/:45).
+  00:07, 00:52, 01:37, 02:22 … UTC), `workflow_dispatch` (manual "run now"), and `issues: opened` for
+  issues titled `[refresh] …` — that is the page's **Refresh now** button (§5): it opens such an issue
+  with the same Issues-only `ISSUE_PAT`, the workflow syncs + deploys and then closes the issue, and the
+  page watches `summary.json` until the new `updated` timestamp lands. Any other new issue skips the job
+  and gets a throwaway concurrency group, so it can never cancel a deploy in progress. The 7-minute offset
+  is deliberate — see §7 (GitHub drops scheduled runs most at :00/:15/:30/:45).
 - `.github/workflows/issue-intake.yml` — handles the "mark documents as issued" write path (§5).
 - No database, no server, no API you have to host. The only moving part is the Python script and
   two small JSON files it maintains (`closed_log.json`, `issued_log.json`) in `site/data/`.
@@ -144,6 +149,11 @@ This was a deliberate, explicitly-chosen trade-off: the token is visible to anyo
 tools on the public page, but its scope (Issues-write, one repo) limits the blast radius of a
 leak to "can open/close issues here" — it cannot touch code, workflows, or any other repo.
 
+The same token powers **Refresh now**: the page opens a `[refresh] …` issue, `deploy.yml` reacts to it
+with a full sync + deploy and closes it. A leaked token can therefore also trigger extra syncs — harmless
+(each run just re-reads the sheet; `cancel-in-progress` collapses bursts). Without the secret the button
+falls back to re-reading the latest published sync.
+
 ## 6. Secrets (names and purpose only — see "Setting these up fresh" to recreate them)
 
 | Secret (GitHub Actions repo secret) | Used for | If missing |
@@ -180,6 +190,8 @@ it, independent of anything else.
 - **"Synced 3h ago" while syncs were running** (2026-10-28): two causes, neither a broken pipeline
   (it runs on GitHub, not on anyone's PC). (a) The page loaded `summary.json` once and never again, so a
   tab left open showed its load-time data forever — fixed by polling every 5 minutes + on tab focus.
+  (Follow-up, 2026-10-29: **Refresh now** used to only re-read that same published file, so it could
+  never show anything newer than the last scheduled sync — it now triggers a real sync, see §2.)
   (b) GitHub does not guarantee `schedule` runs; on 2026-10-27 only ~13 of 32 slots ran, worst gap ~2h50m,
   every run that did fire succeeded. Mitigated by moving the crons off the quarter-hour (:07/:52/:37/:22).
   If every slot must fire, the remaining option is an external trigger (e.g. a Google Apps Script
