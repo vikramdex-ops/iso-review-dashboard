@@ -15,7 +15,7 @@ scripts/build_summary.py          # read each tab (Sheets API, CSV fallback) →
 scripts/build_booklet_mapping.py  # offline: mapping workbook (.xlsx, needs openpyxl) → data/booklet_mapping.json
 scripts/apply_issued.py           # records "Mark as issued" batches into site/data/issued_log.json
 site/index.html                   # the dashboard itself — single file, no build step, no framework
-.github/workflows/deploy.yml      # cron (every 45 min at :07/:52/:37/:22 UTC) + push + manual dispatch → sync → commit → deploy
+.github/workflows/deploy.yml      # cron (every 45 min at :07/:52/:37/:22 UTC) + push + manual dispatch + "[refresh]" issues (Refresh now) → sync → commit → deploy
 .github/workflows/issue-intake.yml  # "Mark as issued" write path
 ```
 
