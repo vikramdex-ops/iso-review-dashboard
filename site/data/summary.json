@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T05:17:10.531884+00:00",
+ "updated": "2026-10-31T07:28:39.622305+00:00",
  "preliminary": false,
  "today": "2026-10-31",
  "status": {
@@ -604,7 +604,7 @@
      }
     }
    },
-   "content_hash": "2cdcfb98721d",
+   "content_hash": "6d75f16581e7",
    "gid": "15300442",
    "fetch_method": "sheets_api"
   }
@@ -1391,83 +1391,83 @@
    "Akash",
    "Lot 10",
    43,
-   18,
-   25,
+   20,
+   22,
    34,
    27,
    7,
    29,
-   12,
-   17,
-   0,
+   15,
+   14,
+   1,
    0,
    0,
    106,
-   57,
-   49,
-   6,
+   62,
+   44,
+   11,
    51
   ],
   [
    "Dharma",
    "Lot 10",
+   70,
+   70,
+   0,
    67,
    67,
    0,
-   62,
-   61,
-   1,
-   18,
-   18,
+   22,
+   22,
    0,
    0,
    0,
    0,
-   147,
-   146,
-   1,
-   6,
+   159,
+   159,
+   0,
+   19,
    117
   ],
   [
    "Hemnath",
    "Lot 10",
+   18,
    10,
    7,
-   1,
-   16,
-   11,
+   22,
+   17,
    5,
-   11,
-   8,
-   3,
-   2,
+   20,
+   14,
+   6,
+   1,
    0,
    0,
-   37,
-   26,
-   11,
-   2,
+   60,
+   41,
+   19,
+   17,
    22
   ],
   [
    "Kowshik",
    "Lot 10",
-   18,
+   7,
    0,
-   18,
+   7,
+   6,
+   0,
+   6,
+   4,
+   0,
+   4,
+   0,
+   0,
+   0,
    17,
    0,
    17,
-   17,
-   0,
-   17,
-   0,
-   0,
-   0,
-   52,
-   0,
-   52,
    0,
    0
   ]
@@ -1477,63 +1477,63 @@
    "Akash",
    "All Lots (combined)",
    306,
-   281,
-   25,
+   283,
+   22,
    259,
    252,
    7,
    176,
-   159,
-   17,
-   0,
+   162,
+   14,
+   1,
    0,
    0,
    741,
-   692,
-   49,
-   6,
+   697,
+   44,
+   11,
    51
   ],
   [
    "Dharma",
    "All Lots (combined)",
-   546,
-   546,
+   549,
+   549,
    0,
-   429,
-   428,
-   1,
-   354,
-   354,
+   434,
+   434,
    0,
-   0,
+   358,
+   358,
    0,
    0,
-   1329,
-   1328,
-   1,
-   6,
+   0,
+   0,
+   1341,
+   1341,
+   0,
+   19,
    117
   ],
   [
    "Hemnath",
    "All Lots (combined)",
+   193,
    185,
-   182,
-   1,
-   183,
-   178,
+   7,
+   189,
+   184,
    5,
-   128,
-   125,
-   3,
-   2,
+   137,
+   131,
+   6,
+   1,
    0,
    0,
-   496,
-   485,
-   11,
-   2,
+   519,
+   500,
+   19,
+   17,
    22
   ],
   [
@@ -1560,21 +1560,21 @@
   [
    "Kowshik",
    "All Lots (combined)",
-   344,
+   333,
    326,
-   18,
-   290,
+   7,
+   279,
    273,
-   17,
-   245,
+   6,
+   232,
    228,
-   17,
+   4,
    0,
    0,
    0,
-   879,
+   844,
    827,
-   52,
+   17,
    0,
    0
   ],
@@ -7170,7 +7170,7 @@
   "Lot 10": {
    "total_documents": 31,
    "ready_pending": {
-    "count": 18,
+    "count": 23,
     "docs": [
      "P12513-12-01-15-1605",
      "P12513-12-01-15-1620",
@@ -7180,8 +7180,13 @@
      "P12513-12-01-15-1660",
      "P12513-12-01-15-1665",
      "P12513-12-01-15-1674",
+     "P12513-12-01-15-1679",
      "P12513-12-01-15-1727",
      "P12513-12-01-15-1757",
+     "P12513-12-01-15-2123",
+     "P12513-12-01-15-2124",
+     "P12513-12-01-15-2134",
+     "P12513-12-01-15-2145",
      "P12513-12-01-15-2603",
      "P12513-12-39-15-1612",
      "P12513-12-39-15-1690",
@@ -7295,6 +7300,20 @@
      "2\"-D-16969-AE3S0C-FA",
      "2\"-D-16969-AE3S0C-FA",
      "2\"-D-16969-AE3S0C-FA",
+     "3/4\"-PG-11358-AE3S0C-FA (RLM title block: 2\"-PG-11358-AE3S0C-FA)",
+     "3/4\"-PG-11358-AE3S0C-FA (RLM title block: 2\"-PG-11358-AE3S0C-FA)",
+     "3/4\"-PG-11358-AE3S0C-FA (RLM title block: 2\"-PG-11358-AE3S0C-FA)",
+     "3/4\"-PG-11358-AE3S0C-FA (RLM title block: 2\"-PG-11358-AE3S0C-FA)",
+     "3/4\"-PG-11358-AE3S0C-FA (RLM title block: 2\"-PG-11358-AE3S0C-FA)",
+     "3/4\"-PG-11358-AE3S0C-FA (RLM title block: 2\"-PG-11358-AE3S0C-FA)",
+     "3/4\"-PG-11358-AE3S0C-FA (RLM title block: 2\"-PG-11358-AE3S0C-FA)",
+     "3/4\"-PG-11358-AE3S0C-FA (RLM title block: 2\"-PG-11358-AE3S0C-FA)",
+     "3/4\"-PG-11358-AE3S0C-FA (RLM title block: 2\"-PG-11358-AE3S0C-FA)",
+     "3/4\"-PG-11358-AE3S0C-FA (RLM title block: 2\"-PG-11358-AE3S0C-FA)",
+     "3/4\"-PG-11358-AE3S0C-FA (RLM title block: 2\"-PG-11358-AE3S0C-FA)",
+     "3/4\"-PG-11358-AE3S0C-FA (RLM title block: 2\"-PG-11358-AE3S0C-FA)",
+     "3/4\"-PG-11358-AE3S0C-FA (RLM title block: 2\"-PG-11358-AE3S0C-FA)",
+     "3/4\"-PG-11358-AE3S0C-FA (RLM title block: 2\"-PG-11358-AE3S0C-FA)",
      "2\"-IA-10995-AC4A1A-FA",
      "2\"-IA-10995-AC4A1A-FA",
      "2\"-IA-10995-AC4A1A-FA",
@@ -7308,6 +7327,38 @@
      "1\"-NN-12208-AE3S0C-FA",
      "1\"-NN-12208-AE3S0C-FA",
      "1\"-NN-12208-AE3S0C-FA",
+     "8\"-FW-6130-AF1A0F-FA",
+     "8\"-FW-6130-AF1A0F-FA",
+     "8\"-FW-6130-AF1A0F-FA",
+     "8\"-FW-6130-AF1A0F-FA",
+     "8\"-FW-6130-AF1A0F-FA",
+     "8\"-FW-6130-AF1A0F-FA",
+     "8\"-FW-6130-AF1A0F-FA",
+     "8\"-FW-6130-AF1A0F-FA",
+     "8\"-FW-6130-AF1A0F-FA",
+     "8\"-FW-6130-AF1A0F-FA",
+     "8\"-FW-6130-AF1A0F-FA",
+     "8\"-FW-6131-AP3A0F-FA",
+     "8\"-FW-6131-AP3A0F-FA",
+     "8\"-FW-6131-AP3A0F-FA",
+     "8\"-FW-6131-AP3A0F-FA",
+     "8\"-FW-6131-AP3A0F-FA",
+     "6\"-FZ-8001-AP3A0F-FA",
+     "6\"-FZ-8001-AP3A0F-FA",
+     "6\"-FZ-8001-AP3A0F-FA",
+     "6\"-FZ-8001-AP3A0F-FA",
+     "6\"-FZ-8001-AP3A0F-FA",
+     "6\"-FZ-8001-AP3A0F-FA",
+     "6\"-FZ-8001-AP3A0F-FA",
+     "6\"-FZ-8001-AP3A0F-FA",
+     "6\"-FZ-8001-AP3A0F-FA",
+     "6\"-FZ-8001-AP3A0F-FA",
+     "6\"-FZ-8001-AP3A0F-FA",
+     "6\"-FZ-8001-AP3A0F-FA",
+     "6\"-FZ-8001-AP3A0F-FA",
+     "6\"-FW-6470-AP3A0F-FA",
+     "6\"-FW-6470-AP3A0F-FA",
+     "6\"-FW-6470-AP3A0F-FA",
      "4\"-D-15260-AP3S0C-FA",
      "4\"-D-15260-AP3S0C-FA",
      "4\"-D-15260-AP3S0C-FA",
@@ -7434,39 +7485,35 @@
    "address": {
     "count": 2,
     "docs": [
-     "P12513-12-01-15-1679",
-     "P12513-12-01-15-2145"
+     "P12513-12-01-15-1772",
+     "P12513-12-01-15-2143"
     ],
     "lines": [
-     "3/4\"-PG-11358-AE3S0C-FA (RLM title block: 2\"-PG-11358-AE3S0C-FA)",
-     "6\"-FW-6470-AP3A0F-FA",
-     "6\"-FW-6470-AP3A0F-FA"
+     "1\"-PA-8622-AC1A1B-FA",
+     "6\"-FZ-8010-AF1A0F-FA",
+     "6\"-FZ-8010-AF1A0F-FA",
+     "6\"-FZ-8010-AF1A0F-FA"
     ],
     "detail": [
      {
-      "doc": "P12513-12-01-15-1679",
+      "doc": "P12513-12-01-15-1772",
       "open": 1
      },
      {
-      "doc": "P12513-12-01-15-2145",
-      "open": 2
+      "doc": "P12513-12-01-15-2143",
+      "open": 3
      }
     ]
    },
    "needs_work": {
-    "count": 11,
+    "count": 6,
     "docs": [
-     "P12513-12-01-15-1772",
      "P12513-12-01-15-1843",
      "P12513-12-01-15-1895",
      "P12513-12-01-15-2116",
-     "P12513-12-01-15-2123",
-     "P12513-12-01-15-2124",
-     "P12513-12-01-15-2134",
      "P12513-12-01-15-2136",
      "P12513-12-01-15-2139",
-     "P12513-12-01-15-2140",
-     "P12513-12-01-15-2143"
+     "P12513-12-01-15-2140"
     ]
    }
   }
@@ -7477,8 +7524,8 @@
    "ready": 2,
    "not_ready": 3,
    "total_docs": 464,
-   "closed_docs": 449,
-   "open_docs": 14,
+   "closed_docs": 454,
+   "open_docs": 9,
    "not_in_lot_docs": 1,
    "excluded_booklets": 4,
    "excluded_items": 131
@@ -7488,8 +7535,8 @@
     "booklet_no": "P12513-12-99-15-1601",
     "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)",
     "total_docs": 313,
-    "closed_docs": 307,
-    "open_docs": 6,
+    "closed_docs": 309,
+    "open_docs": 4,
     "not_in_lot_docs": 0,
     "status": "not_ready",
     "documents": [
@@ -8294,12 +8341,10 @@
      },
      {
       "doc": "P12513-12-01-15-1679",
-      "status": "open",
+      "status": "closed",
       "comments_total": 31,
-      "comments_open": 1,
-      "open_in_lots": [
-       "Lot 10"
-      ],
+      "comments_open": 0,
+      "open_in_lots": [],
       "in_lots": [
        "Lot 1",
        "Lot 10"
@@ -9455,7 +9500,7 @@
       "doc": "P12513-12-01-15-1772",
       "status": "open",
       "comments_total": 6,
-      "comments_open": 5,
+      "comments_open": 1,
       "open_in_lots": [
        "Lot 10"
       ],
@@ -12451,12 +12496,10 @@
      },
      {
       "doc": "P12513-12-01-15-2123",
-      "status": "open",
+      "status": "closed",
       "comments_total": 11,
-      "comments_open": 7,
-      "open_in_lots": [
-       "Lot 10"
-      ],
+      "comments_open": 0,
+      "open_in_lots": [],
       "in_lots": [
        "Lot 10"
       ],
@@ -12693,7 +12736,7 @@
       "doc": "P12513-12-01-15-2143",
       "status": "open",
       "comments_total": 6,
-      "comments_open": 5,
+      "comments_open": 3,
       "open_in_lots": [
        "Lot 10"
       ],
@@ -12833,8 +12876,8 @@
     "booklet_no": "P12513-12-01-15-1755",
     "booklet_type": "ISO for CDS Area - UG (GRE) {P12513-12-01-15-1755}",
     "total_docs": 45,
-    "closed_docs": 37,
-    "open_docs": 7,
+    "closed_docs": 40,
+    "open_docs": 4,
     "not_in_lot_docs": 1,
     "status": "not_ready",
     "documents": [
@@ -13423,12 +13466,10 @@
      },
      {
       "doc": "P12513-12-01-15-2124",
-      "status": "open",
+      "status": "closed",
       "comments_total": 5,
-      "comments_open": 4,
-      "open_in_lots": [
-       "Lot 10"
-      ],
+      "comments_open": 0,
+      "open_in_lots": [],
       "in_lots": [
        "Lot 10"
       ],
@@ -13442,12 +13483,10 @@
      },
      {
       "doc": "P12513-12-01-15-2134",
-      "status": "open",
+      "status": "closed",
       "comments_total": 13,
-      "comments_open": 12,
-      "open_in_lots": [
-       "Lot 10"
-      ],
+      "comments_open": 0,
+      "open_in_lots": [],
       "in_lots": [
        "Lot 10"
       ],
@@ -13518,12 +13557,10 @@
      },
      {
       "doc": "P12513-12-01-15-2145",
-      "status": "open",
+      "status": "closed",
       "comments_total": 3,
-      "comments_open": 2,
-      "open_in_lots": [
-       "Lot 10"
-      ],
+      "comments_open": 0,
+      "open_in_lots": [],
       "in_lots": [
        "Lot 10"
       ],
@@ -14320,7 +14357,7 @@
       "doc": "P12513-12-01-15-1843",
       "status": "open",
       "comments_total": 19,
-      "comments_open": 18,
+      "comments_open": 17,
       "open_in_lots": [
        "Lot 10"
       ],
@@ -23726,7 +23763,7 @@
    },
    "P12513-12-01-15-1679": {
     "total": 14,
-    "open": 1,
+    "open": 0,
     "lines_all": [
      "3/4\"-PG-11358-AE3S0C-FA (RLM title block: 2\"-PG-11358-AE3S0C-FA)",
      "3/4\"-PG-11358-AE3S0C-FA (RLM title block: 2\"-PG-11358-AE3S0C-FA)",
@@ -23743,9 +23780,7 @@
      "3/4\"-PG-11358-AE3S0C-FA (RLM title block: 2\"-PG-11358-AE3S0C-FA)",
      "3/4\"-PG-11358-AE3S0C-FA (RLM title block: 2\"-PG-11358-AE3S0C-FA)"
     ],
-    "lines_open": [
-     "3/4\"-PG-11358-AE3S0C-FA (RLM title block: 2\"-PG-11358-AE3S0C-FA)"
-    ]
+    "lines_open": []
    },
    "P12513-12-01-15-1727": {
     "total": 6,
@@ -23776,7 +23811,7 @@
    },
    "P12513-12-01-15-1772": {
     "total": 6,
-    "open": 5,
+    "open": 1,
     "lines_all": [
      "1\"-PA-8622-AC1A1B-FA",
      "1\"-PA-8622-AC1A1B-FA",
@@ -23786,16 +23821,12 @@
      "1\"-PA-8622-AC1A1B-FA"
     ],
     "lines_open": [
-     "1\"-PA-8622-AC1A1B-FA",
-     "1\"-PA-8622-AC1A1B-FA",
-     "1\"-PA-8622-AC1A1B-FA",
-     "1\"-PA-8622-AC1A1B-FA",
      "1\"-PA-8622-AC1A1B-FA"
     ]
    },
    "P12513-12-01-15-1843": {
     "total": 19,
-    "open": 18,
+    "open": 17,
     "lines_all": [
      "8\"-PW-8277-AE3S0C-FA",
      "8\"-PW-8277-AE3S0C-FA",
@@ -23818,7 +23849,6 @@
      "8\"-PW-8277-AE3S0C-FA"
     ],
     "lines_open": [
-     "8\"-PW-8277-AE3S0C-FA",
      "8\"-PW-8277-AE3S0C-FA",
      "8\"-PW-8277-AE3S0C-FA",
      "8\"-PW-8277-AE3S0C-FA",
@@ -23888,7 +23918,7 @@
    },
    "P12513-12-01-15-2123": {
     "total": 11,
-    "open": 7,
+    "open": 0,
     "lines_all": [
      "8\"-FW-6130-AF1A0F-FA",
      "8\"-FW-6130-AF1A0F-FA",
@@ -23902,19 +23932,11 @@
      "8\"-FW-6130-AF1A0F-FA",
      "8\"-FW-6130-AF1A0F-FA"
     ],
-    "lines_open": [
-     "8\"-FW-6130-AF1A0F-FA",
-     "8\"-FW-6130-AF1A0F-FA",
-     "8\"-FW-6130-AF1A0F-FA",
-     "8\"-FW-6130-AF1A0F-FA",
-     "8\"-FW-6130-AF1A0F-FA",
-     "8\"-FW-6130-AF1A0F-FA",
-     "8\"-FW-6130-AF1A0F-FA"
-    ]
+    "lines_open": []
    },
    "P12513-12-01-15-2124": {
     "total": 5,
-    "open": 4,
+    "open": 0,
     "lines_all": [
      "8\"-FW-6131-AP3A0F-FA",
      "8\"-FW-6131-AP3A0F-FA",
@@ -23922,16 +23944,11 @@
      "8\"-FW-6131-AP3A0F-FA",
      "8\"-FW-6131-AP3A0F-FA"
     ],
-    "lines_open": [
-     "8\"-FW-6131-AP3A0F-FA",
-     "8\"-FW-6131-AP3A0F-FA",
-     "8\"-FW-6131-AP3A0F-FA",
-     "8\"-FW-6131-AP3A0F-FA"
-    ]
+    "lines_open": []
    },
    "P12513-12-01-15-2134": {
     "total": 13,
-    "open": 12,
+    "open": 0,
     "lines_all": [
      "6\"-FZ-8001-AP3A0F-FA",
      "6\"-FZ-8001-AP3A0F-FA",
@@ -23947,20 +23964,7 @@
      "6\"-FZ-8001-AP3A0F-FA",
      "6\"-FZ-8001-AP3A0F-FA"
     ],
-    "lines_open": [
-     "6\"-FZ-8001-AP3A0F-FA",
-     "6\"-FZ-8001-AP3A0F-FA",
-     "6\"-FZ-8001-AP3A0F-FA",
-     "6\"-FZ-8001-AP3A0F-FA",
-     "6\"-FZ-8001-AP3A0F-FA",
-     "6\"-FZ-8001-AP3A0F-FA",
-     "6\"-FZ-8001-AP3A0F-FA",
-     "6\"-FZ-8001-AP3A0F-FA",
-     "6\"-FZ-8001-AP3A0F-FA",
-     "6\"-FZ-8001-AP3A0F-FA",
-     "6\"-FZ-8001-AP3A0F-FA",
-     "6\"-FZ-8001-AP3A0F-FA"
-    ]
+    "lines_open": []
    },
    "P12513-12-01-15-2136": {
     "total": 12,
@@ -24079,7 +24083,7 @@
    },
    "P12513-12-01-15-2143": {
     "total": 6,
-    "open": 5,
+    "open": 3,
     "lines_all": [
      "6\"-FZ-8010-AF1A0F-FA",
      "6\"-FZ-8010-AF1A0F-FA",
@@ -24089,8 +24093,6 @@
      "6\"-FZ-8010-AF1A0F-FA"
     ],
     "lines_open": [
-     "6\"-FZ-8010-AF1A0F-FA",
-     "6\"-FZ-8010-AF1A0F-FA",
      "6\"-FZ-8010-AF1A0F-FA",
      "6\"-FZ-8010-AF1A0F-FA",
      "6\"-FZ-8010-AF1A0F-FA"
@@ -24098,16 +24100,13 @@
    },
    "P12513-12-01-15-2145": {
     "total": 3,
-    "open": 2,
+    "open": 0,
     "lines_all": [
      "6\"-FW-6470-AP3A0F-FA",
      "6\"-FW-6470-AP3A0F-FA",
      "6\"-FW-6470-AP3A0F-FA"
     ],
-    "lines_open": [
-     "6\"-FW-6470-AP3A0F-FA",
-     "6\"-FW-6470-AP3A0F-FA"
-    ]
+    "lines_open": []
    },
    "P12513-12-01-15-2603": {
     "total": 40,
@@ -54563,7 +54562,7 @@
   {
    "doc": "P12513-12-01-15-1679",
    "line": "3/4\"-PG-11358-AE3S0C-FA (RLM title block: 2\"-PG-11358-AE3S0C-FA)",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 10"
   },
   {
@@ -54689,7 +54688,19 @@
   {
    "doc": "P12513-12-01-15-1772",
    "line": "1\"-PA-8622-AC1A1B-FA",
-   "closed": false,
+   "closed": true,
+   "lot": "Lot 10"
+  },
+  {
+   "doc": "P12513-12-01-15-1772",
+   "line": "1\"-PA-8622-AC1A1B-FA",
+   "closed": true,
+   "lot": "Lot 10"
+  },
+  {
+   "doc": "P12513-12-01-15-1772",
+   "line": "1\"-PA-8622-AC1A1B-FA",
+   "closed": true,
    "lot": "Lot 10"
   },
   {
@@ -54701,19 +54712,7 @@
   {
    "doc": "P12513-12-01-15-1772",
    "line": "1\"-PA-8622-AC1A1B-FA",
-   "closed": false,
-   "lot": "Lot 10"
-  },
-  {
-   "doc": "P12513-12-01-15-1772",
-   "line": "1\"-PA-8622-AC1A1B-FA",
-   "closed": false,
-   "lot": "Lot 10"
-  },
-  {
-   "doc": "P12513-12-01-15-1772",
-   "line": "1\"-PA-8622-AC1A1B-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 10"
   },
   {
@@ -54725,7 +54724,7 @@
   {
    "doc": "P12513-12-01-15-1843",
    "line": "8\"-PW-8277-AE3S0C-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 10"
   },
   {
@@ -54947,37 +54946,7 @@
   {
    "doc": "P12513-12-01-15-2123",
    "line": "8\"-FW-6130-AF1A0F-FA",
-   "closed": false,
-   "lot": "Lot 10"
-  },
-  {
-   "doc": "P12513-12-01-15-2123",
-   "line": "8\"-FW-6130-AF1A0F-FA",
-   "closed": false,
-   "lot": "Lot 10"
-  },
-  {
-   "doc": "P12513-12-01-15-2123",
-   "line": "8\"-FW-6130-AF1A0F-FA",
-   "closed": false,
-   "lot": "Lot 10"
-  },
-  {
-   "doc": "P12513-12-01-15-2123",
-   "line": "8\"-FW-6130-AF1A0F-FA",
-   "closed": false,
-   "lot": "Lot 10"
-  },
-  {
-   "doc": "P12513-12-01-15-2123",
-   "line": "8\"-FW-6130-AF1A0F-FA",
-   "closed": false,
-   "lot": "Lot 10"
-  },
-  {
-   "doc": "P12513-12-01-15-2123",
-   "line": "8\"-FW-6130-AF1A0F-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 10"
   },
   {
@@ -54989,7 +54958,37 @@
   {
    "doc": "P12513-12-01-15-2123",
    "line": "8\"-FW-6130-AF1A0F-FA",
-   "closed": false,
+   "closed": true,
+   "lot": "Lot 10"
+  },
+  {
+   "doc": "P12513-12-01-15-2123",
+   "line": "8\"-FW-6130-AF1A0F-FA",
+   "closed": true,
+   "lot": "Lot 10"
+  },
+  {
+   "doc": "P12513-12-01-15-2123",
+   "line": "8\"-FW-6130-AF1A0F-FA",
+   "closed": true,
+   "lot": "Lot 10"
+  },
+  {
+   "doc": "P12513-12-01-15-2123",
+   "line": "8\"-FW-6130-AF1A0F-FA",
+   "closed": true,
+   "lot": "Lot 10"
+  },
+  {
+   "doc": "P12513-12-01-15-2123",
+   "line": "8\"-FW-6130-AF1A0F-FA",
+   "closed": true,
+   "lot": "Lot 10"
+  },
+  {
+   "doc": "P12513-12-01-15-2123",
+   "line": "8\"-FW-6130-AF1A0F-FA",
+   "closed": true,
    "lot": "Lot 10"
   },
   {
@@ -55007,25 +55006,25 @@
   {
    "doc": "P12513-12-01-15-2124",
    "line": "8\"-FW-6131-AP3A0F-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 10"
   },
   {
    "doc": "P12513-12-01-15-2124",
    "line": "8\"-FW-6131-AP3A0F-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 10"
   },
   {
    "doc": "P12513-12-01-15-2124",
    "line": "8\"-FW-6131-AP3A0F-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 10"
   },
   {
    "doc": "P12513-12-01-15-2124",
    "line": "8\"-FW-6131-AP3A0F-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 10"
   },
   {
@@ -55037,73 +55036,73 @@
   {
    "doc": "P12513-12-01-15-2134",
    "line": "6\"-FZ-8001-AP3A0F-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 10"
   },
   {
    "doc": "P12513-12-01-15-2134",
    "line": "6\"-FZ-8001-AP3A0F-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 10"
   },
   {
    "doc": "P12513-12-01-15-2134",
    "line": "6\"-FZ-8001-AP3A0F-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 10"
   },
   {
    "doc": "P12513-12-01-15-2134",
    "line": "6\"-FZ-8001-AP3A0F-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 10"
   },
   {
    "doc": "P12513-12-01-15-2134",
    "line": "6\"-FZ-8001-AP3A0F-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 10"
   },
   {
    "doc": "P12513-12-01-15-2134",
    "line": "6\"-FZ-8001-AP3A0F-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 10"
   },
   {
    "doc": "P12513-12-01-15-2134",
    "line": "6\"-FZ-8001-AP3A0F-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 10"
   },
   {
    "doc": "P12513-12-01-15-2134",
    "line": "6\"-FZ-8001-AP3A0F-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 10"
   },
   {
    "doc": "P12513-12-01-15-2134",
    "line": "6\"-FZ-8001-AP3A0F-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 10"
   },
   {
    "doc": "P12513-12-01-15-2134",
    "line": "6\"-FZ-8001-AP3A0F-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 10"
   },
   {
    "doc": "P12513-12-01-15-2134",
    "line": "6\"-FZ-8001-AP3A0F-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 10"
   },
   {
    "doc": "P12513-12-01-15-2134",
    "line": "6\"-FZ-8001-AP3A0F-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 10"
   },
   {
@@ -55403,13 +55402,13 @@
   {
    "doc": "P12513-12-01-15-2143",
    "line": "6\"-FZ-8010-AF1A0F-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 10"
   },
   {
    "doc": "P12513-12-01-15-2143",
    "line": "6\"-FZ-8010-AF1A0F-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 10"
   },
   {
@@ -55433,13 +55432,13 @@
   {
    "doc": "P12513-12-01-15-2145",
    "line": "6\"-FW-6470-AP3A0F-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 10"
   },
   {
    "doc": "P12513-12-01-15-2145",
    "line": "6\"-FW-6470-AP3A0F-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 10"
   },
   {
