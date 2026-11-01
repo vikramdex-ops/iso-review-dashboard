@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T11:19:16.026842+00:00",
+ "updated": "2026-11-01T13:07:57.779117+00:00",
  "preliminary": false,
  "today": "2026-11-01",
  "status": {
@@ -83,7 +83,7 @@
      }
     }
    },
-   "content_hash": "ff021c871fbc",
+   "content_hash": "c25a2da0d9d5",
    "gid": "31577278",
    "fetch_method": "sheets_api"
   },
@@ -613,11 +613,11 @@
   [
    "Akash",
    "Lot 1",
-   17,
-   17,
+   19,
+   19,
    0,
-   45,
-   45,
+   46,
+   46,
    0,
    42,
    42,
@@ -625,10 +625,10 @@
    0,
    0,
    0,
-   104,
-   104,
+   107,
+   107,
    0,
-   10,
+   13,
    0
   ],
   [
@@ -655,22 +655,22 @@
   [
    "Hemnath",
    "Lot 1",
-   10,
-   5,
-   1,
-   7,
-   5,
-   0,
-   2,
-   1,
-   0,
-   4,
-   2,
-   1,
-   19,
-   11,
    8,
-   11,
+   8,
+   0,
+   6,
+   6,
+   0,
+   2,
+   2,
+   0,
+   0,
+   0,
+   0,
+   16,
+   16,
+   0,
+   16,
    0
   ],
   [
@@ -1476,11 +1476,11 @@
   [
    "Akash",
    "All Lots (combined)",
-   302,
-   302,
+   304,
+   304,
    0,
-   263,
-   263,
+   264,
+   264,
    0,
    179,
    179,
@@ -1488,10 +1488,10 @@
    0,
    0,
    0,
-   744,
-   744,
+   747,
+   747,
    0,
-   10,
+   13,
    48
   ],
   [
@@ -1518,22 +1518,22 @@
   [
    "Hemnath",
    "All Lots (combined)",
-   203,
-   198,
-   1,
-   196,
-   194,
+   201,
+   201,
+   0,
+   195,
+   195,
    0,
    139,
-   138,
+   139,
    0,
-   4,
-   2,
-   1,
-   538,
-   530,
-   8,
-   11,
+   0,
+   0,
+   0,
+   535,
+   535,
+   0,
+   16,
    36
   ],
   [
@@ -1604,7 +1604,7 @@
   "Lot 1": {
    "total_documents": 228,
    "ready_pending": {
-    "count": 227,
+    "count": 228,
     "docs": [
      "P12513-12-01-15-1601",
      "P12513-12-01-15-1602",
@@ -1769,6 +1769,7 @@
      "P12513-12-01-15-1982",
      "P12513-12-01-15-1983",
      "P12513-12-01-15-1984",
+     "P12513-12-01-15-1985",
      "P12513-12-01-15-2002",
      "P12513-12-01-15-2003",
      "P12513-12-01-15-2008",
@@ -3332,6 +3333,40 @@
      "2\"-VG-11881-AC1S3A-FA",
      "2\"-VG-11881-AC1S3A-FA",
      "2\"-VG-11881-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
+     "2\"-VG-11882-AC1S3A-FA",
      "3/4\"-VG-11899-AC1S3A-FA",
      "3/4\"-VG-11899-AC1S3A-FA",
      "3/4\"-VG-11899-AC1S3A-FA",
@@ -3844,10 +3879,8 @@
     "detail": []
    },
    "needs_work": {
-    "count": 1,
-    "docs": [
-     "P12513-12-01-15-1985"
-    ]
+    "count": 0,
+    "docs": []
    }
   },
   "Lot 2": {
@@ -7600,11 +7633,11 @@
  "booklets": {
   "totals": {
    "booklets": 5,
-   "ready": 3,
-   "not_ready": 2,
+   "ready": 4,
+   "not_ready": 1,
    "total_docs": 464,
-   "closed_docs": 462,
-   "open_docs": 1,
+   "closed_docs": 463,
+   "open_docs": 0,
    "not_in_lot_docs": 1,
    "excluded_booklets": 4,
    "excluded_items": 131
@@ -7614,10 +7647,10 @@
     "booklet_no": "P12513-12-99-15-1601",
     "booklet_type": "New Flow Suction Tank (P12513-12-99-15-1601)",
     "total_docs": 313,
-    "closed_docs": 312,
-    "open_docs": 1,
+    "closed_docs": 313,
+    "open_docs": 0,
     "not_in_lot_docs": 0,
-    "status": "not_ready",
+    "status": "ready",
     "documents": [
      {
       "doc": "P12513-12-01-15-1601",
@@ -11991,12 +12024,10 @@
      },
      {
       "doc": "P12513-12-01-15-1985",
-      "status": "open",
+      "status": "closed",
       "comments_total": 34,
-      "comments_open": 8,
-      "open_in_lots": [
-       "Lot 1"
-      ],
+      "comments_open": 0,
+      "open_in_lots": [],
       "in_lots": [
        "Lot 1"
       ],
@@ -18273,7 +18304,7 @@
    },
    "P12513-12-01-15-1985": {
     "total": 34,
-    "open": 8,
+    "open": 0,
     "lines_all": [
      "2\"-VG-11882-AC1S3A-FA",
      "2\"-VG-11882-AC1S3A-FA",
@@ -18310,16 +18341,7 @@
      "2\"-VG-11882-AC1S3A-FA",
      "2\"-VG-11882-AC1S3A-FA"
     ],
-    "lines_open": [
-     "2\"-VG-11882-AC1S3A-FA",
-     "2\"-VG-11882-AC1S3A-FA",
-     "2\"-VG-11882-AC1S3A-FA",
-     "2\"-VG-11882-AC1S3A-FA",
-     "2\"-VG-11882-AC1S3A-FA",
-     "2\"-VG-11882-AC1S3A-FA",
-     "2\"-VG-11882-AC1S3A-FA",
-     "2\"-VG-11882-AC1S3A-FA"
-    ]
+    "lines_open": []
    },
    "P12513-12-01-15-2002": {
     "total": 7,
@@ -32760,7 +32782,7 @@
   {
    "doc": "P12513-12-01-15-1985",
    "line": "2\"-VG-11882-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 1"
   },
   {
@@ -32772,25 +32794,7 @@
   {
    "doc": "P12513-12-01-15-1985",
    "line": "2\"-VG-11882-AC1S3A-FA",
-   "closed": false,
-   "lot": "Lot 1"
-  },
-  {
-   "doc": "P12513-12-01-15-1985",
-   "line": "2\"-VG-11882-AC1S3A-FA",
-   "closed": false,
-   "lot": "Lot 1"
-  },
-  {
-   "doc": "P12513-12-01-15-1985",
-   "line": "2\"-VG-11882-AC1S3A-FA",
-   "closed": false,
-   "lot": "Lot 1"
-  },
-  {
-   "doc": "P12513-12-01-15-1985",
-   "line": "2\"-VG-11882-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 1"
   },
   {
@@ -32802,19 +32806,37 @@
   {
    "doc": "P12513-12-01-15-1985",
    "line": "2\"-VG-11882-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 1"
   },
   {
    "doc": "P12513-12-01-15-1985",
    "line": "2\"-VG-11882-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
    "lot": "Lot 1"
   },
   {
    "doc": "P12513-12-01-15-1985",
    "line": "2\"-VG-11882-AC1S3A-FA",
-   "closed": false,
+   "closed": true,
+   "lot": "Lot 1"
+  },
+  {
+   "doc": "P12513-12-01-15-1985",
+   "line": "2\"-VG-11882-AC1S3A-FA",
+   "closed": true,
+   "lot": "Lot 1"
+  },
+  {
+   "doc": "P12513-12-01-15-1985",
+   "line": "2\"-VG-11882-AC1S3A-FA",
+   "closed": true,
+   "lot": "Lot 1"
+  },
+  {
+   "doc": "P12513-12-01-15-1985",
+   "line": "2\"-VG-11882-AC1S3A-FA",
+   "closed": true,
    "lot": "Lot 1"
   },
   {
